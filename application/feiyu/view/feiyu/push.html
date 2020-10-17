@@ -1,0 +1,45 @@
+{include file="./static/header.html"/}
+
+<body>
+    <form class="layui-form" style="padding: 20px;">
+        <input type="text" name="Id" value="{$data.Id}" hidden>
+        <input type="text" name="clue_id" value="{$data['clue_id']}" hidden>
+        <input type="text" name="client_id" value="{$data['client_id']}" hidden>
+        <select name="clue_convert_type" id="clue_convert_type" lay-filter="aihao" lay-verify="required">
+            <option value="">请选择</option>
+            <option value="1">无效线索</option>
+            <option value="2">潜在客户</option>
+            <option value="3">高价值客户</option>
+            <option value="4">已成单</option>
+        </select>
+        <br>
+        线索回传可能需要3~5秒时间，期间不要频繁点击按钮
+        <br><br>
+        <button type="submit" class="layui-btn" lay-submit="" lay-filter="pushdata">回传数据</button>
+    </form>
+    <script>
+        layui.use('form', function () {
+            var form = layui.form, $ = layui.$;
+            form.render('select')
+
+            //监听提交
+            form.on('submit(pushdata)', function (data) {
+                // layer.alert(JSON.stringify(data.field), {
+                //     title: '最终的提交信息'
+                // })
+                $.post('/feiyu/feiyu/pushclue', data.field, function (obj) {
+                    layer.alert(obj.msg, function () {
+                        if (obj.code === 0) {
+                            //window.parent.location.reload();//刷新父页面，这样直接刷新会导致检索条件也刷新
+                            parent.layui.table.reload("formfields_table");//所以还是刷新父页面的表格
+                            //关闭弹层
+                            var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+                            parent.layer.close(index); //再执行关闭
+                        }
+                    });
+                }, 'json')
+                return false;
+            });
+        });
+    </script>
+</body>

@@ -1,0 +1,294 @@
+{include file="./static/header.html"/}
+
+<body>
+    <!-- 检索条件 -->
+    <form class="layui-form layui-form-item" action="" id="search" hidden>
+        <br>
+        <!-- <div class="layui-form-item">
+            <label class="layui-form-label">选择框项目</label>
+            <div class="layui-input-inline">
+                <select name="city">
+                    <option value=""></option>
+                    <option value="0">项目列表</option>
+                </select>
+            </div>
+        </div> -->
+        <div class="layui-form-item">
+            <label class="layui-form-label">访客ID</label>
+            <div class="layui-input-inline">
+                <input type="text" name="sel_guest_id" placeholder="访客ID" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">客服工号</label>
+            <div class="layui-input-inline">
+                <input type="text" name="sel_worker_id" placeholder="客服工号" autocomplete="off" class="layui-input">
+            </div>
+            <!-- <div class="layui-form-mid layui-word-aux">辅助文字</div> -->
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">咨询页面</label>
+            <div class="layui-input-inline">
+                <input type="text" name="sel_talk_page" placeholder="咨询页面关键词" autocomplete="off" class="layui-input">
+            </div>
+            <div class="layui-form-mid layui-word-aux">咨询页面关键词</div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">时间范围</label>
+            <div class="layui-input-inline">
+                <input type="text" name="sel_start_time" id="sel_start_time" placeholder="yyyy-MM-dd HH:mm:ss"
+                    autocomplete="off" class="layui-input">
+            </div>
+            <div class="layui-form-mid">-</div>
+            <div class="layui-input-inline">
+                <input type="text" name="sel_end_time" id="sel_end_time" placeholder="yyyy-MM-dd HH:mm:ss"
+                    autocomplete="off" class="layui-input">
+            </div>
+
+            <div class="layui-input-inline">
+                <div class="layui-btn layui-btn-normal layui-btn-sm" onclick="sel_time(-1)">前一天</div>
+                <div class="layui-btn layui-btn-normal layui-btn-sm" onclick="sel_time(1)">后一天</div>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">访客有说话</label>
+            <div class="layui-input-block">
+                <input type="radio" name="sel_is_talk" value="" title="全部" checked>
+                <input type="radio" name="sel_is_talk" value="1" title="有">
+                <input type="radio" name="sel_is_talk" value="0" title="无">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">有无手机</label>
+            <div class="layui-input-block">
+                <input type="radio" name="sel_is_mobile" value="" title="全部" checked>
+                <input type="radio" name="sel_is_mobile" value="1" title="有号码">
+                <input type="radio" name="sel_is_mobile" value="0" title="无号码">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">是否重连</label>
+            <div class="layui-input-block">
+                <input type="radio" name="sel_is_relink" value="" title="全部" checked>
+                <input type="radio" name="sel_is_relink" value="1" title="重连">
+                <input type="radio" name="sel_is_relink" value="0" title="非重连">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="formDemo">查找</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </form>
+
+    <table id="formfields_table" lay-filter="lay_formfields" class="layui-table"></table>
+
+    <script type="text/html" id="head_toolbar">
+        <div class="layui-btn-container">
+            <button class="layui-btn layui-btn-sm" lay-event="search">检索</button>
+            <button class="layui-btn layui-btn-sm" lay-event="getCheckData">查看选中数据</button>
+            <button class="layui-btn layui-btn-sm layui-btn-danger" lay-event="dels">批量删除</button>
+        </div>
+    </script>
+
+    <script type="text/html" id="toolbar">
+        <div class="layui-btn-container">
+            <button class="layui-btn layui-btn-sm layui-btn-primary" lay-event="view">查看</button>
+            <button class="layui-btn layui-btn-sm layui-btn-danger" lay-event="del">删除</button>
+        </div>
+    </script>
+
+    <script>
+        var form = layui.form, table = layui.table, layer = layui.layer, $ = layui.$, laydate = layui.laydate;
+        // $.get('/kh_info/kh_info/get_kh_info', function ())
+        var form_table = table.render({
+            defaultToolbar: ['exports', 'print'],
+            elem: '#formfields_table',
+            height: "700px",
+            limit: 20,
+            limits: [20, 50, 100, 200, 500],
+            page: true,
+            // totalRow: true,//开启合计
+            url: '/kh_info/kh_talk/get_kh_talk',
+            toolbar: '#head_toolbar', //开启头部工具栏，并为其绑定左侧模板
+            method: 'post',
+
+            cols: [[
+                { type: 'checkbox' },
+                { field: 'Id', title: 'Id', hide: true },
+                { field: 'guest_id', title: '访客ID', width: '8%' },
+                { field: 'guest_ip', title: '访客IP', width: '8%' },
+                { field: 'guest_area', title: '访客地域', width: '8%' },
+                { field: 'device', title: '使用设备', width: '8%' },
+                { field: 'referer', title: '来源页面', width: '8%' },
+                { field: 'land_page', title: '着陆页面', width: '8%' },
+                { field: 'talk_page', title: '咨询页面', width: '8%' },
+                { field: 'se', title: '搜索引擎', width: '8%' },
+                { field: 'kw', title: '关键词', width: '8%' },
+                { field: 'talk_type', title: '对话类型', width: '8%' },
+                { field: 'worker_id', title: '客服工号', width: '8%' },
+                { field: 'style_name', title: '风格名称', width: '8%' },
+                { field: 'talk_time', title: '对话时间', width: '8%' },
+                { field: 'end_time', title: '结束时间', width: '8%' },
+                { field: 'isMobile', title: '有无手机', width: '8%' },
+                { field: 'relink', title: '是否重连', width: '8%' },
+                { field: 'isTalk', title: '访客有说话', width: '8%' },
+                { field: '', title: '操作', toolbar: '#toolbar', width: '10%', fixed: 'right' }
+            ]],
+            done: function (res, curr, count) {
+
+            }
+        })
+
+        //头部工具
+        table.on('toolbar(lay_formfields)', function (obj) {
+            var checkStatus = table.checkStatus(obj.config.id);
+            switch (obj.event) {
+                case 'search':
+                    $('#search').slideToggle("slow");
+                    // console.log(obj)
+                    break;
+                case 'getCheckData':
+                    // console.log(checkStatus)
+                    var data = checkStatus.data;
+                    layer.alert(JSON.stringify(data));
+                    break;
+                case 'dels':
+                    let ids = [];
+                    checkStatus.data.forEach(index => {
+                        ids.push({ 'Id': index.Id, 'talk_id': index.talk_id });
+                    });
+                    // console.log(ids);
+                    if (ids.length > 0) {
+                        layer.confirm('确定删除？', function (index) {
+                            $.post('/kh_info/kh_talk/dels_kh_talk', { ids: ids }, function (res) {
+                                if (res.code == 0) {
+                                    layer.msg(res.msg, { time: 2000 })
+                                    form_table.reload();
+                                } else {
+                                    layer.alert(res.msg);
+                                }
+                            }, 'json');
+                            layer.close(index);
+                        });
+                    }
+                    break;
+            }
+        })
+
+        //监听行工具事件
+        table.on('tool(lay_formfields)', function (obj) {
+            switch (obj.event) {
+                case 'view':
+                    layer.open({
+                        type: 2,
+                        title: "查看消息",
+                        shadeClose: true,//外部关闭
+                        area: ['50%', '600px'],
+                        content: '/kh_info/kh_talk/view_kh_talk?talk_id=' + obj.data.talk_id + '&talk_time=' + obj.data.talk_time
+                    });
+                    break;
+                case 'del':
+                    layer.confirm('确定删除？', function (index) {
+                        // console.log(JSON.stringify(obj.data));
+                        let data = { id: obj.data.Id, talk_id: obj.data.talk_id };
+                        $.post('/kh_info/kh_talk/del_kh_talk', data, function (res) {
+                            if (res.code == 0) {
+                                layer.msg(res.msg, { time: 2000 })
+                                obj.del();
+                            } else {
+                                layer.alert(res.msg);
+                            }
+                        }, 'json');
+                        layer.close(index);
+                    });
+                    break;
+            }
+        })
+
+        //监听提交
+        form.on('submit(formDemo)', function (data) {
+            // layer.alert(JSON.stringify(data.field));
+            // console.log(data.field);
+            //重载表格
+            form_table.reload({
+                where: data.field
+            });
+            return false;
+        });
+
+        //日期渲染
+        laydate.render({
+            elem: "#sel_start_time",
+            type: 'datetime'
+        });
+        laydate.render({
+            elem: "#sel_end_time",
+            type: 'datetime'
+        });
+        form.render()
+    </script>
+
+    <script>
+        //监听前一天后一天按钮
+        function sel_time(num) {
+            //当前时间变量
+            var start_time = $('#sel_start_time').val();
+            var end_time = $('#sel_end_time').val();
+            if (start_time.length < 10) {
+                start_time = new Date();
+                start_time.setHours(0);
+                start_time.setMinutes(0);
+                start_time.setSeconds(0);
+            }
+            if (end_time.length < 10) {
+                end_time = new Date();
+                end_time.setHours(23);
+                end_time.setMinutes(59);
+                end_time.setSeconds(59);
+            }
+            start_time = new Date(start_time);
+            end_time = new Date(end_time);
+            //新的时间
+            var newdate = new Date(start_time.setDate(start_time.getDate() + num));
+            var end_time = new Date(end_time.setDate(end_time.getDate() + num));
+            var s_str = formatDate(newdate, 'yyyy-MM-dd hh:mm:ss');
+            var e_str = formatDate(end_time, 'yyyy-MM-dd hh:mm:ss');
+            $('#sel_start_time').val(s_str);
+            $('#sel_end_time').val(e_str);
+            return false;
+        }
+
+        //格式化日期函数
+        function formatDate(date, fmt) {
+            if (typeof date == 'string') {
+                return date;
+            }
+
+            if (!fmt) fmt = "yyyy-MM-dd hh:mm:ss";
+
+            if (!date || date == null) return null;
+            var o = {
+                'M+': date.getMonth() + 1, // 月份
+                'd+': date.getDate(), // 日
+                'h+': date.getHours(), // 小时
+                'm+': date.getMinutes(), // 分
+                's+': date.getSeconds(), // 秒
+                'q+': Math.floor((date.getMonth() + 3) / 3), // 季度
+                'S': date.getMilliseconds() // 毫秒
+            }
+            if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (date.getFullYear() + '').substr(4 - RegExp.$1.length))
+            for (var k in o) {
+                if (new RegExp('(' + k + ')').test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length === 1) ? (o[k]) : (('00' + o[k]).substr(('' + o[k]).length)))
+            }
+            return fmt
+        }
+    </script>
+</body>
+
+</html>

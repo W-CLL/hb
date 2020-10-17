@@ -1,0 +1,208 @@
+{include file="./static/header.html"/}
+
+<body>
+	<div class="layui-container">
+
+		<div class="layui-row">
+			<div class="layui-col-xs4 layui-col-sm3 layui-col-md2 layui-col-lg2">
+				<div class="layui-inline">
+					<div class="layui-input-inline">
+						<select id="sel_cate_id" class="layui-select">
+							<option value="">请选择分类</option>
+							{volist name='cate' id='vo'}
+							<option value="{$vo.Id}">{$vo.Cate}</option>
+							{/volist}
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="layui-col-xs4 layui-col-sm3 layui-col-md2 layui-col-lg2">
+				<div class="layui-inline">
+					<div class="layui-input-inline">
+						<select id="sel_status" lay-verify="required" lay-search="" class="layui-select">
+							<option value="">请选择</option>
+							<option value="0">所有人</option>
+							<option value="1">内部展示</option>
+							<option value="2">不展示</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="layui-col-xs4 layui-col-sm3 layui-col-md4 layui-col-lg4">
+				<div class="layui-inline">
+					<div class="layui-input-inline">
+						<input type="text"  class="layui-input" id="sel_time" placeholder="请选择日期范围">
+					</div>
+					<button class="layui-btn layui-btn-normal layui-btn-sm" id="lastday">前一天</button>
+					<div class="layui-input-inline">
+						<button class="layui-btn layui-btn-normal layui-btn-sm" id="nextday">后一天</button>
+					</div>
+				</div>
+			</div>
+			<div class="layui-col-xs4 layui-col-sm3 layui-col-md2 layui-col-lg2">
+				<div class="layui-inline">
+					<button class="layui-btn layui-btn-sm laymy-w1" id="search">搜索</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<table id="formfields_table" lay-filter="lay_formfields" class="layui-table"></table>
+	<script type="text/html" id="head_toolbar">
+		<div class="layui-btn-container">
+		  <button class="layui-btn layui-btn-sm" lay-event="insert_cate">新增分类</button>
+		  <button class="layui-btn layui-btn-sm" lay-event="update_cate">编辑分类</button>
+		  <button class="layui-btn layui-btn-sm layui-btn-danger" lay-event="del_cate">删除分类</button>
+		  <button class="layui-btn layui-btn-sm" lay-event="insert_data">新增资料</button>
+		</div>
+      </script>
+	<script type="text/html" id="toolbar">
+		<div class="layui-btn-container">
+          <button class="layui-btn layui-btn-sm" lay-event="update">编辑</button>
+		  <button class="layui-btn layui-btn-sm layui-btn-danger" lay-event="dels">删除</button>
+		</div>
+	  </script>
+
+
+	<!-- 导入日期选择扩展 -->
+	{include file="./static/js/selectdate.html" /}
+	<script>
+
+		var table = layui.table, layer = layui.layer, $ = layui.$, laydate = layui.laydate;
+		var myDate = new Date();
+		var date = myDate.getDate();
+		var h = myDate.getHours();       //获取当前小时数(0-23)
+		var m = myDate.getMinutes();     //获取当前分钟数(0-59)
+		var s = myDate.getSeconds();
+
+		//日期范围
+		laydate.render({
+			elem: '#sel_time'
+			,range: true
+        });
+
+		var form_table = table.render({
+			elem: '#formfields_table',
+			height: "full-70",
+			limit: 20,
+			limits: [20, 50, 100, 200, 500],
+			page: true,
+			totalRow: true,//开启合计
+			toolbar: '#head_toolbar', //开启头部工具栏，并为其绑定左侧模板
+			defaultToolbar: ['exports', 'print'],
+			url: '/get_manage_com_data',
+			method: 'get',
+			cols: [[
+				{ field: 'Id', title: 'ID', hide: true },
+				{ field: 'Cate_Name', title: '分类', totalRowText: '合计', sort: true },
+				{ field: 'Title', title: '标题', sort: true },
+				{ field: 'Label', title: '标签', sort: true },
+				// { field: 'Content', title: '内容', sort: true },
+				{ field: 'Status', title: '展示状态', sort: true },
+				{ field: 'Update_time', title: '更新时间', sort: true },
+				{ field: '', title: '操作', toolbar: '#toolbar' }
+			]],
+			done: function (res, curr, count) {
+
+			}
+
+		});
+		//监听头部工具行
+		table.on('toolbar(lay_formfields)', function (obj) {
+			var data = obj.data;
+			var event = obj.event;
+			var tr = obj.tr;
+			switch (event) {
+				case 'insert_cate': {
+					layer.open({
+						type: 2,
+						title: "新增分类",
+						area: ['500px', '500px'],
+						content: '/add_com_data_cate'
+					});
+					break;
+				}
+				case 'update_cate':{
+					layer.open({
+						type:2,
+						title:'编辑分类',
+						area:['500px','500px'],
+						content:'upd_com_data_cate'
+					});
+					break;
+				}
+				case 'del_cate':{
+					layer.open({
+						type:2,
+						title:"删除分类",
+						area:['500px','500px'],
+						content:'del_com_data_cate'
+					});
+					break;
+				}
+				case 'insert_data': {
+					// location.href = '/add_com_data';
+					layer.open({
+						type: 2,
+						title: "新增资料",
+						area: ['80%', '90%'],
+						content: '/add_com_data'
+					});
+					break;
+				}
+			}
+		});
+
+		//监听列工具行
+		table.on('tool(lay_formfields)', function (obj) {
+			var data = obj.data;
+			var event = obj.event;
+			var tr = obj.tr;
+			switch (event) {
+				case 'dels':
+					{
+						layer.confirm('是否确定删除？', { btn: ['确定', '取消'] }, function () {
+							$.post('/del_com_data', { Id: data.Id }, function (data) {
+								if(data.code === 0){
+									layer.msg(data.msg, { time: 1500 }, function () {
+											form_table.reload();
+									})
+								}else{
+									layer.open({content:data.msg});
+								}
+							}, 'json');
+						});
+						break;
+					}
+				case 'update':
+					{
+						// location.href = '/upd_com_data?Id=' + obj.data.Id;
+						layer.open({
+							type: 2,
+							title: "编辑项目信息",
+							area: ['80%', '90%'],
+							content: '/upd_com_data?Id=' + obj.data.Id
+						});
+						break;
+					}
+			}
+		});
+		//搜索
+		$("#search").click(function () {
+			var sel_cate_id = $("#sel_cate_id").val() || "";
+			var sel_status = $('#sel_status').val() || "";
+			var sel_time = $('#sel_time').val() || "";
+			form_table.reload({	//重载表格
+				where: {
+					sel_status: sel_status,
+					sel_cate_id: sel_cate_id,
+					sel_time: sel_time
+				}
+			});
+		});
+	</script>
+</body>

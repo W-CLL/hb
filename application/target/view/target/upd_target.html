@@ -1,0 +1,169 @@
+{include file="./static/header.html"/}
+
+<body>
+    <form class="layui-form" action="">
+        <input type="hidden" class="layui-input" value="{$list.Id}" name="Id"><br>
+        {if $Think.session.type<3}
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">负责人:</label>
+                <div class="layui-input-inline" id="adduserid">
+                    <select name="user_id" lay-verify="required" class="adduserid" lay-filter="select">
+                        <option value="{$list.User_Id}">{$list.Name}</option>
+                        {foreach $per as $k=>$v}
+                        <option value="{$v.User_Id}">{$v.Name}</option>
+                        {/foreach}
+                    </select>
+                </div>
+            </div>
+        </div>
+        {/if}
+        <div class="layui-form-item">
+            <div class="layui-inline ">
+                <label class="layui-form-label">可见用户:</label>
+                <div class="layui-input-inline" id="seeuser">
+                    {if(empty($list.see_user))}
+                    <select name="see_user_id[]"  lay-search="" class="seeuser"
+                        lay-filter="select">
+                        <option value="">请选择有权查看的用户</option>
+                        {foreach $per as $k=>$v}
+                        <option value="{$v.User_Id}">{$v.Name}</option>
+                        {/foreach}
+                    </select>
+                    {else /}
+                    {volist name="list.see_user" id="vo"}
+                    <select name="see_user_id[]" lay-search="" class="seeuser"
+                        lay-filter="select">
+                        <option value="{$vo.User_Id}">{$vo.Name}</option>
+                        {foreach $per as $k=>$v}
+                        <option value="{$v.User_Id}">{$v.Name}</option>
+                        {/foreach}
+                    </select>
+                    {/volist}
+                    {/if}
+                </div>
+                <button class="layui-btn" onclick="add('seeuser');" type="button">继续添加</button>
+                <button class="layui-btn layui-btn-danger" onclick="del('seeuser');" type="button">删除追加</button>
+            </div>
+        </div>
+        {if $Think.session.type<3}
+        <div class="layui-form-item">
+            <label class="layui-form-label">工作目标:</label>
+            <div class="layui-input-inline">
+                <input type="text" name="work_target" lay-verify="required" placeholder="请输入工作目标" autocomplete="off"
+                    class="layui-input" value="{$list.Work_Target}">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">截止时间</label>
+            <div class="layui-input-inline">
+              <input type="text" name="end_time" class="layui-input" id="test5" lay-verify="required" placeholder="" value="{$list.End_time}">
+            </div>
+        </div>
+        {/if}
+        <!-- <div class="layui-form-item">
+            <label class="layui-form-label">创建时间</label>
+            <div class="layui-input-inline">
+                <input type="text" name="Create_time" class="layui-input" id="test5" placeholder="请输入目标完成时间"
+                    autocomplete="off" value="{$list.Create_time}">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">完成时间</label>
+            <div class="layui-input-inline">
+                <input type="text" name="complete_time" class="layui-input" id="test5" placeholder="请输入目标完成时间"
+                    autocomplete="off" value="{$list.Complete_time}">
+            </div>
+        </div> -->
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">完成状态:</label>
+            <div class="layui-input-block">
+                <input type="radio" name="status" value="0" title="已完成" {if $list.Status==0}checked=""{/if}>
+                <input type="radio" name="status" value="1" title="待完成" {if $list.Status==1}checked=""{/if} >
+            </div>
+        </div>
+        {if $Think.session.type<3}
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">备注:</label>
+            <div class="layui-input-block">
+                <textarea class="layui-textarea" name="remarks" lay-verify="" placeholder="请输入备注,255字以内"
+                    style="width:400px" autocomplete="off">{$list.Remarks}</textarea>
+            </div>
+        </div>
+        {/if}
+        <div class="layui-form-item">
+            <label class="layui-form-label">负责人反馈:</label>
+            <div class="layui-input-inline">
+                <textarea class="layui-textarea" name="feedback" lay-verify="" placeholder="请输入反馈情况，255字以内"
+                    style="width:400px" autocomplete="off">{$list.Feedback}</textarea>
+            </div>
+        </div>
+
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button type="submit" class="layui-btn" lay-submit="" lay-filter="add">立即更新</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+
+    </form>
+
+    <script type="text/javascript">
+        layui.use('form', function () {
+            var layer = layui.layer, $ = layui.$, laydate = layui.laydate, form = layui.form;
+
+            //追加按钮
+            add = function (val) {
+                $('#' + val).children(":first").clone(true).appendTo('#' + val)
+                form.render();
+            }
+
+            //删除操作
+            del = function (val) {
+                if ($('#' + val).children().length == "1") {
+                    layer.alert("没有可删除的节点了")
+                } else {
+                    $('#' + val).children("." + val).remove()
+                    $('#' + val).children(":last").remove()
+                }
+                form.render();
+            }
+
+            //表单提交
+            form.on('submit(add)', function (data) {
+                $.post('/upd_target_do', data.field, function (obj) {
+                    layer.alert(obj.msg, function () {
+                        if (obj.code === 0) {
+                            
+                            //window.parent.location.reload();//刷新父页面，这样直接刷新会导致检索条件也刷新
+                            parent.layui.table.reload("formfields_table");//所以还是刷新父页面的表格
+                            //关闭弹层
+                            var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+                            parent.layer.close(index); //再执行关闭
+                        }
+                    });
+                }, 'json');
+                return false;
+            });
+
+            form.on('select(select)', function (data) {
+                form.render('select');
+            });
+
+
+            //但是，如果你的HTML是动态生成的，自动渲染就会失效
+            //因此你需要在相应的地方，执行下述方法来进行渲染
+
+            //日期时间选择器
+            laydate.render({
+                elem: '#test5'
+                , type: 'datetime'
+            });
+            form.render();//只有执行了这一步，部分表单元素才会自动修饰成功
+        });
+    </script>
+
+</body>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昨日消费记录</title>
+</head>
+
+<body>
+    <style type="text/css" media="all">
+        * {
+            margin: 0;
+        }
+
+        #content {
+            padding-top: 20px;
+            width: 100%;
+            padding-left: 20px;
+        }
+
+        #content>div {
+            height: 24px;
+            border-bottom: black 1px solid;
+            width: 90%;
+        }
+
+        .key {
+            width: 30%;
+            float: left;
+        }
+
+        .value {
+            color: #173177;
+            width: 60%;
+            float: right;
+        }
+    </style>
+    <div id="content">
+        <div>
+            <div class="key">名称：</div>
+            <div class="value">{$list.Client}</div>
+        </div>
+        <div>
+            <div class="key">项目：</div>
+            <div class="value">{$list.ProjectName}</div>
+        </div>
+        <div>
+            <div class="key">消费/币：</div>
+            <div class="value">{$list.Money_Coin}</div>
+        </div>
+        <div>
+            <div class="key">消费/元：</div>
+            <div class="value">{$list.Money_Con}</div>
+        </div>
+        <div>
+            <div class="key">展现：</div>
+            <div class="value">{$list.ShowCon}</div>
+        </div>
+        <div>
+            <div class="key">点击：</div>
+            <div class="value">{$list.Click}</div>
+        </div>
+        <div>
+            <div class="key">对话数量：</div>
+            <div class="value">{$list.Dialogue}</div>
+        </div>
+        <div>
+            <div class="key">留电数量：</div>
+            <div class="value">{$list.Phone}</div>
+        </div>
+        <div>
+            <div class="key">留言数量：</div>
+            <div class="value">{$list.Message}</div>
+        </div>
+        <div>
+            <div class="key">对话：</div>
+            <div class="value">{$list.Dialogue}</div>
+        </div>
+        <div>
+            <div class="key">线索总数：</div>
+            <div class="value">{$list.CueSum}</div>
+        </div>
+        <div>
+            <div class="key">对话成本：</div>
+            <div class="value">{$list.DialogueCost}</div>
+        </div>
+        <div>
+            <div class="key">线索成本：</div>
+            <div class="value">{$list.CueCost}</div>
+        </div>
+        <div>
+            <div class="key">日期：</div>
+            <div class="value">{$list.Date}</div>
+        </div>
+
+    </div>
+</body>
+
+</html>

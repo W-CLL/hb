@@ -1,0 +1,51 @@
+    {include file="./static/header.html"/}
+
+    <body>
+
+<table id="formfields_table" lay-filter="lay_formfields" class="layui-table"></table>
+
+ </div>
+
+  </div>
+
+  <script>
+
+
+
+		var table = layui.table,layer = layui.layer,$=layui.$,laydate = layui.laydate;
+
+
+
+		var form_table = table.render({
+
+			elem:'#formfields_table',
+
+			height:"full-70",
+
+			url:"/public/index.php/get_view_project?Id={$Id}",
+
+			method:'get',
+
+			cols:[[
+
+				{field:'Pro_User',title:'推广账号'},
+
+				{field:'Pro_Psw',title:'推广账号密码'},
+
+				{field:'User_53',title:'53账号'},
+
+				{field:'Psw_53',title:'53密码'},
+
+				{field:'Code_53',title:'项目53代码'},
+
+			]],
+
+
+
+				})
+
+
+
+  </script>
+
+	 </body>

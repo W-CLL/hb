@@ -1,0 +1,83 @@
+{include file="./static/header.html"/}
+
+<body>
+    {if $Think.session.openid}
+    <div style="height:40px;text-align:center;font-size:20px">该账号已经绑定以下微信</div>
+    <div style="padding-top:20px;">
+        <form class="layui-form" action="" style="width: 80%;">
+            <input type="text" name="userid" lay-verify="required" value="{$weixin.User_Id}" disabled="" hidden>
+            <input type="text" name="openid" lay-verify="required" value="{$weixin.OpenID}" disabled="" hidden>
+            <div class="layui-form-item">
+                <label class="layui-form-label">头像</label>
+                 <div class="layui-input-block">
+                   <img src="{$weixin.Headimgurl}" alt="微信头像" style="width:128px;height:128px;"/>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">昵称</label>
+                <div class="layui-input-block">
+                    <input type="text" name="username" lay-verify="required" autocomplete="off"
+                        value="{$weixin.Nickname}" disabled="" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">性别</label>
+                <div class="layui-input-block">
+                    <input type="radio" class="layui-input" name="sx" value="1" title="男" {if $weixin.Sex==1} checked="" {/if}>
+                    <input type="radio" class="layui-input" name="sx" value="2" title="女"  {if $weixin.Sex==2} checked="" {/if}>
+                    <input type="radio" class="layui-input" name="sx" value="0" title="未知" {if $weixin.Sex==0} checked="" {/if}>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">地域</label>
+                <div class="layui-input-block">
+                    <input type="text" name="City" autocomplete="off" value="{$weixin.Province} {$weixin.City}"
+                        disabled="" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit lay-filter="unbind">解除绑定</button>
+                </div>
+            </div>
+        </form>
+        <div style="text-align:center">如果信息有误可以尝试解除绑定重新进行绑定</div>
+    </div>
+    {else /}
+    <div style="text-align: center;width: 300px;margin: 0 auto;">
+        扫描二维码关注公众号即可绑定微信
+        <img id="qrcode" src="http://umbed.site/wx_qrcode?ticket={$ticket}" alt="微信二维码"
+            style="width:240px;height:240px" />
+    </div>
+    {/if}
+
+    <script type="text/javascript">
+        layui.use('form', function () {
+            var form = layui.form;
+            //监听提交
+            form.on('submit(unbind)', function (data) {
+                // layer.alert(JSON.stringify(data.field), {
+                //     title: '解除绑定'
+                // })
+                layer.confirm('解除绑定将无法使用相关功能，确定解除绑定?', { icon: 3, title: '提示' }, function (index) {
+                    $.post('/wxapi/wx/unbindwx', data.field, function (res) {
+                        if (res.code == 0) {
+                            layer.msg(res.msg, { time: 2000 }, function () {
+                                location.href = '/bindwx';
+                            })
+                        } else {
+                            layer.open({ content: res.msg });
+                        }
+                    })
+                })
+                return false;
+            });
+
+            form.render();//只有执行了这一步，部分表单元素才会自动修饰成功
+
+        })
+    </script>
+
+</body>
+
+</html>

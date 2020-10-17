@@ -1,0 +1,129 @@
+{include file="./static/header.html"/}
+
+
+<table id="formfields_table" lay-filter="lay_formfields" class="layui-table"></table>
+
+<script type="text/html" id="head_toolbar">
+    <div><button class="layui-btn layui-btn-sm layui-btn-info" lay-event="add">添加</button></div>
+</script>
+
+<script type="text/html" id="toolbar">
+    <div class="layui-btn-container">
+        <button class="layui-btn layui-btn-sm layui-btn-info" lay-event="upd">编辑</button>
+
+        {{#  if(d.status == 0){ }}
+            <button class="layui-btn layui-btn-sm layui-btn-normal" lay-event="stop">自动拉取</button>
+        {{#  } else { }}
+            <button class="layui-btn layui-btn-sm layui-btn-warm" lay-event="stop">暂停拉取</button>
+        {{#  } }}
+        
+        <button class="layui-btn layui-btn-sm layui-btn-danger" lay-event="del">删除</button>
+    </div>
+</script>
+
+<script>
+    var table = layui.table, layer = layui.layer, $ = layui.$, laypage = layui.laypage, laydate = layui.laydate;
+    var form_table = table.render({
+        elem: '#formfields_table',
+        height: "full-70",
+        limit: 20,
+        limits: [20, 50, 100, 200, 500],
+        page: true,
+        totalRow: true,//开启合计
+        toolbar: '#head_toolbar', //开启头部工具栏，并为其绑定左侧模板
+        defaultToolbar: ['exports', 'print'],
+        url: '/feiyu/accounts/get_accounts',
+        method: 'get',
+        cols: [[ //标题栏
+            , { field: 'Id', title: 'id', hide: true }
+            , { field: 'Pro_Id', title: 'id', hide: true }
+            , { field: 'Client_Id', title: '客户id', hide: true }
+            , { field: 'Client', title: '客户', }
+            , { field: 'Pro_User', title: '推广账号', }
+            , { field: 'Name', title: '名称', }
+            // , { field: 'Key', title: '秘钥', }
+            // , { field: 'Token', title: 'Token', }
+            , { field: '', title: '操作', width: 220, toolbar: '#toolbar', fixed: 'right' }
+        ]],
+        done: function (res, curr, count) {
+
+        }
+    });
+    //头部工具
+    table.on('toolbar(lay_formfields)', function (obj) {
+        var checkStatus = table.checkStatus(obj.config.id);
+        switch (obj.event) {
+            case 'add':
+                layer.open({
+                    type: 2,
+                    title: '添加',
+                    area: ['650px', '450px'],
+                    // shade: [0.3, '#ffffff'],
+                    shadeClose: true,
+                    content: '/feiyu/accounts/add_accounts',
+                })
+                break;
+        }
+    })
+
+    //监听列工具行
+    table.on('tool(lay_formfields)', function (obj) {
+        // console.log(obj.data)
+        var data = obj.data;
+        var event = obj.event;
+        switch (event) {
+            case 'upd':
+                layer.open({
+                    type: 2,
+                    title: '编辑',
+                    area: ['650px', '450px'],
+                    // shade: [0.3, '#ffffff'],
+                    shadeClose: true,
+                    content: "/feiyu/accounts/upd_accounts?id=" + data.Id,
+                })
+                break;
+            case 'del':
+                layer.confirm('是否确定删除？', { btn: ['确定', '取消'] }, function () {
+                    $.ajax({
+                        url: "/feiyu/accounts/del_accounts_do?id=" + data.Id,
+                        data: {},
+                        type: "delete",
+                        dataType: "json",
+                        success: function (data) {
+                            layer.alert(data.msg, function (index) {
+                                layer.close(index)
+                                if (data.code === 0) {
+                                    form_table.reload();
+                                }
+                            });
+                        },
+                        error: function (data) {
+                            layer.alert('错误', data.msg);
+                        }
+                    });
+                });
+                break;
+            case 'stop':
+                layer.confirm('是否确定？', { btn: ['确定', '取消'] }, function () {
+                    $.ajax({
+                        url: "/feiyu/accounts/upd_status/",
+                        data: { id: data.Id, status: data.status },
+                        type: "put",
+                        dataType: "json",
+                        success: function (data) {
+                            layer.alert(data.msg, function (index) {
+                                layer.close(index)
+                                if (data.code === 0) {
+                                    form_table.reload();
+                                }
+                            });
+                        },
+                        error: function (data) {
+                            layer.alert('错误', data.msg);
+                        }
+                    });
+                });
+                break;
+        }
+    });
+</script>

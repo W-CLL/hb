@@ -1,0 +1,181 @@
+think\Exception: fields not exists:[User_id] in D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Builder.php:229
+Stack trace:
+#0 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Builder.php(1485): think\db\Builder->parseData(Array, Array)
+#1 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Query.php(4531): think\db\Builder->insert(Array, Array, false)
+#2 D:\wwwroot\www.hb.demo\application\project\controller\Project.php(347): think\db\Query->insert(Array)
+#3 [internal function]: app\project\controller\Project->ins_project_do()
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\project\controller\Project), Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#7 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#8 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#9 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#10 {main}
+think\Exception: fields not exists:[User_id] in D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Builder.php:229
+Stack trace:
+#0 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Builder.php(1485): think\db\Builder->parseData(Array, Array)
+#1 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Query.php(4531): think\db\Builder->insert(Array, Array, false)
+#2 D:\wwwroot\www.hb.demo\application\project\controller\Project.php(347): think\db\Query->insert(Array)
+#3 [internal function]: app\project\controller\Project->ins_project_do()
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\project\controller\Project), Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#7 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#8 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#9 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#10 {main}
+think\Exception: fields not exists:[User_id] in D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Builder.php:229
+Stack trace:
+#0 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Builder.php(1485): think\db\Builder->parseData(Array, Array)
+#1 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Query.php(4531): think\db\Builder->insert(Array, Array, false)
+#2 D:\wwwroot\www.hb.demo\application\project\controller\Project.php(347): think\db\Query->insert(Array)
+#3 [internal function]: app\project\controller\Project->ins_project_do()
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\project\controller\Project), Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#7 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#8 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#9 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#10 {main}
+think\Exception: fields not exists:[User_id] in D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Builder.php:229
+Stack trace:
+#0 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Builder.php(1485): think\db\Builder->parseData(Array, Array)
+#1 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Query.php(4531): think\db\Builder->insert(Array, Array, false)
+#2 D:\wwwroot\www.hb.demo\application\project\controller\Project.php(347): think\db\Query->insert(Array)
+#3 [internal function]: app\project\controller\Project->ins_project_do()
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\project\controller\Project), Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#7 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#8 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#9 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#10 {main}
+think\Exception: fields not exists:[User_id] in D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Builder.php:229
+Stack trace:
+#0 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Builder.php(1485): think\db\Builder->parseData(Array, Array)
+#1 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Query.php(4531): think\db\Builder->insert(Array, Array, false)
+#2 D:\wwwroot\www.hb.demo\application\project\controller\Project.php(347): think\db\Query->insert(Array)
+#3 [internal function]: app\project\controller\Project->ins_project_do()
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\project\controller\Project), Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#7 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#8 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#9 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#10 {main}
+think\exception\ErrorException: implode(): Invalid arguments passed in D:\wwwroot\www.hb.demo\application\project\controller\Project.php:325
+Stack trace:
+#0 [internal function]: think\Error::appError(2, 'implode(): Inva...', 'D:\\wwwroot\\www....', 325, Array)
+#1 D:\wwwroot\www.hb.demo\application\project\controller\Project.php(325): implode('@,', NULL)
+#2 [internal function]: app\project\controller\Project->ins_project_do()
+#3 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\project\controller\Project), Array)
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#7 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#8 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#9 {main}
+think\exception\ErrorException: implode(): Invalid arguments passed in D:\wwwroot\www.hb.demo\application\project\controller\Project.php:325
+Stack trace:
+#0 [internal function]: think\Error::appError(2, 'implode(): Inva...', 'D:\\wwwroot\\www....', 325, Array)
+#1 D:\wwwroot\www.hb.demo\application\project\controller\Project.php(325): implode('@,', NULL)
+#2 [internal function]: app\project\controller\Project->ins_project_do()
+#3 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\project\controller\Project), Array)
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#7 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#8 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#9 {main}
+think\exception\ErrorException: implode(): Invalid arguments passed in D:\wwwroot\www.hb.demo\application\project\controller\Project.php:325
+Stack trace:
+#0 [internal function]: think\Error::appError(2, 'implode(): Inva...', 'D:\\wwwroot\\www....', 325, Array)
+#1 D:\wwwroot\www.hb.demo\application\project\controller\Project.php(325): implode('@,', NULL)
+#2 [internal function]: app\project\controller\Project->ins_project_do()
+#3 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\project\controller\Project), Array)
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#7 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#8 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#9 {main}
+think\exception\ErrorException: implode(): Invalid arguments passed in D:\wwwroot\www.hb.demo\application\project\controller\Project.php:325
+Stack trace:
+#0 [internal function]: think\Error::appError(2, 'implode(): Inva...', 'D:\\wwwroot\\www....', 325, Array)
+#1 D:\wwwroot\www.hb.demo\application\project\controller\Project.php(325): implode('@,', NULL)
+#2 [internal function]: app\project\controller\Project->ins_project_do()
+#3 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\project\controller\Project), Array)
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#7 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#8 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#9 {main}
+think\exception\ErrorException: implode(): Invalid arguments passed in D:\wwwroot\www.hb.demo\application\project\controller\Project.php:325
+Stack trace:
+#0 [internal function]: think\Error::appError(2, 'implode(): Inva...', 'D:\\wwwroot\\www....', 325, Array)
+#1 D:\wwwroot\www.hb.demo\application\project\controller\Project.php(325): implode('@,', NULL)
+#2 [internal function]: app\project\controller\Project->ins_project_do()
+#3 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\project\controller\Project), Array)
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#7 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#8 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#9 {main}
+think\Exception: fields not exists:[Change_Log] in D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Builder.php:229
+Stack trace:
+#0 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Builder.php(1485): think\db\Builder->parseData(Array, Array)
+#1 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Query.php(4531): think\db\Builder->insert(Array, Array, false)
+#2 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Query.php(4609): think\db\Query->insert(Array, false, true, NULL)
+#3 D:\wwwroot\www.hb.demo\application\project\controller\Project.php(359): think\db\Query->insertGetId(Array)
+#4 [internal function]: app\project\controller\Project->ins_project_do()
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\project\controller\Project), Array)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#7 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#8 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#9 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#10 D:\wwwroot\www.hb.demo\public\index.php(32): require('D:\\wwwroot\\www....')
+#11 {main}
+think\exception\PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE8\xBE\x93\xE5\x85\xA5...' for column 'Brand' at row 1 in D:\phpstudy_pro\WWW\thinkphp\library\think\db\Connection.php:905
+Stack trace:
+#0 D:\phpstudy_pro\WWW\thinkphp\library\think\db\Query.php(537): think\db\Connection->execute('INSERT INTO `pr...', Array, Object(think\db\Query))
+#1 D:\phpstudy_pro\WWW\thinkphp\library\think\db\Query.php(4549): think\db\Query->execute('INSERT INTO `pr...', Array, Object(think\db\Query))
+#2 D:\phpstudy_pro\WWW\thinkphp\library\think\db\Query.php(4609): think\db\Query->insert(Array, false, true, NULL)
+#3 D:\phpstudy_pro\WWW\application\project\controller\Project.php(362): think\db\Query->insertGetId(Array)
+#4 [internal function]: app\project\controller\Project->ins_project_do()
+#5 D:\phpstudy_pro\WWW\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\project\controller\Project), Array)
+#6 D:\phpstudy_pro\WWW\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#7 D:\phpstudy_pro\WWW\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#8 D:\phpstudy_pro\WWW\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#9 D:\phpstudy_pro\WWW\thinkphp\start.php(37): think\App::run()
+#10 D:\phpstudy_pro\WWW\public\index.php(32): require('D:\\phpstudy_pro...')
+#11 {main}
+think\exception\PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE8\xBE\x93\xE5\x85\xA5...' for column 'Brand' at row 1 in D:\phpstudy_pro\WWW\thinkphp\library\think\db\Connection.php:905
+Stack trace:
+#0 D:\phpstudy_pro\WWW\thinkphp\library\think\db\Query.php(537): think\db\Connection->execute('INSERT INTO `pr...', Array, Object(think\db\Query))
+#1 D:\phpstudy_pro\WWW\thinkphp\library\think\db\Query.php(4549): think\db\Query->execute('INSERT INTO `pr...', Array, Object(think\db\Query))
+#2 D:\phpstudy_pro\WWW\thinkphp\library\think\db\Query.php(4609): think\db\Query->insert(Array, false, true, NULL)
+#3 D:\phpstudy_pro\WWW\application\project\controller\Project.php(362): think\db\Query->insertGetId(Array)
+#4 [internal function]: app\project\controller\Project->ins_project_do()
+#5 D:\phpstudy_pro\WWW\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\project\controller\Project), Array)
+#6 D:\phpstudy_pro\WWW\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#7 D:\phpstudy_pro\WWW\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#8 D:\phpstudy_pro\WWW\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#9 D:\phpstudy_pro\WWW\thinkphp\start.php(37): think\App::run()
+#10 D:\phpstudy_pro\WWW\public\index.php(32): require('D:\\phpstudy_pro...')
+#11 {main}
+think\exception\PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE8\xBE\x93\xE5\x85\xA5...' for column 'Brand' at row 1 in D:\phpstudy_pro\WWW\thinkphp\library\think\db\Connection.php:905
+Stack trace:
+#0 D:\phpstudy_pro\WWW\thinkphp\library\think\db\Query.php(537): think\db\Connection->execute('INSERT INTO `pr...', Array, Object(think\db\Query))
+#1 D:\phpstudy_pro\WWW\thinkphp\library\think\db\Query.php(4549): think\db\Query->execute('INSERT INTO `pr...', Array, Object(think\db\Query))
+#2 D:\phpstudy_pro\WWW\thinkphp\library\think\db\Query.php(4609): think\db\Query->insert(Array, false, true, NULL)
+#3 D:\phpstudy_pro\WWW\application\project\controller\Project.php(363): think\db\Query->insertGetId(Array)
+#4 [internal function]: app\project\controller\Project->ins_project_do()
+#5 D:\phpstudy_pro\WWW\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\project\controller\Project), Array)
+#6 D:\phpstudy_pro\WWW\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#7 D:\phpstudy_pro\WWW\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#8 D:\phpstudy_pro\WWW\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#9 D:\phpstudy_pro\WWW\thinkphp\start.php(37): think\App::run()
+#10 D:\phpstudy_pro\WWW\public\index.php(32): require('D:\\phpstudy_pro...')
+#11 {main}

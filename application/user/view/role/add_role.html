@@ -1,0 +1,52 @@
+{include file="./static/header.html"/}
+
+<body>
+    <div class="layui-container">
+        <form class="layui-form" action="">
+            <div class="layui-form-item">
+                <label class="layui-form-label">角色名称</label>
+                <div class="layui-input-block">
+                    <input type="text" name="Type_Name" lay-verify="required" autocomplete="off" placeholder="请输入角色名称"
+                        class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button type="submit" class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        layui.use(['form', 'layedit', 'laydate'], function () {
+            var form = layui.form, layer = layui.layer, $ = layui.$
+
+            //监听提交
+            form.on('submit(demo1)', function (data) {
+                layer.confirm('确定创建角色？', function () {
+                    // console.log(data.field);
+                    //提交数据
+                    $.ajax({
+                        type: 'put',
+                        url: '/public/index.php/add_role',
+                        data: data.field,
+                        success: function (res) {
+                            // console.log(res)
+                            layer.alert(res.msg, function () {
+                                if (res.code === 0) {
+                                    parent.layui.table.reload("formfields_table");//刷新父页面的表格
+                                    //关闭弹层
+                                    var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+                                    parent.layer.close(index); //再执行关闭
+                                }
+                            });
+                        }
+                    })
+
+                })
+                return false;
+            });
+        })
+    </script>
+</body>

@@ -1,0 +1,111 @@
+{include file="./static/header.html"/}
+<body>
+<div class="layui-container">
+    <form class="layui-form" action="">
+        <input type="hidden" name="id" value="{$list.Id}">
+        <div class="layui-form-item">
+            <label class="layui-form-label">客户名:</label>
+            <div class="layui-input-block" style="padding-top: 10px;">
+                {$list.Name}
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">项目名:</label>
+            <div class="layui-input-block" style="padding-top: 10px;">
+                {$list.ProjectName}
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">推广账号:</label>
+            <div class="layui-input-block" style="padding-top: 10px;">
+                {$list.Pro_User}
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">消费金额:</label>
+            <div class="layui-input-block">
+                <input type="text" name="money_con" value="{$list.Money_Con}" lay-verify="number" placeholder="请输入充值金额" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">展现数量:</label>
+            <div class="layui-input-block">
+                <input type="text" name="showcon" value="{$list.ShowCon}" lay-verify="number"  autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">点击数量:</label>
+            <div class="layui-input-block">
+                
+                <input type="text" name="click" value="{$list.Click}" lay-verify="number"  autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">对话数量:</label>
+            <div class="layui-input-block">
+                <input type="text" name="dialogue" value="{$list.Dialogue}" lay-verify="number" placeholder="请输入充值金额" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">留电数量:</label>
+            <div class="layui-input-block">
+                <input type="text" name="phone" value="{$list.Phone}" lay-verify="number" placeholder="请输入充值金额" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+        <label class="layui-form-label">留言数量:</label>
+        <div class="layui-input-block">
+            <input type="text" name="message" value="{$list.Message}" lay-verify="number" placeholder="请输入充值金额" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+        <div class="layui-form-item">
+        <label class="layui-form-label">消费备注:</label>
+        <div class="layui-input-block">
+            <input type="text" name="remarks" value="{$list.Remarks}"  autocomplete="off" class="layui-input">
+        </div>
+    </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">充值时间:</label>
+            <div class="layui-input-block">
+                <input type="text" class="layui-input" name="date" value="{$list.Date}" id="test5" placeholder="yyyy-MM-dd">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button type="submit" class="layui-btn" lay-submit="" lay-filter="upd">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </form>
+    <script type="text/javascript">
+        layui.use('form', function(){
+            var	layer = layui.layer,$=layui.$,laydate = layui.laydate,form = layui.form;//只有执行了这一步，部分表单元素才会自动修饰成功
+            //表单提交
+            form.on('submit(upd)',function(data){
+                $.post('/public/index.php/upd_promotion_con_do',data.field,function(obj){
+                    // parent.layer.table.reload();
+                    layer.alert(obj.msg,function(index){
+                        if(obj.code===0){
+                            //window.parent.location.reload();//刷新父页面，这样直接刷新会导致检索条件也刷新
+                            parent.layui.table.reload("formfields_table");//所以还是刷新父页面的表格
+                            //关闭弹层
+                            var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+                            parent.layer.close(index); //再执行关闭
+                        }
+                    });
+                },'json');
+                return false;
+            });
+            //但是，如果你的HTML是动态生成的，自动渲染就会失效
+            //因此你需要在相应的地方，执行下述方法来进行渲染
+            //日期时间选择器
+            laydate.render({
+                elem: '#test5'
+                ,format: 'yyyy-MM-dd'
+            });
+            // form.render();
+        });
+    </script>
+</div>
+</body>

@@ -1,0 +1,259 @@
+{include file="./static/header.html"/}
+
+<body>
+  <form class="layui-form" action="">
+    <input type="hidden" class="layui-input" value="{$list.Id}" name="Id">
+    <div class="layui-form-item">
+      <div class="layui-inline">
+        <label class="layui-form-label">客户:</label>
+        <div class="layui-input-inline">
+          <select name="client_id" lay-verify="required" lay-search="" lay-filter="select">
+            <option value="{$list.Client_Id}">{$list.Client}</option>
+            <!-- <option value="">直接选择或搜索选择</option> -->
+            {foreach $cli as $k=>$v}
+            <option value="{$v.User_Id}">{$v.Name}</option>
+            {/foreach}
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="layui-form-item">
+      <label class="layui-form-label">项目等级:</label>
+      <div class="layui-input-inline">
+        <select name="projectgrade" lay-filter="select">
+          <option value="{$list.ProjectGrade}">{$list.ProjectGrade}</option>
+          <option value="A">A</option>
+          <option value="B+">B+</option>
+          <option value="B">B</option>
+          <option value="C+">C+</option>
+          <option value="C">C</option>
+        </select>
+      </div>
+      <div class="layui-form-mid layui-word-aux">代表项目优先度</div>
+    </div>
+
+
+    <div class="layui-form-item">
+      <div class="layui-inline">
+        <label class="layui-form-label">负责人:</label>
+        <div class="layui-input-inline">
+          <select name="user_id" lay-verify="required" lay-search="" lay-filter="select">
+            <option value="{$list.User_Id}">{$list.Name}</option>
+            <option value="">直接选择或搜索选择</option>
+            {foreach $per as $k=>$v}
+            <option value="{$v.User_Id}">{$v.Name}</option>
+            {/foreach}
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="layui-form-item">
+      <div class="layui-inline ">
+        <label class="layui-form-label">可见用户:</label>
+        <div class="layui-input-inline" id="seeuser">
+          {if(empty($list.see_user))}
+          <select name="see_user_id[]" lay-verify="required" lay-search="" class="seeuser" lay-filter="select">
+            <option value="">请选择有权查看的用户</option>
+            {foreach $per as $k=>$v}
+            <option value="{$v.User_Id}">{$v.Name}</option>
+            {/foreach}
+            <!-- 合作伙伴 -->
+            {foreach $part as $k=>$v}
+            <option value="{$v.User_Id}">{$v.Name}</option>
+            {/foreach}
+          </select>
+          {else /}
+          {volist name="list.see_user" id="vo"}
+          <select name="see_user_id[]" lay-verify="required" lay-search="" class="seeuser" lay-filter="select">
+            <option value="{$vo.User_Id}">{$vo.Name}</option>
+            {foreach $per as $k=>$v}
+            <option value="{$v.User_Id}">{$v.Name}</option>
+            {/foreach}
+            <!-- 合作伙伴 -->
+            {foreach $part as $k=>$v}
+            <option value="{$v.User_Id}">{$v.Name}</option>
+            {/foreach}
+          </select>
+          {/volist}
+          {/if}
+        </div>
+        <div class="layui-input-inline"><button class="layui-btn" onclick="add('seeuser');" type="button">继续添加 </button>
+        </div>
+        <div class="layui-input-inline"><button class="layui-btn layui-btn-danger" onclick="del('seeuser');"
+            type="button">删除追加</button></div>
+      </div>
+    </div>
+
+    <div class="layui-form-item">
+      <label class="layui-form-label">项目名称:</label>
+      <div class="layui-input-inline">
+        <input type="text" name="projectname" value="{$list.ProjectName}" lay-verify="required" placeholder="请输入项目名"
+          autocomplete="off" class="layui-input">
+      </div>
+    </div>
+
+    <div class="layui-form-item">
+      <div class="layui-inline">
+        <label class="layui-form-label">时间范围</label>
+        <div class="layui-input-inline">
+          <input type="text" class="layui-input" id="test9" placeholder=" - " name="time" lay-verify="required"
+            value="{$list.ExtensionStart} - {$list.ExtensionEnd}">
+        </div>
+      </div>
+    </div>
+    <div class="layui-form-item">
+      <div class="layui-inline ">
+        <label class="layui-form-label">推广账号:</label>
+        <div class="layui-input-inline" id="promotion">
+          {volist name="list.pro_user" id="vo"}
+          <select name="pro_user_id[]" lay-verify="required" lay-search="" class="promotion" lay-filter="select">
+            <option value="{$vo.Id}">{$vo.Pro_User}</option>
+            {foreach $pro_user as $k=>$v}
+            <option value="{$v.Id}">{$v.Pro_User}</option>
+            {/foreach}
+          </select>
+          {/volist}
+        </div>
+        <div class="layui-input-inline"><button class="layui-btn" onclick="add('promotion');" type="button">继续添加
+          </button></div>
+        <div class="layui-input-inline"><button class="layui-btn layui-btn-danger" onclick="del('promotion');"
+            type="button">删除追加</button></div>
+      </div>
+    </div>
+
+    </div>
+    <div class="layui-form-item">
+      <div class="layui-inline">
+        <label class="layui-form-label">53账号:</label>
+        <div class="layui-input-inline" id="user_53">
+          {volist name="list.user_53" id="vo"}
+          <select name="user_53_id[]" lay-verify="required" lay-search="" class="user_53" lay-filter="select">
+            <option value="{$vo.Id}">{$vo.User_53}</option>
+            {foreach $user_53 as $k=>$v}
+            <option value="{$v.Id}">{$v.User_53}</option>
+            {/foreach}
+          </select>
+          {/volist}
+        </div>
+        <div class="layui-input-inline"><button class="layui-btn" onclick="add('user_53');" type="button">继续添加 </button>
+        </div>
+        <div class="layui-input-inline"><button class="layui-btn layui-btn-danger" onclick="del('user_53');"
+            type="button">删除追加</button></div>
+      </div>
+    </div>
+    <div class="layui-form-item">
+      <label class="layui-form-label">项目53代码:</label>
+      <div class="layui-input-inline">
+        <input type="text" name="code_53" value="{$list.Code_53}" lay-verify="required" placeholder="请输入项目53代码"
+          autocomplete="off" class="layui-input">
+      </div>
+    </div>
+    <div class="layui-form-item">
+      <label class="layui-form-label">目标成本:</label>
+      <div class="layui-input-inline">
+        <input type="text" name="estimatedcost" value="{$list.EstimatedCost}" lay-verify="required|number"
+          placeholder="请输入目标成本" autocomplete="off" class="layui-input">
+      </div>
+    </div>
+
+    <div class="layui-form-item">
+      <label class="layui-form-label">目标数量:</label>
+      <div class="layui-input-inline">
+        <input type="text" name="targetnumber" value="{$list.TargetNumber}" lay-verify="required|number"
+          placeholder="请输入目标数量" autocomplete="off" class="layui-input">
+      </div>
+    </div>
+
+    <div class="layui-form-item">
+      <label class="layui-form-label">预算:</label>
+      <div class="layui-input-inline">
+        <input type="text" name="customerbudget" value="{$list.CustomerBudget}" lay-verify="required|number"
+          placeholder="请输入客户预算" autocomplete="off" class="layui-input">
+      </div>
+    </div>
+
+    <div class="layui-form-item">
+      <label class="layui-form-label">品牌:</label>
+      <div class="layui-input-inline">
+        <input type="text" name="brand" value="{$list.Brand} "lay-verify="" placeholder="请输入品牌" autocomplete="off" class="layui-input">
+      </div>
+    </div>
+
+
+
+
+    <div class="layui-form-item">
+      <label class="layui-form-label">地域:</label>
+      <div class="layui-input-inline">
+        <input type="text" name="address" value="{$list.Address}" lay-verify="" placeholder="请输入地域" autocomplete="off"
+          class="layui-input">
+      </div>
+    </div>
+    <div class="layui-form-item">
+      <label class="layui-form-label">备注:</label>
+      <div class="layui-input-inline">
+        <input type="text" name="remarks" value="{$list.Remarks}" lay-verify="" placeholder="请输入备注" autocomplete="off"
+          class="layui-input">
+      </div>
+    </div>
+
+    <div class="layui-form-item">
+      <div class="layui-input-block">
+        <button type="submit" class="layui-btn" lay-submit="" lay-filter="upd">立即提交</button>
+        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+      </div>
+    </div>
+  </form>
+  <script type="text/javascript">
+    layui.use('form', function () {
+
+      var layer = layui.layer, $ = layui.$, laydate = layui.laydate, form = layui.form;//只有执行了这一步，部分表单元素才会自动修饰成功
+      //追加按钮
+      add = function (val) {
+        $('#' + val).children(":first").clone(true).appendTo('#' + val)
+        form.render();
+
+      }
+      //删除操作
+      del = function (val) {
+        if ($('#' + val).children().length == "1") {
+          layer.alert("没有可删除的节点了")
+        } else {
+          $('#' + val).children(":last").remove()
+          $('#' + val).children(":last").remove()
+        }
+        form.render();
+      }
+      //表单提交
+      form.on('submit(upd)', function (data) {
+        $.post('/public/index.php/upd_project_do', data.field, function (obj) {
+          
+          layer.alert(obj.msg,{offset: '100px'}, function () {
+            if (obj.code === 0) {
+              //window.parent.location.reload();//刷新父页面，这样直接刷新会导致检索条件也刷新
+              parent.layui.table.reload("formfields_table");//所以还是刷新父页面的表格
+              //关闭弹层
+              var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+              parent.layer.close(index); //再执行关闭
+            }
+          });
+        }, 'json');
+        return false;
+      });
+      form.on('select(select)', function (data) {
+        form.render('select');
+      });
+      //但是，如果你的HTML是动态生成的，自动渲染就会失效
+      //因此你需要在相应的地方，执行下述方法来进行渲染
+      //时间范围
+      laydate.render({
+        elem: '#test9'
+        , type: 'time'
+        , range: true
+      });
+      form.render();
+    });
+  </script>
+</body>

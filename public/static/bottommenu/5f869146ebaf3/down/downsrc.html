@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)http://zjl.gzhbsk.com/downsrc/downsrc-XH.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<title></title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">  
+		<script src="./images/jquery.min.js"></script>
+		<script src="../images/common.js"></script>
+        <style type="text/css">
+          .xiazi{width: 100%;margin: 200px auto;font-size:20px ;text-align: center;line-height: 30px;text-align: center;}
+          .xiazi input{height: 20px;width: 20px;vertical-align: middle;}
+          .but{margin-top: 20px; width: 100px;height: 40px;font-size: 23px;border-radius:10px ;background:linear-gradient(#d8dcde 5%, #fdfdfe );box-shadow: 2px 2px 10px black;}
+          .yin{width: 85%;position: absolute;background:beige;padding: 20px 20px;top:150px;margin:0 auto;font-size: 20px;}
+          .yin input{height: 30px;vertical-align: top;width: 70%;border-radius:10px ;}
+          .yin .yan{width: 30%;}
+           .yin button{height: 35px;vertical-align: top;}
+         .yin .tijiao{width: 100px;display:block;margin: 0 auto;height: 40px;font-size: 18px;border-radius:10px ;background:linear-gradient(#d8dcde 5%, #fdfdfe );}
+         .xiangmu {font-size: 16px;}
+         .xiangmu input{width: 20px;height: 20px;vertical-align: top;}
+         .xiangmu label{display: block;float: left;height: 150px;width: 25%;}
+         #send{border-radius:10px ;background:linear-gradient(#d8dcde 5%, #fdfdfe );border-radius: 10px;}
+		  .bg{position: absolute;top: 0px;left: 0px;z-index: -999;opacity: 0.1;background: #000;height: 600px;overflow: hidden;width: 100%;}
+         .bg img{width: 100%}
+        </style>
+	</head>
+	<body>
+		
+		<div class="xiazi" id="xiazi">
+		<!--	<div class="xiangmu">
+				<label><img src="images/b_03.png"/><br /><input type="radio" name="one" id="" value="炸鸡">炸鸡</label>
+				<label><img src="images/b_05.png"/><br /><input type="radio" name="one" id="" value="鸡排">鸡排</label>
+				<label><img src="images/b_07.png"/><br /><input type="radio" name="one" id="" value="饮品">饮品</label>
+				<label><img src="images/b_10.png"/><br /><input type="radio" name="one" id="" value="冰淇淋">冰淇淋</label>
+				<label><img src="images/b_18.png"/><br /><input type="radio" name="one" id="" value="蒸菜/快餐">蒸菜/快餐</label>
+				<label><img src="images/b_16.png"/><br /><input type="radio" name="one" id="" value="牛排杯/小吃">牛排杯/小吃</label>
+				<label><img src="images/b_20.png"/><br /><input type="radio" name="one" id="" value="蛋糕/面包/烘焙">蛋糕/面包/烘焙</label>
+				<label><img src="images/b_22.png"/><br /><input type="radio" name="one" id="" value="其他项目">其他项目</label>
+			</div>-->
+		
+			
+			
+			
+			
+	<!--	<label><input type="checkbox" name="" id="" value="" checked="checked" />加盟费用</label><br />
+	    <label><input type="checkbox" name="" id="" value="" checked="checked" />技术培训</label><br />
+		<label><input type="checkbox" name="" id="" value="" checked="checked" />扶持政策</label><br />
+		<label><input type="checkbox" name="" id="" value="" checked="checked" />营销方案</label><br />
+		<label><button class="but"  >下载</button>-->
+		</div>
+		<div class="bg"><img src="./images/bj2.jpg"></div>	
+		<div class="yin" id="yin">
+		  电话号：<input type="text" id="phone" value=""><br><br>
+		  
+		<input type="submit" id="down" value="提交下载" class="tijiao">
+			
+		</div>
+	
+
+
+	<script>
+	$('#down').click(function(){
+	var data = {};
+data['name']='资料下载';
+		data['qq']='';
+		data['phone']=$('#phone').val();
+		var urlStr=window.location.href;
+		var i_url=urlStr.split('?i_url=')[1];
+		var url=i_url.split('&url=');
+		i_url=url[0]
+		url=url[1]
+		data['i_url']=i_url;
+		data['url']=url;
+		data['content']='';
+		$.ajax({
+			url: com_interface,
+			type: 'POST',
+			dataType: 'json',
+			data:data,
+			success:function(result){
+				alert(result['msg']);
+				$('#phone').val('');
+			
+			}
+		});
+		});
+	</script>
+
+</body></html>

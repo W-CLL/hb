@@ -1,0 +1,65 @@
+ {include file="./static/header.html"/}
+<body centent="centent">
+	<div class="layui-container">
+
+<form class="layui-form" action="">
+    <div class="layui-form-item">
+
+  <div id="tran" class="demo-transfer"></div>
+
+        <div class="layui-input-block">
+            <button type="submit" class="layui-btn" lay-submit="" lay-filter="add">立即提交</button>
+        </div>
+    </div>
+</form>
+<script type="text/javascript">
+layui.use('form', function() {
+  var layer = layui.layer, $ = layui.$, laydate = layui.laydate, form = layui.form;//只有执行了这一步，部分表单元素才会自动修饰成功
+  var transfer = layui.transfer;
+    var left
+    var right
+  $.get('/get_upd_rbac', {Group_Id: {$Group_Id}}, function (obj) {
+       left=obj.data
+       right=obj.value
+      //初始右侧数据
+      transfer.render({
+          elem: '#tran',
+          title:['未拥有权限','已拥有权限'],
+          data: left,
+          parseData: function(res){
+              return {
+                  "value": res.id //数据值
+                  ,"title": res.title //数据标题
+                  ,"disabled": res.disabled  //是否禁用
+                  ,"checked": res.checked //是否选中
+              }
+          },
+          id:'tran1',
+          value:right
+      })
+  })
+    //表单提交
+    var arr={}
+    form.on('submit(add)',function(data){
+        //获得右侧数据
+        var getData = transfer.getData('tran1');
+        arr['value']=""
+        for (var i=0;i<getData.length;i++){
+            arr['value']+=getData[i]['value']+","
+        }
+        arr['id']={$Group_Id},
+        $.post('/upd_rbac_do',arr,function(obj){
+            layer.alert(obj.msg,function(){
+                if(obj.code===0){
+                    window.parent.location.reload();//刷新父页面
+                }
+            });
+        },'json');
+        return false;
+    });
+
+
+})
+</script>
+</div>
+</body>

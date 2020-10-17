@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>赚不赚钱，立刻算一算</title>
+  <style>
+    /*重置样式*/
+    html, body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, th, td, img, area, param {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    i, b {
+      font-style: normal;
+    }
+
+    img {
+      border: none;
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    /* html {
+      background: #f3f4f5;
+    } */
+    
+    .mb-8 {
+      margin-bottom: 8px;
+    }
+
+    .mb-12 {
+      margin-bottom: 12px;
+    }
+
+    .container {
+      padding-top: 80px;
+    }
+
+    .img-block {
+      width: 100%;
+      display: block;
+    }
+    
+    .form-body {
+      padding: 24px 20px;
+      /* background: url(./img/form-bg.jpeg) no-repeat left top/contain; */
+      /* background-repeat: repeat-y; */
+    }
+
+    .submit-btn {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 56px;
+      background: #f85959;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      font-size: 18px;
+      border: 0;
+    }
+
+    .submit-btn:active {
+      opacity: 0.7;
+    }
+
+    .submit-btn:disabled {
+      opacity: 0.6;
+    }
+
+    .form-input {
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      height: 50px;
+      padding: 5px 10px;
+      font-size: 18px;
+      border: 1px solid #cdcdcd;
+      border-radius: 4px;
+    }
+
+    .hint {
+      color: #c7254e;
+      font-size: 14px;
+      margin-bottom: 12px;
+      display: none;
+    }
+
+    .title {
+      color: #fff;
+      background: #f85959;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      width: 220px;
+      padding: 6px 16px;
+      border-radius: 10px;
+      line-height: 1.1;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translate(-50%, 50%);
+    }
+
+    .contact {
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  </style>
+  <script src="./js/zepto.min.js"></script>
+  <script src="../images/common.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- <img class="img-block" src="./img/form-head.jpeg" alt=""/> -->
+    <div class="title">算一算一年能赚多少钱</div>
+    <div class="form-body">
+      <form onsubmit="return toValid(this);">
+        <input class="form-input mb-12" type="text" name="userName" maxlength="10" placeholder="计划开店区域（例如：上海）">
+        <div class="hint" id="hintUserName">请输入开店区域</div>
+        <input class="form-input mb-12" type="number" name="userPhone" maxlength="11" placeholder="电话（已加密）">
+        <div class="hint" id="hintUserPhone">手机格式不正确，请重新输入</div>
+        <div class="mb-12" style="color: #808080;">您要开哪种店、投资多少？</div>
+        <div class="check-group mb-12">
+          <div class="mb-8">
+            <label style="margin-right: 14px;">
+              <input type="checkbox" name="options" value="创业店">
+              <span>创业店</span>
+            </label>
+            <label style="margin-right: 14px;">
+              <input type="checkbox" name="options" value="标准店">
+              <span>标准店</span>
+            </label>
+            <label style="margin-right: 14px;">
+              <input type="checkbox" name="options" value="旗舰店">
+              <span>旗舰店</span>
+            </label>
+          </div>
+
+         <!-- <HR>
+         <div class="">
+            <label style="margin-right: 14px;">
+              <input type="checkbox" name="options" value="街边店" />
+              <span>街边店</span>
+            </label>
+            <label style="margin-right: 14px;">
+              <input type="checkbox" name="options" value="商场店" />
+              <span>商场店</span>
+            </label>
+            <label style="margin-right: 14px;">
+              <input type="checkbox" name="options" value="社区店" />
+              <span>社区店</span>
+            </label>
+          </div>
+          <HR> -->
+          <div class="">
+            <label style="margin-right: 14px;">
+              <input type="checkbox" name="options" value="一线城市">
+              <span>一线城市</span>
+            </label>
+            <label style="margin-right: 14px;">
+              <input type="checkbox" name="options" value="二线城市">
+              <span>二线城市</span>
+            </label>
+            <label style="margin-right: 14px;">
+              <input type="checkbox" name="options" value="三四线城市">
+              <span>三四线城市</span>
+            </label>
+          </div>
+
+
+
+
+
+        </div>
+        <div class="mb-12">
+          <input class="submit-btn" id="submitBtn" type="submit" value="计算结果，短信发手机上">
+        </div>
+        <div class="contact">今日已有1325人，获得开店年利润计算</div>
+      </form>
+    </div>
+    <!-- <img class="img-block" src="./img/form-bottom.jpeg" alt=""/> -->
+  </div>
+  <script>
+  var objHintName = document.getElementById("hintUserName");
+  var objHintPhone = document.getElementById("hintUserPhone");
+  var submitBtn = document.getElementById("submitBtn");
+  function toValid(thisForm) {
+    // console.log(thisForm, 'thisFrom')
+    var checkedOptions = []
+    var tmpOption = null
+    var userName = thisForm.userName.value
+    var userPhone = thisForm.userPhone.value
+    if (!userName) {
+      objHintName.style.display = 'block'
+      return false
+    } else {
+      objHintName.style.display = 'none'
+    }
+
+    if (!/^1\d{10}$/.test(userPhone)) {
+      objHintPhone.style.display = 'block'
+      return false
+    } else {
+      objHintPhone.style.display = 'none'
+    }
+
+    for (var i = 0, len = thisForm.options.length; i < len; i++) {
+      tmpOption = thisForm.options[i]
+      if (tmpOption.checked) {
+        checkedOptions.push(tmpOption.value)
+      }
+    }
+
+    submitBtn.disabled = true;
+    var messdata={}
+    var urlStr=window.location.href;
+    i_url=urlStr.split('?url=')[1];
+    messdata['i_url']=i_url
+    messdata['name']=userName
+    messdata['phone']=userPhone
+    messdata['content']=checkedOptions.join(',')
+    messdata['qq']=''
+    messdata['url']=document.referrer
+    $.ajax({
+      type: 'POST',
+      url: com_interface,
+      data:messdata,
+dataType: 'json',
+      success: function(res) {
+        alert(res.msg);
+        submitBtn.disabled = false;
+        thisForm.reset();
+      },
+      error: function(res) {
+        alert(res.msg);
+        submitBtn.disabled = false;
+      },
+    })
+
+    return false
+  }
+</script>
+
+</body></html>

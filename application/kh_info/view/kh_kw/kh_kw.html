@@ -1,0 +1,73 @@
+{include file="./static/header.html"/}
+<body>
+	<table id="formfields_table" lay-filter="lay_formfields" class="layui-table"></table>
+	<script type="text/html" id="head_toolbar">
+	<div class="layui-btn-container">
+		<button class="layui-btn layui-btn-sm" lay-event="add">增加</button>
+	</div>
+</script>
+	<script type="text/html" id="toolbar">
+	<div class="layui-btn-container">
+		<button class="layui-btn layui-btn-sm" lay-event="upd">编辑</button>
+		<button class="layui-btn layui-btn-sm" lay-event="del">删除</button>
+	</div>
+</script>
+
+	<script>
+
+		var table = layui.table, layer = layui.layer, $ = layui.$, laydate = layui.laydate;
+
+		var form_table = table.render({
+			defaultToolbar: '',
+			elem: '#formfields_table',
+			height: "full-70",
+			url: '/kh_info/kh_kw/get_kh_kw',
+			method: 'post',
+			toolbar: '#head_toolbar',
+			defaultToolbar: ['exports', 'print'],
+			cols: [[
+				{ field: 'Id', title: 'ID', hide: true },
+				{ field: 'Client_Id', title: '客户Id', hide: true },
+				{ field: 'Name', title: '客户' },
+				{ field: 'Pro_Name', title: '显示名称(项目)' },
+				{ field: 'Tag', title: '标识' },
+				{ field: 'Pro_User', title: '推广账号' },
+				{ field: '', title: '操作', toolbar: '#toolbar' }
+			]],
+		})
+		table.on('toolbar(lay_formfields)', function (obj) {
+			if (obj.event == "add") {
+				layer.open({
+					type: 2,
+					title: "添加",
+					shadeClose: true,//外部关闭
+					area: ['50%', '600px'],
+					content: 'ins_kh_kw'
+				});
+			}
+		})
+		table.on('tool(lay_formfields)', function (obj) {
+			if (obj.event == "upd") {
+				layer.open({
+					type: 2,
+					title: "编辑",
+					shadeClose: true,//外部关闭
+					area: ['50%', '600px'],
+					content: '/kh_info/kh_kw/upd_kh_kw?Id=' + obj.data.Id
+				});
+			}
+			if (obj.event == "del") {
+				layer.confirm('是否确定删除？', { btn: ['确定', '取消'] }, function () {
+					$.post('/kh_info/kh_kw/del_kh_kw', { Id: obj.data.Id }, function (msg) {
+						layer.msg(msg.msg, function () {
+							if (msg.code === 0) {
+								window.location.reload();//刷新父页面
+							}
+						})
+					}, 'json');
+				});
+			}
+		})
+	</script>
+</body>
+</html>

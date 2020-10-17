@@ -1,0 +1,310 @@
+{include file="./static/header.html"/}
+<!-- <script src="static/bootstrap3/css/bootstrap.css"></script> -->
+
+<body style=" background-color: rgb(233, 233, 233);">
+    <style>
+        .duihua {
+            background-color: #EFF3F6;
+            border-radius: 10px;
+            padding: 8px;
+        }
+        .layui-btn+.layui-btn{
+            margin: 0;
+        }
+        .layui-tree-entry{
+            height: 25px;
+        }
+        .duihua{
+            text-align: left;
+        }
+    </style>
+
+    <div style="padding: 20px;">
+        <div class="layui-row layui-col-space15">
+
+            <div class="layui-col-md6">
+                
+                {if $Think.session.type<5 or $Think.session.type==7}
+                <div style="">
+                    <textarea name="yh_talk_content" id="" cols="70" rows="5" placeholder="请输入对话的内容" style="width: 100%;height: 100px;"></textarea>
+                </div>
+                <div class="layui-row" style="padding-bottom: 10px;">
+                    <div style="padding: 10px;">
+                        <div class="layui-col-xs4">
+                            <button class="layui-btn layui-btn-normal" id="add_talk_cate">添加分类</button>
+                            <button class="layui-btn layui-btn-normal" id="edit_talks">编辑对话</button>
+                        </div>
+                        <div class="layui-col-xs4">
+                            <select name="cate_id" id="cate_id" lay-verify="required" style="width: 100px;height: 38px;margin-left: 30px;">
+                                <option value="">选择标题</option>
+                                {volist name="cate02" id="vo"}
+                                <option value="{$vo.Id}">{$vo.Cate_Name}</option>
+                                {/volist}
+                            </select>
+                            <button class="layui-btn layui-btn-normal" id="save_talks">保存</button>
+                        </div>
+                        <div class="layui-col-xs4">
+                            <button class="layui-btn layui-btn-normal" id="clear_talks" style="margin-left:50px;">清空</button>
+                            <button class="layui-btn layui-btn-normal" id="yh_input">发送</button>
+                        </div>
+                    </div>
+                </div>
+                {/if}
+
+                <div class="layui-row">
+                    <div id="talk_tree" style="background-color:white"></div>
+                </div>
+            </div>
+
+            <div class="layui-col-md4">
+                <div class="layui-card">
+                    <div class="layui-card-header" style="background-color:#1798FC;">对话面板</div>
+                    <div class="layui-card-body" id="talk_panel" style="background-color:#FFFDFB;height: 500px;overflow: auto;">
+
+                        <div class="layui-row kf" style="text-align:right">
+                            <div>话务</div>
+                            <div class="duihua layui-col-md6 layui-col-md-offset6">
+                                你可以点击发送按钮输入对话，内容将在此对话面板展示。<br>
+                                (注意:<strong style="color: red;">保存按钮</strong>是将此对话面板的内容
+                                <strong style="color: red;">追加</strong>到绑定标题原有对话内容的后面,
+                                所以需要添加对话的时候请:<br><strong>点击清空</strong> -》<strong>输入对话</strong>-》<strong>保存</strong>)
+                            </div>
+                        </div>
+
+                        <div class="layui-row yh">
+                            <div style="text-align: rigt;">客户</div>
+                            <div class="duihua layui-col-md6">
+                                好的
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="layui-row" style="border-top: 1px solid black;">
+                        <div style="padding:10 5;">
+                            <a><i class="layui-icon" style="font-size: 25px;padding-left: 5px;">&#xe6af;</i></a>
+                            <a><i class="layui-icon" style="font-size: 25px;padding-left: 5px;">&#xe64a;</i></a>
+                            <a><i class="layui-icon" style="font-size: 25px;padding-left: 5px;">&#xe601;</i></a>
+                            <a><i class="layui-icon" style="font-size: 25px;padding-left: 5px;">&#xe681;</i></a>
+                            <a><i class="layui-icon" style="font-size: 25px;padding-left: 5px;">&#xe64c;</i></a>
+                        </div>
+                        <div>
+                            <textarea name="kf_talk_content" id="" cols="30" rows="5"
+                                style="padding:10px;width: 100%;border:#EFF3F6; resize: vertical;"
+                                placeholder="输入文字内容"></textarea>
+                        </div>
+                        <div style="text-align: right;">
+                            <button class="layui-btn layui-btn-normal" id="kf_input">发送</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //这是点击发送按钮添加到面板的对话
+        var kf = '<div class="layui-row kf" style="text-align:right"><div>话务</div><div class="duihua layui-col-md6 layui-col-md-offset6">';
+        var yh = '<div class="layui-row yh"><div style="text-align: rigt;">客户</div><div class="duihua layui-col-md6">';
+
+        layui.use('tree', function () {
+            var tree = layui.tree;
+
+            //渲染
+            var inst1 = tree.render({
+                elem: '#talk_tree'  //绑定元素
+                , showLine: false  //是否开启连接线
+                , id: 'treedemo' 
+                , checked: 1
+                {if $Think.session.type<5 or $Think.session.type==7}
+                , edit: ['update', 'del']
+                {/if}
+                , data: [{$listdata}]   //这里的{$listdata}是后台返回的，要注意不要有空格
+                , click: function (obj) {
+                    //点击后的回调
+                    var data = obj.data; //得到当前节点的数据
+                    // var elem = obj.elem; //得到当前节点元素
+                    if (obj.data.children.length == '0') {
+                        $.post('/get_talks',
+                            { catename: data.title, cateid: data.id },
+                            function (res) {
+                                //查询成功的话会返回对话数据，将内容添加到对话面板中
+                                if (res.code == 0) {
+                                    // console.log(res);
+                                    $('#talk_panel').html('');
+                                    var talkContent = '';
+                                    res.msg.forEach((item) => {
+                                        // console.log(item)
+                                        if (item.Talk_Type == 'g') {
+                                            talkContent += kf + item.Talk_Content + '</div></div>'
+                                        } else {
+                                            talkContent += yh + item.Talk_Content + '</div></div>';
+                                        }
+                                    });
+                                    $('#talk_panel').html(talkContent);
+                                } else {
+                                    var talktext = '';
+                                    talktext = kf+ '查询数据<span style="color:red;">' + obj.data.title + '</span>失败,该分类或许未绑定数据</div></div>'
+                                    $('div.layui-card-body').append(talktext);
+                                }
+                            })
+                       
+                    }
+                }
+                , operate: function (obj) {
+                    //这是点击编辑按钮后的回调
+                    var type = obj.type; //得到操作类型：add、update、del
+                    var data = obj.data; //得到当前节点的数据
+                    if (type == 'update') {
+                        $.ajax({
+                            url: '/edit_talk_cate?id=' + data.id,
+                            type: 'post',
+                            data: { id: data.id, catename: data.title },
+                            success: function (res) {
+                                if (res.code == 0) {
+                                    layer.msg(res.msg, { icon: 6, time: 2000 }, function () {
+                                        location.reload();
+                                    });
+                                } else {
+                                    layer.open({ content: res.msg, icon: 5 }, function () {
+                                        location.reload();
+                                    });
+                                }
+                            }
+                        })
+                    } else if (type == 'del') {
+                        if (obj.data.children.length > 0) {
+                            layer.confirm(
+                                '该节点下存在子节点，若删除会将子节点数据一起删除，是否继续？',
+                                { icon: 3, title: '提示' },
+                                function () {
+                                    $.ajax({
+                                        url: '/del_talk_cate?id=' + data.id,
+                                        type: 'post',
+                                        data: { id: data.id, catename: data.title, parentid: data.id },
+                                        success: function (res) {
+                                            if (res.code == 0) {
+                                                layer.msg(res.msg, { time: 2000 }, function () {
+                                                    location.reload();
+                                                });
+                                            } else {
+                                                layer.open({ content: res.msg, icon: 5 }, function () {
+                                                    location.reload();
+                                                });
+                                            }
+                                        }
+                                    })
+                                })
+                        } else {
+                            $.ajax({
+                                url: '/del_talk_cate?id=' + data.id,
+                                type: 'post',
+                                data: { id: data.id, catename: data.title },
+                                success: function (res) {
+                                    if (res.code == 0) {
+                                        layer.msg(res.msg, { time: 2000 }, function () {
+                                            location.reload();
+                                        });
+                                    } else {
+                                        layer.open({ content: res.msg, icon: 5 }, function () {
+                                            location.reload();
+                                        });
+                                    }
+                                }
+                            })
+                        }
+                    }
+                }
+            });
+        });
+
+        //话务输入发送按钮,
+        $('#kf_input').click(function () {
+            var talk_con = $('textarea[name="kf_talk_content"]').val();
+            if (talk_con) {
+                let talktext = kf + talk_con + '</div></div>';
+                $('div.layui-card-body').append(talktext);
+                $('textarea[name="kf_talk_content"]').val('');
+            }
+        });
+
+        //客户输入发送按钮
+        $('#yh_input').click(function () {
+            var talk_con = $('textarea[name="yh_talk_content"]').val();
+            if (talk_con) {
+                let talktext = yh + talk_con + '</div></div>';
+                $('div.layui-card-body').append(talktext);
+                $('textarea[name="yh_talk_content"]').val('');
+            }
+        });
+
+        //清空对话面板
+        $('#clear_talks').click(function(){
+            $('#talk_panel').html('');
+        })
+        
+        //添加分类
+        $('#add_talk_cate').click(function () {
+            var index = layer.open({
+                type: 2,
+                title: "添加话术分类",
+                area: ['500px', 500],
+                content: '/add_talk_cate'
+            });
+            return false;
+        });
+
+        //编辑对话
+        $('#edit_talks').click(function () {
+            layer.open({
+                type: 2,
+                title: "编辑对话",
+                area: ['80%', '100%'],
+                content: '/edit_talks'
+            });
+            return false;
+        })
+
+        //保存对话
+        $('#save_talks').click(function(){
+            var cate_id = $("#cate_id option:selected").val();
+            if(!cate_id){
+                layer.alert('请选择需要绑定的标题');
+                return false;
+            }
+            var text = $('#talk_panel').children();
+            //得到对话面板的的对话内容
+            var data = new Array();
+            for(let i=0; i<text.length; i++){
+                data[i] = new Object;
+                data[i].Category_Id = cate_id;
+                data[i].Talk_Content = text[i].lastElementChild.innerText;
+                if(text[i].className == "layui-row kf"){
+                    data[i].Talk_Type = 'g';
+                }else{
+                    data[i].Talk_Type = 'u';
+                }
+                //获得当前时间的毫秒级时间戳
+                data[i].Create_time = parseInt((new Date().getTime())/1000);
+            }
+            //如果没有得到对话面板数据就不上传
+            if(data.length == 0){
+                return false;
+            }
+            $.post("/save_talks",{data:data},function(res){
+                if(res.code == 0){
+                    layer.msg('保存对话成功',{icon:1,time:1000});
+                }else{
+                    layer.open({content:res.msg});
+                }
+            },'json');
+            console.log(data);
+            return false;
+        })
+        
+        // 编辑分类按钮
+        // $('i[data-type="update"]').click(function () {
+        //     return false;
+        // })
+    </script>
+</body>
+
+</html>

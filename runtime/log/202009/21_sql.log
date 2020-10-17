@@ -1,0 +1,15 @@
+---------------------------------------------------------------
+[ 2020-09-21T18:03:17+08:00 ] 127.0.0.1 POST localhost/public/index.php/checklogin
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002549s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.002136s ]
+[ sql ] [ SQL ] SELECT `a`.`Id`,`User`,`Login_time`,`Ip`,`a`.`Status`,`Name`,`Type_Id`,`Auth_Id`,`Alias` FROM `user` `a` INNER JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`Id` WHERE  `User` = 'test'  AND `Psw` = 'f7dc2e1937940bb8486274edc88cc3c5' LIMIT 1 [ RunTime:0.001969s ]
+---------------------------------------------------------------
+[ 2020-09-21T18:03:58+08:00 ] 127.0.0.1 POST localhost/public/index.php/checklogin
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003860s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.003665s ]
+[ sql ] [ SQL ] SELECT `a`.`Id`,`User`,`Login_time`,`Ip`,`a`.`Status`,`Name`,`Type_Id`,`Auth_Id`,`Alias` FROM `user` `a` INNER JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`Id` WHERE  `User` = 'test'  AND `Psw` = 'f7dc2e1937940bb8486274edc88cc3c5' LIMIT 1 [ RunTime:0.004153s ]
+---------------------------------------------------------------
+[ 2020-09-21T18:04:34+08:00 ] 127.0.0.1 POST localhost/public/index.php/checklogin
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003602s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.003117s ]
+[ sql ] [ SQL ] SELECT `a`.`Id`,`User`,`Login_time`,`Ip`,`a`.`Status`,`Name`,`Type_Id`,`Auth_Id`,`Alias` FROM `user` `a` INNER JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`Id` WHERE  `User` = 'test'  AND `Psw` = 'f7dc2e1937940bb8486274edc88cc3c5' LIMIT 1 [ RunTime:0.002699s ]

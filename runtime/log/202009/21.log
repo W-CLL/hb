@@ -1,0 +1,136 @@
+---------------------------------------------------------------
+[ 2020-09-21T18:03:17+08:00 ] 127.0.0.1 POST localhost/public/index.php/checklogin
+[运行时间：0.085349s] [吞吐率：11.72req/s] [内存消耗：2,392.10kb] [文件加载：45]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 'login/login/checklogin/login',
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-34e771d1=225f105b-2546-4f37-826e-3d5f427e4d0f; PHPSESSID=vpg1d81u7e036vf3tlrglo143l',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/public/index.php',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'http://localhost',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '27',
+  'connection' => 'keep-alive',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'test',
+  'password' => 'test',
+)
+[ info ] [ RUN ] app\login\controller\Login->checklogin[ D:\phpstudy_pro\WWW\application\login\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT redis
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-09-21T18:03:58+08:00 ] 127.0.0.1 POST localhost/public/index.php/checklogin
+[运行时间：0.092078s] [吞吐率：10.86req/s] [内存消耗：2,392.09kb] [文件加载：45]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 'login/login/checklogin/login',
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-34e771d1=225f105b-2546-4f37-826e-3d5f427e4d0f; PHPSESSID=vpg1d81u7e036vf3tlrglo143l',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/public/index.php',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'http://localhost',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '27',
+  'connection' => 'keep-alive',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'test',
+  'password' => 'test',
+)
+[ info ] [ RUN ] app\login\controller\Login->checklogin[ D:\phpstudy_pro\WWW\application\login\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT redis
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-09-21T18:04:20+08:00 ] 127.0.0.1 GET localhost/public/index.php
+[运行时间：0.057487s] [吞吐率：17.40req/s] [内存消耗：1,608.57kb] [文件加载：37]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-34e771d1=225f105b-2546-4f37-826e-3d5f427e4d0f; PHPSESSID=vpg1d81u7e036vf3tlrglo143l',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'sec-fetch-dest' => 'document',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'none',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'localhost',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\login\controller\Login->login[ D:\phpstudy_pro\WWW\application\login\controller\Login.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\public/../application/login\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-09-21T18:04:34+08:00 ] 127.0.0.1 POST localhost/public/index.php/checklogin
+[运行时间：0.065085s] [吞吐率：15.36req/s] [内存消耗：2,392.09kb] [文件加载：45]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 'login/login/checklogin/login',
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-34e771d1=225f105b-2546-4f37-826e-3d5f427e4d0f; PHPSESSID=vpg1d81u7e036vf3tlrglo143l',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/public/index.php',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'origin' => 'http://localhost',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '27',
+  'connection' => 'keep-alive',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'test',
+  'password' => 'test',
+)
+[ info ] [ RUN ] app\login\controller\Login->checklogin[ D:\phpstudy_pro\WWW\application\login\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT redis
+[ info ] [ LOG ] INIT File

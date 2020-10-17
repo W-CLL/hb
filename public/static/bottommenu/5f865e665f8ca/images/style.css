@@ -1,0 +1,64 @@
+	footer{
+		
+		position: fixed;
+		width: 100%;
+		height:50%;
+		bottom: 0;
+		background-color: #4f4b4b;
+		z-index: 10;
+	}
+	footer ul,footer ul li{
+		height: 100%;
+		padding: 0px;
+		margin: 0px;
+		list-style: none;
+	}
+	footer ul{
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+	}
+	footer ul li{
+		box-sizing: border-box;
+		border-left:1px solid #FFFFFF;
+		float: left;
+		width: 100%;
+	}
+	footer ul li a{
+		text-decoration:none;
+		font-size: 12px;
+		text-align: center;
+		color: #fff;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	footer ul li a .line{
+		text-align: center;
+		display:table;
+		width: 15px;
+		height: 15px;
+		margin: 0 auto 0 60%;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-ms-border-radius: 5px;
+		-o-border-radius: 5px;
+		border-radius: 5px;
+		background-color: red;
+	}
+	.line{
+		animation: dot 1s infinite;
+		-moz-animation: dot 1s infinite;	/* Firefox */
+		-webkit-animation: dot 1s infinite;	/* Safari 和 Chrome */
+		-o-animation: dot 1s infinite;	/* Opera */
+	}
+	@keyframes dot
+	{
+		70% {
+			background-color: rgba(255,0,0,1);
+		}
+		80% {
+			background-color:rgba(255,0,0,0);
+			display: none;
+		}
+	}

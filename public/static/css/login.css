@@ -1,0 +1,27 @@
+.laymy-login{
+	margin-top:200px;
+	
+}
+
+.layui-input{
+	padding-left:20px;
+}
+.layui-form-item{
+	margin-bottom:25px;
+}
+.laymy-icon{
+	position: absolute;
+    left: -75px;
+}
+.laymy-login-font{
+	font-size:18px;
+	margin-bottom:25px;
+}
+.laymy-login-blue{
+	color:#5FB878;
+}
+.laymy-login-title{
+
+	font-size:30px;
+	padding-bottom:30px;
+}

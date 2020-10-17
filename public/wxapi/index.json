@@ -1,0 +1,70 @@
+{
+    "tabList": [
+        {
+            "id": 1,
+            "imgPath": "/images/tool.png",
+            "title": "计算器",
+            "bgcolor": "#203eead"
+        },
+        {
+            "id": 2,
+            "imgPath": "/images/tool.png",
+            "title": "推荐内容",
+            "bgcolor": "#a2e4ad"
+        },
+        {
+            "id": 3,
+            "imgPath": "/images/tool.png",
+            "title": "广告分类",
+            "bgcolor": "#a14413"
+        },
+        {
+            "id": 4,
+            "imgPath": "/images/tool.png",
+            "title": "发布信息",
+            "bgcolor": "#a213ad"
+        }
+    ],
+    "proList": [
+        {
+            "id": 1,
+            "title": "百度信息流",
+            "industry": "奶茶招商加盟",
+            "company": "一点点奶茶",
+            "rebate": "1.5",
+            "user": "信息发布者",
+            "content": "信息介绍，信息介绍，信息介绍，信息介绍，信息介绍，信息介绍，信息介绍，信息介绍，信息介绍，信息介绍",
+            "create_time": "06-16"
+        },
+        {
+            "id": 2,
+            "title": "标题名称",
+            "industry": "行业",
+            "company": "公司",
+            "rebate": "返点",
+            "user": "信息发布者",
+            "content": "信息介绍，信息介绍，信息介绍，信息介绍，信息介绍，信息介绍，信息介绍，信息介绍，信息介绍，信息介绍",
+            "create_time": "发布时间"
+        },
+        {
+            "id": 3,
+            "title": "标题名称",
+            "industry": "行业",
+            "company": "公司",
+            "rebate": "返点",
+            "user": "信息发布者",
+            "content": "信息介绍，信息介绍，信息介绍，信息介绍，信息介绍，信息介绍，信息介绍，信息介绍，信息介绍，信息介绍",
+            "create_time": "发布时间"
+        },
+        {
+            "id": 4,
+            "title": "标题名称",
+            "industry": "行业",
+            "company": "公司",
+            "rebate": "返点",
+            "user": "信息发布者",
+            "content": "信息介绍，信息介绍，信息介绍，信息介绍，信息介绍，信息介绍，信息介绍，信息介绍，信息介绍，信息介绍",
+            "create_time": "发布时间"
+        }
+    ]
+}

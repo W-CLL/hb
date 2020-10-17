@@ -1,0 +1,118 @@
+.layui-layout-admin .layui-side .layui-logo
+{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1002;
+    width: 220px;
+    height: 49px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-weight: 300;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+.layui-layout-admin .layui-header{
+	z-index:999;
+}
+.layui-layout-admin .layui-side{
+    width:180px;
+}
+.layui-layout-admin .layui-nav-tree{
+    width:100%;
+}
+.layui-layout-admin .layui-body{
+    position:fixed;
+    top:60px;
+    left:180px;
+    bottom:0;
+}
+.layui-layout-admin .layui-body .layadmin-tabsbody-item{
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    overflow:hidden;
+}
+.layui-layout-admin .layui-body .layadmin-tabsbody-item .laymy-iframe{
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    width:100%;
+    height:100%;
+}
+
+
+/*---------------------------后面添加的---------------------------*/
+.layui-layout-admin .layui-header{
+    background-color: #007a99;
+    height: 60px;
+}
+.layui-side,.layui-side .layui-nav{
+    background-color: #008fb3;
+}
+.layui-tab{
+    position: fixed;
+    left: 180px;
+    margin: 0;
+    width: 100%;
+}
+.layui-layout-admin .layui-body{
+    top: 100px;
+    padding: 0;
+}
+.laymy-iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.nav-icon{
+    font-size: 18px;
+}
+/* 图标的大小和颜色 */
+svg{
+    width: 18px;
+    height: 18px;
+}
+path{
+    fill: #dddddd;
+}
+dd a{
+    font-size: 10px;
+}
+.laymy-menu{
+    font-size: 13px;
+}
+.layui-nav-item>a{
+    font-size: 15px;
+}
+/*红点提示的样式*/
+.dot1{
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(223, 79, 79);
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    font-size: 0.8em;
+    line-height: 16px;
+}
+.dot2{
+    display: block;
+    width: 10px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    font-size: 0.8em;
+    line-height: 16px;
+}

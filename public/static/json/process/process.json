@@ -1,0 +1,24 @@
+{
+    "lead": "96",
+    "node": [
+        {
+            "1": {
+                "status": "yes"
+            },
+            "96": {
+                "status": "no"
+            }
+        },
+        {
+            "5": {
+                "status": "no"
+            },
+            "97": {
+                "status": "no"
+            }
+        }
+    ],
+    "content":"这是结点内容",
+    "presentNode": "1",
+    "end": false
+}

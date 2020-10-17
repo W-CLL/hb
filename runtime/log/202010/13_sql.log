@@ -1,0 +1,1507 @@
+---------------------------------------------------------------
+[ 2020-10-13T15:17:11+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/checklogin
+[ sql ] [ DB ] CONNECT:[ UseTime:0.021178s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+---------------------------------------------------------------
+[ 2020-10-13T15:52:15+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/checklogin
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012063s ] mysql:host=127.0.0.1;dbname=hb;charset=utf8
+---------------------------------------------------------------
+[ 2020-10-13T15:52:47+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/checklogin
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008324s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.008207s ]
+---------------------------------------------------------------
+[ 2020-10-13T15:52:58+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/checklogin
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009024s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.010615s ]
+---------------------------------------------------------------
+[ 2020-10-13T15:55:01+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/checklogin
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007384s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.007598s ]
+[ sql ] [ SQL ] SELECT `a`.`Id`,`User`,`Login_time`,`Ip`,`a`.`Status`,`Name`,`Type_Id`,`Auth_Id`,`Alias` FROM `user` `a` INNER JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`Id` WHERE  `User` = 'super'  AND `Psw` = '3e25249ba656237db75f87536e904d10' LIMIT 1 [ RunTime:0.007462s ]
+[ sql ] [ SQL ] UPDATE `user`  SET `Login_time`=1602575701,`Ip`='127.0.0.1'  WHERE  `Id` = 96 [ RunTime:0.005344s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wx_user` [ RunTime:0.007199s ]
+[ sql ] [ SQL ] SELECT `OpenID` FROM `wx_user` WHERE  `User_Id` = 96 LIMIT 1 [ RunTime:0.003899s ]
+---------------------------------------------------------------
+[ 2020-10-13T15:55:05+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012820s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.016639s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `user` `u` ON `u`.`Id`=`ui`.`User_Id` WHERE  `Type_Id` IN (2,3,4)  AND `Status` = 1 ORDER BY `Name` [ RunTime:0.018146s ]
+[ sql ] [ SQL ] SELECT `ui`.`Name`,`ui`.`User_Id` FROM `user_info` `ui` INNER JOIN `user` `u` ON `u`.`Id`=`ui`.`User_Id` WHERE  `Type_Id` = 5  AND `Status` = 1 ORDER BY `Name` [ RunTime:0.021694s ]
+---------------------------------------------------------------
+[ 2020-10-13T15:59:10+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010437s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.010925s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:00:21+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009394s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.012306s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:00:34+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/checklogin
+[ sql ] [ DB ] CONNECT:[ UseTime:0.016080s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.012033s ]
+[ sql ] [ SQL ] SELECT `a`.`Id`,`User`,`Login_time`,`Ip`,`a`.`Status`,`Name`,`Type_Id`,`Auth_Id`,`Alias` FROM `user` `a` INNER JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`Id` WHERE  `User` = 'super'  AND `Psw` = '3e25249ba656237db75f87536e904d10' LIMIT 1 [ RunTime:0.013122s ]
+[ sql ] [ SQL ] UPDATE `user`  SET `Login_time`=1602576034,`Ip`='127.0.0.1'  WHERE  `Id` = 96 [ RunTime:0.010252s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wx_user` [ RunTime:0.009930s ]
+[ sql ] [ SQL ] SELECT `OpenID` FROM `wx_user` WHERE  `User_Id` = 96 LIMIT 1 [ RunTime:0.010924s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:00:38+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009297s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.009532s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:02:52+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.017900s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.014567s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:19:48+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.019262s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.012349s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:24:25+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.024839s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.019784s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.015245s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `promotion_user` [ RunTime:0.013300s ]
+[ sql ] [ SQL ] SELECT `Pro_User`,`Id` FROM `promotion_user` WHERE  `Status` = 1 ORDER BY `Pro_User` [ RunTime:0.013540s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.015510s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.012212s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.011455s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `ProjectName`,`Id` FROM `project` WHERE  `status` = 1 ORDER BY `ProjectName` [ RunTime:0.009701s ]
+[ sql ] [ SQL ] SELECT `ui`.`Name`,`ui`.`User_Id` FROM `user_info` `ui` INNER JOIN `user` `u` ON `u`.`Id`=`ui`.`User_Id` WHERE  `Type_Id` = 6  AND `Status` = 1 ORDER BY `Name` [ RunTime:0.015235s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:26:05+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010347s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.015060s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.016738s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.015503s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.012964s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:26:44+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011791s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.015178s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.013137s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.016957s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.012379s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:26:56+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006941s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.009249s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.010787s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.011528s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.008357s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:27:11+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005851s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.009702s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.009941s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.010704s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.008433s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:27:42+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008691s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.010196s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.010769s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.011587s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.008915s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:28:23+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015821s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.014643s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.017865s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.018293s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.015927s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:28:32+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003615s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.004512s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.004128s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.004872s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.002206s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:29:08+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005820s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.006552s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.006739s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.007389s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.004827s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:29:52+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005665s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.009067s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.010576s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.010330s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.007208s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:30:34+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006240s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.008567s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.008930s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.009325s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.007830s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:31:22+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/clear_redis?scene=all
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009864s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.013754s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.010137s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.012426s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.008963s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:31:45+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/checklogin
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005299s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.007235s ]
+[ sql ] [ SQL ] SELECT `a`.`Id`,`User`,`Login_time`,`Ip`,`a`.`Status`,`Name`,`Type_Id`,`Auth_Id`,`Alias` FROM `user` `a` INNER JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`Id` WHERE  `User` = 'super'  AND `Psw` = '3e25249ba656237db75f87536e904d10' LIMIT 1 [ RunTime:0.008230s ]
+[ sql ] [ SQL ] UPDATE `user`  SET `Login_time`=1602577905,`Ip`='127.0.0.1'  WHERE  `Id` = 96 [ RunTime:0.008439s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wx_user` [ RunTime:0.008030s ]
+[ sql ] [ SQL ] SELECT `OpenID` FROM `wx_user` WHERE  `User_Id` = 96 LIMIT 1 [ RunTime:0.005329s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:31:48+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013281s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.018057s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `user` `u` ON `u`.`Id`=`ui`.`User_Id` WHERE  `Type_Id` IN (2,3,4)  AND `Status` = 1 ORDER BY `Name` [ RunTime:0.018325s ]
+[ sql ] [ SQL ] SELECT `ui`.`Name`,`ui`.`User_Id` FROM `user_info` `ui` INNER JOIN `user` `u` ON `u`.`Id`=`ui`.`User_Id` WHERE  `Type_Id` = 5  AND `Status` = 1 ORDER BY `Name` [ RunTime:0.016906s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.018158s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `promotion_user` [ RunTime:0.018699s ]
+[ sql ] [ SQL ] SELECT `Pro_User`,`Id` FROM `promotion_user` WHERE  `Status` = 1 ORDER BY `Pro_User` [ RunTime:0.018808s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.020822s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.016163s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.019453s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `ProjectName`,`Id` FROM `project` WHERE  `status` = 1 ORDER BY `ProjectName` [ RunTime:0.016881s ]
+[ sql ] [ SQL ] SELECT `ui`.`Name`,`ui`.`User_Id` FROM `user_info` `ui` INNER JOIN `user` `u` ON `u`.`Id`=`ui`.`User_Id` WHERE  `Type_Id` = 6  AND `Status` = 1 ORDER BY `Name` [ RunTime:0.015890s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:36:07+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007441s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.006790s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.007546s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.008496s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.006993s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:36:09+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011263s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.014188s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.014911s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.016349s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.016045s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:39:11+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014952s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.015167s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.015060s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.016247s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.015091s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:39:33+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010391s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.011802s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.012414s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.014045s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.012558s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:41:06+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010695s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.013128s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.012951s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.013835s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.012700s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:41:09+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003900s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.003813s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.004629s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.005190s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.004345s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:41:14+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010677s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.012472s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.016085s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.018264s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.015431s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:41:31+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006348s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.006855s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.009142s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.008749s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.008599s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:41:31+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003783s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.003529s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.004044s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.004442s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.003915s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:41:34+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008694s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.009631s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.013295s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.012914s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.012744s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:41:35+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004769s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.004430s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.005958s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.006580s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.004071s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:41:35+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013211s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.016094s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.018045s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.021210s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.018238s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:41:36+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014292s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.017474s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.013868s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.014320s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.015726s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:41:36+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005821s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.006795s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.007604s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.007965s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.004454s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:41:36+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004654s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.004244s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.004914s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.005648s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.004150s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:41:36+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014752s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.017791s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.013939s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.014113s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.016125s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:41:36+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005113s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.004219s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.004096s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.004688s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.003895s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:41:40+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006037s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.007005s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.008554s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.010173s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.008552s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:41:51+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008197s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.009626s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.013744s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.013843s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.012503s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:42:12+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006451s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.005667s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.006171s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.007295s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.006097s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:42:26+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/main
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011546s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.012756s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.009969s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.011183s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.010130s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:42:30+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008014s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.009589s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.011988s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.012221s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.011054s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:42:47+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index/index/main
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012961s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.010860s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.009632s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.011183s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.008851s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:42:59+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index/index/main
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011597s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.012989s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.014232s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.015249s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.014502s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:43:02+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004771s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.005382s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.006434s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.006927s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.006130s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:46:55+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008220s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.007579s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.007982s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.008103s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.007439s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:49:45+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005298s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.005021s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.004960s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.005634s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.004970s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:50:01+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007853s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.007212s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.008851s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.009466s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.008018s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:50:23+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007042s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.008592s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.008916s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.010147s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.009281s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:50:38+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006132s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.008439s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.010627s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.010947s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.010186s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:50:38+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/main
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014327s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.019264s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.022908s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.025480s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.024261s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:50:42+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004927s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.004372s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.005181s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.006047s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.004938s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:50:43+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/main
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003788s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.003095s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.002824s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.003517s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.002661s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:51:56+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009440s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.012572s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.016723s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.013970s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.013946s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:51:56+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/main
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010320s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.014400s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.018221s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.020007s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.027970s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:52:27+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006483s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.006215s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.005660s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.006786s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.005606s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:52:27+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/main
+[ sql ] [ DB ] CONNECT:[ UseTime:0.016806s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.022272s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.020357s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.013039s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.012744s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:53:08+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007245s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.005377s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.008112s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.008767s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.006663s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:53:08+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/main
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009090s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.009239s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.008690s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.009622s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.009541s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:53:28+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006877s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.006947s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.006017s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.006709s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.005542s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:53:28+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/main
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009055s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.008907s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.009459s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.008456s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:53:50+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007364s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.008018s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.013304s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.011693s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.010882s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:53:50+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/main
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014154s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.018363s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.024779s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.026496s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.019595s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:56:31+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007725s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.008741s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.009060s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.010807s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.009711s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:56:31+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/main
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007742s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.009038s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.008825s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.012231s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.008740s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:58:05+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005165s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.004741s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.005637s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.006481s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.005614s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:58:05+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/main
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007080s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.006993s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.007141s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.008530s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.006694s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:58:46+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004731s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.004712s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.003684s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.006096s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.003962s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:58:46+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/main
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006218s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.008011s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.008732s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.009056s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.010399s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:58:52+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007130s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.006355s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.006058s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.007861s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.006413s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:58:52+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/main
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009703s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.010309s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.013522s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.012361s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.017418s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:59:58+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009340s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.010866s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.009677s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.011700s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.009662s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:59:58+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/main
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008520s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.007477s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.007206s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.008736s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.008239s ]
+---------------------------------------------------------------
+[ 2020-10-13T16:59:58+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_my_cluedata/?project_id=&user_id=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004979s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.004447s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.005862s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.006346s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.005020s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.006488s ]
+[ sql ] [ SQL ] SELECT p.Id, p.ProjectName, Sum(Money_Con) Con, Sum(c.Phone+Message) Res, Date FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` BETWEEN '2020-09-13' AND '2020-10-12'  AND `p`.`Status` = 1 GROUP BY Project_Id,Date ORDER BY `p`.`Id`,`Date` DESC [ RunTime:0.009969s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:00:19+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/push/push/check_dot
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011578s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.012914s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.014204s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.014005s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.013634s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:00:21+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006981s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.007680s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.007198s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.008481s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.007976s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:00:21+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/main
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011376s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.014283s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.026130s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.016789s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.014309s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:00:21+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/push/push/check_dot
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006255s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.004922s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.006229s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.006292s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.006166s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:00:21+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_my_cluedata/?project_id=&user_id=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015335s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.016811s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.017266s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.019878s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.018537s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.020674s ]
+[ sql ] [ SQL ] SELECT p.Id, p.ProjectName, Sum(Money_Con) Con, Sum(c.Phone+Message) Res, Date FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` BETWEEN '2020-09-13' AND '2020-10-12'  AND `p`.`Status` = 1 GROUP BY Project_Id,Date ORDER BY `p`.`Id`,`Date` DESC [ RunTime:0.022217s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:02:03+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006792s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.006018s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.005579s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.005770s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.005161s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:02:03+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/main
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010386s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.007488s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.007008s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.011868s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.010878s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:02:04+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_my_project
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013743s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.018267s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.017520s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.020992s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.019051s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.025246s ]
+[ sql ] [ SQL ] SELECT p.ProjectName ,p.EstimatedCost Target, TargetNumber, Project_Id, Sum(Money_Con) Con, Sum(c.Phone+Message) Res FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` BETWEEN '2020-10-12' AND '2020-10-12'  AND `p`.`Status` = 1 GROUP BY `Project_Id` [ RunTime:0.024650s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:02:04+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_my_cluedata/?project_id=&user_id=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007672s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.009214s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.012165s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.011783s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.012378s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.012840s ]
+[ sql ] [ SQL ] SELECT p.Id, p.ProjectName, Sum(Money_Con) Con, Sum(c.Phone+Message) Res, Date FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` BETWEEN '2020-09-13' AND '2020-10-12'  AND `p`.`Status` = 1 GROUP BY Project_Id,Date ORDER BY `p`.`Id`,`Date` DESC [ RunTime:0.016652s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:02:04+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_target?limit=20&page=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008439s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.013225s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.016537s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.014911s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.015454s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `target` [ RunTime:0.019757s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `target` `a` LEFT JOIN `user_info` `b` ON `a`.`User_Id`=`b`.`User_Id` WHERE  `Status` = '1' LIMIT 1 [ RunTime:0.020200s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`Name` FROM `target` `a` LEFT JOIN `user_info` `b` ON `a`.`User_Id`=`b`.`User_Id` WHERE  `Status` = '1' ORDER BY `Create_time` DESC LIMIT 0,20 [ RunTime:0.024488s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:02:04+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer_count?limit=20&page=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008211s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.012874s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.013184s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.012201s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.016222s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `push` [ RunTime:0.013885s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `customer` [ RunTime:0.015152s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `feiyu_clues` [ RunTime:0.015784s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `user_info` `u` LEFT JOIN ( SELECT count(Phone) Customer,Client_Id,count(Moblie) Repeats,count(Phone)-count(Moblie) NoRepeats FROM `customer` `c` LEFT JOIN `kf_moblie` `kf` ON `kf`.`Moblie`=`c`.`Phone` WHERE  `c`.`Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) c ON `c`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(*) Push,Client_Id FROM `push` WHERE  `Cre_Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) p ON `p`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(clue_id) as Clues,fu.Client_Id FROM `feiyu_clues` `fc` LEFT JOIN `feiyu_user` `fu` ON `fc`.`client_id`=`fu`.`Id` WHERE  `fc`.`create_time` BETWEEN 1602518400 AND 1602604799 GROUP BY `fu`.`Client_Id` ) fy ON `fy`.`Client_Id`=`u`.`User_Id` WHERE  `Type_Id` = 5 GROUP BY `u`.`User_Id` ) `_group_count_` LIMIT 1 [ RunTime:0.022345s ]
+[ sql ] [ SQL ] SELECT `u`.`User_Id`,`Name`,`Push`,`Customer`,`Repeats`,`NoRepeats`,`Clues` FROM `user_info` `u` LEFT JOIN ( SELECT count(Phone) Customer,Client_Id,count(Moblie) Repeats,count(Phone)-count(Moblie) NoRepeats FROM `customer` `c` LEFT JOIN `kf_moblie` `kf` ON `kf`.`Moblie`=`c`.`Phone` WHERE  `c`.`Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) c ON `c`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(*) Push,Client_Id FROM `push` WHERE  `Cre_Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) p ON `p`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(clue_id) as Clues,fu.Client_Id FROM `feiyu_clues` `fc` LEFT JOIN `feiyu_user` `fu` ON `fc`.`client_id`=`fu`.`Id` WHERE  `fc`.`create_time` BETWEEN 1602518400 AND 1602604799 GROUP BY `fu`.`Client_Id` ) fy ON `fy`.`Client_Id`=`u`.`User_Id` WHERE  `Type_Id` = 5 GROUP BY `u`.`User_Id` ORDER BY `Push` DESC,`Customer` DESC,`Clues` DESC LIMIT 0,20 [ RunTime:0.018807s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:10:23+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.019946s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.017317s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `user` `u` ON `u`.`Id`=`ui`.`User_Id` WHERE  `Type_Id` IN (2,3,4)  AND `Status` = 1 ORDER BY `Name` [ RunTime:0.016209s ]
+[ sql ] [ SQL ] SELECT `ui`.`Name`,`ui`.`User_Id` FROM `user_info` `ui` INNER JOIN `user` `u` ON `u`.`Id`=`ui`.`User_Id` WHERE  `Type_Id` = 5  AND `Status` = 1 ORDER BY `Name` [ RunTime:0.009650s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.014015s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `promotion_user` [ RunTime:0.012307s ]
+[ sql ] [ SQL ] SELECT `Pro_User`,`Id` FROM `promotion_user` WHERE  `Status` = 1 ORDER BY `Pro_User` [ RunTime:0.011135s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.013015s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.009125s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.009609s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `ProjectName`,`Id` FROM `project` WHERE  `status` = 1 ORDER BY `ProjectName` [ RunTime:0.008278s ]
+[ sql ] [ SQL ] SELECT `ui`.`Name`,`ui`.`User_Id` FROM `user_info` `ui` INNER JOIN `user` `u` ON `u`.`Id`=`ui`.`User_Id` WHERE  `Type_Id` = 6  AND `Status` = 1 ORDER BY `Name` [ RunTime:0.008666s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:10:24+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/main
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014403s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.008386s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.007980s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.008894s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.006367s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:10:24+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/push/push/check_dot
+[ sql ] [ DB ] CONNECT:[ UseTime:0.144777s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.132059s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.023280s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.016176s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.012374s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:10:24+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_my_project
+[ sql ] [ DB ] CONNECT:[ UseTime:0.017035s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.011958s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.009929s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.006531s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.011954s ]
+[ sql ] [ SQL ] SELECT p.ProjectName ,p.EstimatedCost Target, TargetNumber, Project_Id, Sum(Money_Con) Con, Sum(c.Phone+Message) Res FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` BETWEEN '2020-10-12' AND '2020-10-12'  AND `p`.`Status` = 1 GROUP BY `Project_Id` [ RunTime:0.013472s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:10:24+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_my_cluedata/?project_id=&user_id=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009063s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.014474s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.012800s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.012735s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.009091s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.013392s ]
+[ sql ] [ SQL ] SELECT p.Id, p.ProjectName, Sum(Money_Con) Con, Sum(c.Phone+Message) Res, Date FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` BETWEEN '2020-09-13' AND '2020-10-12'  AND `p`.`Status` = 1 GROUP BY Project_Id,Date ORDER BY `p`.`Id`,`Date` DESC [ RunTime:0.012790s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:10:25+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_target?limit=20&page=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005769s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.008087s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.008824s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.009971s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.006571s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `target` [ RunTime:0.011123s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `target` `a` LEFT JOIN `user_info` `b` ON `a`.`User_Id`=`b`.`User_Id` WHERE  `Status` = '1' LIMIT 1 [ RunTime:0.006712s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`Name` FROM `target` `a` LEFT JOIN `user_info` `b` ON `a`.`User_Id`=`b`.`User_Id` WHERE  `Status` = '1' ORDER BY `Create_time` DESC LIMIT 0,20 [ RunTime:0.006537s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:10:25+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer_count?limit=20&page=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006287s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.009343s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.008986s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.010698s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.007576s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `push` [ RunTime:0.010543s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `customer` [ RunTime:0.012419s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `feiyu_clues` [ RunTime:0.010568s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `user_info` `u` LEFT JOIN ( SELECT count(Phone) Customer,Client_Id,count(Moblie) Repeats,count(Phone)-count(Moblie) NoRepeats FROM `customer` `c` LEFT JOIN `kf_moblie` `kf` ON `kf`.`Moblie`=`c`.`Phone` WHERE  `c`.`Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) c ON `c`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(*) Push,Client_Id FROM `push` WHERE  `Cre_Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) p ON `p`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(clue_id) as Clues,fu.Client_Id FROM `feiyu_clues` `fc` LEFT JOIN `feiyu_user` `fu` ON `fc`.`client_id`=`fu`.`Id` WHERE  `fc`.`create_time` BETWEEN 1602518400 AND 1602604799 GROUP BY `fu`.`Client_Id` ) fy ON `fy`.`Client_Id`=`u`.`User_Id` WHERE  `Type_Id` = 5 GROUP BY `u`.`User_Id` ) `_group_count_` LIMIT 1 [ RunTime:0.025495s ]
+[ sql ] [ SQL ] SELECT `u`.`User_Id`,`Name`,`Push`,`Customer`,`Repeats`,`NoRepeats`,`Clues` FROM `user_info` `u` LEFT JOIN ( SELECT count(Phone) Customer,Client_Id,count(Moblie) Repeats,count(Phone)-count(Moblie) NoRepeats FROM `customer` `c` LEFT JOIN `kf_moblie` `kf` ON `kf`.`Moblie`=`c`.`Phone` WHERE  `c`.`Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) c ON `c`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(*) Push,Client_Id FROM `push` WHERE  `Cre_Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) p ON `p`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(clue_id) as Clues,fu.Client_Id FROM `feiyu_clues` `fc` LEFT JOIN `feiyu_user` `fu` ON `fc`.`client_id`=`fu`.`Id` WHERE  `fc`.`create_time` BETWEEN 1602518400 AND 1602604799 GROUP BY `fu`.`Client_Id` ) fy ON `fy`.`Client_Id`=`u`.`User_Id` WHERE  `Type_Id` = 5 GROUP BY `u`.`User_Id` ORDER BY `Push` DESC,`Customer` DESC,`Clues` DESC LIMIT 0,20 [ RunTime:0.013210s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:10:50+08:00 ] 127.0.0.1 PUT localhost:8080/public/index.php/finsh_target/?Id=43
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010217s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.013341s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.013836s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.014809s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.012641s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `target` [ RunTime:0.014960s ]
+[ sql ] [ SQL ] SELECT * FROM `target` WHERE  `Id` = 43 LIMIT 1 [ RunTime:0.013389s ]
+[ sql ] [ SQL ] UPDATE `target`  SET `Status`='0',`Complete_time`=1602580250  WHERE  `Id` = 43  AND `User_Id` = '96'  AND `See_User_Id` = '@,@,'  AND `Work_Target` = 'qwer'  AND `Remarks` = ''  AND `Create_time` = 1595747705  AND `End_time` = 1595757600  AND `Complete_time` = 1596159515  AND `Feedback` IS NULL  AND `Status` = '1' [ RunTime:0.012754s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:10:57+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006388s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.008274s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.008776s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.009451s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.007227s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:10:58+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/main
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009429s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.011736s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.015661s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.013578s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.012912s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:10:58+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/push/push/check_dot
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007936s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.012032s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.012349s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.013482s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.012114s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:10:58+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_my_project
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010282s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.014914s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.016784s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.018087s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.015581s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.016054s ]
+[ sql ] [ SQL ] SELECT p.ProjectName ,p.EstimatedCost Target, TargetNumber, Project_Id, Sum(Money_Con) Con, Sum(c.Phone+Message) Res FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` BETWEEN '2020-10-12' AND '2020-10-12'  AND `p`.`Status` = 1 GROUP BY `Project_Id` [ RunTime:0.016728s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:10:58+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_my_cluedata/?project_id=&user_id=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010035s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.015172s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.017974s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.018786s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.015750s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.017424s ]
+[ sql ] [ SQL ] SELECT p.Id, p.ProjectName, Sum(Money_Con) Con, Sum(c.Phone+Message) Res, Date FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` BETWEEN '2020-09-13' AND '2020-10-12'  AND `p`.`Status` = 1 GROUP BY Project_Id,Date ORDER BY `p`.`Id`,`Date` DESC [ RunTime:0.018327s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:10:58+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer_count?limit=20&page=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003561s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.004380s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.003917s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.004458s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.002384s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `push` [ RunTime:0.003531s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `customer` [ RunTime:0.003295s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `feiyu_clues` [ RunTime:0.003581s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `user_info` `u` LEFT JOIN ( SELECT count(Phone) Customer,Client_Id,count(Moblie) Repeats,count(Phone)-count(Moblie) NoRepeats FROM `customer` `c` LEFT JOIN `kf_moblie` `kf` ON `kf`.`Moblie`=`c`.`Phone` WHERE  `c`.`Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) c ON `c`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(*) Push,Client_Id FROM `push` WHERE  `Cre_Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) p ON `p`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(clue_id) as Clues,fu.Client_Id FROM `feiyu_clues` `fc` LEFT JOIN `feiyu_user` `fu` ON `fc`.`client_id`=`fu`.`Id` WHERE  `fc`.`create_time` BETWEEN 1602518400 AND 1602604799 GROUP BY `fu`.`Client_Id` ) fy ON `fy`.`Client_Id`=`u`.`User_Id` WHERE  `Type_Id` = 5 GROUP BY `u`.`User_Id` ) `_group_count_` LIMIT 1 [ RunTime:0.007935s ]
+[ sql ] [ SQL ] SELECT `u`.`User_Id`,`Name`,`Push`,`Customer`,`Repeats`,`NoRepeats`,`Clues` FROM `user_info` `u` LEFT JOIN ( SELECT count(Phone) Customer,Client_Id,count(Moblie) Repeats,count(Phone)-count(Moblie) NoRepeats FROM `customer` `c` LEFT JOIN `kf_moblie` `kf` ON `kf`.`Moblie`=`c`.`Phone` WHERE  `c`.`Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) c ON `c`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(*) Push,Client_Id FROM `push` WHERE  `Cre_Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) p ON `p`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(clue_id) as Clues,fu.Client_Id FROM `feiyu_clues` `fc` LEFT JOIN `feiyu_user` `fu` ON `fc`.`client_id`=`fu`.`Id` WHERE  `fc`.`create_time` BETWEEN 1602518400 AND 1602604799 GROUP BY `fu`.`Client_Id` ) fy ON `fy`.`Client_Id`=`u`.`User_Id` WHERE  `Type_Id` = 5 GROUP BY `u`.`User_Id` ORDER BY `Push` DESC,`Customer` DESC,`Clues` DESC LIMIT 0,20 [ RunTime:0.006937s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:10:58+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_target?limit=20&page=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004199s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.006875s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.008555s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.009282s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.007143s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `target` [ RunTime:0.007972s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `target` `a` LEFT JOIN `user_info` `b` ON `a`.`User_Id`=`b`.`User_Id` WHERE  `Status` = '1' LIMIT 1 [ RunTime:0.006549s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`Name` FROM `target` `a` LEFT JOIN `user_info` `b` ON `a`.`User_Id`=`b`.`User_Id` WHERE  `Status` = '1' ORDER BY `Create_time` DESC LIMIT 0,20 [ RunTime:0.006719s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:19:38+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009867s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.012675s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.012617s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.014090s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.011281s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:19:39+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/main
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006228s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.007419s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.008012s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.008893s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.007788s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:19:39+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_my_project
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007081s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.007557s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.009368s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.020650s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.009606s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.010900s ]
+[ sql ] [ SQL ] SELECT p.ProjectName ,p.EstimatedCost Target, TargetNumber, Project_Id, Sum(Money_Con) Con, Sum(c.Phone+Message) Res FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` BETWEEN '2020-10-12' AND '2020-10-12'  AND `p`.`Status` = 1 GROUP BY `Project_Id` [ RunTime:0.010189s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:19:39+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_my_cluedata/?project_id=&user_id=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006520s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.008854s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.008592s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.009769s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.008525s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.009844s ]
+[ sql ] [ SQL ] SELECT p.Id, p.ProjectName, Sum(Money_Con) Con, Sum(c.Phone+Message) Res, Date FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` BETWEEN '2020-09-13' AND '2020-10-12'  AND `p`.`Status` = 1 GROUP BY Project_Id,Date ORDER BY `p`.`Id`,`Date` DESC [ RunTime:0.010263s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:19:39+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_target?limit=20&page=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005745s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.005280s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.003526s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.004566s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.004306s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `target` [ RunTime:0.005193s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `target` `a` LEFT JOIN `user_info` `b` ON `a`.`User_Id`=`b`.`User_Id` WHERE  `Status` = '1' LIMIT 1 [ RunTime:0.003219s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`Name` FROM `target` `a` LEFT JOIN `user_info` `b` ON `a`.`User_Id`=`b`.`User_Id` WHERE  `Status` = '1' ORDER BY `Create_time` DESC LIMIT 0,20 [ RunTime:0.003781s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:19:40+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer_count?limit=20&page=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009131s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.013331s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.013702s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.017027s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.018941s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `push` [ RunTime:0.015903s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `customer` [ RunTime:0.015902s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `feiyu_clues` [ RunTime:0.014507s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `user_info` `u` LEFT JOIN ( SELECT count(Phone) Customer,Client_Id,count(Moblie) Repeats,count(Phone)-count(Moblie) NoRepeats FROM `customer` `c` LEFT JOIN `kf_moblie` `kf` ON `kf`.`Moblie`=`c`.`Phone` WHERE  `c`.`Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) c ON `c`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(*) Push,Client_Id FROM `push` WHERE  `Cre_Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) p ON `p`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(clue_id) as Clues,fu.Client_Id FROM `feiyu_clues` `fc` LEFT JOIN `feiyu_user` `fu` ON `fc`.`client_id`=`fu`.`Id` WHERE  `fc`.`create_time` BETWEEN 1602518400 AND 1602604799 GROUP BY `fu`.`Client_Id` ) fy ON `fy`.`Client_Id`=`u`.`User_Id` WHERE  `Type_Id` = 5 GROUP BY `u`.`User_Id` ) `_group_count_` LIMIT 1 [ RunTime:0.025666s ]
+[ sql ] [ SQL ] SELECT `u`.`User_Id`,`Name`,`Push`,`Customer`,`Repeats`,`NoRepeats`,`Clues` FROM `user_info` `u` LEFT JOIN ( SELECT count(Phone) Customer,Client_Id,count(Moblie) Repeats,count(Phone)-count(Moblie) NoRepeats FROM `customer` `c` LEFT JOIN `kf_moblie` `kf` ON `kf`.`Moblie`=`c`.`Phone` WHERE  `c`.`Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) c ON `c`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(*) Push,Client_Id FROM `push` WHERE  `Cre_Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) p ON `p`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(clue_id) as Clues,fu.Client_Id FROM `feiyu_clues` `fc` LEFT JOIN `feiyu_user` `fu` ON `fc`.`client_id`=`fu`.`Id` WHERE  `fc`.`create_time` BETWEEN 1602518400 AND 1602604799 GROUP BY `fu`.`Client_Id` ) fy ON `fy`.`Client_Id`=`u`.`User_Id` WHERE  `Type_Id` = 5 GROUP BY `u`.`User_Id` ORDER BY `Push` DESC,`Customer` DESC,`Clues` DESC LIMIT 0,20 [ RunTime:0.024846s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:19:40+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/push/push/check_dot
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008400s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.008871s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.011346s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.016372s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.011053s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:19:52+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_my_cluedata/?project_id=&user_id=66
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005496s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.006624s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.007756s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.008856s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.007746s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.008649s ]
+[ sql ] [ SQL ] SELECT p.Id, p.ProjectName, Sum(Money_Con) Con, Sum(c.Phone+Message) Res, Date FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` BETWEEN '2020-09-13' AND '2020-10-12'  AND `p`.`Status` = 1  AND `p`.`User_Id` = '66' GROUP BY Project_Id,Date ORDER BY `p`.`Id`,`Date` DESC [ RunTime:0.008427s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:19:55+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_my_cluedata/?project_id=214&user_id=66
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008561s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.010389s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.008666s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.010114s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.009155s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.009719s ]
+[ sql ] [ SQL ] SELECT p.Id, p.ProjectName, Sum(Money_Con) Con, Sum(c.Phone+Message) Res, Date FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` BETWEEN '2020-09-13' AND '2020-10-12'  AND `p`.`Status` = 1  AND `p`.`Id` = '214'  AND `p`.`User_Id` = '66' GROUP BY Project_Id,Date ORDER BY `p`.`Id`,`Date` DESC [ RunTime:0.010288s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:22:26+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007434s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.010991s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.010283s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.011015s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.009753s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:22:26+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/main
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009633s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.012136s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.011118s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.009248s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.009320s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:22:27+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/push/push/check_dot
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010705s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.017300s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.025245s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.015798s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.013882s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:22:27+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_my_project
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006207s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.009365s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.007032s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.008248s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.007203s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.008929s ]
+[ sql ] [ SQL ] SELECT p.ProjectName ,p.EstimatedCost Target, TargetNumber, Project_Id, Sum(Money_Con) Con, Sum(c.Phone+Message) Res FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` BETWEEN '2020-10-12' AND '2020-10-12'  AND `p`.`Status` = 1 GROUP BY `Project_Id` [ RunTime:0.008564s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:22:27+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_my_cluedata/?project_id=&user_id=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010136s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.010135s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.010853s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.013024s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.009208s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.010959s ]
+[ sql ] [ SQL ] SELECT p.Id, p.ProjectName, Sum(Money_Con) Con, Sum(c.Phone+Message) Res, Date FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` BETWEEN '2020-09-13' AND '2020-10-12'  AND `p`.`Status` = 1 GROUP BY Project_Id,Date ORDER BY `p`.`Id`,`Date` DESC [ RunTime:0.011352s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:22:27+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_target?limit=20&page=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006886s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.008200s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.008925s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.009958s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.008640s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `target` [ RunTime:0.010415s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `target` `a` LEFT JOIN `user_info` `b` ON `a`.`User_Id`=`b`.`User_Id` WHERE  `Status` = '1' LIMIT 1 [ RunTime:0.008235s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`Name` FROM `target` `a` LEFT JOIN `user_info` `b` ON `a`.`User_Id`=`b`.`User_Id` WHERE  `Status` = '1' ORDER BY `Create_time` DESC LIMIT 0,20 [ RunTime:0.008776s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:22:27+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer_count?limit=20&page=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006205s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.007415s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.009850s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.010873s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.008688s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `push` [ RunTime:0.009921s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `customer` [ RunTime:0.010607s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `feiyu_clues` [ RunTime:0.009645s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `user_info` `u` LEFT JOIN ( SELECT count(Phone) Customer,Client_Id,count(Moblie) Repeats,count(Phone)-count(Moblie) NoRepeats FROM `customer` `c` LEFT JOIN `kf_moblie` `kf` ON `kf`.`Moblie`=`c`.`Phone` WHERE  `c`.`Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) c ON `c`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(*) Push,Client_Id FROM `push` WHERE  `Cre_Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) p ON `p`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(clue_id) as Clues,fu.Client_Id FROM `feiyu_clues` `fc` LEFT JOIN `feiyu_user` `fu` ON `fc`.`client_id`=`fu`.`Id` WHERE  `fc`.`create_time` BETWEEN 1602518400 AND 1602604799 GROUP BY `fu`.`Client_Id` ) fy ON `fy`.`Client_Id`=`u`.`User_Id` WHERE  `Type_Id` = 5 GROUP BY `u`.`User_Id` ) `_group_count_` LIMIT 1 [ RunTime:0.015268s ]
+[ sql ] [ SQL ] SELECT `u`.`User_Id`,`Name`,`Push`,`Customer`,`Repeats`,`NoRepeats`,`Clues` FROM `user_info` `u` LEFT JOIN ( SELECT count(Phone) Customer,Client_Id,count(Moblie) Repeats,count(Phone)-count(Moblie) NoRepeats FROM `customer` `c` LEFT JOIN `kf_moblie` `kf` ON `kf`.`Moblie`=`c`.`Phone` WHERE  `c`.`Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) c ON `c`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(*) Push,Client_Id FROM `push` WHERE  `Cre_Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) p ON `p`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(clue_id) as Clues,fu.Client_Id FROM `feiyu_clues` `fc` LEFT JOIN `feiyu_user` `fu` ON `fc`.`client_id`=`fu`.`Id` WHERE  `fc`.`create_time` BETWEEN 1602518400 AND 1602604799 GROUP BY `fu`.`Client_Id` ) fy ON `fy`.`Client_Id`=`u`.`User_Id` WHERE  `Type_Id` = 5 GROUP BY `u`.`User_Id` ORDER BY `Push` DESC,`Customer` DESC,`Clues` DESC LIMIT 0,20 [ RunTime:0.014858s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:22:31+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/input
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009008s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.010564s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.015131s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.014933s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.013508s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:22:34+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/customer_count
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011289s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.015420s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.014302s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.015841s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.014435s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:22:35+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/push/kf_moblie/history
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014381s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.016943s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.017097s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.019783s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.019528s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:22:35+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/kh_info/kh_count/kh_count
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009444s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.010615s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.011432s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.014330s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.012800s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:22:36+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/kh_info/kh_info/kh_info
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006029s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.005469s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.004077s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.006353s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.004237s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:22:41+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/project
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007160s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.007347s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.007760s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.008885s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.008518s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:22:48+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/wxapi/gzh/gzh
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010342s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.011081s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.011814s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.013968s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.011832s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:22:51+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/client_rec
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011841s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.015363s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.016103s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.017317s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.015632s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:22:53+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/client_sum
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011433s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.013280s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.012323s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.012635s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.011911s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:22:55+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/customer_count
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005744s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.006241s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.009057s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.013098s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.014100s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:22:58+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/project
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009217s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.009436s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.007461s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.009585s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.007444s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:23:05+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/customer_count
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013101s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.014743s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.014083s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.015666s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.015241s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:23:24+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008707s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.009691s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.009879s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.011197s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.009397s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:23:24+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/main
+[ sql ] [ DB ] CONNECT:[ UseTime:0.018250s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.015520s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.016420s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.019562s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.022494s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:23:24+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/push/push/check_dot
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011383s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.011848s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.012388s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.017823s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.015196s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:23:24+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_my_project
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007102s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.006077s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.005756s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.007104s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.006261s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.006610s ]
+[ sql ] [ SQL ] SELECT p.ProjectName ,p.EstimatedCost Target, TargetNumber, Project_Id, Sum(Money_Con) Con, Sum(c.Phone+Message) Res FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` BETWEEN '2020-10-12' AND '2020-10-12'  AND `p`.`Status` = 1 GROUP BY `Project_Id` [ RunTime:0.008210s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:23:24+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_my_cluedata/?project_id=&user_id=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010178s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.011452s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.007779s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.009949s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.009084s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.010460s ]
+[ sql ] [ SQL ] SELECT p.Id, p.ProjectName, Sum(Money_Con) Con, Sum(c.Phone+Message) Res, Date FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` BETWEEN '2020-09-13' AND '2020-10-12'  AND `p`.`Status` = 1 GROUP BY Project_Id,Date ORDER BY `p`.`Id`,`Date` DESC [ RunTime:0.015733s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:23:25+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer_count?limit=20&page=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008811s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.008430s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.007563s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.010399s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.008014s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `push` [ RunTime:0.011685s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `customer` [ RunTime:0.012073s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `feiyu_clues` [ RunTime:0.010249s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `user_info` `u` LEFT JOIN ( SELECT count(Phone) Customer,Client_Id,count(Moblie) Repeats,count(Phone)-count(Moblie) NoRepeats FROM `customer` `c` LEFT JOIN `kf_moblie` `kf` ON `kf`.`Moblie`=`c`.`Phone` WHERE  `c`.`Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) c ON `c`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(*) Push,Client_Id FROM `push` WHERE  `Cre_Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) p ON `p`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(clue_id) as Clues,fu.Client_Id FROM `feiyu_clues` `fc` LEFT JOIN `feiyu_user` `fu` ON `fc`.`client_id`=`fu`.`Id` WHERE  `fc`.`create_time` BETWEEN 1602518400 AND 1602604799 GROUP BY `fu`.`Client_Id` ) fy ON `fy`.`Client_Id`=`u`.`User_Id` WHERE  `Type_Id` = 5 GROUP BY `u`.`User_Id` ) `_group_count_` LIMIT 1 [ RunTime:0.015022s ]
+[ sql ] [ SQL ] SELECT `u`.`User_Id`,`Name`,`Push`,`Customer`,`Repeats`,`NoRepeats`,`Clues` FROM `user_info` `u` LEFT JOIN ( SELECT count(Phone) Customer,Client_Id,count(Moblie) Repeats,count(Phone)-count(Moblie) NoRepeats FROM `customer` `c` LEFT JOIN `kf_moblie` `kf` ON `kf`.`Moblie`=`c`.`Phone` WHERE  `c`.`Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) c ON `c`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(*) Push,Client_Id FROM `push` WHERE  `Cre_Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) p ON `p`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(clue_id) as Clues,fu.Client_Id FROM `feiyu_clues` `fc` LEFT JOIN `feiyu_user` `fu` ON `fc`.`client_id`=`fu`.`Id` WHERE  `fc`.`create_time` BETWEEN 1602518400 AND 1602604799 GROUP BY `fu`.`Client_Id` ) fy ON `fy`.`Client_Id`=`u`.`User_Id` WHERE  `Type_Id` = 5 GROUP BY `u`.`User_Id` ORDER BY `Push` DESC,`Customer` DESC,`Clues` DESC LIMIT 0,20 [ RunTime:0.016213s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:23:25+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_target?limit=20&page=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011307s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.011193s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.010588s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.011859s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.009960s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `target` [ RunTime:0.012894s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `target` `a` LEFT JOIN `user_info` `b` ON `a`.`User_Id`=`b`.`User_Id` WHERE  `Status` = '1' LIMIT 1 [ RunTime:0.009470s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`Name` FROM `target` `a` LEFT JOIN `user_info` `b` ON `a`.`User_Id`=`b`.`User_Id` WHERE  `Status` = '1' ORDER BY `Create_time` DESC LIMIT 0,20 [ RunTime:0.011314s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:24:38+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_my_cluedata/?project_id=&user_id=90
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006719s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.005954s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.005045s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.005703s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.005051s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.005890s ]
+[ sql ] [ SQL ] SELECT p.Id, p.ProjectName, Sum(Money_Con) Con, Sum(c.Phone+Message) Res, Date FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` BETWEEN '2020-09-13' AND '2020-10-12'  AND `p`.`Status` = 1  AND `p`.`User_Id` = '90' GROUP BY Project_Id,Date ORDER BY `p`.`Id`,`Date` DESC [ RunTime:0.004900s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:24:39+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_my_cluedata/?project_id=214&user_id=90
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012198s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.015071s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.017361s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.018671s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.016630s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.019027s ]
+[ sql ] [ SQL ] SELECT p.Id, p.ProjectName, Sum(Money_Con) Con, Sum(c.Phone+Message) Res, Date FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` BETWEEN '2020-09-13' AND '2020-10-12'  AND `p`.`Status` = 1  AND `p`.`Id` = '214'  AND `p`.`User_Id` = '90' GROUP BY Project_Id,Date ORDER BY `p`.`Id`,`Date` DESC [ RunTime:0.016769s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:24:45+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_my_project?sel_date=2020-10-15%20-%202020-11-12
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008885s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.010875s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.012080s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.012909s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.012347s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.013178s ]
+[ sql ] [ SQL ] SELECT p.ProjectName ,p.EstimatedCost Target, TargetNumber, Project_Id, Sum(Money_Con) Con, Sum(c.Phone+Message) Res FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` BETWEEN '2020-10-15' AND '2020-11-12'  AND `p`.`Status` = 1 GROUP BY `Project_Id` [ RunTime:0.013533s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:25:01+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/promotion
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005499s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `promotion_user` [ RunTime:0.005863s ]
+[ sql ] [ SQL ] SELECT `Platform` FROM `promotion_user` WHERE  ( `Platform` IS NOT NULL AND `Platform` <> '' ) GROUP BY `Platform` [ RunTime:0.004699s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.005373s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.004093s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.005378s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.004729s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:25:03+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/promotion_con
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007311s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.008383s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.007708s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.009321s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.008562s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:25:10+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007285s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.006294s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.005266s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.007093s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.005499s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:25:10+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/main
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012948s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.014976s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.014729s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.018728s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.015033s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:25:10+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_my_project
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009719s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.016124s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.015586s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.016348s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.015049s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.018403s ]
+[ sql ] [ SQL ] SELECT p.ProjectName ,p.EstimatedCost Target, TargetNumber, Project_Id, Sum(Money_Con) Con, Sum(c.Phone+Message) Res FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` BETWEEN '2020-10-12' AND '2020-10-12'  AND `p`.`Status` = 1 GROUP BY `Project_Id` [ RunTime:0.019996s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:25:11+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_my_cluedata/?project_id=&user_id=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012475s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.011089s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.013969s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.016072s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.021257s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.015989s ]
+[ sql ] [ SQL ] SELECT p.Id, p.ProjectName, Sum(Money_Con) Con, Sum(c.Phone+Message) Res, Date FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` BETWEEN '2020-09-13' AND '2020-10-12'  AND `p`.`Status` = 1 GROUP BY Project_Id,Date ORDER BY `p`.`Id`,`Date` DESC [ RunTime:0.016670s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:25:11+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_target?limit=20&page=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002809s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.002482s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.002076s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.002703s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.001858s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `target` [ RunTime:0.003092s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `target` `a` LEFT JOIN `user_info` `b` ON `a`.`User_Id`=`b`.`User_Id` WHERE  `Status` = '1' LIMIT 1 [ RunTime:0.001837s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`Name` FROM `target` `a` LEFT JOIN `user_info` `b` ON `a`.`User_Id`=`b`.`User_Id` WHERE  `Status` = '1' ORDER BY `Create_time` DESC LIMIT 0,20 [ RunTime:0.002012s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:25:11+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer_count?limit=20&page=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005890s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.006010s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.005194s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.006395s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.005350s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `push` [ RunTime:0.006877s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `customer` [ RunTime:0.006680s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `feiyu_clues` [ RunTime:0.006337s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `user_info` `u` LEFT JOIN ( SELECT count(Phone) Customer,Client_Id,count(Moblie) Repeats,count(Phone)-count(Moblie) NoRepeats FROM `customer` `c` LEFT JOIN `kf_moblie` `kf` ON `kf`.`Moblie`=`c`.`Phone` WHERE  `c`.`Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) c ON `c`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(*) Push,Client_Id FROM `push` WHERE  `Cre_Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) p ON `p`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(clue_id) as Clues,fu.Client_Id FROM `feiyu_clues` `fc` LEFT JOIN `feiyu_user` `fu` ON `fc`.`client_id`=`fu`.`Id` WHERE  `fc`.`create_time` BETWEEN 1602518400 AND 1602604799 GROUP BY `fu`.`Client_Id` ) fy ON `fy`.`Client_Id`=`u`.`User_Id` WHERE  `Type_Id` = 5 GROUP BY `u`.`User_Id` ) `_group_count_` LIMIT 1 [ RunTime:0.011130s ]
+[ sql ] [ SQL ] SELECT `u`.`User_Id`,`Name`,`Push`,`Customer`,`Repeats`,`NoRepeats`,`Clues` FROM `user_info` `u` LEFT JOIN ( SELECT count(Phone) Customer,Client_Id,count(Moblie) Repeats,count(Phone)-count(Moblie) NoRepeats FROM `customer` `c` LEFT JOIN `kf_moblie` `kf` ON `kf`.`Moblie`=`c`.`Phone` WHERE  `c`.`Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) c ON `c`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(*) Push,Client_Id FROM `push` WHERE  `Cre_Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) p ON `p`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(clue_id) as Clues,fu.Client_Id FROM `feiyu_clues` `fc` LEFT JOIN `feiyu_user` `fu` ON `fc`.`client_id`=`fu`.`Id` WHERE  `fc`.`create_time` BETWEEN 1602518400 AND 1602604799 GROUP BY `fu`.`Client_Id` ) fy ON `fy`.`Client_Id`=`u`.`User_Id` WHERE  `Type_Id` = 5 GROUP BY `u`.`User_Id` ORDER BY `Push` DESC,`Customer` DESC,`Clues` DESC LIMIT 0,20 [ RunTime:0.010644s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:25:11+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/push/push/check_dot
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005811s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.005872s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.005312s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.006483s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.005370s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:25:21+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/project
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003158s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.002561s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.002247s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.003450s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.002229s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:26:28+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009632s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.012872s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.015182s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.016145s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.014387s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:26:28+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/main
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004805s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.004088s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.004495s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.006047s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.005434s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:26:29+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_my_project
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011553s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.006591s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.007502s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.008951s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.007941s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.009250s ]
+[ sql ] [ SQL ] SELECT p.ProjectName ,p.EstimatedCost Target, TargetNumber, Project_Id, Sum(Money_Con) Con, Sum(c.Phone+Message) Res FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` BETWEEN '2020-10-12' AND '2020-10-12'  AND `p`.`Status` = 1 GROUP BY `Project_Id` [ RunTime:0.009958s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:26:29+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_my_cluedata/?project_id=&user_id=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003030s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.003176s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.003053s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.003623s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.002869s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.003372s ]
+[ sql ] [ SQL ] SELECT p.Id, p.ProjectName, Sum(Money_Con) Con, Sum(c.Phone+Message) Res, Date FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` BETWEEN '2020-09-13' AND '2020-10-12'  AND `p`.`Status` = 1 GROUP BY Project_Id,Date ORDER BY `p`.`Id`,`Date` DESC [ RunTime:0.004808s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:26:29+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_target?limit=20&page=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007017s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.007684s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.009038s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.009660s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.008719s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `target` [ RunTime:0.009479s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `target` `a` LEFT JOIN `user_info` `b` ON `a`.`User_Id`=`b`.`User_Id` WHERE  `Status` = '1' LIMIT 1 [ RunTime:0.008834s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`Name` FROM `target` `a` LEFT JOIN `user_info` `b` ON `a`.`User_Id`=`b`.`User_Id` WHERE  `Status` = '1' ORDER BY `Create_time` DESC LIMIT 0,20 [ RunTime:0.009138s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:26:29+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer_count?limit=20&page=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008420s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.008880s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.007767s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.008555s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.008807s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `push` [ RunTime:0.010975s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `customer` [ RunTime:0.012617s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `feiyu_clues` [ RunTime:0.013132s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `user_info` `u` LEFT JOIN ( SELECT count(Phone) Customer,Client_Id,count(Moblie) Repeats,count(Phone)-count(Moblie) NoRepeats FROM `customer` `c` LEFT JOIN `kf_moblie` `kf` ON `kf`.`Moblie`=`c`.`Phone` WHERE  `c`.`Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) c ON `c`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(*) Push,Client_Id FROM `push` WHERE  `Cre_Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) p ON `p`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(clue_id) as Clues,fu.Client_Id FROM `feiyu_clues` `fc` LEFT JOIN `feiyu_user` `fu` ON `fc`.`client_id`=`fu`.`Id` WHERE  `fc`.`create_time` BETWEEN 1602518400 AND 1602604799 GROUP BY `fu`.`Client_Id` ) fy ON `fy`.`Client_Id`=`u`.`User_Id` WHERE  `Type_Id` = 5 GROUP BY `u`.`User_Id` ) `_group_count_` LIMIT 1 [ RunTime:0.013254s ]
+[ sql ] [ SQL ] SELECT `u`.`User_Id`,`Name`,`Push`,`Customer`,`Repeats`,`NoRepeats`,`Clues` FROM `user_info` `u` LEFT JOIN ( SELECT count(Phone) Customer,Client_Id,count(Moblie) Repeats,count(Phone)-count(Moblie) NoRepeats FROM `customer` `c` LEFT JOIN `kf_moblie` `kf` ON `kf`.`Moblie`=`c`.`Phone` WHERE  `c`.`Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) c ON `c`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(*) Push,Client_Id FROM `push` WHERE  `Cre_Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) p ON `p`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(clue_id) as Clues,fu.Client_Id FROM `feiyu_clues` `fc` LEFT JOIN `feiyu_user` `fu` ON `fc`.`client_id`=`fu`.`Id` WHERE  `fc`.`create_time` BETWEEN 1602518400 AND 1602604799 GROUP BY `fu`.`Client_Id` ) fy ON `fy`.`Client_Id`=`u`.`User_Id` WHERE  `Type_Id` = 5 GROUP BY `u`.`User_Id` ORDER BY `Push` DESC,`Customer` DESC,`Clues` DESC LIMIT 0,20 [ RunTime:0.017055s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:26:29+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/push/push/check_dot
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005492s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.005969s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.007614s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.007714s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.006745s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:26:31+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/project
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009550s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.012462s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.013786s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.012339s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.014126s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:26:31+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006662s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.008197s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.008565s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.011766s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.009101s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.009455s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = 1 LIMIT 1 [ RunTime:0.011158s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`Name`,`s`.`Client`,`a`.`Remarks` FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = 1 ORDER BY `a`.`ProjectName` DESC LIMIT 0,50 [ RunTime:0.013124s ]
+[ sql ] [ SQL ] SELECT Project_Id,Sum(Money_Con) Con,Sum(c.Phone+Message) Res,Sum(c.Cli_Money_Con+c.Cli_Money_Coin) Entry, count(c.Id) ConCount,p.Pro_User_Id Pro FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` = '2020-10-12' GROUP BY `Project_Id` [ RunTime:0.009619s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:26:52+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010999s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.012438s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.012575s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.018601s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.014370s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:26:52+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/main
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010182s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.016172s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.017575s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.017172s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.015358s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:26:52+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/push/push/check_dot
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010012s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.011307s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.011307s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.012526s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.010461s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:26:52+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_my_project
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009015s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.011168s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.011827s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.012829s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.011725s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.012425s ]
+[ sql ] [ SQL ] SELECT p.ProjectName ,p.EstimatedCost Target, TargetNumber, Project_Id, Sum(Money_Con) Con, Sum(c.Phone+Message) Res FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` BETWEEN '2020-10-12' AND '2020-10-12'  AND `p`.`Status` = 1 GROUP BY `Project_Id` [ RunTime:0.012226s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:26:52+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_my_cluedata/?project_id=&user_id=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004021s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.003925s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.004017s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.005077s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.004043s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.004809s ]
+[ sql ] [ SQL ] SELECT p.Id, p.ProjectName, Sum(Money_Con) Con, Sum(c.Phone+Message) Res, Date FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` BETWEEN '2020-09-13' AND '2020-10-12'  AND `p`.`Status` = 1 GROUP BY Project_Id,Date ORDER BY `p`.`Id`,`Date` DESC [ RunTime:0.005416s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:26:52+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer_count?limit=20&page=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005774s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.006308s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.006608s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.008413s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.007343s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `push` [ RunTime:0.007771s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `customer` [ RunTime:0.007078s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `feiyu_clues` [ RunTime:0.007200s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `user_info` `u` LEFT JOIN ( SELECT count(Phone) Customer,Client_Id,count(Moblie) Repeats,count(Phone)-count(Moblie) NoRepeats FROM `customer` `c` LEFT JOIN `kf_moblie` `kf` ON `kf`.`Moblie`=`c`.`Phone` WHERE  `c`.`Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) c ON `c`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(*) Push,Client_Id FROM `push` WHERE  `Cre_Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) p ON `p`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(clue_id) as Clues,fu.Client_Id FROM `feiyu_clues` `fc` LEFT JOIN `feiyu_user` `fu` ON `fc`.`client_id`=`fu`.`Id` WHERE  `fc`.`create_time` BETWEEN 1602518400 AND 1602604799 GROUP BY `fu`.`Client_Id` ) fy ON `fy`.`Client_Id`=`u`.`User_Id` WHERE  `Type_Id` = 5 GROUP BY `u`.`User_Id` ) `_group_count_` LIMIT 1 [ RunTime:0.011027s ]
+[ sql ] [ SQL ] SELECT `u`.`User_Id`,`Name`,`Push`,`Customer`,`Repeats`,`NoRepeats`,`Clues` FROM `user_info` `u` LEFT JOIN ( SELECT count(Phone) Customer,Client_Id,count(Moblie) Repeats,count(Phone)-count(Moblie) NoRepeats FROM `customer` `c` LEFT JOIN `kf_moblie` `kf` ON `kf`.`Moblie`=`c`.`Phone` WHERE  `c`.`Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) c ON `c`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(*) Push,Client_Id FROM `push` WHERE  `Cre_Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) p ON `p`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(clue_id) as Clues,fu.Client_Id FROM `feiyu_clues` `fc` LEFT JOIN `feiyu_user` `fu` ON `fc`.`client_id`=`fu`.`Id` WHERE  `fc`.`create_time` BETWEEN 1602518400 AND 1602604799 GROUP BY `fu`.`Client_Id` ) fy ON `fy`.`Client_Id`=`u`.`User_Id` WHERE  `Type_Id` = 5 GROUP BY `u`.`User_Id` ORDER BY `Push` DESC,`Customer` DESC,`Clues` DESC LIMIT 0,20 [ RunTime:0.012959s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:26:52+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_target?limit=20&page=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005517s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.006033s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.006133s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.007449s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.006157s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `target` [ RunTime:0.006864s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `target` `a` LEFT JOIN `user_info` `b` ON `a`.`User_Id`=`b`.`User_Id` WHERE  `Status` = '1' LIMIT 1 [ RunTime:0.005976s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`Name` FROM `target` `a` LEFT JOIN `user_info` `b` ON `a`.`User_Id`=`b`.`User_Id` WHERE  `Status` = '1' ORDER BY `Create_time` DESC LIMIT 0,20 [ RunTime:0.006429s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:26:53+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/project
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003210s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.002881s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.002573s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.003515s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.002540s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:26:53+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005324s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.006110s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.004384s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.005496s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.004447s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.005411s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = 1 LIMIT 1 [ RunTime:0.006833s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`Name`,`s`.`Client`,`a`.`Remarks` FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = 1 ORDER BY `a`.`ProjectName` DESC LIMIT 0,50 [ RunTime:0.009247s ]
+[ sql ] [ SQL ] SELECT Project_Id,Sum(Money_Con) Con,Sum(c.Phone+Message) Res,Sum(c.Cli_Money_Con+c.Cli_Money_Coin) Entry, count(c.Id) ConCount,p.Pro_User_Id Pro FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` = '2020-10-12' GROUP BY `Project_Id` [ RunTime:0.006363s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:27:05+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007354s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.005675s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.005724s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.006328s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.004809s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.006861s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = 1 LIMIT 1 [ RunTime:0.007186s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`Name`,`s`.`Client`,`a`.`Remarks` FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = 1 ORDER BY `a`.`ProjectName` DESC LIMIT 0,50 [ RunTime:0.011003s ]
+[ sql ] [ SQL ] SELECT Project_Id,Sum(Money_Con) Con,Sum(c.Phone+Message) Res,Sum(c.Cli_Money_Con+c.Cli_Money_Coin) Entry, count(c.Id) ConCount,p.Pro_User_Id Pro FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` = '2020-10-12' GROUP BY `Project_Id` [ RunTime:0.006022s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:27:39+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002692s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.002232s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.002401s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.003142s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.001968s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:27:40+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/main
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010152s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.011037s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.012495s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.016008s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.013205s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:27:40+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/push/push/check_dot
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003620s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.003495s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.003700s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.004589s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.003424s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:27:40+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_my_project
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007462s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.006397s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.008336s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.009896s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.007567s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.009424s ]
+[ sql ] [ SQL ] SELECT p.ProjectName ,p.EstimatedCost Target, TargetNumber, Project_Id, Sum(Money_Con) Con, Sum(c.Phone+Message) Res FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` BETWEEN '2020-10-12' AND '2020-10-12'  AND `p`.`Status` = 1 GROUP BY `Project_Id` [ RunTime:0.010250s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:27:40+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_my_cluedata/?project_id=&user_id=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006399s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.005552s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.006120s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.006442s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.005953s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.006359s ]
+[ sql ] [ SQL ] SELECT p.Id, p.ProjectName, Sum(Money_Con) Con, Sum(c.Phone+Message) Res, Date FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` BETWEEN '2020-09-13' AND '2020-10-12'  AND `p`.`Status` = 1 GROUP BY Project_Id,Date ORDER BY `p`.`Id`,`Date` DESC [ RunTime:0.006613s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:27:40+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer_count?limit=20&page=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006420s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.007008s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.008629s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.008459s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.006363s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `push` [ RunTime:0.007669s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `customer` [ RunTime:0.008391s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `feiyu_clues` [ RunTime:0.007570s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `user_info` `u` LEFT JOIN ( SELECT count(Phone) Customer,Client_Id,count(Moblie) Repeats,count(Phone)-count(Moblie) NoRepeats FROM `customer` `c` LEFT JOIN `kf_moblie` `kf` ON `kf`.`Moblie`=`c`.`Phone` WHERE  `c`.`Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) c ON `c`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(*) Push,Client_Id FROM `push` WHERE  `Cre_Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) p ON `p`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(clue_id) as Clues,fu.Client_Id FROM `feiyu_clues` `fc` LEFT JOIN `feiyu_user` `fu` ON `fc`.`client_id`=`fu`.`Id` WHERE  `fc`.`create_time` BETWEEN 1602518400 AND 1602604799 GROUP BY `fu`.`Client_Id` ) fy ON `fy`.`Client_Id`=`u`.`User_Id` WHERE  `Type_Id` = 5 GROUP BY `u`.`User_Id` ) `_group_count_` LIMIT 1 [ RunTime:0.013061s ]
+[ sql ] [ SQL ] SELECT `u`.`User_Id`,`Name`,`Push`,`Customer`,`Repeats`,`NoRepeats`,`Clues` FROM `user_info` `u` LEFT JOIN ( SELECT count(Phone) Customer,Client_Id,count(Moblie) Repeats,count(Phone)-count(Moblie) NoRepeats FROM `customer` `c` LEFT JOIN `kf_moblie` `kf` ON `kf`.`Moblie`=`c`.`Phone` WHERE  `c`.`Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) c ON `c`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(*) Push,Client_Id FROM `push` WHERE  `Cre_Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) p ON `p`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(clue_id) as Clues,fu.Client_Id FROM `feiyu_clues` `fc` LEFT JOIN `feiyu_user` `fu` ON `fc`.`client_id`=`fu`.`Id` WHERE  `fc`.`create_time` BETWEEN 1602518400 AND 1602604799 GROUP BY `fu`.`Client_Id` ) fy ON `fy`.`Client_Id`=`u`.`User_Id` WHERE  `Type_Id` = 5 GROUP BY `u`.`User_Id` ORDER BY `Push` DESC,`Customer` DESC,`Clues` DESC LIMIT 0,20 [ RunTime:0.012329s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:27:40+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_target?limit=20&page=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007733s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.009633s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.007985s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.009305s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.009393s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `target` [ RunTime:0.011607s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `target` `a` LEFT JOIN `user_info` `b` ON `a`.`User_Id`=`b`.`User_Id` WHERE  `Status` = '1' LIMIT 1 [ RunTime:0.008078s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`Name` FROM `target` `a` LEFT JOIN `user_info` `b` ON `a`.`User_Id`=`b`.`User_Id` WHERE  `Status` = '1' ORDER BY `Create_time` DESC LIMIT 0,20 [ RunTime:0.009966s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:27:42+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/project
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009475s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.010996s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.013342s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.014492s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.013372s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:27:42+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005421s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.006466s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.007768s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.008261s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.007389s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.008934s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = 1 LIMIT 1 [ RunTime:0.010513s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`Name`,`s`.`Client`,`a`.`Remarks` FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = 1 ORDER BY `a`.`ProjectName` DESC LIMIT 0,50 [ RunTime:0.010661s ]
+[ sql ] [ SQL ] SELECT Project_Id,Sum(Money_Con) Con,Sum(c.Phone+Message) Res,Sum(c.Cli_Money_Con+c.Cli_Money_Coin) Entry, count(c.Id) ConCount,p.Pro_User_Id Pro FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` = '2020-10-12' GROUP BY `Project_Id` [ RunTime:0.009247s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:28:32+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005776s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.006986s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.008249s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.008539s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.007662s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:28:32+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/main
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013230s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.018205s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.016823s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.024476s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.019522s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:28:32+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/push/push/check_dot
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008967s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.011203s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.016060s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.015963s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.012283s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:28:32+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_my_project
+[ sql ] [ DB ] CONNECT:[ UseTime:0.019656s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.015996s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.013727s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.017252s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.017181s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.017519s ]
+[ sql ] [ SQL ] SELECT p.ProjectName ,p.EstimatedCost Target, TargetNumber, Project_Id, Sum(Money_Con) Con, Sum(c.Phone+Message) Res FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` BETWEEN '2020-10-12' AND '2020-10-12'  AND `p`.`Status` = 1 GROUP BY `Project_Id` [ RunTime:0.015904s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:28:33+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_my_cluedata/?project_id=&user_id=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012887s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.014730s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.014245s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.016302s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.014466s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.015717s ]
+[ sql ] [ SQL ] SELECT p.Id, p.ProjectName, Sum(Money_Con) Con, Sum(c.Phone+Message) Res, Date FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` BETWEEN '2020-09-13' AND '2020-10-12'  AND `p`.`Status` = 1 GROUP BY Project_Id,Date ORDER BY `p`.`Id`,`Date` DESC [ RunTime:0.016452s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:28:33+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer_count?limit=20&page=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004728s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.005722s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.006443s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.007633s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.006320s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `push` [ RunTime:0.008406s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `customer` [ RunTime:0.008585s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `feiyu_clues` [ RunTime:0.007734s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `user_info` `u` LEFT JOIN ( SELECT count(Phone) Customer,Client_Id,count(Moblie) Repeats,count(Phone)-count(Moblie) NoRepeats FROM `customer` `c` LEFT JOIN `kf_moblie` `kf` ON `kf`.`Moblie`=`c`.`Phone` WHERE  `c`.`Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) c ON `c`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(*) Push,Client_Id FROM `push` WHERE  `Cre_Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) p ON `p`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(clue_id) as Clues,fu.Client_Id FROM `feiyu_clues` `fc` LEFT JOIN `feiyu_user` `fu` ON `fc`.`client_id`=`fu`.`Id` WHERE  `fc`.`create_time` BETWEEN 1602518400 AND 1602604799 GROUP BY `fu`.`Client_Id` ) fy ON `fy`.`Client_Id`=`u`.`User_Id` WHERE  `Type_Id` = 5 GROUP BY `u`.`User_Id` ) `_group_count_` LIMIT 1 [ RunTime:0.011157s ]
+[ sql ] [ SQL ] SELECT `u`.`User_Id`,`Name`,`Push`,`Customer`,`Repeats`,`NoRepeats`,`Clues` FROM `user_info` `u` LEFT JOIN ( SELECT count(Phone) Customer,Client_Id,count(Moblie) Repeats,count(Phone)-count(Moblie) NoRepeats FROM `customer` `c` LEFT JOIN `kf_moblie` `kf` ON `kf`.`Moblie`=`c`.`Phone` WHERE  `c`.`Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) c ON `c`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(*) Push,Client_Id FROM `push` WHERE  `Cre_Time` BETWEEN 1602518400 AND 1602604799 GROUP BY `Client_Id` ) p ON `p`.`Client_Id`=`u`.`User_Id` LEFT JOIN ( SELECT count(clue_id) as Clues,fu.Client_Id FROM `feiyu_clues` `fc` LEFT JOIN `feiyu_user` `fu` ON `fc`.`client_id`=`fu`.`Id` WHERE  `fc`.`create_time` BETWEEN 1602518400 AND 1602604799 GROUP BY `fu`.`Client_Id` ) fy ON `fy`.`Client_Id`=`u`.`User_Id` WHERE  `Type_Id` = 5 GROUP BY `u`.`User_Id` ORDER BY `Push` DESC,`Customer` DESC,`Clues` DESC LIMIT 0,20 [ RunTime:0.012569s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:28:33+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_target?limit=20&page=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005173s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.006762s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.007370s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.008776s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.008141s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `target` [ RunTime:0.008192s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `target` `a` LEFT JOIN `user_info` `b` ON `a`.`User_Id`=`b`.`User_Id` WHERE  `Status` = '1' LIMIT 1 [ RunTime:0.007706s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`Name` FROM `target` `a` LEFT JOIN `user_info` `b` ON `a`.`User_Id`=`b`.`User_Id` WHERE  `Status` = '1' ORDER BY `Create_time` DESC LIMIT 0,20 [ RunTime:0.007451s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:28:35+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/project
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007061s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.009480s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.010145s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.011651s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.010480s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:28:36+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004763s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.005195s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.006218s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.007513s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.006525s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.008099s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = 1 LIMIT 1 [ RunTime:0.009054s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`Name`,`s`.`Client`,`a`.`Remarks` FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = 1 ORDER BY `a`.`ProjectName` DESC LIMIT 0,50 [ RunTime:0.008489s ]
+[ sql ] [ SQL ] SELECT Project_Id,Sum(Money_Con) Con,Sum(c.Phone+Message) Res,Sum(c.Cli_Money_Con+c.Cli_Money_Coin) Entry, count(c.Id) ConCount,p.Pro_User_Id Pro FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` = '2020-10-12' GROUP BY `Project_Id` [ RunTime:0.007343s ]
+---------------------------------------------------------------
+[ 2020-10-13T17:28:37+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/view_project?Id=214
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010341s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.013118s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.014591s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.016254s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.014935s ]

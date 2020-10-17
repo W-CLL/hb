@@ -1,0 +1,11 @@
+think\exception\ErrorException: Invalid argument supplied for foreach() in D:\wwwroot\www.hb.demo\application\api\controller\Feiyu.php:130
+Stack trace:
+#0 D:\wwwroot\www.hb.demo\application\api\controller\Feiyu.php(130): think\Error::appError(2, 'Invalid argumen...', 'D:\\wwwroot\\www....', 130, Array)
+#1 [internal function]: app\api\controller\Feiyu->pull()
+#2 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\api\controller\Feiyu), Array)
+#3 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#6 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#7 D:\wwwroot\www.hb.demo\public\index.php(32): require('D:\\wwwroot\\www....')
+#8 {main}

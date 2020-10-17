@@ -1,0 +1,53 @@
+.message{
+	width:50px;
+	height: 50px;
+	background-color: #000;
+	color: #fff;
+}
+/*===========以上不是=========*/
+
+body{
+	padding:0px;
+	margin:0px;
+	width: 100%;
+    display: table;
+}
+.mes{
+	text-align: center;
+	background-color: #ff6501;
+	width: 100%;
+}
+.mes h2{
+	text-align: left;
+	font-weight: 500;
+	padding-top: 20px;
+	text-align: center;
+}
+.mes p{	
+	width: 90%;
+	margin: 5px auto;
+	text-align: left;
+	font-size: 14px;
+}
+.mes textarea{
+	height: 100px;
+}
+.mes input{
+	height:25px;
+	margin-bottom: 20px;
+}
+.mes textarea,.mes input{
+	font-size: 16px;
+	width: 90%;
+	margin: 5px auto;
+}
+.mes button{
+	width: 90%;
+	height: 40px;
+	background-color: #333;
+	color: #fff;
+	cursor: pointer;
+	font-size: 15px;
+	margin-bottom: 20px;
+	border:none;
+}

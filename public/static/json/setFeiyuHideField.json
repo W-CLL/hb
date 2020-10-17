@@ -1,0 +1,11 @@
+{
+  "93": {
+    "username": "测试客户账号",
+    "hide": ["external_url","clue_source","appname","clue_type"]
+  }
+  ,
+  "96":{
+    "username": "super",
+    "hide": ["create_time","appname"]
+  }
+}

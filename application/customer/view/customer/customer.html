@@ -1,0 +1,274 @@
+{include file="./static/header.html"/}
+<body>
+  <div class="layui-fluid">
+    <!--layui-fluid -->
+    <div class="layui-row">
+      
+      <div class="layui-col-xs4 layui-col-sm3 layui-col-md3 layui-col-lg3">
+        <h1>{$Think.session.type}</h1>
+        {if condition= "($Think.session.type!='6') OR ($Think.session.type!='5')"}
+        <div class="layui-inline">
+          <div class="layui-input-inline">
+            <select id="sel_client_id" class="layui-select">
+              <option value="">请选择客户</option>
+              {foreach $cli as $k=>$v}
+              <option value="{$v.User_Id}">{$v.Name}</option>
+              {/foreach}
+            </select>
+          </div>
+        </div>
+    {/if}
+
+        <div class="layui-inline">
+          <div class="layui-input-inline">
+            <select id="sel_join" class="layui-select">
+              <option value="">请选择是否重复</option>
+              <option value="repeat">重复</option>
+              <option value="notrepeat">不重复</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="layui-col-xs4 layui-col-sm3 layui-col-md3 layui-col-lg3">
+        <div class="layui-inline">
+          <div class="layui-input-inline">
+            <input
+              type="text"
+              class="layui-input"
+              id="sel_time"
+              placeholder="请选择日期范围"
+            />
+          </div>
+          <button class="layui-btn layui-btn-normal layui-btn-sm" id="lastday">
+            前一天
+          </button>
+          <div class="layui-input-inline">
+            <button
+              class="layui-btn layui-btn-normal layui-btn-sm"
+              id="nextday"
+            >
+              后一天
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="layui-col-xs4 layui-col-sm3 layui-col-md4 layui-col-lg4">
+        <div class="layui-inline">
+          <div class="layui-input-inline">
+            <input
+              type="text"
+              class="layui-input"
+              id="sel_url"
+              placeholder="请输入Url关键字"
+            />
+          </div>
+        </div>
+        <div class="layui-inline">
+          <div class="layui-input-inline">
+            <input
+              type="text"
+              class="layui-input"
+              id="sel_phone"
+              placeholder="请输入手机号码"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- <div class="layui-col-xs4 layui-col-sm3 layui-col-md2 layui-col-lg2">
+            </div> -->
+      <div class="layui-col-xs4 layui-col-sm3 layui-col-md2 layui-col-lg2">
+        <div class="layui-inline">
+          <button class="layui-btn layui-btn-sm laymy-w1" id="search">
+            搜索
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <table
+    id="formfields_table"
+    lay-filter="lay_formfields"
+    class="layui-table"
+  ></table>
+  {if $Think.session.auth<3}
+  <script type="text/html" id="toolbarDemo">
+    <div class="layui-btn-container">
+      <button class="layui-btn layui-btn-sm" lay-event="delData">
+        删除选中行数据
+      </button>
+    </div>
+  </script>
+  {/if}
+  <script type="text/html" id="toolbar">
+    <div class="layui-btn-container">
+      {if $Think.session.auth<3||$Think.session.type==5}
+      <button class="layui-btn layui-btn-sm layui-btn-info" lay-event="ok">
+        确认查收</button
+      >{/if}
+      <button class="layui-btn layui-btn-sm layui-btn-danger" lay-event="dels">
+        删除
+      </button>
+    </div>
+  </script>
+
+  <!-- 导入日期选择扩展 -->
+  {include file="./static/js/selectdate.html" /}
+  <script>
+    var table = layui.table,layer = layui.layer,$=layui.$;
+
+    var form_table = table.render({
+    	elem:'#formfields_table',
+    	limit:20,
+              limits:[20,50,100,200,500],
+    	page: true,
+              defaultToolbar:['exports','print'],
+    	url:'/public/index.php/get_customer',
+              toolbar: '#toolbarDemo', //开启头部工具栏，并为其绑定左侧模板
+    	method:'get',
+              // width:1920,
+    	cols:[[
+                  {if $Think.session.auth<3} {type:'checkbox'},{/if}
+    		{field:'Id',title:'ID',hide:true},
+                  {if $Think.session.type != 6}
+                  {field:'Client',title:'所属客户'},
+                  {/if}
+                  {field:'ProgramName',title:'项目'},
+    		{field:'Sub_Time',title:'时间',width:160},
+    		{field:'Name',title:'姓名或城市'},
+    		{field:'Phone',title:'手机号码',width:120},
+    		{field:'Kw',title:'搜索词'},
+    		{field:'Search',title:'搜索来源'},
+    		{field:'UrlKw',title:'关键词'},
+    		{field:'Content',title:'留言内容'},
+                  {field:'Ip',title:'Ip'},
+                  {field:'Url',title:'访问url',width:400},
+    		{field:'Status',title:'状态',hide:true},
+    		{field:'Being',title:'是否重复',width:60},
+    		{field:'Ok_time',title:'提取时间'},
+                  {field:'Remarks',title:'备注',edit:'text'},
+    		{field:'',title:'操作',toolbar:'#toolbar',width:170}
+    	]],
+    	done:function(res, curr, count){
+    		$.each(res.data,function(k,v){
+    			var status=v.Status
+    			var moblie=v.Moblie
+                      var ok=v.Ok
+                      if(moblie){
+                          $(".layui-table-box tbody tr[data-index='" + k + "']").css("background-color", "#B4EEB4");
+                      }
+    			if(status===0){
+    			$(".layui-table-box tbody tr[data-index='" + k + "']").css("background-color", "#ec8a8a");
+    			}
+                      if(ok===1){
+                          $(".layui-table-box tbody tr[data-index='" + k + "']").css("background-color", "#ec8a8a");
+                      }
+    		})
+    	},
+
+    });
+    //监听列工具行
+    table.on('tool(lay_formfields)',function(obj){
+    	var data = obj.data;
+    	var event = obj.event;
+    	var tr = obj.tr;
+    	switch(event)
+    	{
+    		case 'dels':
+    		{
+    			layer.confirm('是否确定删除？',{btn:['确定','取消']},function(){
+    				$.post('/public/index.php/dels_customer_do',{Id:data.Id},function(data){
+    					layer.msg(data.msg,function(){
+    						if(data.code === 0)
+    						{
+    							form_table.reload();
+    						}
+    					})
+    				},'json');
+    			});
+    			break;
+    		}
+    		case 'ok':
+    		{
+    				$.post('/public/index.php/ok_customer_do',{Id:data.Id},function(data){
+    					layer.msg(data.msg,function(){
+    						if(data.code === 0)
+    						{
+    							form_table.reload();
+    						}
+    					})
+    				},'json');
+    			break;
+    		}
+    	}
+    });
+          //监听头部工具行
+          table.on('toolbar(lay_formfields)',function(obj){
+              var data = table.checkStatus('formfields_table');
+              var event = obj.event;
+              var tr = obj.tr;
+              switch(event)
+              {
+                  case 'delData':
+                  {
+                      layer.confirm('是否确定删除？',{btn:['确定','取消']},function(){
+                          $.post('/public/index.php/dels_customer_do',{data:data},function(data){
+                              layer.msg(data.msg,function(){
+                                  if(data.code === 0)
+                                  {
+                                      form_table.reload();
+                                  }
+                              })
+                          },'json');
+                      });
+                      break;
+                  }
+
+              }
+          });
+          //监听单元格编辑
+          table.on('edit(lay_formfields)', function(obj){
+                  // console.log(obj.data)
+                  var value = obj.value //得到修改后的值
+                  ,data = obj.data //得到所在行所有键值
+                  ,field = obj.field; //得到字段
+                  layer.confirm('是否确定修改备注？',{btn:['确定','取消']},function(){
+                      $.ajax({
+                          url:"/public/index.php/upd_customer_remark",
+                          data:{'Id':data.Id,'Remarks':data.Remarks},
+                          type:"post",
+                          dataType:"json",
+                          success:function(data){
+                              layer.msg('操作成功，备注更改为：'+ value,function(){
+                                  if(data.code === 0){}
+                                  {form_table.reload();}
+                              })
+                          },
+                          error:function(data){
+                              $.messager.alert('错误',data.msg);
+                          }
+                      });
+                  });
+              });
+
+          //搜索
+    $("#search").click(function(){
+    	var sel_client_id = $("#sel_client_id").val()||"";
+    	var sel_url = $("#sel_url").val()||"";
+    	var sel_time = $('#sel_time').val()||"";
+    	var sel_phone = $('#sel_phone').val()||"";
+    	var sel_join = $('#sel_join').val()||"";
+    	form_table.reload({	//重载表格
+    		where:{
+                      sel_time:sel_time,
+    			sel_client_id:sel_client_id,
+                      sel_url:sel_url,
+                      sel_phone:sel_phone,
+                      sel_join:sel_join,
+    		}
+    	});
+    });
+  </script>
+</body>

@@ -1,0 +1,43 @@
+  
+__GetZoneResult_ = {
+    mts:'1787952',
+    province:'½­Î÷',
+    catName:'ÖĞ¹úÒÆ¶¯',
+    telString:'17879529508',
+	areaVid:'30512',
+	ispVid:'3236139',
+	carrier:'½­Î÷ÒÆ¶¯'
+}
+
+__GetZoneResult_ = {
+    mts:'1787952',
+    province:'½­Î÷',
+    catName:'ÖĞ¹úÒÆ¶¯',
+    telString:'17879529508',
+	areaVid:'30512',
+	ispVid:'3236139',
+	carrier:'½­Î÷ÒÆ¶¯'
+}
+
+  
+  
+__GetZoneResult_ = {
+    mts:'1787952',
+    province:'½­Î÷',
+    catName:'ÖĞ¹úÒÆ¶¯',
+    telString:'17879529508',
+	areaVid:'30512',
+	ispVid:'3236139',
+	carrier:'½­Î÷ÒÆ¶¯'
+}
+
+
+
+
+
+
+{"status":"0","t":"","set_cache_time":"","data":[{"StdStg":6004,"StdStl":8,"_update_time":"1577497901","cambrian_appid":"0","city":"ÒË´º","key":"1787952","prov":"½­Î÷","showurl":"http:\/\/haoma.baidu.com","title":"XXX","type":"ÖĞ¹úÒÆ¶¯","url":"http:\/\/haoma.baidu.com","loc":"https:\/\/dss1.baidu.com\/8aQDcnSm2Q5IlBGlnYG\/q?r=2002696&k=1787952","SiteId":2002696,"_version":30208,"_select_time":1577497582,"querytype":"ÊÖ»úºÅÂë","phoneinfo":"ÊÖ»úºÅÂë&quot;17879529508&quot;","phoneno":"17879529508","origphoneno":"17879529508","titlecont":"ÊÖ»úºÅÂë¹éÊôµØ²éÑ¯","showlamp":"1","clickneed":"0","ExtendedLocation":"","OriginQuery":"17879529508","tplt":"mobilephone","resourceid":"6004","fetchkey":"6004_1787952","appinfo":"","role_id":1,"disp_type":0}]}
+{"status":"0","t":"","set_cache_time":"","data":[{"StdStg":6004,"StdStl":8,"_update_time":"1577497901","cambrian_appid":"0","city":"ÒË´º","key":"1787952","prov":"½­Î÷","showurl":"http:\/\/haoma.baidu.com","title":"XXX","type":"ÖĞ¹úÒÆ¶¯","url":"http:\/\/haoma.baidu.com","loc":"https:\/\/dss1.baidu.com\/8aQDcnSm2Q5IlBGlnYG\/q?r=2002696&k=1787952","SiteId":2002696,"_version":30208,"_select_time":1577497582,"querytype":"ÊÖ»úºÅÂë","phoneinfo":"ÊÖ»úºÅÂë&quot;17879529508&quot;","phoneno":"17879529508","origphoneno":"17879529508","titlecont":"ÊÖ»úºÅÂë¹éÊôµØ²éÑ¯","showlamp":"1","clickneed":"0","ExtendedLocation":"","OriginQuery":"17879529508","tplt":"mobilephone","resourceid":"6004","fetchkey":"6004_1787952","appinfo":"","role_id":1,"disp_type":0}]}
+{"status":"0","t":"","set_cache_time":"","data":[{"StdStg":6004,"StdStl":8,"_update_time":"1577497901","cambrian_appid":"0","city":"å®œæ˜¥","key":"1787952","prov":"æ±Ÿè¥¿","showurl":"http:\/\/haoma.baidu.com","title":"XXX","type":"ä¸­å›½ç§»åŠ¨","url":"http:\/\/haoma.baidu.com","loc":"https:\/\/dss1.baidu.com\/8aQDcnSm2Q5IlBGlnYG\/q?r=2002696&k=1787952","SiteId":2002696,"_version":30208,"_select_time":1577497582,"querytype":"æ‰‹æœºå·ç ","phoneinfo":"æ‰‹æœºå·ç &quot;17879529508&quot;","phoneno":"17879529508","origphoneno":"17879529508","titlecont":"æ‰‹æœºå·ç å½’å±åœ°æŸ¥è¯¢","showlamp":"1","clickneed":"0","ExtendedLocation":"","OriginQuery":"17879529508","tplt":"mobilephone","resourceid":"6004","fetchkey":"6004_1787952","appinfo":"","role_id":1,"disp_type":0}]}
+        
+

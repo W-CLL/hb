@@ -1,0 +1,158 @@
+think\exception\ErrorException: implode(): Invalid arguments passed in D:\wwwroot\www.hb.demo\application\project\controller\Project.php:325
+Stack trace:
+#0 [internal function]: think\Error::appError(2, 'implode(): Inva...', 'D:\\wwwroot\\www....', 325, Array)
+#1 D:\wwwroot\www.hb.demo\application\project\controller\Project.php(325): implode('@,', NULL)
+#2 [internal function]: app\project\controller\Project->ins_project_do()
+#3 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\project\controller\Project), Array)
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#7 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#8 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#9 {main}
+think\exception\ErrorException: implode(): Invalid arguments passed in D:\wwwroot\www.hb.demo\application\project\controller\Project.php:325
+Stack trace:
+#0 [internal function]: think\Error::appError(2, 'implode(): Inva...', 'D:\\wwwroot\\www....', 325, Array)
+#1 D:\wwwroot\www.hb.demo\application\project\controller\Project.php(325): implode('@,', NULL)
+#2 [internal function]: app\project\controller\Project->ins_project_do()
+#3 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\project\controller\Project), Array)
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#7 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#8 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#9 {main}
+think\exception\ErrorException: implode(): Invalid arguments passed in D:\wwwroot\www.hb.demo\application\project\controller\Project.php:325
+Stack trace:
+#0 [internal function]: think\Error::appError(2, 'implode(): Inva...', 'D:\\wwwroot\\www....', 325, Array)
+#1 D:\wwwroot\www.hb.demo\application\project\controller\Project.php(325): implode('@,', NULL)
+#2 [internal function]: app\project\controller\Project->ins_project_do()
+#3 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\project\controller\Project), Array)
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#7 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#8 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#9 {main}
+think\exception\ErrorException: implode(): Invalid arguments passed in D:\wwwroot\www.hb.demo\application\project\controller\Project.php:325
+Stack trace:
+#0 [internal function]: think\Error::appError(2, 'implode(): Inva...', 'D:\\wwwroot\\www....', 325, Array)
+#1 D:\wwwroot\www.hb.demo\application\project\controller\Project.php(325): implode('@,', NULL)
+#2 [internal function]: app\project\controller\Project->ins_project_do()
+#3 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\project\controller\Project), Array)
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#7 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#8 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#9 {main}
+think\exception\ErrorException: implode(): Invalid arguments passed in D:\wwwroot\www.hb.demo\application\project\controller\Project.php:325
+Stack trace:
+#0 [internal function]: think\Error::appError(2, 'implode(): Inva...', 'D:\\wwwroot\\www....', 325, Array)
+#1 D:\wwwroot\www.hb.demo\application\project\controller\Project.php(325): implode('@,', NULL)
+#2 [internal function]: app\project\controller\Project->ins_project_do()
+#3 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\project\controller\Project), Array)
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#7 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#8 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#9 {main}
+think\exception\ErrorException: implode(): Invalid arguments passed in D:\wwwroot\www.hb.demo\application\project\controller\Project.php:325
+Stack trace:
+#0 [internal function]: think\Error::appError(2, 'implode(): Inva...', 'D:\\wwwroot\\www....', 325, Array)
+#1 D:\wwwroot\www.hb.demo\application\project\controller\Project.php(325): implode('@,', NULL)
+#2 [internal function]: app\project\controller\Project->ins_project_do()
+#3 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\project\controller\Project), Array)
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#7 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#8 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#9 {main}
+think\exception\ErrorException: implode(): Invalid arguments passed in D:\wwwroot\www.hb.demo\application\project\controller\Project.php:325
+Stack trace:
+#0 [internal function]: think\Error::appError(2, 'implode(): Inva...', 'D:\\wwwroot\\www....', 325, Array)
+#1 D:\wwwroot\www.hb.demo\application\project\controller\Project.php(325): implode('@,', NULL)
+#2 [internal function]: app\project\controller\Project->ins_project_do()
+#3 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\project\controller\Project), Array)
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#7 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#8 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#9 {main}
+think\exception\ErrorException: implode(): Invalid arguments passed in D:\wwwroot\www.hb.demo\application\project\controller\Project.php:325
+Stack trace:
+#0 [internal function]: think\Error::appError(2, 'implode(): Inva...', 'D:\\wwwroot\\www....', 325, Array)
+#1 D:\wwwroot\www.hb.demo\application\project\controller\Project.php(325): implode('@,', NULL)
+#2 [internal function]: app\project\controller\Project->ins_project_do()
+#3 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\project\controller\Project), Array)
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#7 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#8 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#9 {main}
+Array
+think\exception\ErrorException: implode(): Invalid arguments passed in D:\wwwroot\www.hb.demo\application\project\controller\Project.php:326
+Stack trace:
+#0 [internal function]: think\Error::appError(2, 'implode(): Inva...', 'D:\\wwwroot\\www....', 326, Array)
+#1 D:\wwwroot\www.hb.demo\application\project\controller\Project.php(326): implode('@,', NULL)
+#2 [internal function]: app\project\controller\Project->ins_project_do()
+#3 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\project\controller\Project), Array)
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#7 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#8 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#9 {main}
+
+think\exception\ErrorException: implode(): Invalid arguments passed in D:\wwwroot\www.hb.demo\application\project\controller\Project.php:326
+Stack trace:
+#0 [internal function]: think\Error::appError(2, 'implode(): Inva...', 'D:\\wwwroot\\www....', 326, Array)
+#1 D:\wwwroot\www.hb.demo\application\project\controller\Project.php(326): implode('@,', NULL)
+#2 [internal function]: app\project\controller\Project->ins_project_do()
+#3 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\project\controller\Project), Array)
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#7 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#8 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#9 {main}
+think\exception\ErrorException: implode(): Invalid arguments passed in D:\wwwroot\www.hb.demo\application\project\controller\Project.php:326
+Stack trace:
+#0 [internal function]: think\Error::appError(2, 'implode(): Inva...', 'D:\\wwwroot\\www....', 326, Array)
+#1 D:\wwwroot\www.hb.demo\application\project\controller\Project.php(326): implode('@,', NULL)
+#2 [internal function]: app\project\controller\Project->ins_project_do()
+#3 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\project\controller\Project), Array)
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#7 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#8 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#9 {main}
+think\exception\ErrorException: implode(): Invalid arguments passed in D:\wwwroot\www.hb.demo\application\project\controller\Project.php:325
+Stack trace:
+#0 [internal function]: think\Error::appError(2, 'implode(): Inva...', 'D:\\wwwroot\\www....', 325, Array)
+#1 D:\wwwroot\www.hb.demo\application\project\controller\Project.php(325): implode('@,', NULL)
+#2 [internal function]: app\project\controller\Project->ins_project_do()
+#3 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\project\controller\Project), Array)
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#7 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#8 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#9 {main}
+think\exception\ErrorException: implode(): Invalid arguments passed in D:\wwwroot\www.hb.demo\application\project\controller\Project.php:325
+Stack trace:
+#0 [internal function]: think\Error::appError(2, 'implode(): Inva...', 'D:\\wwwroot\\www....', 325, Array)
+#1 D:\wwwroot\www.hb.demo\application\project\controller\Project.php(325): implode('@,', NULL)
+#2 [internal function]: app\project\controller\Project->ins_project_do()
+#3 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\project\controller\Project), Array)
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#7 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#8 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#9 {main}

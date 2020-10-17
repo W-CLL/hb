@@ -1,0 +1,144 @@
+{include file="./static/header.html"/}
+
+<body>
+
+<table id="formfields_table" lay-filter="lay_formfields" class="layui-table"></table>
+
+<script type="text/html" id="head_toolbar">
+
+	<div class="layui-btn-container">
+
+		<button class="layui-btn layui-btn-sm" lay-event="add">增加</button>
+
+	</div>
+
+</script>
+
+<script type="text/html" id="toolbar">
+
+	<div class="layui-btn-container">
+
+		<button class="layui-btn layui-btn-sm" lay-event="upd">编辑</button>
+
+		<button class="layui-btn layui-btn-sm" lay-event="del">删除</button>
+
+	</div>
+
+</script>
+
+
+
+<script>
+
+
+
+	var table = layui.table,layer = layui.layer,$=layui.$,laydate = layui.laydate;
+
+
+	var form_table = table.render({
+
+		defaultToolbar:'',
+
+		elem:'#formfields_table',
+
+		height:"full-70",
+
+		url:'/get_kw',
+
+		method:'post',
+
+		toolbar:'#head_toolbar',
+
+		defaultToolbar:['exports','print'],
+
+		cols:[[
+
+			{field:'Id',title:'ID',hide:true},
+
+			{if $Think.session.auth<3}{field:'Client',title:'客户名'},{/if}
+
+			{field:'Name',title:'名称'},
+
+			{field:'Kw',title:'关键词'},
+
+			{field:'',title:'操作',toolbar:'#toolbar'}
+
+		]],
+
+
+
+	})
+
+	table.on('toolbar(lay_formfields)',function(obj){
+
+		if(obj.event=="add"){
+
+			layer.open({
+
+				type:2,
+
+				title:"添加",
+
+				shadeClose:true,//外部关闭
+
+				area:['50%','600px'],
+
+				content:'/ins_kw'
+
+			});
+
+		}
+
+	})
+
+	table.on('tool(lay_formfields)',function(obj){
+
+		if(obj.event=="upd"){
+
+			layer.open({
+
+				type:2,
+
+				title:"编辑",
+
+				shadeClose:true,//外部关闭
+
+				area:['50%','600px'],
+
+				content:'/upd_kw?Id='+obj.data.Id
+
+			});
+
+		}
+
+		if(obj.event=="del"){
+
+			layer.confirm('是否确定删除？',{btn:['确定','取消']},function(){
+
+				$.post('/dels_kw',{Id:obj.data.Id},function(msg){
+
+					layer.msg(msg.msg,function(){
+
+						if(msg.code === 0)
+
+						{
+
+							window.location.reload();//刷新父页面
+
+						}
+
+					})
+
+				},'json');
+
+			});
+
+		}
+
+	})
+
+</script>
+
+</body>
+
+</html>

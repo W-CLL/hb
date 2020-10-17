@@ -1,0 +1,28 @@
+{include file="./static/header.html"/}
+
+<body>
+    <div>
+        <form action="">
+            <input type="text" name="openid" value="{$openid}" hidden>
+            账号：<input type="text" name="username" value="" placeholder="请输入账号"><br>
+            密码：<input type="password" name="password" value="" placeholder="请输入密码"><br>
+            <button type="submit" id="binduser">提交</button>
+        </form>
+    </div>
+    <script>
+        $('#binduser').click(function () {
+            $.ajax({
+                url: 'http://www.hb.demo/wxapi/Wx/binduser_do',
+                type: 'post',
+                dataType: 'json',
+                data: $('form').serialize(),
+                success: function (res) {
+                    alert(res.msg);
+                }
+            });
+            return false;
+        });
+    </script>
+</body>
+
+</html>

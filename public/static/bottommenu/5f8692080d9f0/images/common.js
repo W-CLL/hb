@@ -1,0 +1,1 @@
+var com_interface = "http://localhost:8080/api/api/message/key/fd6934b5f9b7778a3058c2bd8caf1938";

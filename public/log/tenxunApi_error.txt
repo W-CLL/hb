@@ -1,0 +1,148 @@
+think\exception\PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null ) LIMIT 1' at line 1 in D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Connection.php:769
+Stack trace:
+#0 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Query.php(509): think\db\Connection->query('SELECT * FROM `...', Array, false, false)
+#1 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Query.php(5371): think\db\Query->query('SELECT * FROM `...', Array, false, false)
+#2 D:\wwwroot\www.hb.demo\application\api\controller\Tenxun.php(29): think\db\Query->find()
+#3 [internal function]: app\api\controller\Tenxun->pushApi()
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\api\controller\Tenxun), Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#7 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#8 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#9 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#10 {main}think\exception\PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null ) LIMIT 1' at line 1 in D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Connection.php:769
+Stack trace:
+#0 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Query.php(509): think\db\Connection->query('SELECT * FROM `...', Array, false, false)
+#1 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Query.php(5371): think\db\Query->query('SELECT * FROM `...', Array, false, false)
+#2 D:\wwwroot\www.hb.demo\application\api\controller\Tenxun.php(29): think\db\Query->find()
+#3 [internal function]: app\api\controller\Tenxun->pushApi()
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\api\controller\Tenxun), Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#7 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#8 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#9 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#10 {main}think\exception\PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null ) LIMIT 1' at line 1 in D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Connection.php:769
+Stack trace:
+#0 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Query.php(509): think\db\Connection->query('SELECT * FROM `...', Array, false, false)
+#1 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Query.php(5371): think\db\Query->query('SELECT * FROM `...', Array, false, false)
+#2 D:\wwwroot\www.hb.demo\application\api\controller\Tenxun.php(29): think\db\Query->find()
+#3 [internal function]: app\api\controller\Tenxun->pushApi()
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\api\controller\Tenxun), Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#7 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#8 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#9 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#10 {main}think\exception\PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null ) LIMIT 1' at line 1 in D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Connection.php:769
+Stack trace:
+#0 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Query.php(509): think\db\Connection->query('SELECT * FROM `...', Array, false, false)
+#1 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Query.php(5371): think\db\Query->query('SELECT * FROM `...', Array, false, false)
+#2 D:\wwwroot\www.hb.demo\application\api\controller\Tenxun.php(29): think\db\Query->find()
+#3 [internal function]: app\api\controller\Tenxun->pushApi()
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\api\controller\Tenxun), Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#7 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#8 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#9 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#10 {main}think\exception\PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null ) LIMIT 1' at line 1 in D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Connection.php:769
+Stack trace:
+#0 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Query.php(509): think\db\Connection->query('SELECT * FROM `...', Array, false, false)
+#1 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Query.php(5371): think\db\Query->query('SELECT * FROM `...', Array, false, false)
+#2 D:\wwwroot\www.hb.demo\application\api\controller\Tenxun.php(29): think\db\Query->find()
+#3 [internal function]: app\api\controller\Tenxun->pushApi()
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\api\controller\Tenxun), Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#7 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#8 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#9 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#10 {main}think\exception\PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null ) LIMIT 1' at line 1 in D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Connection.php:769
+Stack trace:
+#0 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Query.php(509): think\db\Connection->query('SELECT * FROM `...', Array, false, false)
+#1 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Query.php(5371): think\db\Query->query('SELECT * FROM `...', Array, false, false)
+#2 D:\wwwroot\www.hb.demo\application\api\controller\Tenxun.php(29): think\db\Query->find()
+#3 [internal function]: app\api\controller\Tenxun->pushApi()
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\api\controller\Tenxun), Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#7 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#8 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#9 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#10 {main}think\exception\PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null ) LIMIT 1' at line 1 in D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Connection.php:769
+Stack trace:
+#0 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Query.php(509): think\db\Connection->query('SELECT * FROM `...', Array, false, false)
+#1 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Query.php(5371): think\db\Query->query('SELECT * FROM `...', Array, false, false)
+#2 D:\wwwroot\www.hb.demo\application\api\controller\Tenxun.php(29): think\db\Query->find()
+#3 [internal function]: app\api\controller\Tenxun->pushApi()
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\api\controller\Tenxun), Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#7 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#8 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#9 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#10 {main}think\exception\PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null ) LIMIT 1' at line 1 in D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Connection.php:769
+Stack trace:
+#0 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Query.php(509): think\db\Connection->query('SELECT * FROM `...', Array, false, false)
+#1 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Query.php(5371): think\db\Query->query('SELECT * FROM `...', Array, false, false)
+#2 D:\wwwroot\www.hb.demo\application\api\controller\Tenxun.php(29): think\db\Query->find()
+#3 [internal function]: app\api\controller\Tenxun->pushApi()
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\api\controller\Tenxun), Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#7 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#8 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#9 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#10 {main}think\exception\PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null ) LIMIT 1' at line 1 in D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Connection.php:769
+Stack trace:
+#0 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Query.php(509): think\db\Connection->query('SELECT * FROM `...', Array, false, false)
+#1 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Query.php(5371): think\db\Query->query('SELECT * FROM `...', Array, false, false)
+#2 D:\wwwroot\www.hb.demo\application\api\controller\Tenxun.php(29): think\db\Query->find()
+#3 [internal function]: app\api\controller\Tenxun->pushApi()
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\api\controller\Tenxun), Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#7 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#8 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#9 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#10 {main}think\exception\PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null ) LIMIT 1' at line 1 in D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Connection.php:769
+Stack trace:
+#0 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Query.php(509): think\db\Connection->query('SELECT * FROM `...', Array, false, false)
+#1 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Query.php(5371): think\db\Query->query('SELECT * FROM `...', Array, false, false)
+#2 D:\wwwroot\www.hb.demo\application\api\controller\Tenxun.php(29): think\db\Query->find()
+#3 [internal function]: app\api\controller\Tenxun->pushApi()
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\api\controller\Tenxun), Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#7 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#8 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#9 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#10 {main}think\Exception: fields not exists:[Create_time] in D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Builder.php:229
+Stack trace:
+#0 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Builder.php(1485): think\db\Builder->parseData(Array, Array)
+#1 D:\wwwroot\www.hb.demo\thinkphp\library\think\db\Query.php(4531): think\db\Builder->insert(Array, Array, false)
+#2 D:\wwwroot\www.hb.demo\application\api\controller\Tenxun.php(48): think\db\Query->insert(Array)
+#3 [internal function]: app\api\controller\Tenxun->pushApi()
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\api\controller\Tenxun), Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#7 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#8 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#9 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#10 {main}think\exception\ErrorException: Invalid argument supplied for foreach() in D:\wwwroot\www.hb.demo\application\api\controller\Tenxun.php:40
+Stack trace:
+#0 D:\wwwroot\www.hb.demo\application\api\controller\Tenxun.php(40): think\Error::appError(2, 'Invalid argumen...', 'D:\\wwwroot\\www....', 40, Array)
+#1 [internal function]: app\api\controller\Tenxun->pushApi()
+#2 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\api\controller\Tenxun), Array)
+#3 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#6 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#7 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#8 {main}2020-22-04 18:46:09该落地页id没有找到对应关键词
+10685322
+2020-22-04 18:47:43该落地页id没有找到对应关键词
+10685322
+2020-22-04 18:48:43该落地页id没有找到对应关键词
+10685322

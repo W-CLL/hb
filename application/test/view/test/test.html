@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>抓取关键字</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+</body>
+<script>
+
+	var url=document.referrer
+	var massdata={}
+	massdata['url']=url
+	$.ajax({
+		type:"POST",
+		url:"http://a.cn:888/getKw",
+		dataType:'JSON',
+		data:massdata,
+		async:true,
+		success:function(res){
+           console.log(res.search)
+           console.log(res.keyword)
+        }
+	})
+</script>
+</html>

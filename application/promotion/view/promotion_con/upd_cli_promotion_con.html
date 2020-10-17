@@ -1,0 +1,97 @@
+{include file="./static/header.html"/}
+<body>
+<div class="layui-container">
+    <form class="layui-form" action="">
+        <input type="hidden" name="id" value="{$list.Id}">
+        <div class="layui-form-item">
+            <label class="layui-form-label">客户名:</label>
+            <div class="layui-input-block" style="padding-top: 10px;">
+                {$list.Client}
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">项目名:</label>
+            <div class="layui-input-block" style="padding-top: 10px;">
+                {$list.ProjectName}
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">外部消费币:</label>
+            <div class="layui-input-inline">
+                <input type="text" class="layui-input" name="cli_money_coin" value="{$list.Cli_Money_Coin}">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">外部消费金额:</label>
+            <div class="layui-input-inline">
+                <input type="text" class="layui-input" name="cli_money_con" value="{$list.Cli_Money_Con}">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">内部消费金额:</label>
+            <div class="layui-input-block" style="padding-top: 10px;">
+                {$list.Money_Con}
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">线索总数:</label>
+            <div class="layui-input-block" style="padding-top: 10px;">
+                {$list.CueSum}
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">对话成本:</label>
+            <div class="layui-input-block" style="padding-top: 10px;">
+                {$list.DialogueCost}
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">线索成本:</label>
+            <div class="layui-input-block" style="padding-top: 10px;">
+                {$list.CueCost}
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">消费日期:</label>
+            <div class="layui-input-block" style="padding-top: 10px;">
+                {$list.Date}
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">是否展示</label>
+            <div class="layui-input-block">
+                <input type="checkbox" name="cli_status" title="展示" {$list.Cli_Status?"checked":""}>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button type="submit" class="layui-btn" lay-submit="" lay-filter="upd">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </form>
+    <script type="text/javascript">
+        layui.use('form', function(){
+            var	layer = layui.layer,$=layui.$,laydate = layui.laydate,form = layui.form;//只有执行了这一步，部分表单元素才会自动修饰成功
+            //表单提交
+            form.on('submit(upd)',function(data){
+                $.post('/public/index.php/upd_cli_promotion_con_do',data.field,function(obj){
+                    layer.alert(obj.msg,function(){
+                        if(obj.code===0){
+                             //window.parent.location.reload();//刷新父页面，这样直接刷新会导致检索条件也刷新
+                             parent.layui.table.reload("formfields_table");//所以还是刷新父页面的表格
+                            //关闭弹层
+                            var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+                            parent.layer.close(index); //再执行关闭
+                        }
+                    });
+                },'json');
+                return false;
+            });
+            //但是，如果你的HTML是动态生成的，自动渲染就会失效
+            //因此你需要在相应的地方，执行下述方法来进行渲染
+            form.render();
+        });
+    </script>
+</div>
+</body>

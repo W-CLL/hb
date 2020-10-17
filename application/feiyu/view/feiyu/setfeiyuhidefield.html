@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="__STATIC__/jquery.min.js"></script>
+    <script src="__STATIC__/js/vue.min.js"></script>
+    <link rel="stylesheet" href="__STATIC__/bootstrap3/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div id="app" style="padding: 10px 20px;">
+        <div>
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>用户id</th>
+                        <th>用户名</th>
+                        <th>隐藏字段</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(value, key) in list">
+                        <td>{{ key }}</td>
+                        <td>{{ value.username }}</td>
+                        <td>
+                            <template v-for="i in value.hide">
+                                <template v-for="(v2 , k2) in hidelist">
+                                    <span v-if="i==k2">{{v2}}，</span>
+                                </template>
+                            </template>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+            <ul>
+                <li v-for="(value,key) in hidelist">
+                    {{value}}：{{key}}
+                </li>
+            </ul>
+        </div>
+
+        <form action="/feiyu/feiyu/sethidefield" method="post">
+            <textarea name="hidefield" style="width: 100%;" rows="15">
+{{content}}
+            </textarea>
+
+            <button type="submit" class="btn btn-primary">提交</button>
+        </form>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                list: Object,
+                hidelist: {
+                    "convert_status": "转化状态",
+                    "clue_type": "线索类型",
+                    "create_time": "线索创建时间",
+                    "clue_source": "线索来源",
+                    "external_url": "落地页url",
+                    "appname": "应用名称",
+                    "clue_convert_state": "回传状态"
+                },
+                content:''
+            },
+            methods: {}
+        });
+
+        $.ajax({
+            url: '/feiyu/feiyu/sethidefield',
+            // url: '/static/json/setFeiyuHideField.json',
+            type: 'get',
+            dataType: 'json',
+            contentType: 'application/json',
+            success: function (res) {
+                app.list = JSON.parse(res);
+                app.content = res;
+                // app.list = res;
+            }
+        });
+    </script>
+</body>
+
+</html>

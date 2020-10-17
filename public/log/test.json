@@ -1,0 +1,16 @@
+{
+    "errMsg": "getUserInfo:ok",
+    "rawData": "{\"nickName\":\"\u6b64\u95f4\u4e71\",\"gender\":1,\"language\":\"zh_CN\",\"city\":\"Yichun\",\"province\":\"Jiangxi\",\"country\":\"China\",\"avatarUrl\":\"https:\/\/wx.qlogo.cn\/mmopen\/vi_32\/ibudibicMiaXibYQ1dLGxchnn5u3Xk8EZbibSP96XdCoZo4m2NGUr3Lk8qZnvwpFNDlgLPG8xGw1qMqiakC9Dd1Hv3g4Q\/132\"}",
+    "userInfo": {
+        "nickName": "\u6b64\u95f4\u4e71",
+        "gender": 1,
+        "language": "zh_CN",
+        "city": "Yichun",
+        "province": "Jiangxi",
+        "country": "China",
+        "avatarUrl": "https:\/\/wx.qlogo.cn\/mmopen\/vi_32\/ibudibicMiaXibYQ1dLGxchnn5u3Xk8EZbibSP96XdCoZo4m2NGUr3Lk8qZnvwpFNDlgLPG8xGw1qMqiakC9Dd1Hv3g4Q\/132"
+    },
+    "signature": "6d36ae15c58c8b8ce3e6eefbd334c5b2798d5a70",
+    "encryptedData": "qEpA I DsiscHfCmEuS9u0Z5bBZDv qpYe rWi8z XM1C6dPL oPYa8WpapnoluqzQ1ha6gliEZDGQs2bH2i7m 6FyfS1TBBJITRvKsuKp4gEaeTKziQrCT9F\/bXgzY11Vb 6nbvKQ0ZpMI0WJuQ\/A7L0oAzZxmIi7yXs7tjFRT8VGWo6KUmsb6DTaeNF\/lHp7QvWsWZLpE uxTGAwc8CEH16j4mfT18Qnfm\/KR1p6B0aY\/SnCpx5MOGwGZ87XFF5Pb05dJu7S0490T\/gE219pfsFeCauaP9Cl\/Mrg5IqCKaPqUYviNXcUJy8FnmeZlTEjBxKrDSIgb73nwQSqIOdWg17luqewcpmHjNJGoFgGJAOrgr93lPqb9KB5sB1SYQFNV1Kn4NK8TR\/HyM48RGm33v6V4V9JLtV6cA2plgGA5gz1ArnwPMTGUYR2IQJn3W9dCIuWzbXgPIqxF19Rsb4NLf 3uNXCoEnhxIamiOkxA=",
+    "iv": "5A9mG9nww9vJmry9GAeVtA=="
+}

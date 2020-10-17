@@ -1,0 +1,109 @@
+{include file="./static/header.html"/}
+
+<body>
+
+    <div class="layui-container">
+        <div class="layui-row">
+
+            <div class="layui-inline">
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" id="sel_time" placeholder="请选择日期范围">
+                </div>
+                <button class="layui-btn layui-btn-normal layui-btn-sm" id="lastday">前一天</button>
+                <div class="layui-input-inline">
+                    <button class="layui-btn layui-btn-normal layui-btn-sm" id="nextday">后一天</button>
+                </div>
+            </div>
+
+            <div class="layui-inline">
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" id="sel_phone" placeholder="请输入手机号码">
+                </div>
+            </div>
+
+            <div class="layui-inline">
+                <div class="layui-input-inline">
+                    <button class="layui-btn layui-btn-sm laymy-w1" id="search">搜索</button>
+                </div>
+            </div>
+
+            <div class="layui-inline" style="margin-left: 200px;">
+                <div class="layui-input-inline">
+                    <a href="/push/kf_moblie/kfmoblie" class="layui-btn layui-btn-sm">53推送历史电话</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <table id="formfields_table" lay-filter="lay_formfields" class="layui-table"></table>
+
+    <!-- 导入日期选择扩展 -->
+    {include file="./static/js/selectdate.html" /}
+    <script>
+        var table = layui.table, layer = layui.layer, $ = layui.$, laypage = layui.laypage, laydate = layui.laydate;
+
+        //日期范围
+        laydate.render({
+            elem: '#sel_time'
+            , range: true,
+        });
+
+
+        var form_table = table.render({
+            elem: '#formfields_table',
+            height: "full-70",
+            limit: 20,
+            limits: [20, 50, 100, 200, 500],
+            page: true,
+            totalRow: true,//开启合计
+            toolbar: '#head_toolbar', //开启头部工具栏，并为其绑定左侧模板
+            defaultToolbar: ['exports', 'print'],
+            url: '/push/kf_moblie/getHistory',
+            method: 'get',
+            cols: [[
+                { field: 'Id', title: 'ID', width: 80 },
+                { field: "Client_Id", title: '客户Id', width: 70 },
+                { field: "Name", title: '客户', width: 200 },
+                { field: 'Content', title: '号码或内容' },
+                { field: 'Cre_time', title: '时间', width: 200 },
+                { field: 'ColumnType', title: '模块', width: 200 },
+            ]],
+        });
+
+        //监听列工具行
+        table.on('tool(lay_formfields)', function (obj) {
+            console.log(obj.data)
+            var data = obj.data;
+            var event = obj.event;
+            switch (event) {
+
+            }
+        });
+
+        //监听单元格编辑
+        table.on('edit(lay_formfields)', function (obj) {
+            // console.log(obj.data)
+            var value = obj.value //得到修改后的值
+                , data = obj.data //得到所在行所有键值
+                , field = obj.field; //得到字段
+        });
+
+        //搜索
+        $("#search").click(function () {
+
+            var sel_client_id = $("#sel_client_id").val() || "";
+            var sel_time = $('#sel_time').val() || "";
+            var sel_phone = $('#sel_phone').val() || "";
+
+            form_table.reload({	//重载表格
+                where: {
+                    sel_client_id: sel_client_id,
+                    sel_time: sel_time,
+                    sel_phone: sel_phone,
+                }
+            });
+        });
+    </script>
+
+</body>

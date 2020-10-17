@@ -1,0 +1,61 @@
+{include file="./static/header.html"/}
+
+<body>
+    <div style="padding: 20px 80px;;height: 350px;overflow: hidden;overflow-y:auto;">
+        <ul class="layui-timeline">
+
+            {volist name="list" id="vo"}
+            <li class="layui-timeline-item">
+                <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                <div class="layui-timeline-content layui-text">
+                    <h3 class="layui-timeline-title">{$key}</h3>
+                    {volist name="$vo" id="l"}
+                    <em>{$l.create_time|date="H:i:s",###}</em><em>{$l.Name}</em>
+                    <p style="white-space: pre;">{$l.Content}</p>
+                    {/volist}
+                </div>
+            </li>
+            {/volist}
+
+        </ul>
+    </div>
+
+
+    <div style="width: 90%;position: fixed;bottom: 0;padding-left:80px;">
+        <form class="layui-form" action="">
+            <input type="text" name="Pro_Id" value="{$Pro_Id}" hidden>
+
+            <textarea name="Content" placeholder="请输入内容" class="layui-textarea"></textarea>
+
+            <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+
+        </form>
+    </div>
+
+    <script>
+        //Demo
+        layui.use('form', function () {
+            var form = layui.form;
+
+            //监听提交
+            form.on('submit(formDemo)', function (data) {
+                $.post('/public/index.php/log_project_add', data.field, function (obj) {
+                    // console.log(res);
+                    layer.alert(obj.msg, function () {
+                        if (obj.code == 0) {
+                            //window.parent.location.reload();//刷新父页面，这样直接刷新会导致检索条件也刷新
+                            parent.layui.table.reload("formfields_table");//所以还是刷新父页面的表格
+                            //关闭弹层
+                            var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+                            parent.layer.close(index); //再执行关闭
+                        }
+                    });
+
+                }, 'json')
+                return false;
+            });
+        });
+    </script>
+</body>
+
+</html>

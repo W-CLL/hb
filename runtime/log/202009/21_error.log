@@ -1,0 +1,9 @@
+---------------------------------------------------------------
+[ 2020-09-21T18:03:17+08:00 ] 127.0.0.1 POST localhost/public/index.php/checklogin
+[ error ] [0]不支持: redis[D:\phpstudy_pro\WWW\thinkphp\library\think\cache\driver\Redis.php:87]
+---------------------------------------------------------------
+[ 2020-09-21T18:03:58+08:00 ] 127.0.0.1 POST localhost/public/index.php/checklogin
+[ error ] [0]不支持: redis[D:\phpstudy_pro\WWW\thinkphp\library\think\cache\driver\Redis.php:87]
+---------------------------------------------------------------
+[ 2020-09-21T18:04:34+08:00 ] 127.0.0.1 POST localhost/public/index.php/checklogin
+[ error ] [0]不支持: redis[D:\phpstudy_pro\WWW\thinkphp\library\think\cache\driver\Redis.php:87]

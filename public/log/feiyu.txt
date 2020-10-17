@@ -1,0 +1,148 @@
+2020-05-28 15:24:08
+2020-05-30 10:34:45调用
+2020-05-30 10:34:47无效的签名
+2020-05-30 10:40:59调用
+2020-05-30 11:40:37调用
+2020-05-30 11:40:37跳过
+2020-05-30 11:41:36调用
+2020-06-01 09:49:23调用
+2020-06-01 09:49:23跳过
+2020-06-01 09:49:23跳过
+2020-06-01 14:28:34调用
+2020-06-01 14:28:34跳过
+2020-06-01 14:28:34跳过
+2020-06-01 14:29:00调用
+2020-06-01 14:29:00跳过
+开始插入账户id17
+2020-06-01 15:14:56调用
+2020-06-01 15:14:56跳过
+2020-06-01 15:16:51调用
+2020-06-01 15:17:44调用
+2020-06-01 15:21:33调用
+2020-06-01 15:22:45调用
+2020-06-01 15:22:57调用
+2020-06-01 15:23:59调用
+2020-06-01 15:24:10调用
+2020-06-01 15:24:22调用
+2020-06-01 15:24:36调用
+2020-06-01 15:24:39调用
+2020-06-01 15:25:20调用
+2020-06-01 15:26:32调用
+2020-06-01 15:26:46调用
+2020-06-01 15:27:31调用
+2020-06-01 15:27:33调用
+2020-06-01 15:32:21调用
+2020-06-01 15:41:23调用
+2020-06-01 15:43:25调用
+2020-06-01 15:45:26调用
+2020-06-01 15:46:02调用
+2020-06-01 15:46:02跳过
+2020-06-01 15:47:31调用
+2020-06-01 15:47:32跳过
+2020-06-01 15:47:35调用
+2020-06-01 15:47:35跳过
+2020-06-01 15:47:46调用
+2020-06-01 15:47:46跳过
+2020-06-01 15:56:57调用
+2020-06-01 15:56:57跳过
+2020-06-01 15:57:06调用
+2020-06-01 15:57:06跳过
+2020-06-01 15:57:10调用
+2020-06-01 15:57:10跳过
+2020-06-01 15:59:52调用
+2020-06-01 15:59:52跳过
+2020-06-01 16:09:08调用
+2020-06-01 16:09:08跳过
+2020-06-01 16:09:43调用
+2020-06-01 16:09:43跳过
+2020-06-01 16:10:03调用
+2020-06-01 16:10:03跳过
+2020-06-01 16:10:19调用
+2020-06-01 16:10:19跳过
+2020-06-01 16:15:11调用
+2020-06-01 16:15:11跳过
+2020-06-01 16:15:27调用
+2020-06-01 16:15:27跳过
+2020-06-01 16:15:45调用
+2020-06-01 16:15:45跳过
+2020-06-01 16:19:06调用
+2020-06-01 16:19:06跳过
+2020-06-01 16:19:10调用
+2020-06-01 16:19:10跳过
+2020-06-01 16:19:28调用
+2020-06-01 16:19:28跳过
+2020-06-01 16:21:09调用
+2020-06-01 16:21:09跳过
+2020-06-01 16:21:11调用
+2020-06-01 16:21:11跳过
+2020-06-01 16:21:24调用
+2020-06-01 16:21:24跳过
+think\exception\ErrorException: Invalid argument supplied for foreach() in D:\wwwroot\www.hb.demo\application\api\controller\Feiyu.php:136
+Stack trace:
+#0 D:\wwwroot\www.hb.demo\application\api\controller\Feiyu.php(136): think\Error::appError(2, 'Invalid argumen...', 'D:\\wwwroot\\www....', 136, Array)
+#1 [internal function]: app\api\controller\Feiyu->pull()
+#2 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\api\controller\Feiyu), Array)
+#3 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#6 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#7 D:\wwwroot\www.hb.demo\public\index.php(32): require('D:\\wwwroot\\www....')
+#8 {main}2020-06-01 16:23:07调用
+2020-06-01 16:23:07跳过
+2020-06-01 16:26:39调用
+2020-06-01 16:26:39跳过
+2020-06-01 16:26:54调用
+2020-06-01 16:26:54跳过
+2020-06-01 16:29:46调用
+2020-06-01 16:29:46跳过
+2020-06-01 16:30:15调用
+2020-06-01 16:30:15跳过
+2020-06-01 16:31:29调用
+2020-06-01 16:31:29跳过
+think\exception\ErrorException: Invalid argument supplied for foreach() in D:\wwwroot\www.hb.demo\application\api\controller\Feiyu.php:136
+Stack trace:
+#0 D:\wwwroot\www.hb.demo\application\api\controller\Feiyu.php(136): think\Error::appError(2, 'Invalid argumen...', 'D:\\wwwroot\\www....', 136, Array)
+#1 [internal function]: app\api\controller\Feiyu->pull()
+#2 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\api\controller\Feiyu), Array)
+#3 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#6 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#7 D:\wwwroot\www.hb.demo\public\index.php(32): require('D:\\wwwroot\\www....')
+#8 {main}2020-06-01 16:31:55调用
+2020-06-01 16:31:55跳过
+2020-06-01 16:33:43调用
+2020-06-01 16:33:43跳过
+2020-06-01 16:34:23调用
+2020-06-01 16:34:23跳过
+2020-06-01 16:37:07调用
+2020-06-01 16:45:20调用
+think\exception\ErrorException: Invalid argument supplied for foreach() in D:\wwwroot\www.hb.demo\application\api\controller\Feiyu.php:134
+Stack trace:
+#0 D:\wwwroot\www.hb.demo\application\api\controller\Feiyu.php(134): think\Error::appError(2, 'Invalid argumen...', 'D:\\wwwroot\\www....', 134, Array)
+#1 [internal function]: app\api\controller\Feiyu->pull()
+#2 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\api\controller\Feiyu), Array)
+#3 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#6 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#7 D:\wwwroot\www.hb.demo\public\index.php(32): require('D:\\wwwroot\\www....')
+#8 {main}2020-06-01 16:46:24调用
+2020-06-01 16:47:38调用
+2020-06-01 17:03:40调用
+2020-06-01 17:04:00调用
+2020-06-10 09:24:25调用
+2020-06-10 09:28:36调用
+2020-06-16 10:21:56""
+2020-06-16 10:22:26""
+2020-06-16 10:27:56""
+2020-06-16 10:31:30""
+2020-06-16 10:36:07""
+2020-06-16 10:36:54""
+2020-06-16 10:37:54""
+2020-06-16 10:45:15""
+2020-06-16 10:46:24""
+2020-06-16 10:46:47""
+2020-06-16 11:17:03调用
+2020-07-16 10:52:29调用
+2020-07-16 10:58:54调用

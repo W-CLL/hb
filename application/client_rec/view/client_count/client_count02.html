@@ -1,0 +1,141 @@
+{include file="./static/header.html"/}
+<link rel="stylesheet" href="__STATIC__/bootstrap3/css/bootstrap.min.css">
+<body>
+<div class="layui-container">
+	<div class="layui-row">
+
+		{if $Think.session.type<=4}
+		<div class="layui-col-xs4 layui-col-sm3 layui-col-md3 layui-col-lg3">
+			<div class="layui-inline">
+				<div class="layui-input-inline">
+					<select id="sel_client_id"   class="layui-select">
+						<option value="">请选择客户</option>
+						{foreach $cli as $k=>$v}
+						<option value="{$v.User_Id}">{$v.Name}</option>
+						{/foreach}
+					</select>
+				</div>
+			</div>
+		</div>
+		{/if}
+
+		<div class="layui-col-xs4 layui-col-sm3 layui-col-md4 layui-col-lg4">
+			<div class="layui-inline">
+				<div class="layui-input-inline">
+					<input type="text"  class="layui-input" id="sel_time" placeholder="请选择日期范围">
+				</div>
+                <button class="layui-btn layui-btn-normal layui-btn-sm" id="lastday">前一天</button>
+                <div class="layui-input-inline">
+                    <button class="layui-btn layui-btn-normal layui-btn-sm" id="nextday">后一天</button>
+                </div>
+			</div>
+        </div>
+        
+		<div class="layui-col-xs4 layui-col-sm3 layui-col-md1 layui-col-lg1">
+			<div class="layui-inline">
+				<div class="layui-input-inline">
+					<button class="layui-btn layui-btn-sm laymy-w1" id="search">搜索</button>
+				</div>
+			</div>
+        </div>
+        
+	</div>
+</div>
+
+<table  id="form_table" lay-fiter="form_table" class="layui-table">
+
+</table>
+
+<script type="text/html" id="toolbarDemo">
+    <div class="layui-btn-container">
+      <button class="layui-btn layui-btn-sm" lay-event="getCheckData">获取选中行数据</button>
+    </div>
+</script>
+
+<script>
+
+    var table = layui.table, layer = layui.layer, $ = layui.$, laypage = layui.laypage;
+    layui.use('table', function () {
+        var table = layui.table;
+    });
+    var data = [{}]
+    var cols = [
+        [
+            { field: 'Client', title: '客户', colspan: 4, align: 'center' }
+            , { field: 'Project', title: '项目', colspan: 4, align: 'center' }
+        ], [
+            { field: 'Date', width: 120, title: '日期', totalRowText: '合计' }
+            , { field: 'Money', width: 100, title: '充值', sort: true }
+            , { field: 'Spend', width: 100, title: '消费', sort: true }
+            , { field: 'balance', width: 100, title: '余额', sort: true }
+
+            , { field: 'Sum_Coin', width: 130, title: '消费(广告币)', sort: true }
+            , { field: 'Sum_Con', width: 130, title: '消费(人民币)', sort: true }
+            , { field: 'classify', width: 130, title: '线索总数', sort: true }
+            , { field: 'classify', width: 130, title: '线索成本', sort: true }
+        ]
+    ]
+
+    form_table = table.render({
+        elem: '#form_table'
+        ,title: '月度消费表'
+        ,limit : 31
+        ,toolbar: '#toolbarDemo' //开启头部工具栏，并为其绑定左侧模板
+        , totalRow: true
+        , data: data
+        , cols: cols //设置表头
+        ,done: function(res, curr, count){
+            var bg1 = {
+                'background-color': 'orange',
+            }
+            var bg2 = {
+                'background-color': 'yellowgreen',
+            }
+            $('th[data-field="Client"]').css(bg1);
+            $('th[data-field="Client"]').css('font-size','28px');
+            $('th[data-field="Date"]').css(bg1);
+            $('th[data-field="Money"]').css(bg1);
+            $('th[data-field="Spend"]').css(bg1);
+            $('th[data-field="balance"]').css(bg1);
+
+            $('th[data-field="Project"]').css(bg2);
+            $('th[data-field="Project"]').css('font-size', '28px');
+            $('th[data-field="Sum_Coin"]').css(bg2);
+            $('th[data-field="Sum_Con"]').css(bg2);
+        }
+    })
+
+    //为了变换表头
+    function getData(sel_client_id, sel_time) {
+        $.get('/get_client_count?sel_client_id=' + sel_client_id + '&sel_time=' + sel_time, function (res) {
+            var cols = new Array(new Array,new Array);
+            cols[0][0] = { field: 'Client', title: '客户', colspan: 4, align: 'center' }
+            cols[1][0] = { field: 'Date', width: 120, title: '日期', totalRowText: '合计' }
+            cols[1][1] = { field: 'Money', width: 100, title: '充值', sort: true }
+            cols[1][2] = { field: 'Spend', width: 100, title: '消费', sort: true }
+            cols[1][3] = { field: 'balance', width: 100, title: '余额', sort: true }
+
+            for(let i = 1;i<=res.project.length;i++){
+                cols[0][i] = { field: 'Project', title: res.project[i-1].ProjectName, colspan: 4, align: 'center' }
+
+                cols[1][4*i] = { field: 'Sum_Coin', width: 130, title: '消费(广告币)', sort: true }
+                cols[1][4*i+1] = { field: 'Sum_Con', width: 130, title: '消费(人民币)', sort: true }
+                cols[1][4*i+2] = { field: 'classify', width: 130, title: '线索总数', sort: true }
+                cols[1][4*i+3] = { field: 'classify', width: 130, title: '线索成本', sort: true }
+            }
+
+            form_table.reload({	//重载表格
+                cols: cols,
+                data: res.data
+            });
+        })
+    }
+
+    //搜索
+    $("#search").click(function () {
+        var sel_client_id = $("#sel_client_id").val() || "";
+        var sel_time = $('#sel_time').val() || "";
+        getData(sel_client_id, sel_time)
+    });
+</script>
+</body>

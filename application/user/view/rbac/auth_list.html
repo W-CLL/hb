@@ -1,0 +1,144 @@
+{include file="./static/header.html"/}
+
+<body>
+    <div class="layui-container">
+
+		<div class="layui-row">
+			<div class="layui-col-xs4 layui-col-sm3 layui-col-md4 layui-col-lg4">
+				<div class="layui-inline">
+					<div class="layui-input-inline">
+						<input type="text"  class="layui-input" id="sel_title" placeholder="标题">
+					</div>
+				</div>
+            </div>
+
+            <div class="layui-col-xs4 layui-col-sm3 layui-col-md4 layui-col-lg4">
+				<div class="layui-inline">
+					<div class="layui-input-inline">
+						<input type="text"  class="layui-input" id="sel_name" placeholder="路由">
+					</div>
+				</div>
+            </div>
+            
+			<div class="layui-col-xs4 layui-col-sm3 layui-col-md2 layui-col-lg2">
+				<div class="layui-inline">
+					<button class="layui-btn layui-btn-sm laymy-w1" id="search">搜索</button>
+				</div>
+			</div>
+		</div>
+    </div>
+    
+    <table id="formfields_table" lay-filter="lay_formfields" class="layui-table" style="margin:0"></table>
+
+    <script type="text/html" id="head_toolbar">
+        <div class="layui-btn-container">
+            <button type="button" class="layui-btn layui-btn-primary layui-btn-sm" lay-event="back"><i class="layui-icon"></i></button>
+            <button class="layui-btn layui-btn-sm" lay-event="insert">新增权限类型</button>
+        </div>
+    </script>
+
+    <script type="text/html" id="toolbar">
+        <div class="layui-btn-container">
+            <button class="layui-btn layui-btn-sm" lay-event="update">编辑</button>
+            <button type="button" class="layui-btn layui-btn-sm layui-btn-disabled" lay-event="del">删除</button>
+        </div>
+    </script>
+
+    <script>
+        var table = layui.table, layer = layui.layer, $ = layui.$, laydate = layui.laydate;
+        var form_table = table.render({
+            elem: '#formfields_table',
+            height: 'full-70',
+            limit: 20,
+            page: true,
+            toolbar: '#head_toolbar',
+            defaultToolbar: '',
+            url: '/public/index.php/auth_list',
+            method: 'get',
+            cols: [[
+                { field: 'id', title: 'ID', width: 60 },
+                { field: 'title', title: '标题' },
+                { field: 'name', title: '路由' },
+                // { field: 'type', title: '类型' },
+                { field: '', title: '操作', toolbar: '#toolbar' }
+            ]],
+            done: function (res, curr, count) {
+            }
+
+        });
+
+        //监听头部工具行
+        table.on('toolbar(lay_formfields)', function (obj) {
+            var data = obj.data;
+            var event = obj.event;
+            switch (event) {
+                case 'insert':
+                    {
+                        layer.open({
+                            type: 2,
+                            title: "新增权限",
+                            shadeClose: true,//外部关闭
+                            area: ['50%', '600px'],
+                            content: '/ins_rbac'
+                        });
+
+                        break;
+                    }
+                case 'back': {
+                    window.history.back();
+                    break;
+                }
+            }
+        });
+
+        //监听列工具行
+        table.on('tool(lay_formfields)', function (obj) {
+            var data = obj.data;
+            var event = obj.event;
+            var tr = obj.tr;
+            switch (event) {
+                case 'update':
+                    {
+                        layer.open({
+                            type: 2,
+                            title: "更新权限",
+                            shadeClose: true,//外部关闭
+                            area: ['80%', 600],
+                            content: '/public/index.php/upd_auth?id=' + data.id
+                        });
+                        break;
+                    }
+            //     case 'del':
+            //         {
+            //             layer.confirm('确定删除？',{ shadeClose: true }, function () {
+            //                 $.ajax({
+            //                     type: 'delete',
+            //                     url: '/del_auth',
+            //                     data: data,
+            //                     success: function (res) {
+            //                         layer.alert(res.msg, function (index) {
+            //                             if (res.code === 0) {
+            //                                 layui.table.reload("formfields_table");//刷新页面的表格
+            //                                 layer.close(index); //再执行关闭
+            //                             }
+            //                         });
+            //                     }
+            //                 })
+            //             })
+            //         }
+            }
+        });
+
+        //搜索
+        $("#search").click(function () {
+			var sel_title = $("#sel_title").val() || "";
+			var sel_name = $('#sel_name').val() || "";
+			form_table.reload({	//重载表格
+				where: {
+					sel_title: sel_title,
+					sel_name: sel_name
+				}
+			});
+		});
+    </script>
+</body>

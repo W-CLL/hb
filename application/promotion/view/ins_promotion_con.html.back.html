@@ -1,0 +1,141 @@
+{include file="./static/header.html"/}
+
+<body>
+
+<table id="formfields_table" lay-filter="lay_formfields" class="layui-table"></table>
+
+<script type="text/html" id="toolbar">
+
+    <a class="layui-btn layui-btn-sm" lay-event="add">确认</a>
+
+</script>
+
+<script type="text/html" id="titleTpl">
+
+    <a href="/detail/{{d.id}}" class="layui-table-link">{{d.title}}</a>
+
+</script>
+
+</div>
+
+</div>
+
+<script>
+
+
+
+    var table = layui.table,layer = layui.layer,$=layui.$,laydate = layui.laydate;
+
+
+
+    var form_table = table.render({
+
+        elem:'#formfields_table',
+
+        height:"full-70",
+
+        url:"/public/index.php/get_ins_promotion_con?Id={$Id}",
+
+        method:'get',
+
+        cols:[[
+
+            {field:'Client_Id',title:'ID',hide:true},
+
+            {field:'Pro_Id',title:'Pro_Id',hide:true},
+            
+            {field:'kf53_Id',title:'kf53_Id',hide:true},
+
+            {field:'Project_Id',title:'Project_Id',hide:true},
+
+            {field:'Name',title:'客户',sort:true},
+
+            {field:'ProjectName',title:'项目名',sort:true},
+
+            {field:'Pro_User',title:'推广账号',sort:true,width:'10%'},
+            
+            {field:'Pro_Psw',title:'密码',width:'5%'},
+
+            {field:'User_53',title:'53账号',width:'5%'},
+
+            {field:'Psw_53',title:'53密码',width:'5%'},
+
+            {field:'Rebate',title:'平台返点'},
+
+            {field:'Remarks',title:'推广账号备注'},
+
+            {field:'Con_B',title:'消费币',edit: 'text'},
+            
+            {field:'ShowCon',title:'展现',edit:'text'},
+
+            {field:'Click',title:'点击',edit:'text'},
+
+            {field:'Dialogue',title:'对话',edit: 'text'},
+
+            {field:'Phone',title:'留电',edit: 'text'},
+
+            {field:'Message',title:'留言',edit: 'text'},
+
+            {field:'Date',title:'日期'},
+
+            {field:'ConRemarks',title:'消费备注',edit: 'text'},
+
+            {field:'',title:'操作',toolbar:'#toolbar',width:100}
+
+        ]],
+        done:function(res, curr, count){
+            // console.log(res);
+            var pro = $('td[data-field="Pro_Psw"]')
+            pro.dblclick(function(e){
+                // console.log($(e.target).parent().siblings('td[data-field="Pro_Id"]').text());
+                var psw = $(e.target)
+                var Pro_Id = psw.parent().siblings('td[data-field="Pro_Id"]').text()
+                $.post('/public/index.php/get_pro_key',{Pro_Id:Pro_Id},function(res){
+                    if(res.code == 0){psw.text(res.key)}
+                },'json')
+            })
+            var pro = $('td[data-field="Psw_53"]')
+            pro.dblclick(function(e){
+                var kf53_key = $(e.target)
+                var client_53_id= kf53_key.parent().siblings('td[data-field="kf53_Id"]').text()
+                $.post('/public/index.php/get_kf53_key',{client_53_id:client_53_id},function(res){
+                    if(res.code == 0){kf53_key.text(res.key)}
+                },'json')
+            })
+        }
+
+    })
+
+    //监听行工具事件
+
+    table.on('tool(lay_formfields)', function(obj){
+
+        var data = obj.data;
+        delete data.Psw_53
+        delete data.Pro_Psw
+
+        if(obj.event === 'add'){
+
+            $.post('/public/index.php/ins_promotion_con_do',{data:data},function(obj){
+
+                layer.msg(obj.msg,function(index){
+
+/*                    if(obj.code===0){
+
+                        window.parent.location.reload();//刷新父页面
+
+                    }*/
+
+                });
+
+            },'json');
+
+            obj.del()
+
+        }
+
+    });
+
+</script>
+
+</body>

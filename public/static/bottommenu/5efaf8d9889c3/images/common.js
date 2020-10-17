@@ -1,0 +1,1 @@
+var com_interface = "http://www.hb.demo/api/api/message/key/503006efedb8a5cc81698d8ac3beaefc";

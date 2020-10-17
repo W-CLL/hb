@@ -1,0 +1,597 @@
+<!-- <!DOCTYPE html> -->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		{switch name = $_SERVER['HTTP_HOST']}
+			{case value="www.test.com"}留言管理系统{/case}
+			{default /}海豹广告管理系统
+		{/switch}
+	</title>
+	<meta name="renderer" content="webkit">
+	<link rel="icon" href="/favicon.ico" type="img/x-ico" />
+	<link rel="stylesheet" href="/static/layui/css/layui.css">
+	<link rel="stylesheet" href="/static/css/index.css">
+	<style>
+		.layui-header{
+			background-color: #007a99!important;
+			height: 60px;
+		}
+		.layui-side{
+			/* background-color: #699ef6!important;; */
+			background-color: #008fb3!important;
+		}
+		.layui-tab{
+			position: fixed;
+			left: 180px;
+			margin: 0;
+			width: 100%;
+		}
+		.layui-layout-admin .layui-body{
+			top: 100px;
+			padding: 0;
+		}
+		.laymy-iframe{
+			width: 100%;
+			height: 100%;
+		}
+		.nav-hade{
+			/* background-color:#2c60b7; */
+			background-color: #008fb3;
+		}
+		.nav-icon{
+			font-size: 18px;
+		}
+		/* 图标的大小和颜色 */
+		svg{
+			width: 18px;
+			height: 18px;
+		}
+		path{
+			fill: #dddddd;
+		}
+		dd a{
+			/* background-color:#2c60d5; */
+			background-color: #00a3cc;
+			font-size: 10px;
+		}
+		.laymy-menu{
+			font-size: 13px;
+		}
+		.layui-nav-item>a{
+			font-size: 15px;
+		}
+		/*红点提示的样式*/
+		.dot1{
+			display: block;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background-color: rgb(223, 79, 79);
+			position: absolute;
+			top: 8px;
+			left: 10px;
+			font-size: 0.8em;
+			line-height: 16px;
+		}
+		.dot2{
+			display: block;
+			width: 10px;
+			height: 15px;
+			border-radius: 50%;
+			background-color: red;
+			position: absolute;
+			top: 8px;
+			left: 10px;
+			font-size: 0.8em;
+			line-height: 16px;
+		}
+	</style>
+</head>
+<body>
+
+<div class="layui-layout layui-layout-admin">
+	  
+	<div class="layui-header">
+		<ul class="layui-nav layui-layout-right" lay-filter="layadmin-layout-right">
+			<li class="layui-nav-item" lay-unselect="">
+				<a href="javascript:;">
+					<cite><i class="layui-icon nav-icon">&#xe640;</i></cite>
+					<span class="layui-nav-more"></span></a>
+				<dl class="layui-nav-child layui-anim layui-anim-upbit">
+					<dd layadmin-event="clearRedis" style="text-align: center;">
+						<a href="javascript:;" onclick="clearRedis('list');"> 清除列表缓存</a>
+					</dd>
+					<dd layadmin-event="clearRedis" style="text-align: center;">
+						<a href="javascript:;" onclick="clearRedis('all');"> 清除全部缓存</a>
+					</dd>
+				</dl>
+			</li>
+
+			<li class="layui-nav-item" lay-unselect="">
+				<a href="javascript:;">
+					<cite>{$Think.session.username}</cite>
+					<span class="layui-nav-more"></span></a>
+				<dl class="layui-nav-child layui-anim layui-anim-upbit">
+
+					<dd><a href="javascript:;" onclick="
+								layer.open({
+									type:2,
+									title:'添加',
+									area:['50%','400px'],
+									shadeClose:true,//外部关闭
+									content:'/upd_msg'
+								});  ">
+								修改密码
+						</a>
+					</dd>
+					<!-- <hr> -->
+					<dd>
+						<a href="javascript:;" onclick="bindwx()"> 绑定微信</a>
+						<div id="qrcode" style="display: none;"></div>
+					</dd>
+					<!-- <hr> -->
+					<dd layadmin-event="logout" style="text-align: center;">
+						<a href="/public/index.php/loginout"> 退出</a>
+					</dd>
+				</dl>
+			</li>
+		</ul>
+
+	</div>
+
+	<div class="layui-side layui-bg-black">
+		<div class="layui-logo" lay-href="" style="width:260px">
+			<span style="font-size: 24px;color:white;">
+				办公自动化管理系统
+			</span>
+		</div>
+		<ul class="layui-nav layui-nav-tree" lay-filter="allmenu">
+			<!-- 侧边导航: <ul class="layui-nav layui-nav-tree layui-nav-side"> -->
+            
+            {if condition="isset($rules[91])"}
+			<li class="layui-nav-item">
+				<a href="javascript:;" class="nav-hade laymy-menu" data-href="/website/site/show/">
+					网址导航</a>
+            </li>
+            {/if}
+
+            {if condition="isset($rules[42]) OR isset($rules[72])"}
+            <li class="layui-nav-item">
+                <a href="javascript:;" class="nav-hade">
+                    <i class="layui-icon nav-icon">&#xe653;</i>
+                    项目管理</a>
+                <dl class="layui-nav-child">
+                    {if condition="isset($rules[42])"}
+                    <dd><a href="javascript:;"  class="laymy-menu con_amdin" data-href="/project">项目管理</a></dd>
+                    {/if}
+                    {if condition="isset($rules[72])"}
+                    <dd><a href="javascript:;"  class="laymy-menu con_amdin" data-href="/customer_count">留言统计</a></dd>
+                    {/if}
+                </dl>
+            </li>
+            {/if}
+
+			{if condition="isset($rules[26]) OR isset($rules[35]) OR isset($rules[53]) OR isset($rules[19])"}
+			<li class="layui-nav-item">
+				<a href="javascript:;" class="nav-hade">
+					<!-- <i class="layui-icon nav-icon">&#xe673;</i> -->
+					<svg t="1585898325692" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1312" width="18" height="18" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><style type="text/css"></style></defs><path d="M345.705929 297.42283c15.350222 12.791852 35.817184 20.466963 53.725777 17.908592 20.466963 0 38.375555-10.233481 53.725777-23.025333 17.908592-15.350222 30.700444-35.817184 40.933925-58.842517 17.908592-43.492295 17.908592-97.218072 2.55837-143.268738-10.233481-30.700444-28.142073-58.842517-53.725777-76.75111-15.350222-10.233481-38.375555-15.350222-58.842517-12.791851-12.791852 2.55837-25.583703 7.675111-38.375555 15.350222-23.025333 15.350222-38.375555 40.933925-48.609036 66.517628-12.791852 46.050666-15.350222 92.101331-2.55837 138.151997 10.233481 28.142073 25.583703 56.284147 51.167406 76.75111zM601.542961 299.9812c17.908592 15.350222 40.933925 25.583703 63.959258 25.583703 20.466963 2.55837 38.375555-2.55837 56.284147-12.791851 17.908592-10.233481 33.258814-25.583703 43.492295-43.492296 12.791852-20.466963 23.025333-40.933925 30.700444-63.959258 5.116741-17.908592 7.675111-38.375555 5.116741-58.842517-2.55837-28.142073-15.350222-53.725777-33.258814-76.75111-12.791852-15.350222-28.142073-30.700444-46.050666-38.375554-12.791852-5.116741-28.142073-10.233481-40.933925-7.675111-17.908592 2.55837-33.258814 12.791852-46.050666 23.025332-17.908592 15.350222-33.258814 33.258814-43.492295 53.725777-10.233481 17.908592-20.466963 38.375555-23.025333 61.400888-2.55837 25.583703-2.55837 51.167406 2.55837 74.192739 5.116741 23.025333 12.791852 46.050666 30.700444 63.959258zM245.929487 509.767566c17.908592-15.350222 28.142073-35.817184 35.817184-56.284147 10.233481-33.258814 10.233481-66.517628 7.675111-99.776442 0-12.791852-5.116741-25.583703-10.233481-38.375555-12.791852-28.142073-35.817184-53.725777-63.959258-69.075999-23.025333-10.233481-46.050666-15.350222-66.517628-10.233481-25.583703 2.55837-46.050666 20.466963-61.400888 40.933925-20.466963 28.142073-30.700444 63.959258-35.817184 97.218072-2.55837 20.466963 0 40.933925 5.11674 61.400888 7.675111 30.700444 23.025333 58.842517 46.050666 79.30948 17.908592 15.350222 40.933925 23.025333 63.959258 23.025333 28.142073 0 56.284147-7.675111 79.30948-28.142074zM982.740139 433.016457c-2.55837-20.466963-7.675111-38.375555-17.908593-56.284147-10.233481-20.466963-28.142073-40.933925-48.609036-51.167407-23.025333-12.791852-51.167406-15.350222-76.751109-12.791851-12.791852 2.55837-28.142073 5.116741-40.933925 12.791851-17.908592 10.233481-30.700444 28.142073-40.933925 48.609036-10.233481 25.583703-15.350222 53.725777-15.350222 81.86785 0 25.583703 0 53.725777 7.675111 79.30948 5.116741 17.908592 15.350222 38.375555 33.258814 48.609036 17.908592 15.350222 40.933925 20.466963 63.959258 23.025333 17.908592 2.55837 38.375555 2.55837 56.284147-2.55837 17.908592-5.116741 35.817184-15.350222 46.050665-30.700444 12.791852-15.350222 20.466963-35.817184 23.025333-53.725777 12.791852-30.700444 10.233481-58.842517 10.233482-86.98459z" p-id="1313" fill="#cdcdcd"></path><path d="M911.10577 819.330375c-2.55837-35.817184-20.466963-71.634369-46.050666-99.776443-5.116741-5.116741-10.233481-10.233481-17.908592-15.350222-33.258814-28.142073-66.517628-58.842517-99.776443-89.542961-33.258814-33.258814-63.959258-69.075999-92.101331-107.451553-20.466963-33.258814-48.609036-63.959258-86.984591-81.86785-23.025333-10.233481-51.167406-15.350222-76.75111-12.791852-46.050666 5.116741-86.984591 30.700444-115.126664 66.517628-7.675111 7.675111-12.791852 17.908592-17.908592 28.142074-20.466963 30.700444-46.050666 61.400888-74.192739 86.984591-15.350222 15.350222-30.700444 28.142073-46.050666 40.933925-7.675111 7.675111-17.908592 15.350222-25.583703 23.025333-30.700444 23.025333-61.400888 53.725777-79.30948 86.98459-12.791852 23.025333-20.466963 48.609036-23.025333 76.75111 0 23.025333 2.55837 46.050666 10.233481 66.517628 7.675111 23.025333 17.908592 46.050666 33.258814 63.959258 25.583703 30.700444 63.959258 51.167406 102.334813 53.725777 48.609036 2.55837 97.218072 0 143.268738-7.675111 20.466963-2.55837 40.933925-10.233481 63.959258-12.791852 46.050666-5.116741 92.101331-2.55837 135.593627 10.233482 35.817184 12.791852 74.192739 17.908592 112.568294 20.466962 38.375555 2.55837 79.30948-2.55837 115.126664-23.025333 25.583703-12.791852 46.050666-35.817184 58.842517-61.400887 20.466963-33.258814 30.700444-71.634369 25.583704-112.568294z m-429.806214 104.893183h-117.685034c-12.791852 0-25.583703 0-38.375555-2.558371-25.583703-5.116741-48.609036-20.466963-63.959258-43.492295-12.791852-15.350222-20.466963-33.258814-23.025333-53.725777-2.55837-20.466963-2.55837-40.933925 0-61.400887 5.116741-23.025333 17.908592-43.492295 33.258814-58.842518 12.791852-12.791852 30.700444-23.025333 48.609036-30.700444 7.675111-2.55837 15.350222-5.116741 23.025333-5.11674h69.075999v-97.218072h66.517628c2.55837 120.243405 2.55837 237.92844 2.55837 353.055104z m263.512143 0h-161.17733c-17.908592-2.55837-33.258814-7.675111-46.050666-17.908593-15.350222-12.791852-23.025333-33.258814-23.025333-51.167406v-173.969182h66.517629v161.17733c0 7.675111 2.55837 12.791852 7.675111 17.908593 5.116741 5.116741 12.791852 7.675111 20.466962 7.675111h69.075999v-189.319404h66.517628v245.603551z" p-id="1314" fill="#cdcdcd"></path><path d="M340.589189 734.904154c-12.791852 5.116741-25.583703 15.350222-33.258814 30.700444-5.116741 12.791852-7.675111 25.583703-7.675111 38.375555 0 15.350222 5.116741 30.700444 12.791851 43.492295 10.233481 15.350222 28.142073 25.583703 46.050666 23.025333h53.725777v-138.151997h-58.842518c-2.55837-2.55837-7.675111 0-12.791851 2.55837z" p-id="1315" fill="#cdcdcd"></path></svg>
+					推广账号</a>
+				<dl class="layui-nav-child">
+					{if condition="isset($rules[26])"}
+                    <dd><a href="javascript:;"  class="laymy-menu con_amdin" data-href="/promotion">推广账号</a></dd>
+                    {/if}
+                    {if condition="isset($rules[35])"}
+					<dd><a href="javascript:;" class="laymy-menu" data-href="/promotion_rec">充值记录</a></dd>
+                    {/if}
+                    {if condition="isset($rules[53])"}
+					<dd><a href="javascript:;" class="laymy-menu" data-href="/promotion_con">竞价消费</a></dd>
+                    {/if}
+                    {if condition="isset($rules[19])"}
+                    <dd><a href="javascript:;"  class="laymy-menu con_amdin" data-href="/client_53">客户53账号管理</a></dd>
+                    {/if}
+				</dl>
+			</li>
+			{/if}
+            
+            {if condition="isset($rules[26]) OR isset($rules[63])"}
+			<li class="layui-nav-item">
+				<a href="javascript:;" class="nav-hade">
+					<i class="layui-icon nav-icon">&#xe606;</i>
+					客服栏目</a>
+				<dl class="layui-nav-child">
+                    {if condition="isset($rules[26])"}
+                    <dd><a href="javascript:;"  class="laymy-menu con_amdin" data-href="/input">对话转项目</a></dd>
+                    {/if}
+                    {if condition="isset($rules[63])"}
+					<dd><a href="javascript:;" class="laymy-menu" data-href="/kw">客户关键字管理</a></dd>
+					{/if}
+				</dl>
+            </li>
+            {/if}
+
+            {if condition="isset($rules[26]) OR isset($rules[63])"}
+			<li class="layui-nav-item">
+				<a href="javascript:;" class="nav-hade">
+					<i class="layui-icon nav-icon">&#xe62c;</i>
+					线索统计</a>
+				<dl class="layui-nav-child">
+                    {if condition="isset($rules[72])"}
+                    <dd><a href="javascript:;"  class="laymy-menu con_amdin" data-href="/customer_count">线索统计</a></dd>
+                    {/if}
+                    {if condition="isset($rules[26])"}
+					<dd><a href="javascript:;"  class="laymy-menu con_amdin" data-href="/push/kf_moblie/kfmoblie">历史电话</a></dd>
+                    {/if}
+                    {if condition="isset($rules[26])"}
+					<dd><a href="javascript:;"  class="laymy-menu con_amdin" data-href="/kh_info/kh_count/kh_count">53对话统计</a></dd>
+                    {/if}
+					{if condition="isset($rules[26])"}
+                    <dd><a href="javascript:;"  class="laymy-menu con_amdin" data-href="/kh_info/kh_info/kh_info">53访客信息</a></dd>
+                    {/if}
+                    {if condition="isset($rules[26])"}
+                    <dd><a href="javascript:;"  class="laymy-menu con_amdin" data-href="/kh_info/kh_talk/kh_talk">53对话信息</a></dd>
+                    {/if}
+                    {if condition="isset($rules[26])"}
+                    <dd><a href="javascript:;"  class="laymy-menu con_amdin" data-href="/api/wo_long/ocpc">ocpc回传</a></dd>
+                    {/if}
+				</dl>
+            </li>
+            {/if}
+
+            {if condition="isset($rules[2]) OR isset($rules[83]) OR isset($rules[121])"}
+			<li class="layui-nav-item">
+				<a href="javascript:;" class="nav-hade">
+					<i class="layui-icon nav-icon">&#xe667;</i>
+					线索管理</a>
+				<dl class="layui-nav-child">
+                    {if condition="isset($rules[2])"}
+					<dd><a href="javascript:;"  class="laymy-menu con_amdin" data-href="/customer">留言表单</a></dd>
+                    {/if}
+                    {if condition="isset($rules[83])"}
+					<dd><a href="javascript:;"  class="laymy-menu con_amdin" data-href="/push">推送记录</a></dd>
+                    {/if}
+                    {if condition="isset($rules[121])"}
+                    <dd><a href="javascript:;"  class="laymy-menu con_amdin" data-href="/feiyu/feiyu/clues">飞鱼线索</a></dd>
+                    {/if}
+				</dl>
+            </li>
+            {/if}
+
+            {if condition="isset($rules[128]) OR isset($rules[7]) OR isset($rules[74]) OR isset($rules[81])"}
+			<li class="layui-nav-item">
+				<a href="javascript:;" class="nav-hade">
+					<i class="layui-icon nav-icon">&#xe65e;</i>
+                    财务记录
+                </a>
+				<dl class="layui-nav-child">
+                    {if condition="isset($rules[128])"}
+				    <dd><a href="javascript:;"  class="laymy-menu con_amdin" data-href="/client_count">消费统计</a></dd>
+                    {/if}
+                    {if condition="isset($rules[7])"}
+                    <dd><a href="javascript:;"  class="laymy-menu con_amdin" data-href="/cli_promotion_con">消费记录</a></dd>
+                    {/if}
+                    {if condition="isset($rules[74])"}
+                    <dd><a href="javascript:;"  class="laymy-menu" data-href="/client_rec">打款记录</a></dd>
+                    {/if}
+                    {if condition="isset($rules[81])"}
+                    <dd><a href="javascript:;"  class="laymy-menu" data-href="/client_sum">我的余额</a></dd>
+                    {/if}
+				</dl>
+			</li>
+            {/if}
+
+            {if condition="isset($rules[100]) OR isset($rules[98]) OR isset($rules[109])"}
+			<li class="layui-nav-item">
+				<a href="javascript:;" class="nav-hade">
+					<i class="layui-icon nav-icon">&#xe705;</i>
+					话务资料</a>
+				<dl class="layui-nav-child">
+                    {if condition="isset($rules[100])"}
+					<dd><a href="javascript:;"  class="laymy-menu con_amdin" data-href="/manage_com_data">竞品资料管理</a></dd>
+                    {/if}
+                    {if condition="isset($rules[98])"}
+                    <dd><a href="javascript:;"  class="laymy-menu con_amdin" data-href="/com_data">竞品资料</a></dd>
+                    {/if}
+                    {if condition="isset($rules[109])"}
+                    <dd><a href="javascript:;"  class="laymy-menu con_amdin" data-href="/attr_talk">招商话术</a></dd>
+                    {/if}
+				</dl>
+            </li>
+            {/if}
+            
+			{if $Think.session.type<=4}
+			<li class="layui-nav-item">
+				<a href="javascript:;" class="nav-hade">
+					<i class="layui-icon nav-icon">&#xe66c;</i>
+					目标管理</a>
+				<dl class="layui-nav-child">
+					<dd><a href="javascript:;"  class="laymy-menu con_amdin" data-href="/target">工作目标</a></dd>
+					<dd><a href="javascript:;"  class="laymy-menu con_amdin" data-href="/meal">工作餐</a></dd>
+				</dl>
+            </li>
+            {/if}
+
+            {if $Think.session.type<=2}
+			<li class="layui-nav-item">
+				<a href="javascript:;" class="nav-hade">
+					<i class="layui-icon nav-icon">&#xe770;</i> 
+					用户管理</a>
+				<dl class="layui-nav-child">
+					<dd><a href="javascript:;"  class="laymy-menu con_amdin" data-href="/user">用户管理</a></dd>
+					<dd><a href="javascript:;"  class="laymy-menu con_amdin" data-href="/wxapi/gzh/gzh">公众号管理</a></dd>
+					<dd><a href="javascript:;"  class="laymy-menu con_amdin" data-href="/client_rec">客户打款记录</a></dd>
+					<dd><a href="javascript:;"  class="laymy-menu con_amdin" data-href="/client_sum">客户余额</a></dd>
+					<dd><a href="javascript:;"  class="laymy-menu con_amdin" data-href="/rbac">角色权限管理</a></dd>
+				</dl>
+			</li>
+            {/if}
+		</ul>
+	</div>
+
+    <div class="layui-tab layui-tab-card" lay-filter="demo" lay-allowclose="true">
+        <ul class="layui-tab-title">
+			{if $Think.session.type==5}
+			<!-- 客户首页 -->
+			<li class="layui-this" lay-id='customer'>留言系统</li>
+            {elseif $Think.session.type>5 /}
+            <li class="layui-this" lay-id='/website/site/show/'>网址导航</li>
+			{else}
+			<!--管理员，竞价员,内部客服-->
+			<li class="layui-this" lay-id='project'>项目管理</li>
+			{/if}
+        </ul>
+        <div class="layui-tab-content layui-body">
+			<audio src="/music/tip.mp3"  hidden="hidden" id="audio"></audio>
+            <div class="layui-tab-item layui-show">
+                {if $Think.session.type==5}
+				<!-- 客户首页 -->
+				<iframe class="laymy-iframe" frameborder='0' src="/customer" lay-filter="customer"></iframe>
+                {elseif $Think.session.type>5 /}
+                <iframe class="laymy-iframe" frameborder='0' src="/website/site/show/" lay-filter="/website/site/show/"></iframe>
+				{else /}
+				<!--管理员，竞价员，内部客服-->
+				<iframe class="laymy-iframe" frameborder='0' src="/project" lay-filter="project"></iframe>
+				{/if}
+            </div>
+        </div>
+	</div>
+	
+</div>
+
+<script src="/static/layui/layui.all.js" ></script>
+<script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+<script src='http://cdn.bootcss.com/socket.io/1.3.7/socket.io.js'></script>
+
+<script>
+ 	layui.use('element', function () {
+		var element = layui.element;
+		//一些事件监听
+		// element.on('tab(demo)', function (data) {
+		// 	console.log(data);
+		// });
+		//删除指定lay-id="yyy"的这一项
+		// element.tabDelete('demo', 'dindan');
+
+		var $ = layui.$;
+		$(".laymy-menu").click(function () {
+			//这里获取的如data-href="/user"
+			var iframesrc = $(this).attr("data-href");
+			//点击菜单的时候检查顺便检查下有没有红点的消息提醒
+			dot(this);
+			var title = $(this).text();
+			//如果iframesrc得到了/user,则lay_id获得user,即去掉/
+			var lay_id = iframesrc.slice(1);
+
+			//如果有这个选项卡就切换到这个，没有就新增一个
+			if ($("li[lay-id='" + lay_id + "']").length) {
+				// 用于外部切换到指定的Tab项上，切换到 lay-id="yyy" 的这一项
+				element.tabChange('demo', lay_id);
+				// 然后刷新
+				$("iframe[lay-filter='"+lay_id+"']").attr('src',iframesrc);
+			} else {
+				// 用于新增一个Tab选项,然后切换到那个去
+				element.tabAdd('demo', {
+					title: title
+					, content: '<iframe src="'+iframesrc+'" frameborder="0" lay-filter="' + lay_id + '" style="width:100%;height:100%"></iframe>'
+					, id: lay_id //lay-id="yyy" 的这一项
+				});
+				element.tabChange('demo', lay_id);
+			}
+		})
+	});
+
+    var win = document.title
+    var windowmsg = {
+        time: 0,
+        title: document.title,
+        timer: null,
+        //显示新消息提示
+        show: function () {
+            var title = windowmsg.title.replace("", "").replace("【您有新消息】", "");
+            //定时器，此处产生闪烁
+            //由于定时器无法清除，在此调用之前先主动清除一下定时器打到缓冲效果，否则定时器效果叠加标题闪烁频率越来越快
+            clearTimeout(windowmsg.timer);
+            windowmsg.timer = setTimeout(function () {
+                windowmsg.time++;
+                windowmsg.show();
+                if (windowmsg.time % 2 == 0) {
+                    document.title = "【您有新消息】" + title
+                } else {
+                    document.title = title
+                };
+            }, 300);
+            return [windowmsg.timer, windowmsg.title];
+        },
+        //取消新消息提示
+        //此处起名最好不要用clear，由于关键字问题有时可能会无效
+        clears: function () {
+            clearTimeout(windowmsg.timer);
+            document.title = win
+        }
+    };
+	jQuery(function ($) {
+		//play是原生js方法，jq对象没有
+		var tip=document.getElementById('audio');
+		// 连接服务端
+		// var socket = io('http://s.ykhwzx.cn:2120'); //这里当然填写真实的地址了
+		var socket = io('http://127.0.0.1:2120');
+		// uid可以是自己网站的用户id，以便针对uid推送以及统计在线人数
+		uid = '400'+{$Think.session.id}+'009';
+		// socket连接后以uid登录
+		socket.on('connect', function () {
+			socket.emit('login', uid);
+		});
+
+		// 后端推送来消息时
+		socket.on('new_msg', function (msg) {
+			if(msg == '绑定成功'){
+				layer.open({
+					title:msg,
+					content:'已完成微信绑定，可以使用相关功能了',
+					end:function(){
+						location.reload();
+					}
+				})
+			}else{
+				windowmsg.show();
+				tip.play();
+				layer.open({
+					title:'系统提醒',
+					content: msg,
+					shadeClose:true,
+					end:function(){
+						windowmsg.clears();
+					}
+				})
+				console.log("收到消息：" + msg);
+			}
+		});
+		// 后端推送来在线数据时
+		{if $Think.session.auth<3}
+		socket.on('update_online_count', function (online_stat) {
+			console.log(online_stat);
+		});
+		{/if}
+
+		//后端推送提示信息时
+		socket.on('tip',function(msg){
+			switch(msg.active){
+				case 'remind'://红点消息提醒
+					console.log(msg);
+					var $ = layui.$;
+					//根据route定义数据找到的DOM元素，子菜单，和父菜单
+					var sub_menu = $('[data-href="'+msg.route+'"]').parent()
+					var menu = sub_menu.parent().prev();
+					
+					//然后添加红点提示
+					var dot1 = '<i class="dot1" route="'+msg.route+'"></i>';
+					var dot2 = '<i class="dot2">'+msg.num+'</i>';
+					menu.append(dot1);
+					sub_menu.append(dot2);
+					break;
+				case 'open_new'://弹出框消息提醒
+					console.log(msg.msg);
+					windowmsg.show();
+					tip.play();
+					layer.open({
+						title: '系统提醒',
+						content: msg.msg,
+						shadeClose: true,
+						end: function () {
+							windowmsg.clears();
+						}
+					})
+					break;
+			}
+		})
+	})
+</script>
+
+<script>
+	// 点击按钮清除缓存的ajax请求
+	function clearRedis(scene)
+	{
+		function to_do(scene){
+			$.post('clear_redis?scene='+scene,function(data){
+				layer.msg(data,{time:2000},function(){
+					location.href = '/index'
+				});
+			});
+		}
+
+		if(scene == 'all'){
+			layer.confirm('确定清除全部缓存?', {icon: 3, title:'提示'}, function(index){
+				//do something
+				to_do(scene);
+			});
+			layer.close(index);
+		}else{
+			to_do(scene);
+		}
+	}
+
+	//绑定微信
+	function bindwx(){
+		layer.open({
+			area:['450px','400px'],
+			type:2,
+			content:'/bindwx'
+		})
+	}
+
+
+	//打开浏览器获取红点消息提示缓存
+	(function(){
+		$.get('/push/push/check_dot',function(res){
+			// console.log(res.data);
+			let obj = res.data;
+			for(k in obj){
+				//根据route定义数据找到的DOM元素，子菜单，和父菜单
+				let sub_menu = $('[data-href="'+obj[k]['route']+'"]').parent()
+				let menu = sub_menu.parent().prev();
+				
+				//然后添加红点提示
+				let dot1 = '<i class="dot1" route="'+obj[k]['route']+'"></i>';
+				let dot2 = '<i class="dot2">'+obj[k]['num']+'</i>';
+				menu.append(dot1);
+				sub_menu.append(dot2);
+			}
+		},'json')
+	})();
+
+	//点击菜单后，清除红点消息提醒
+	function dot(i){
+		let route = $(i).attr("data-href");
+		let dot = $(i).siblings("i");
+		// 如果不存在红点就返回
+		if(!dot.length){
+			return false;
+		}
+		//如果存在红点就删除
+		dot.remove();
+		$('i[route="'+route+'"]').remove();
+		//还要通知服务器删除红点的缓存
+		$.post('/push/push/rm_dot',{route:route},function(res){
+			console.log(res);
+		},'json');
+	}
+</script>
+
+{if condition="($Think.session.type<=4) And $Think.session.open_window"}
+<script>
+	layer.open({
+		content:'/public/index.php/bottommenu_add'
+	})
+</script>
+{elseif condition="($Think.session.type>4) And $Think.session.open_window"/}
+<script>
+	layer.open({
+		content:'对外弹窗内容',
+	})
+</script>
+{/if}
+{php}session('open_window', null){/php}
+
+</body>
+</html>

@@ -1,0 +1,408 @@
+---------------------------------------------------------------
+[ 2020-10-16T09:23:54+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\promotion\controller\Promotion.php:85]
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T09:23:56+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionRec.php:75]
+---------------------------------------------------------------
+[ 2020-10-16T09:31:13+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionRec.php:75]
+---------------------------------------------------------------
+[ 2020-10-16T09:36:14+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50&sel_status=1&sel_client_id=45&sel_user_id=&sel_time=2020-10-01+-+2020-10-04&sel_grade_min=&sel_grade_max=
+[ error ] [8]未定义变量: b[D:\phpstudy_pro\WWW\application\project\controller\Project.php:242]
+---------------------------------------------------------------
+[ 2020-10-16T09:38:23+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionRec.php:75]
+---------------------------------------------------------------
+[ 2020-10-16T09:38:29+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=2020-10-01+-+2020-10-04&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T09:38:49+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=2020-08-06+-+2020-08-22&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T09:38:58+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=2020-08-06+-+2020-08-22&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T09:39:01+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionRec.php:75]
+---------------------------------------------------------------
+[ 2020-10-16T09:39:28+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=2020-05-01+-+2020-06-18&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T09:48:25+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionRec.php:75]
+---------------------------------------------------------------
+[ 2020-10-16T10:10:15+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/upd_project_do
+[ error ] [8]未定义数组索引: Changes[D:\phpstudy_pro\WWW\application\project\controller\Project.php:543]
+---------------------------------------------------------------
+[ 2020-10-16T10:10:32+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/upd_project_do
+[ error ] [8]未定义数组索引: Changes[D:\phpstudy_pro\WWW\application\project\controller\Project.php:543]
+---------------------------------------------------------------
+[ 2020-10-16T10:13:45+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/upd_project_do
+[ error ] [8]未定义数组索引: Changes[D:\phpstudy_pro\WWW\application\project\controller\Project.php:491]
+---------------------------------------------------------------
+[ 2020-10-16T10:14:11+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/upd_project_do
+[ error ] [8]未定义数组索引: Changes[D:\phpstudy_pro\WWW\application\project\controller\Project.php:545]
+[ error ] [10501]SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE8\xBE\x93\xE5\x85\xA5...' for column 'Brand' at row 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Connection.php:905]
+---------------------------------------------------------------
+[ 2020-10-16T10:15:17+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/upd_project_do
+[ error ] [8]未定义数组索引: Changes[D:\phpstudy_pro\WWW\application\project\controller\Project.php:545]
+---------------------------------------------------------------
+[ 2020-10-16T10:15:32+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/upd_project_do
+[ error ] [8]未定义数组索引: Changes[D:\phpstudy_pro\WWW\application\project\controller\Project.php:545]
+[ error ] [10501]SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE8\xBE\x93\xE5\x85\xA5' for column 'Brand' at row 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Connection.php:905]
+---------------------------------------------------------------
+[ 2020-10-16T10:17:43+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/upd_project_do
+[ error ] [8]未定义数组索引: Changes[D:\phpstudy_pro\WWW\application\project\controller\Project.php:543]
+[ error ] [10501]SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE4\xBF\xAE\xE6\x94\xB9' for column 'Brand' at row 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Connection.php:905]
+---------------------------------------------------------------
+[ 2020-10-16T10:20:08+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/upd_project_do
+[ error ] [8]未定义数组索引: Changes[D:\phpstudy_pro\WWW\application\project\controller\Project.php:503]
+[ error ] [10501]SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE8\xBE\x93\xE5\x85\xA5' for column 'Brand' at row 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Connection.php:905]
+---------------------------------------------------------------
+[ 2020-10-16T10:22:08+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/upd_project_do
+[ error ] [8]未定义数组索引: Changes[D:\phpstudy_pro\WWW\application\project\controller\Project.php:543]
+---------------------------------------------------------------
+[ 2020-10-16T10:22:28+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/upd_project_do
+[ error ] [8]未定义数组索引: Changes[D:\phpstudy_pro\WWW\application\project\controller\Project.php:534]
+[ error ] [10501]SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE4\xBF\xAE\xE6\x94\xB9' for column 'Brand' at row 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Connection.php:905]
+---------------------------------------------------------------
+[ 2020-10-16T10:23:15+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/upd_project_do
+[ error ] [8]未定义数组索引: Id[D:\phpstudy_pro\WWW\application\project\controller\Project.php:457]
+[ error ] [8]未定义数组索引: client_id[D:\phpstudy_pro\WWW\application\project\controller\Project.php:458]
+[ error ] [8]未定义数组索引: user_id[D:\phpstudy_pro\WWW\application\project\controller\Project.php:459]
+[ error ] [2]implode(): Invalid arguments passed[D:\phpstudy_pro\WWW\application\project\controller\Project.php:460]
+---------------------------------------------------------------
+[ 2020-10-16T10:24:22+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/upd_project_do
+[ error ] [8]未定义数组索引: Changes[D:\phpstudy_pro\WWW\application\project\controller\Project.php:534]
+[ error ] [10501]SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xE5\x81\x8F\xE5\x83\xBB' for column 'Brand' at row 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Connection.php:905]
+---------------------------------------------------------------
+[ 2020-10-16T10:27:38+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/upd_project_do
+[ error ] [8]未定义数组索引: Changes[D:\phpstudy_pro\WWW\application\project\controller\Project.php:543]
+---------------------------------------------------------------
+[ 2020-10-16T10:31:31+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/ins_promotion_con_do
+[ error ] [8]未定义数组索引: Con_B[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:253]
+[ error ] [8]未定义数组索引: ShowCon[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:254]
+[ error ] [8]未定义数组索引: Click[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:255]
+[ error ] [8]未定义数组索引: Dialogue[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:256]
+[ error ] [8]未定义数组索引: Message[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:257]
+[ error ] [8]未定义数组索引: Phone[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:258]
+[ error ] [8]未定义数组索引: ConRemarks[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:260]
+[ error ] [10501]SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'ShowCon' cannot be null[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Connection.php:905]
+---------------------------------------------------------------
+[ 2020-10-16T10:31:32+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/ins_promotion_con_do
+[ error ] [8]未定义数组索引: Con_B[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:253]
+[ error ] [8]未定义数组索引: ShowCon[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:254]
+[ error ] [8]未定义数组索引: Click[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:255]
+[ error ] [8]未定义数组索引: Dialogue[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:256]
+[ error ] [8]未定义数组索引: Message[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:257]
+[ error ] [8]未定义数组索引: Phone[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:258]
+[ error ] [8]未定义数组索引: ConRemarks[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:260]
+[ error ] [10501]SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'ShowCon' cannot be null[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Connection.php:905]
+---------------------------------------------------------------
+[ 2020-10-16T10:31:37+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/upd_promotion_con_all_do/?status=0
+[ error ] [2]Invalid argument supplied for foreach()[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:325]
+---------------------------------------------------------------
+[ 2020-10-16T10:31:56+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/ins_promotion_con_do
+[ error ] [8]未定义数组索引: Con_B[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:253]
+[ error ] [8]未定义数组索引: ShowCon[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:254]
+[ error ] [8]未定义数组索引: Click[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:255]
+[ error ] [8]未定义数组索引: Dialogue[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:256]
+[ error ] [8]未定义数组索引: Message[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:257]
+[ error ] [8]未定义数组索引: Phone[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:258]
+[ error ] [8]未定义数组索引: ConRemarks[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:260]
+[ error ] [10501]SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'ShowCon' cannot be null[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Connection.php:905]
+---------------------------------------------------------------
+[ 2020-10-16T10:31:57+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/ins_promotion_con_do
+[ error ] [8]未定义数组索引: Con_B[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:253]
+[ error ] [8]未定义数组索引: ShowCon[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:254]
+[ error ] [8]未定义数组索引: Click[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:255]
+[ error ] [8]未定义数组索引: Dialogue[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:256]
+[ error ] [8]未定义数组索引: Message[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:257]
+[ error ] [8]未定义数组索引: Phone[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:258]
+[ error ] [8]未定义数组索引: ConRemarks[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:260]
+[ error ] [10501]SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'ShowCon' cannot be null[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Connection.php:905]
+---------------------------------------------------------------
+[ 2020-10-16T10:32:06+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/upd_promotion_con_all_do/?status=0
+[ error ] [2]Invalid argument supplied for foreach()[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:325]
+---------------------------------------------------------------
+[ 2020-10-16T10:32:27+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/ins_promotion_con_do
+[ error ] [8]未定义数组索引: Con_B[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:253]
+[ error ] [8]未定义数组索引: ShowCon[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:254]
+[ error ] [8]未定义数组索引: Click[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:255]
+[ error ] [8]未定义数组索引: Dialogue[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:256]
+[ error ] [8]未定义数组索引: Message[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:257]
+[ error ] [8]未定义数组索引: Phone[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:258]
+[ error ] [8]未定义数组索引: ConRemarks[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:260]
+[ error ] [10501]SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'ShowCon' cannot be null[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Connection.php:905]
+---------------------------------------------------------------
+[ 2020-10-16T10:32:47+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/upd_promotion_con_all_do/?status=0
+[ error ] [8]未定义数组索引: ConRemarks[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:329]
+---------------------------------------------------------------
+[ 2020-10-16T10:33:40+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/upd_project_do
+[ error ] [8]未定义数组索引: Changes[D:\phpstudy_pro\WWW\application\project\controller\Project.php:543]
+---------------------------------------------------------------
+[ 2020-10-16T10:33:57+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/upd_project_do
+[ error ] [8]未定义数组索引: Changes[D:\phpstudy_pro\WWW\application\project\controller\Project.php:543]
+---------------------------------------------------------------
+[ 2020-10-16T10:36:22+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionRec.php:75]
+---------------------------------------------------------------
+[ 2020-10-16T10:36:25+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionRec.php:75]
+---------------------------------------------------------------
+[ 2020-10-16T10:36:34+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_user?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\user\controller\User.php:49]
+---------------------------------------------------------------
+[ 2020-10-16T10:36:45+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_user?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\user\controller\User.php:49]
+---------------------------------------------------------------
+[ 2020-10-16T10:36:49+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/upd_user?Id=41
+[ error ] [8]未定义数组索引: Status[D:\phpstudy_pro\WWW\application\common.php:106]
+[ error ] [8]未定义数组索引: Status[D:\phpstudy_pro\WWW\application\common.php:108]
+[ error ] [8]未定义数组索引: Login_time[D:\phpstudy_pro\WWW\application\common.php:123]
+---------------------------------------------------------------
+[ 2020-10-16T10:36:57+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_user?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\user\controller\User.php:49]
+---------------------------------------------------------------
+[ 2020-10-16T10:40:01+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/upd_project_do
+[ error ] [8]未定义数组索引: Changes[D:\phpstudy_pro\WWW\application\project\controller\Project.php:503]
+---------------------------------------------------------------
+[ 2020-10-16T11:14:54+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_con?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:107]
+---------------------------------------------------------------
+[ 2020-10-16T11:15:02+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_con?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php:107]
+---------------------------------------------------------------
+[ 2020-10-16T11:15:03+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionRec.php:75]
+---------------------------------------------------------------
+[ 2020-10-16T11:15:06+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=2020-10-14+-+2020-10-14&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T11:15:19+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionRec.php:75]
+---------------------------------------------------------------
+[ 2020-10-16T11:15:36+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=2020-10-15+-+2020-10-15&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T11:15:38+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=2020-10-14+-+2020-10-14&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T11:15:40+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionRec.php:75]
+---------------------------------------------------------------
+[ 2020-10-16T11:15:41+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=2020-10-15+-+2020-10-15&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T13:44:16+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionRec.php:75]
+---------------------------------------------------------------
+[ 2020-10-16T13:44:22+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionRec.php:75]
+---------------------------------------------------------------
+[ 2020-10-16T13:44:37+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=2020-10-15+-+2020-10-15&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T13:44:41+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=2020-10-14+-+2020-10-14&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T13:44:43+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=2020-10-15+-+2020-10-15&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T13:52:47+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionRec.php:75]
+---------------------------------------------------------------
+[ 2020-10-16T13:54:37+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=2020-10-01+-+2020-10-08&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T13:54:45+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=2020-09-04+-+2020-10-11&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T13:54:54+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=2020-09-25+-+2020-09-30&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T13:54:58+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionRec.php:75]
+---------------------------------------------------------------
+[ 2020-10-16T13:55:06+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=2&limit=20
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionRec.php:75]
+---------------------------------------------------------------
+[ 2020-10-16T13:55:08+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=3&limit=20
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionRec.php:75]
+---------------------------------------------------------------
+[ 2020-10-16T13:55:09+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=27&limit=20
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionRec.php:75]
+---------------------------------------------------------------
+[ 2020-10-16T13:55:18+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=27&limit=20&sel_pro_user=&sel_remarks=&sel_time=2020-10-01+-+2020-10-08&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T14:07:01+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionRec.php:75]
+---------------------------------------------------------------
+[ 2020-10-16T14:07:06+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=2020-05-01+-+2020-06-18&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T14:07:12+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=2020-05-03+-+2020-05-03&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T14:07:25+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=2020-05-03+-+2020-05-03&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T14:07:35+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=2020-06-16+-+2020-06-30&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T14:07:46+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=2019-04-02+-+2019-04-18&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T14:07:55+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=2019-05-01+-+2019-05-23&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T14:07:56+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=2019-05-01+-+2019-05-23&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T14:07:57+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=2019-05-01+-+2019-05-23&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T14:07:58+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=2019-05-01+-+2019-05-23&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T14:08:00+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionRec.php:75]
+---------------------------------------------------------------
+[ 2020-10-16T14:08:16+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=2020-04-08+-+2020-05-18&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T14:08:19+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=2020-04-07+-+2020-04-07&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T14:08:21+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=2020-04-08+-+2020-04-08&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T14:08:23+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=2020-04-09+-+2020-04-09&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T14:08:31+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=2020-04-03+-+2020-04-16&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T14:08:38+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=2020-04-14+-+2020-04-14&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T14:08:41+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=2020-04-14+-+2020-04-14&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T14:54:14+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50&sel_status=0&sel_client_id=&sel_user_id=&sel_time=2020-10-15+-+2020-10-15&sel_grade_min=&sel_grade_max=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T14:56:31+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50&sel_status=0&sel_client_id=&sel_user_id=&sel_time=&sel_grade_min=B%2B&sel_grade_max=
+[ error ] [8]未定义变量: b[D:\phpstudy_pro\WWW\application\project\controller\Project.php:250]
+---------------------------------------------------------------
+[ 2020-10-16T14:57:47+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/upd_project_do
+[ error ] [8]未定义数组索引: Changes[D:\phpstudy_pro\WWW\application\project\controller\Project.php:545]
+---------------------------------------------------------------
+[ 2020-10-16T14:58:18+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50&sel_status=0&sel_client_id=&sel_user_id=&sel_time=2019-10-02+-+2020-11-16&sel_grade_min=&sel_grade_max=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T14:59:55+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50&sel_status=0&sel_client_id=&sel_user_id=&sel_time=2020-04-08+-+2020-05-13&sel_grade_min=&sel_grade_max=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T15:00:02+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50&sel_status=0&sel_client_id=&sel_user_id=&sel_time=2020-04-07+-+2020-04-07&sel_grade_min=&sel_grade_max=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T15:01:40+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50&sel_status=1&sel_client_id=&sel_user_id=&sel_time=2019-04-03+-+2019-04-18&sel_grade_min=&sel_grade_max=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T15:01:45+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50&sel_status=0&sel_client_id=&sel_user_id=&sel_time=2019-04-03+-+2019-04-18&sel_grade_min=&sel_grade_max=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T15:01:49+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=2&limit=50&sel_status=0&sel_client_id=&sel_user_id=&sel_time=2019-04-03+-+2019-04-18&sel_grade_min=&sel_grade_max=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T15:19:21+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionRec.php:75]
+---------------------------------------------------------------
+[ 2020-10-16T15:19:30+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=2020-10-15+-+2020-10-15&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T15:20:01+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionRec.php:75]
+---------------------------------------------------------------
+[ 2020-10-16T15:41:22+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionRec.php:75]
+---------------------------------------------------------------
+[ 2020-10-16T16:36:42+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionRec.php:75]
+---------------------------------------------------------------
+[ 2020-10-16T16:38:29+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50&sel_status=1&sel_client_id=&sel_user_id=&sel_time=2020-10-25+-+2020-10-25&sel_grade_min=&sel_grade_max=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T16:40:53+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionRec.php:75]
+---------------------------------------------------------------
+[ 2020-10-16T16:41:30+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionRec.php:75]
+---------------------------------------------------------------
+[ 2020-10-16T17:18:18+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\promotion\controller\Promotion.php:85]
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T17:18:22+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\promotion\controller\PromotionRec.php:75]
+---------------------------------------------------------------
+[ 2020-10-16T17:18:27+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_promotion_rec?page=1&limit=20&sel_pro_user=&sel_remarks=&sel_time=2020-10-21+-+2020-10-21&sel_status=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T17:33:32+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50&sel_status=1&sel_client_id=&sel_user_id=&sel_time=2020-10-15+-+2020-10-15&sel_grade_min=&sel_grade_max=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T17:52:43+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50&sel_status=1&sel_client_id=&sel_user_id=&sel_time=2020-11-04&sel_grade_min=&sel_grade_max=
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\application\project\controller\Project.php:197]
+[ error ] [8]未定义数组下标: 1[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Builder.php:645]
+---------------------------------------------------------------
+[ 2020-10-16T18:58:37+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'create_' in 'where clause'[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Connection.php:769]
+---------------------------------------------------------------
+[ 2020-10-16T18:58:43+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'create_' in 'where clause'[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Connection.php:769]
+---------------------------------------------------------------
+[ 2020-10-16T18:58:56+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'create_' in 'where clause'[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Connection.php:769]
+---------------------------------------------------------------
+[ 2020-10-16T18:59:16+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'create_' in 'where clause'[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Connection.php:769]
+---------------------------------------------------------------
+[ 2020-10-16T18:59:17+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'create_' in 'where clause'[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Connection.php:769]
+---------------------------------------------------------------
+[ 2020-10-16T18:59:20+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'create_' in 'where clause'[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Connection.php:769]
+---------------------------------------------------------------
+[ 2020-10-16T18:59:36+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'create_' in 'where clause'[D:\phpstudy_pro\WWW\thinkphp\library\think\db\Connection.php:769]

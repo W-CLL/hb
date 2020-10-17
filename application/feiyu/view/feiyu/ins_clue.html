@@ -1,0 +1,167 @@
+{include file="./static/header.html"/}
+
+<body>
+    <div class="layui-container">
+        <form class="layui-form" action="">
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">推广账号</label>
+                <div class="layui-input-inline">
+                    <select name="client_id" lay-verify="required|number" lay-filter="pro_user">
+                        <option value="">请选择推广账号</option>
+                        {volist name='pro_user' id='vo'}
+                        <option value="{$vo.Id}">{$vo.Pro_User}</option>
+                        {/volist}
+                    </select>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">姓名:</label>
+                <div class="layui-input-block">
+                    <input type="text" class="layui-input" name="name" value="未命名" lay-verify="required">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">电话:</label>
+                <div class="layui-input-block">
+                    <input type="text" class="layui-input" name="telphone" value="" lay-verify="required|phone">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">地址:</label>
+                <div class="layui-input-block">
+                    <input type="text" class="layui-input" name="location" value="" placeholder="省份+城市"
+                        lay-verify="required">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">时间:</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" name="create_time" value="" placeholder="0000-00-00 00:00:00"
+                        lay-verify="required|datetime">
+                </div>
+                <div class="layui-form-mid layui-word-aux">请按指定格式输入：年-月-日 时:分:秒</div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">线索类型:</label>
+                <div class="layui-input-inline">
+                    <select name="clue_type" lay-filter="clue_type">
+                        <option value="0">表单提交</option>
+                        <option value="1" selected="">在线咨询</option>
+                    </select>
+                </div>
+                <div class="layui-form-mid layui-word-aux">表单提交一般都有姓名，在线咨询一般姓名都是未命名</div>
+            </div>
+
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">落地页url:</label>
+                <div class="layui-input-block">
+                    <input type="text" class="layui-input" name="external_url" value="" lay-verify="required">
+                </div>
+            </div>
+
+
+
+            <div style="margin-top: 20px;color: red;">
+                以下可选
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">线索id:</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" name="clue_id" value="0" placeholder="">
+                </div>
+                <div class="layui-form-mid layui-word-aux">回传数据需要的线索id，可以不填，但无法回传</div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">应用名称:</label>
+                <div class="layui-input-inline">
+                    <select name="appname" lay-filter="appname">
+                        <option value="抖音" selected="">抖音</option>
+                        <option value="今日头条">今日头条</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">转化状态:</label>
+                <div class="layui-input-block">
+                    <input type="text" class="layui-input" name="convert_status" value="合法转化" placeholder="">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">线索来源:</label>
+                <div class="layui-input-inline">
+                    <select name="clue_source" lay-filter="clue_source">
+                        <option value="0">外部流量</option>
+                        <option value="1" selected="">正常投放</option>
+                        <option value="2">外部导入</option>
+                        <option value="3">异常提交</option>
+                        <option value="4">广告预览</option>
+                        <option value="5">抖音私信</option>
+                        <option value="6">鲁班线索</option>
+                    </select>
+                </div>
+            </div>
+
+
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button type="submit" class="layui-btn" lay-submit="" lay-filter="upd">立即提交</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+        </form>
+        <script type="text/javascript">
+            layui.use('form', function () {
+                var layer = layui.layer, $ = layui.$, laydate = layui.laydate, form = layui.form;//只有执行了这一步，部分表单元素才会自动修饰成功
+                //表单提交
+                form.on('submit(upd)', function (data) {
+                    $.post('/feiyu/feiyu/ins_clue', data.field, function (obj) {
+                        layer.alert(obj.msg, function () {
+                            if (obj.code === 0) {
+                                //window.parent.location.reload();//刷新父页面，这样直接刷新会导致检索条件也刷新
+                                parent.layui.table.reload("formfields_table");//所以还是刷新父页面的表格
+                                //关闭弹层
+                                var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+                                parent.layer.close(index); //再执行关闭
+                            }
+                        });
+                    }, 'json');
+                    return false;
+                });
+
+
+                form.verify({
+                    //我们既支持函数式的方式，也支持下述数组的形式
+                    //数组的两个值分别代表：[正则匹配、匹配不符时的提示文字]
+                    datetime: [
+                        /\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}/
+                        , '日期时间必须按指定格式'
+                    ]
+                });
+
+                // form.on('select(pro_user)',function(data){
+                //     console.log(data)
+                //     $.get('/feiyu/feiyu/ins_clue')
+                // })
+
+
+                //但是，如果你的HTML是动态生成的，自动渲染就会失效
+                //因此你需要在相应的地方，执行下述方法来进行渲染
+                form.render();
+            });
+
+
+        </script>
+    </div>
+</body>

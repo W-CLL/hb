@@ -1,0 +1,212 @@
+{include file="./static/header.html"/}
+
+<body style="background-color: #eeeeee;">
+    <style>
+        @media screen and (max-width: 768px) {
+            .list-img {
+                min-width: 250px;
+            }
+        }
+
+        #banner {
+            text-align: center;
+            font-size: 50px;
+        }
+
+        .data_content:hover {
+            background: rgba(220, 220, 220, 0.5);
+            cursor: pointer;
+        }
+    </style>
+
+    <div class="layui-row" style="height: 80px;overflow: hidden;;background-color: #ffffff;">
+        <div class="scroll-box layui-col-xs12 layui-col-sm6 layui-col-md6" style="padding:5px 50px">
+            <ul>
+                {volist name='li' id='vo'}
+                <li style="line-height: 25px;">
+                    {$vo.user}：{$vo.message}
+                    {if $vo.status}
+                    <button type="" class="layui-btn layui-btn-primary layui-btn-xs"
+                        onclick="liuyan({$vo.id})">收到，正在处理</button>
+                    {else/}
+                    <button type="" class="layui-btn layui-btn layui-btn-xs" onclick="liuyan({$vo.id})">待处理</button>
+                    {/if}
+                </li>
+                {/volist}
+            </ul>
+        </div>
+        <div class="layui-col-xs12 layui-col-sm6 layui-col-md6" style="padding-top:20px">
+            <form action="/save_liuyan" method="POST">
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <div class="layui-input-inline" style="width: 400px;">
+                            <input type="text" name="liuyan" id="liuyan" autocomplete="off" class="layui-input"
+                                placeholder="" style="border: solid 1px rgba(112, 141, 141, 0.6);">
+                        </div>
+                    </div>
+
+                    <div class="layui-inline">
+                        <div class="layui-input-inline">
+                            <button type="submit" class="layui-btn layui-btn-normal">发送</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="layui-container" style="background-color: #ffffff;">
+        <div class="layui-tab" style="padding: 10px;">
+            <div class="layui-row">
+                <ul class="layui-tab-title">
+                    {volist name="cate" id="vo"}
+                    <li
+                        class="{if $com_datas.0.Cate_Id==$vo.Id}layui-this{/if} layui-col-xs4 layui-col-sm3 layui-col-md1">
+                        <a href="com_data?cateid={$vo.Id}">{$vo.Cate}</a></li>
+                    {/volist}
+                </ul>
+            </div>
+            <div class="layui-tab-content">
+
+                <div class="layui-row">
+                    <div class="layui-tab-item layui-show">
+                        <!-- <div class="layui-fluid" style=""> -->
+                        {if empty($nodata)}
+                        {volist name="com_datas" id="vo"}
+                        <div class="layui-col-xs12 layui-col-sm12 layui-col-md12 data_content" data-id="{$vo.Id}">
+                            <div class="list-img layui-col-xs3 layui-col-sm3 layui-col-md3" style="padding:10px">
+                                <!-- <a href="/show_com_data/?id={$vo.Id}"><img src="{$vo.Img}" alt="主题图片" srcset=""
+                                        style="width: 250px;height: 200px;"></a> -->
+                                <img src="{$vo.Img}" alt="主题图片" srcset="" style="width: 250px;height: 200px;">
+                            </div>
+                            <div class="layui-col-xs9 layui-col-sm9 layui-col-md9">
+                                <div style="font-size: 30px;padding: 10px;">
+                                    <!-- <a href="/show_com_data/?id={$vo.Id}">{$vo.Title}</a> -->
+                                    {$vo.Title}
+                                </div>
+                                <div style="padding: 0 10 10 10;float: left;width: 100%;">
+                                    {foreach $vo.Label as $lab}
+                                    <div style="width: 50%;float: left;"><span
+                                            style="padding: 0 5px;color:rgb(241, 146, 69);">{$lab}</span></div>
+                                    {/foreach}
+                                </div>
+                                <div style="padding: 10px;">
+                                    <p>
+                                        {$vo.Brief}
+                                    </p>
+                                </div>
+                                <!-- <div style="position: absolute;right: 10px;">
+                                    <a href="/show_com_data/?id={$vo.Id}">查看详情>></a>
+                                </div> -->
+                            </div>
+                        </div>
+                        {/volist}
+                        {else /}
+                        {$nodata}
+                        {/if}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script>
+
+        //注意：选项卡 依赖 element 模块，否则无法进行功能性操作
+        layui.use('element', function () {
+            var element = layui.element;
+
+            //…
+        });
+        //消息滚动
+        $(function () {
+            //获得当前<ul>
+            var $uList = $(".scroll-box ul");
+            var timer = null;
+            //触摸清空定时器
+            $uList.hover(function () {
+                clearInterval(timer);
+            },
+                function () { //离开启动定时器
+                    timer = setInterval(function () {
+                        scrollList($uList);
+                    },
+                        1500);
+                }).trigger("mouseleave"); //自动触发触摸事件
+            //滚动动画
+            function scrollList(obj) {
+                //获得当前<li>的高度
+                var scrollHeight = $("ul li:first").height();
+                //滚动出一个<li>的高度
+                $uList.stop().animate({
+                    marginTop: -scrollHeight
+                },
+                    600,
+                    function () {
+                        //动画结束后，将当前<ul>marginTop置为初始值0状态，再将第一个<li>拼接到末尾。
+                        $uList.css({
+                            marginTop: 0
+                        }).find("li:first").appendTo($uList);
+                    });
+            }
+        });
+
+        function liuyan(id) {
+            $.post('/upd_liuyan/?id=' + id, function (res) {
+                layer.msg(res.msg, { time: 1500 }, function () { location.reload() })
+            }, 'json')
+            // alert(id);
+        }
+
+        $('.data_content').click(function () {
+            // location.href = '{}';
+            var id = $(this).attr('data-id')
+            $.get('/jump_site/?id=' + id, function (res) {
+                // console.log(res);
+                var offic = res.offic || '#'
+                var jump_site = res.jump_site || '#'
+                var item = '/show_com_data/?id='+res.Id
+                if(offic == '#' && jump_site == '#'){
+                    location.href = item
+                    return ;
+                }
+                var content =
+                    '<div style="padding:10px;text-align:center;">' +
+                    '<a href="' + offic + '" style="margin:10px"><button type="button" class="layui-btn layui-btn-normal">官网</button></a>' +
+                    '<a href="' + jump_site + '" style="margin:10px"><button type="button" class="layui-btn layui-btn-normal">百科</button></a>' +
+                    '<a href="' + item + '" style="margin:10px"><button type="button" class="layui-btn layui-btn-normal">详情</button></a>' +
+                    '</div>';
+                layer.msg(content, {
+                    // area: ['300px', '200px'],
+                    shade: '#fff',
+                    shadeClose: true,
+                    fixed:true,
+                    offset: '200px',
+                    time: 0
+                })
+                // layer.open({
+                //     type:1,
+                //     shade: '#fff',
+                //     shadeClose:true,
+                //     area:['300px','200px'],
+                //     content:content,
+                // })
+            }, 'json')
+        })
+
+    </script>
+
+    <script language="Javascript">
+        //禁止复制
+        document.oncontextmenu = new Function("event.returnValue=false");
+        document.onselectstart = new Function("event.returnValue=false");
+    </script>
+
+</body>
+
+</html>

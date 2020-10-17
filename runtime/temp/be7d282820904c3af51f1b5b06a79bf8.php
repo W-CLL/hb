@@ -1,0 +1,149 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:80:"D:\phpstudy_pro\WWW\public/../application/project\view\project\view_project.html";i:1602751702;s:20:"./static/header.html";i:1602579388;}*/ ?>
+    <head>
+
+    <meta charset="utf-8">
+
+    <title>留言管理</title>
+
+    <meta name="renderer" content="webkit">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <link rel="icon" href="/favicon.ico" type="img/x-ico" />
+
+    <link rel="stylesheet" href="/public/static/layui/css/layui.css">
+
+	<link rel="stylesheet" href="/public/static/css/formfields.css">
+
+     <script src="/public/static/layui/layui.all.js" ></script>
+
+     <script src="/public/static/jquery.min.js"></script>
+
+    </head>
+
+<body>
+	<table id="formfields_table" lay-filter="lay_formfields" class="layui-table"></table>
+
+	<script type="text/html" id="barDemo">
+
+		{{#  if(d.Ok_Status[0] == 1){ }}
+		<a class="layui-btn layui-btn-xs layui-btn-disabled" >运营确认</a>
+		{{#  }else{ }}
+		<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="ok_0" style="background:#ff0000">运营确认</a>
+		{{# } }}
+
+		{{#  if(d.Ok_Status[1] == 1){ }}
+		<a class="layui-btn layui-btn-xs layui-btn-disabled">维护确认</a>
+		{{#  }else{ }}
+		<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="ok_1" style="background:#0000ff">维护确认</a>
+		{{# } }}
+
+	</script>
+
+	<script>
+
+		var table = layui.table, layer = layui.layer, $ = layui.$, laydate = layui.laydate;
+
+		var form_table = table.render({
+			elem: '#formfields_table',
+			// height: "full-70",
+			url: "/public/index.php/get_view_project?Id=<?php echo $Id; ?>",
+			method: 'get',
+			cols: [[
+				{ title: '线索是否已分配给客户',  toolbar:'#barDemo',width:180},
+			    { field: 'Pro_Id', title: '推广账号id' ,hide:true },
+				{ field: 'Pro_User', title: '推广账号' },
+				{ field: 'Pro_Psw', title: '推广账号密码' },
+				{ field: 'Pro_time', title: '推广时间' },
+				{ field: 'kf53_Id', title: '53账号id' ,hide:true },
+				{ field: 'User_53', title: '53账号' },
+				{ field: 'Psw_53', title: '53密码' },
+				{ field: 'Code_53', title: '项目53代码' },
+				{ field: 'Address', title: '地域' },
+			]],
+			done: function (res, curr, count) {
+				// console.log(res.changes);
+				let html = '<textarea name="changes" id="changes" style="width:100%;height:100px;margin-top:30px">' + res.Changes + '</textarea>' +
+					'<br><input id="project_id" hidden type="text" value="' + res.id + '">' +
+					'<button id="submit" type="button" class="layui-btn layui-btn-primary layui-btn-sm" style="margin:10px 0">确定，我已执行</button><br>';
+				$('.layui-table-body').append(html);
+
+				let changes_log = '<br><label for="changes_log">修改记录</label>'+
+				'<textarea name="changes_log" id="" style="width: 100%;height: 150px;" disabled>'+res.Changes_Log+'</textarea>';
+				$('.layui-table-body').append(changes_log);
+
+				$('#submit').click(function () {
+					let changes = $('#changes').val();
+					let id = $('#project_id').val();
+					$.post('/public/index.php/upd_project_changes', { changes: changes, id: id }, function (res) {
+						console.log(res);
+						layer.alert(res.msg, function (index) {
+							if (res.code === 0) {
+								//window.parent.location.reload();//刷新父页面，这样直接刷新会导致检索条件也刷新
+								parent.layui.table.reload("formfields_table");//所以还是刷新父页面的表格
+								//关闭弹层
+								var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+								parent.layer.close(index); //再执行关闭
+							} else {
+								layer.close(index);
+							}
+						});
+
+					}, 'json');
+				})
+				
+				//双击事件
+				var pro = $('td[data-field="Pro_Psw"]')
+				pro.dblclick(function(e){
+					// console.log($(e.target).parent().siblings('td[data-field="Pro_Id"]').text());
+					var psw = $(e.target)
+					var Pro_Id = psw.parent().siblings('td[data-field="Pro_Id"]').text()
+					$.post('/public/index.php/get_pro_key',{Pro_Id:Pro_Id},function(res){
+						if(res.code == 0){psw.text(res.key)}
+					},'json')
+				})
+				var pro = $('td[data-field="Psw_53"]')
+				pro.dblclick(function(e){
+					var kf53_key = $(e.target)
+					var client_53_id= kf53_key.parent().siblings('td[data-field="kf53_Id"]').text()
+					$.post('/public/index.php/get_kf53_key',{client_53_id:client_53_id},function(res){
+						if(res.code == 0){kf53_key.text(res.key)}
+					},'json')
+				})
+
+			}
+		})
+
+		table.on('tool(lay_formfields)', function (obj) {
+			var data = obj.data; //获得当前行数据
+			var layEvent = obj.event; //获得 lay-event 对应的值
+			var tr = obj.tr; //获得当前行 tr 的 DOM 对象（如果有的话）
+
+			var Project_Id = "<?php echo $Id; ?>";	//项目id
+			var Pro_User_Id = data.Pro_Id;	//推广账号id
+			switch (layEvent) {
+				case 'ok_0':
+					$.post('/public/index.php/ok_status', { Project_Id, Pro_User_Id, ok_0: 1 }, function (res) {
+						// console.log(res)
+						layer.msg(res.msg,{time:1500},function(){
+							parent.layui.table.reload("formfields_table");//所以还是刷新父页面的表格
+							form_table.reload()
+						})
+					}, 'json')
+					break;
+				case 'ok_1':
+					$.post('/public/index.php/ok_status', { Project_Id, Pro_User_Id, ok_1: 1 }, function (res) {
+						console.log(res)
+						layer.msg(res.msg,{time:1500},function(){
+							parent.layui.table.reload("formfields_table");//所以还是刷新父页面的表格
+							form_table.reload()
+						})
+					}, 'json')
+					break;
+			}
+		})
+
+	</script>
+</body>

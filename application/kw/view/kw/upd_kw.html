@@ -1,0 +1,75 @@
+{include file="./static/header.html"/}
+    <body>
+    		 <div class="layui-container">
+    		 <div class="layui-row">
+    		 <div class="layui-col-xs-offset4 layui-col-sm-offset4 layui-col-md-offset4 layui-col-lg-offset4" style="margin-bottom: 30px;">
+    		  <h2>编辑客户关键字</h2>
+    		 </div >
+
+<form class="layui-form" action="">
+  <input type="hidden" name="id" value="{$list.Id}">
+  <div class="layui-form-item">
+    <label class="layui-form-label">所属客户:</label>
+    <div class="layui-input-inline">
+      <select name="client_id"   class="layui-select" lay-filter="select">
+        {isset $list.Client}<option value="{$list.Client_Id}">{$list.Client}</option>{/isset}
+        <option value="">请选择客户</option>
+        {foreach $cli as $k=>$v}
+        <option value="{$v.User_Id}">{$v.Name}</option>
+        {/foreach}
+      </select>
+    </div>
+    <div class="layui-form-mid layui-word-aux">可不填</div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label">名称:</label>
+    <div class="layui-input-block">
+      <input type="text"  name="name" value="{$list.Name}" required  lay-verify="required"  autocomplete="off" class="layui-input">
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label">关键字:</label>
+    <div class="layui-input-block">
+      <textarea type="text" name="kw"  autocomplete="off" class="layui-textarea" rows="8"  cols="8">{$list.Kw}</textarea>
+    </div>
+    <div class="layui-form-mid layui-word-aux">关键字用|分割,如kfc1|kfc2
+    </div>
+
+
+  </div>
+
+  <div class="layui-form-item">
+    <div class="layui-input-block">
+      <button class="layui-btn" lay-submit lay-filter="upd">立即提交</button>
+      <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+    </div>
+  </div>
+</form>
+ </div>
+  </div>
+  <script>
+var form = layui.form,$ = layui.$;
+layui.use('form', function(){
+  var form = layui.form; $ = layui.jquery;
+  //监听提交
+  form.on('submit(upd)', function(data){
+	$.post('/upd_kw_do',data.field,function(obj){
+      layer.alert(obj.msg,function(){
+        if(obj.code===0){
+          window.parent.location.reload();//刷新父页面
+        }
+      });
+	},'json');
+	 return false;
+  });
+  //选择时重载下拉框
+  form.on('select(select)', function(data){
+    form.render('select');
+  });
+  //但是，如果你的HTML是动态生成的，自动渲染就会失效
+  //因此你需要在相应的地方，执行下述方法来进行渲染
+  form.render();
+});
+  </script>
+	 </body>
+</html>

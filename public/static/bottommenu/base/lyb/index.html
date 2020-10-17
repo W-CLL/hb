@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		
+		<title>给我们留言</title>
+		<link rel="stylesheet" type="text/css" href="./style.css">
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="../images/common.js"></script>
+	</head>
+		<div class="mes">
+	   <h2>给我们留言</h2>
+	   <div>
+		<p>姓名:</p>
+		<input id="messname" placeholder="请输入姓名" />
+	   </div>
+	   <div>
+		<p>手机:</p>
+		<input id="messphone" placeholder="请输入手机号" />
+	   </div>
+	   <div style="position:relative;">
+		<p>留言:</p>
+		<input id="messcont" value="我有意向，请问加盟费多少?" />
+		<select id="selId" style="position: absolute;top:30px;left:4.5%;height:30px;background: transparent;    border-style: none;opacity: 0;width:90%;"><option>我有意向，请问加盟费多少?</option><option>我想加盟，请来电告知加盟细节。</option><option>请问具体加盟流程是怎么样的。</option><option>我所在的地方已有加盟商了吗？</option><option>手动填写</option></select>
+	   </div>
+	   <div>
+		<button id="messbt">发送</button>
+		<p style="display: inline-block;text-align:center;margin-bottom: 20px;">声明：我们将对您的信息严格保密，绝不外泄。</p>
+	   </div>
+	  </div>		
+
+	<body>
+	<script type="text/javascript" defer=""> $(function(){$('#selId').change(function(){var t = $(this);if(t.val() == '手动填写'){t.hide();$('#messcont').focus();$('#messcont').val('');}else{$('#messcont').val($('#selId').val());}});})</script>
+	
+
+<script type = "text/javascript" > $('#messbt').click(function() {
+    var messdata = {};
+    messdata['name'] = $('#messname').val();
+    messdata['qq'] = '';
+    messdata['phone'] = $('#messphone').val();
+    messdata['url'] = document.referrer;
+    messdata['content'] = $('#messcont').val();
+	
+    $.ajax({
+        url: com_interface,
+        type: 'POST',
+        dataType: 'json',
+        data: messdata,
+        success: function(result) {
+            alert(result['msg']);
+            $('#messphone').val('');
+        }
+    });
+});
+ </script>
+
+	</body>
+</html>

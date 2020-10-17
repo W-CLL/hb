@@ -1,0 +1,79 @@
+{include file="../public/bootstrap337/header.html"/}
+
+<!-- partial -->
+<div class="card">
+	<div class="card-body">
+		<div class="row">
+			<a class="title" href="ins_project.html">
+
+				<button type="button" class="btn btn-rr">新增客户</button>
+			</a>
+
+			<br>
+	<form role="form" class="form-horizontal" action="{:url('upd_Client_do')}" method="POST">
+			<div class="form-group">
+			
+				<label>输入查询条件:</label>
+				<div class="row">
+					<div class="col-lg-2">
+						<input type="text" class="form-control" placeholder="客户名称" name="" value="">
+					</div>
+					<div class="col-lg-2">
+						<input type="text" class="form-control" placeholder="客户地址" name="" value="">
+					</div>
+					
+						<div class="col-lg-3">
+						</div>
+						<div class="col-lg-1">
+							<input class="btn btn-info" type="submit" value="查询" name="type">
+						</div>
+						<div class="col-lg-1">
+							<input class="btn btn-info" type="submit" value="一键保存" name="type">
+						</div>
+					
+				</div>
+			</div>
+
+			<br>
+			<table class="table table-hover ">
+
+				<thead>
+					<tr>
+						<th>客户名称</th>
+						<th>客户余额</th>
+						<th>总充值金额</th>
+						<th>客户地址</th>
+						<th>电话</th>
+						<th>备注</th>
+					</tr>
+				</thead>
+				<tbody>
+
+					{foreach $list as $k =>$v}
+					<tr style=" height:50px; font-size:15px; padding-top:15px; line-height:10px;" name="TrBk[]">
+						<input hidden="hidden" name="id[]" value="{$v.id}" />
+						<td><textarea class="form-control" rows="1" name="Name[]">{$v.Name}</textarea></td>
+						<td><textarea class="form-control" rows="1" name="Balance[]">{$v.Balance}</textarea></td>
+						<td><textarea class="form-control" rows="1" name="SumMoney[]">{$v.SumMoney}</textarea></td>
+						<td><textarea class="form-control" rows="1" name="Address[]">{$v.Address}</textarea></td>
+						<td><textarea class="form-control" rows="1" name="Tel[]">{$v.Tel}</textarea></td>
+						<td><textarea class="form-control" rows="1" name="Remarks[]">{$v.Remarks}</textarea></td>
+						<td style="width: 150px;">
+							<a href="{:url('del_Client')}?id={$v.Id}">
+								<button type="button" class="btn btn-warning" name="type">删除</button>
+							</a>
+
+						</td>
+
+					</tr>
+					
+					{/foreach}
+				</tbody>
+			</table>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- content-wrapper ends -->
+<!-- partial:partials/_footer.html -->
+{include file="../public/bootstrap337/footer.html" /}

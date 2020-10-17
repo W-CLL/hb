@@ -1,0 +1,132 @@
+15565917038电话号码已存在2020-05-13 11:51:36
+15465927038电话号码已存在2020-05-13 17:03:30
+15465927038电话号码已存在2020-05-13 17:03:47
+think\exception\ErrorException: json_decode() expects parameter 1 to be string, array given in D:\wwwroot\www.hb.demo\application\api\controller\Kf.php:131
+Stack trace:
+#0 [internal function]: think\Error::appError(2, 'json_decode() e...', 'D:\\wwwroot\\www....', 131, Array)
+#1 D:\wwwroot\www.hb.demo\application\api\controller\Kf.php(131): json_decode(Array, true)
+#2 D:\wwwroot\www.hb.demo\application\api\controller\Kf.php(28): app\api\controller\Kf->save_talk_info(Array)
+#3 [internal function]: app\api\controller\Kf->kf_moblie()
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\api\controller\Kf), Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#7 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#8 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#9 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#10 {main}think\exception\ErrorException: json_decode() expects parameter 1 to be string, array given in D:\wwwroot\www.hb.demo\application\api\controller\Kf.php:132
+Stack trace:
+#0 [internal function]: think\Error::appError(2, 'json_decode() e...', 'D:\\wwwroot\\www....', 132, Array)
+#1 D:\wwwroot\www.hb.demo\application\api\controller\Kf.php(132): json_decode(Array, true)
+#2 D:\wwwroot\www.hb.demo\application\api\controller\Kf.php(28): app\api\controller\Kf->save_talk_info(Array)
+#3 [internal function]: app\api\controller\Kf->kf_moblie()
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\api\controller\Kf), Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#7 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#8 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#9 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#10 {main}think\exception\ErrorException: Invalid argument supplied for foreach() in D:\wwwroot\www.hb.demo\application\api\controller\Kf.php:135
+Stack trace:
+#0 D:\wwwroot\www.hb.demo\application\api\controller\Kf.php(135): think\Error::appError(2, 'Invalid argumen...', 'D:\\wwwroot\\www....', 135, Array)
+#1 D:\wwwroot\www.hb.demo\application\api\controller\Kf.php(28): app\api\controller\Kf->save_talk_info(Array)
+#2 [internal function]: app\api\controller\Kf->kf_moblie()
+#3 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\api\controller\Kf), Array)
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#7 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#8 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#9 {main}13418236658电话号码已存在2020-05-14 10:25:38
+think\exception\ErrorException: Invalid argument supplied for foreach() in D:\wwwroot\www.hb.demo\application\api\controller\Kf.php:147
+Stack trace:
+#0 D:\wwwroot\www.hb.demo\application\api\controller\Kf.php(147): think\Error::appError(2, 'Invalid argumen...', 'D:\\wwwroot\\www....', 147, Array)
+#1 D:\wwwroot\www.hb.demo\application\api\controller\Kf.php(28): app\api\controller\Kf->save_talk_info(Array)
+#2 [internal function]: app\api\controller\Kf->kf_moblie()
+#3 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\api\controller\Kf), Array)
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#7 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#8 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#9 {main}13418236658电话号码已存在2020-05-14 11:13:30
+13418236658电话号码已存在2020-05-14 12:27:18
+13418236658电话号码已存在2020-05-14 12:28:41
+think\exception\ErrorException: json_decode() expects parameter 1 to be string, array given in D:\wwwroot\www.hb.demo\application\api\controller\Kf.php:144
+Stack trace:
+#0 [internal function]: think\Error::appError(2, 'json_decode() e...', 'D:\\wwwroot\\www....', 144, Array)
+#1 D:\wwwroot\www.hb.demo\application\api\controller\Kf.php(144): json_decode(Array, true)
+#2 D:\wwwroot\www.hb.demo\application\api\controller\Kf.php(29): app\api\controller\Kf->save_talk_info(Array)
+#3 [internal function]: app\api\controller\Kf->kf_moblie()
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\api\controller\Kf), Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#7 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#8 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#9 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#10 {main}think\exception\ErrorException: json_decode() expects parameter 1 to be string, array given in D:\wwwroot\www.hb.demo\application\api\controller\Kf.php:144
+Stack trace:
+#0 [internal function]: think\Error::appError(2, 'json_decode() e...', 'D:\\wwwroot\\www....', 144, Array)
+#1 D:\wwwroot\www.hb.demo\application\api\controller\Kf.php(144): json_decode(Array, true)
+#2 D:\wwwroot\www.hb.demo\application\api\controller\Kf.php(29): app\api\controller\Kf->save_talk_info(Array)
+#3 [internal function]: app\api\controller\Kf->kf_moblie()
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\api\controller\Kf), Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#7 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#8 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#9 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#10 {main}think\exception\ErrorException: json_decode() expects parameter 1 to be string, array given in D:\wwwroot\www.hb.demo\application\api\controller\Kf.php:145
+Stack trace:
+#0 [internal function]: think\Error::appError(2, 'json_decode() e...', 'D:\\wwwroot\\www....', 145, Array)
+#1 D:\wwwroot\www.hb.demo\application\api\controller\Kf.php(145): json_decode(Array, true)
+#2 D:\wwwroot\www.hb.demo\application\api\controller\Kf.php(29): app\api\controller\Kf->save_talk_info(Array)
+#3 [internal function]: app\api\controller\Kf->kf_moblie()
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\api\controller\Kf), Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#7 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#8 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#9 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#10 {main}think\exception\ErrorException: json_decode() expects parameter 1 to be string, array given in D:\wwwroot\www.hb.demo\application\api\controller\Kf.php:144
+Stack trace:
+#0 [internal function]: think\Error::appError(2, 'json_decode() e...', 'D:\\wwwroot\\www....', 144, Array)
+#1 D:\wwwroot\www.hb.demo\application\api\controller\Kf.php(144): json_decode(Array, true)
+#2 D:\wwwroot\www.hb.demo\application\api\controller\Kf.php(29): app\api\controller\Kf->save_talk_info(Array)
+#3 [internal function]: app\api\controller\Kf->kf_moblie()
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\api\controller\Kf), Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#7 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#8 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#9 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#10 {main}think\exception\ErrorException: json_decode() expects parameter 1 to be string, array given in D:\wwwroot\www.hb.demo\application\api\controller\Kf.php:144
+Stack trace:
+#0 [internal function]: think\Error::appError(2, 'json_decode() e...', 'D:\\wwwroot\\www....', 144, Array)
+#1 D:\wwwroot\www.hb.demo\application\api\controller\Kf.php(144): json_decode(Array, true)
+#2 D:\wwwroot\www.hb.demo\application\api\controller\Kf.php(29): app\api\controller\Kf->save_talk_info(Array)
+#3 [internal function]: app\api\controller\Kf->kf_moblie()
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\api\controller\Kf), Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#7 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#8 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#9 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#10 {main}think\exception\ErrorException: json_decode() expects parameter 1 to be string, array given in D:\wwwroot\www.hb.demo\application\api\controller\Kf.php:145
+Stack trace:
+#0 [internal function]: think\Error::appError(2, 'json_decode() e...', 'D:\\wwwroot\\www....', 145, Array)
+#1 D:\wwwroot\www.hb.demo\application\api\controller\Kf.php(145): json_decode(Array, true)
+#2 D:\wwwroot\www.hb.demo\application\api\controller\Kf.php(29): app\api\controller\Kf->save_talk_info(Array)
+#3 [internal function]: app\api\controller\Kf->kf_moblie()
+#4 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\api\controller\Kf), Array)
+#5 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#6 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#7 D:\wwwroot\www.hb.demo\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#8 D:\wwwroot\www.hb.demo\thinkphp\start.php(37): think\App::run()
+#9 D:\wwwroot\www.hb.demo\public\index.php(31): require('D:\\wwwroot\\www....')
+#10 {main}13418236658电话号码已存在2020-05-14 16:53:38
+13418236658电话号码已存在2020-05-14 16:54:45
+13418236658电话号码已存在2020-05-14 16:55:53
+13418236658电话号码已存在2020-05-14 16:56:06
+13418236658电话号码已存在2020-05-14 17:05:09
+13418236658电话号码已存在2020-05-14 17:06:14
+13418236658电话号码已存在2020-05-14 17:08:22

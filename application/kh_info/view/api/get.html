@@ -1,0 +1,127 @@
+{include file="./static/header.html"/}
+
+<table class="layui-hide" id="demo" lay-filter="lay_formfields"></table>
+
+<script type="text/html" id="toolbar">
+    <div class="layui-btn-container">
+        <button class="layui-btn layui-btn-sm layui-btn-primary" lay-event="save">保存记录</button>
+    </div>
+</script>
+
+<form class="layui-form" action="" id="search">
+    <input type="text" name="Pro_User_Id" value="{$Pro_User_Id}" autocomplete="off" hidden>
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label">开始日期</label>
+            <div class="layui-input-inline">
+                <input type="text" name="startDate" id="startDate" value="{$info.startDate}" lay-verify="date"
+                    placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label">结束日期</label>
+            <div class="layui-input-inline">
+                <input type="text" name="endDate" id="endDate" value="{$info.endDate}" lay-verify="date"
+                    placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label">层级</label>
+            <div class="layui-input-inline">
+                <select name="levelOfDetails" id="levelOfDetails">
+                    <option value="2">账户粒度</option>
+                    <option value="3">计划粒度</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label">数据类型</label>
+            <div class="layui-input-inline">
+                <select name="reportType" id="reportType">
+                    <option value="2">账户</option>
+                    <option value="10">计划</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <label class="layui-form-label"></label>
+    <div class="layui-input-inline">
+        <div class="">
+            <button class="layui-btn" lay-submit lay-filter="formDemo">获取信息</button>
+            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+    </div>
+</form>
+
+<script>
+    var form = layui.form, table = layui.table, layer = layui.layer, $ = layui.$, laydate = layui.laydate;
+
+    //展示已知数据
+    var form_table = table.render({
+        elem: '#demo'
+        //,skin: 'line' //表格风格
+        , even: true
+        //,page: true //是否显示分页
+        //,limits: [5, 7, 10]
+        //,limit: 5 //每页默认显示的数量
+        , cols: [[ //标题栏
+            { field: 'id', title: 'ID', width: '10%', hide:true }
+            , { field: 'impression', title: '展现', width: '8%' }
+            , { field: 'click', title: '点击', width: '8%' }
+            , { field: 'cost', title: '花费', width: '8%' }
+            , { field: 'cpc', title: '平均点击价格', width: '10%' }
+            , { field: 'ctr', title: '点击率', width: '10%' }
+            , { field: 'cpm', title: '千次展现成本', width: '10%' }
+            , { field: 'name', title: '名称', width: '15%' }
+            , { field: 'date', title: '日期', width: '10%', sort: true }
+            // , { field: '', title: '操作', width: '10%', toolbar: '#toolbar' ,fixed: 'right'}
+        ]]
+        , data: []
+    });
+
+
+    //监听行工具事件
+    table.on('tool(lay_formfields)', function (obj) {
+        switch (obj.event) {
+            case "save":
+                console.log(obj.data);
+                break;
+        }
+    })
+
+    //监听提交
+    form.on('submit(formDemo)', function (data) {
+        // layer.alert(JSON.stringify(data.field), {
+        //     title: '最终的提交信息'
+        // })
+        $.post('/kh_info/Api/pull_info/', data.field, function (res) {
+            if (res.code == 0) {
+                // console.log(res.data)
+                form_table.reload({
+                    data: res.data
+                });
+            } else {
+                layer.alert(res.msg)
+            }
+        }, 'json')
+        return false;
+    });
+
+
+    //日期渲染
+    laydate.render({
+        elem: "#startDate",
+        type: 'date'
+    });
+    laydate.render({
+        elem: "#endDate",
+        type: 'date'
+    });
+    form.render()
+</script>

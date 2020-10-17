@@ -1,0 +1,80 @@
+{include file="./static/header.html"/}
+
+<body>
+    <div class="layui-container">
+        <!--   <div class="layui-row">
+            <div class="layui-col-xs12 layui-col-sm6 layui-col-md4" style="padding: 10;">
+                <img src="" alt="" style="width: 100%;height: 350px;">
+            </div>
+            <div class="layui-col-xs12 layui-col-sm6 layui-col-md8" style="padding: 10;">
+                <div style="font-size:25px;padding: 10px;">
+                    标题
+                </div>
+                <div style="padding: 10px;">
+                    <span>标签名称：标签1</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>标签名称：标签2</span><br>
+                    <span>标签名称：标签1</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>标签名称：标签2</span>
+                </div>
+                <div style="padding: 10px;">
+                    其他内容
+                </div>
+            </div>
+        </div>
+      
+        <div class="layui-row">
+            <div class="layui-col-xs12 layui-col-sm12 layui-col-md12">
+                <div class="layui-card">
+                    <div class="layui-card-header" style="font-size: 25px;">详细介绍</div>
+                    <div class="layui-card-body">
+                        卡片式面板面板通常用于非白色背景色的主体内<br>
+                        从而映衬出边框投影
+                        卡片式面板面板通常用于非白色背景色的主体内<br>
+                        从而映衬出边框投影
+                        卡片式面板面板通常用于非白色背景色的主体内
+                        从而映衬出边框投影
+                        卡片式面板面板通常用于非白色背景色的主体内
+                        从而映衬出边框投影
+                        卡片式面板面板通常用于非白色背景色的主体内
+                        从而映衬出边框投影
+                        卡片式面板面板通常用于非白色背景色的主体内<br>
+                        从而映衬出边框投影
+                        卡片式面板面板通常用于非白色背景色的主体内<br>
+                        从而映衬出边框投影
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <style>
+            #pre_page {
+            font-size: 30px;
+            position: fixed;
+            text-align: center;
+            border: 1px solid rgba(104, 100, 100, 0.5);
+            border-radius: 5px;
+            padding: 5px;
+            left: 30px;
+            top: 20px;
+          }
+      
+          #pre_page:hover {
+            /* background-color: darkgrey; */
+            background-color: #dddddd;
+            cursor:hand;
+          }
+        </style>
+        <div><span id="pre_page" class="layui-icon" onclick="pre_page()">&#xe65c;</span></div>
+        {$content|htmlspecialchars_decode}
+    </div>
+    <script language="Javascript">  
+        //禁止复制
+        document.oncontextmenu=new Function("event.returnValue=false");  
+        document.onselectstart=new Function("event.returnValue=false");  
+    </script> 
+    <script>
+        function pre_page(){
+            location.href=document.referrer;
+        }
+    </script>
+</body>
+
+</html>

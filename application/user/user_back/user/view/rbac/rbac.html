@@ -1,0 +1,80 @@
+{include file="./static/header.html"/}
+<body>
+<table id="formfields_table" lay-filter="lay_formfields" class="layui-table"></table>
+<script type="text/html" id="head_toolbar">
+    <div class="layui-btn-container">
+        <button class="layui-btn layui-btn-sm" lay-event="insert">新增权限类型</button>
+
+    </div>
+</script>
+<script type="text/html" id="toolbar">
+    <div class="layui-btn-container">
+        <button class="layui-btn layui-btn-sm" lay-event="update">编辑权限</button>
+    </div>
+</script>
+
+<script>
+
+    var table = layui.table,layer = layui.layer,$=layui.$,laydate = layui.laydate;
+    var form_table = table.render({
+        elem:'#formfields_table',
+        height:"full-70",
+        toolbar:'#head_toolbar',
+        defaultToolbar:'',
+        url:'/get_rbac',
+        method:'get',
+        cols:[[
+            {field:'Type_Id',title:'ID',hide:true},
+            {field:'Type_Name',title:'类型名称'},
+            {field:'Group_Id',title:'外键组Id'},
+            {field:'',title:'操作',toolbar:'#toolbar'}
+        ]],
+        done:function(res, curr, count){
+        }
+
+    });
+    //监听头部工具行
+    table.on('toolbar(lay_formfields)',function(obj){
+        var data = obj.data;
+        var event = obj.event;
+        switch(event)
+        {
+            case 'insert':
+            {
+                layer.open({
+                    type: 2,
+                    title:"新增权限",
+                    shadeClose:true,//外部关闭
+                    area:['50%','600px'],
+                    content: '/ins_rbac'
+                });
+
+                break;
+            }
+
+        }
+    });
+
+    //监听列工具行
+    table.on('tool(lay_formfields)',function(obj){
+        var data = obj.data;
+        var event = obj.event;
+        var tr = obj.tr;
+        switch(event)
+        {
+            case 'update':
+            {
+                layer.open({
+                    type: 2,
+                    title:"编辑角色权限",
+                    shadeClose:true,//外部关闭
+                    area:['80%',600],
+                    content: '/upd_rbac?Group_Id='+obj.data.Group_Id
+                });
+                break;
+            }
+        }
+    });
+
+</script>
+</body>

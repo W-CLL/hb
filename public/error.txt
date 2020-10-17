@@ -1,0 +1,49 @@
+think\exception\PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '26' for key 'PRIMARY' in C:\wamp64\www\hblayui\thinkphp\library\think\db\Connection.php:453
+Stack trace:
+#0 C:\wamp64\www\hblayui\thinkphp\library\think\db\Query.php(269): think\db\Connection->execute('INSERT INTO `us...', Array, Object(think\db\Query))
+#1 C:\wamp64\www\hblayui\thinkphp\library\think\db\Query.php(2275): think\db\Query->execute('INSERT INTO `us...', Array, Object(think\db\Query))
+#2 C:\wamp64\www\hblayui\application\user\controller\User.php(91): think\db\Query->insert(Array)
+#3 [internal function]: app\user\controller\User->ins_user_do()
+#4 C:\wamp64\www\hblayui\thinkphp\library\think\App.php(343): ReflectionMethod->invokeArgs(Object(app\user\controller\User), Array)
+#5 C:\wamp64\www\hblayui\thinkphp\library\think\App.php(611): think\App::invokeMethod(Array, Array)
+#6 C:\wamp64\www\hblayui\thinkphp\library\think\App.php(456): think\App::module(Array, Array, false)
+#7 C:\wamp64\www\hblayui\thinkphp\library\think\App.php(139): think\App::exec(Array, Array)
+#8 C:\wamp64\www\hblayui\thinkphp\start.php(19): think\App::run()
+#9 C:\wamp64\www\hblayui\public\index.php(17): require('C:\\wamp64\\www\\h...')
+#10 {main}think\exception\PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '27' for key 'PRIMARY' in C:\wamp64\www\hblayui\thinkphp\library\think\db\Connection.php:453
+Stack trace:
+#0 C:\wamp64\www\hblayui\thinkphp\library\think\db\Query.php(269): think\db\Connection->execute('INSERT INTO `us...', Array, Object(think\db\Query))
+#1 C:\wamp64\www\hblayui\thinkphp\library\think\db\Query.php(2275): think\db\Query->execute('INSERT INTO `us...', Array, Object(think\db\Query))
+#2 C:\wamp64\www\hblayui\application\user\controller\User.php(91): think\db\Query->insert(Array)
+#3 [internal function]: app\user\controller\User->ins_user_do()
+#4 C:\wamp64\www\hblayui\thinkphp\library\think\App.php(343): ReflectionMethod->invokeArgs(Object(app\user\controller\User), Array)
+#5 C:\wamp64\www\hblayui\thinkphp\library\think\App.php(611): think\App::invokeMethod(Array, Array)
+#6 C:\wamp64\www\hblayui\thinkphp\library\think\App.php(456): think\App::module(Array, Array, false)
+#7 C:\wamp64\www\hblayui\thinkphp\library\think\App.php(139): think\App::exec(Array, Array)
+#8 C:\wamp64\www\hblayui\thinkphp\start.php(19): think\App::run()
+#9 C:\wamp64\www\hblayui\public\index.php(17): require('C:\\wamp64\\www\\h...')
+#10 {main}think\exception\PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'ysl' for key 'User' in C:\wamp64\www\hblayui\thinkphp\library\think\db\Connection.php:453
+Stack trace:
+#0 C:\wamp64\www\hblayui\thinkphp\library\think\db\Query.php(269): think\db\Connection->execute('UPDATE `user`  ...', Array, Object(think\db\Query))
+#1 C:\wamp64\www\hblayui\thinkphp\library\think\db\Query.php(2437): think\db\Query->execute('UPDATE `user`  ...', Array, Object(think\db\Query))
+#2 C:\wamp64\www\hblayui\application\user\controller\User.php(147): think\db\Query->update(Array)
+#3 [internal function]: app\user\controller\User->reset_user_do()
+#4 C:\wamp64\www\hblayui\thinkphp\library\think\App.php(343): ReflectionMethod->invokeArgs(Object(app\user\controller\User), Array)
+#5 C:\wamp64\www\hblayui\thinkphp\library\think\App.php(611): think\App::invokeMethod(Array, Array)
+#6 C:\wamp64\www\hblayui\thinkphp\library\think\App.php(456): think\App::module(Array, Array, false)
+#7 C:\wamp64\www\hblayui\thinkphp\library\think\App.php(139): think\App::exec(Array, Array)
+#8 C:\wamp64\www\hblayui\thinkphp\start.php(19): think\App::run()
+#9 C:\wamp64\www\hblayui\public\index.php(17): require('C:\\wamp64\\www\\h...')
+#10 {main}think\exception\PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '108' for key 'PRIMARY' in D:\phpstudy_pro\WWW\thinkphp\library\think\db\Connection.php:905
+Stack trace:
+#0 D:\phpstudy_pro\WWW\thinkphp\library\think\db\Query.php(537): think\db\Connection->execute('INSERT INTO `us...', Array, Object(think\db\Query))
+#1 D:\phpstudy_pro\WWW\thinkphp\library\think\db\Query.php(4549): think\db\Query->execute('INSERT INTO `us...', Array, Object(think\db\Query))
+#2 D:\phpstudy_pro\WWW\application\user\controller\User.php(94): think\db\Query->insert(Array)
+#3 [internal function]: app\user\controller\User->ins_user_do()
+#4 D:\phpstudy_pro\WWW\thinkphp\library\think\App.php(685): ReflectionMethod->invokeArgs(Object(app\user\controller\User), Array)
+#5 D:\phpstudy_pro\WWW\thinkphp\library\think\App.php(1221): think\App::invokeMethod(Array, Array)
+#6 D:\phpstudy_pro\WWW\thinkphp\library\think\App.php(911): think\App::module(Array, Array, false)
+#7 D:\phpstudy_pro\WWW\thinkphp\library\think\App.php(277): think\App::exec(Array, Array)
+#8 D:\phpstudy_pro\WWW\thinkphp\start.php(37): think\App::run()
+#9 D:\phpstudy_pro\WWW\public\index.php(32): require('D:\\phpstudy_pro...')
+#10 {main}

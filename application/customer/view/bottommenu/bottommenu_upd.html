@@ -1,0 +1,164 @@
+{include file="./static/header.html"/}
+
+<body>
+    <form class="layui-form" action="" style="padding: 20px;">
+
+        <input type="text" name="id" hidden value="{$id}">
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">客户</label>
+            <div class="layui-input-block">
+                <select name="user_id" lay-verify="required">
+                    <option value="{$list.id}">{$list.name}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">备注</label>
+            <div class="layui-input-inline">
+                <input type="text" name="remark" required lay-verify="required" placeholder="请输入备注"
+                    autocomplete="off" value="{$list.remark}" class="layui-input">
+            </div>
+        </div>
+
+
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">显示</label>
+            
+            <div class="layui-input-inline" style="width: 60px;">
+                {if $list.param.menu[0]['show']}
+                <input type="checkbox" checked="" name="menu[0][show]" lay-skin="switch">
+                {else /}
+                <input type="checkbox" name="menu[0][show]" lay-skin="switch">
+                {/if}
+            </div>
+
+            <label class="layui-form-label">名称</label>
+            <div class="layui-input-inline">
+                <input type="text" name="menu[0][name]" required lay-verify="required" placeholder="请输入标题"
+                    autocomplete="off" value="{$list.param.menu[0]['name']}" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">显示</label>
+            <div class="layui-input-inline" style="width: 60px;">
+                {if $list.param.menu[1]['show']}
+                <input type="checkbox" checked="" name="menu[1][show]" lay-skin="switch">
+                {else /}
+                <input type="checkbox" name="menu[1][show]" lay-skin="switch">
+                {/if}
+            </div>
+            <label class="layui-form-label">名称</label>
+            <div class="layui-input-inline">
+                <input type="text" name="menu[1][name]" required lay-verify="required" placeholder="请输入标题"
+                    autocomplete="off" value="{$list.param.menu[1]['name']}" class="layui-input">
+            </div>
+        </div>
+
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">显示</label>
+            <div class="layui-input-inline" style="width: 60px;">
+                {if $list.param.menu[2]['show']}
+                <input type="checkbox" checked="" name="menu[2][show]" lay-skin="switch">
+                {else /}
+                <input type="checkbox" name="menu[2][show]" lay-skin="switch">
+                {/if}
+            </div>
+
+            <label class="layui-form-label">名称</label>
+            <div class="layui-input-inline">
+                <input type="text" name="menu[2][name]" required lay-verify="required" placeholder="请输入标题"
+                    autocomplete="off" value="{$list.param.menu[2]['name']}" class="layui-input">
+            </div>
+
+            <label class="layui-form-label">53链接</label>
+            <div class="layui-input-inline">
+                <input type="text" name="code53" value="{$list.param.code53}" placeholder="请输入53链接" class="layui-input">
+            </div>
+        </div>
+
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">显示</label>
+            <div class="layui-input-inline" style="width: 60px;">
+                {if $list.param.menu[3]['show']}
+                <input type="checkbox" checked="" name="menu[3][show]" lay-skin="switch">
+                {else /}
+                <input type="checkbox" name="menu[3][show]" lay-skin="switch">
+                {/if}
+            </div>
+            <label class="layui-form-label">名称</label>
+            <div class="layui-input-inline">
+                <input type="text" name="menu[3][name]" required lay-verify="required" placeholder="请输入标题"
+                    autocomplete="off" value="{$list.param.menu[3]['name']}" class="layui-input">
+            </div>
+        </div>
+
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">显示</label>
+            <div class="layui-input-inline" style="width: 60px;">
+                {if $list.param.menu[4]['show']}
+                <input type="checkbox" checked="" name="menu[4][show]" lay-skin="switch">
+                {else /}
+                <input type="checkbox" name="menu[4][show]" lay-skin="switch">
+                {/if}
+            </div>
+            <label class="layui-form-label">名称</label>
+            <div class="layui-input-inline">
+                <input type="text" name="menu[4][name]" required lay-verify="required" placeholder="请输入标题"
+                    autocomplete="off" value="{$list.param.menu[4]['name']}" class="layui-input">
+            </div>
+
+            <label class="layui-form-label">电话号</label>
+            <div class="layui-input-inline">
+                <input type="text" name="phone" required placeholder="请输入电话号码" autocomplete="off"
+                    value="{$list.param.phone}" class="layui-input">
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="formDemo">立即修改</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        //Demo
+        layui.use('form', function () {
+            var form = layui.form, $ = layui.$;
+
+            //监听提交
+            form.on('submit(formDemo)', function (data) {
+                // console.log(JSON.stringify(data.field))
+                $.post('/public/index.php/bottommenu_upd', data.field, function (res) {
+                    // console.log(res)
+                    if (res.code == 0) {
+                        layer.alert(res.msg, function () {
+                            var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+                            parent.layui.table.reload("formfields_table");//刷新父页面的表格
+                            parent.layer.close(index); //再执行关闭
+                        });
+                    } else {
+                        layer.alert(res.msg)
+                    }
+                })
+                return false;
+            });
+
+            form.render();
+        });
+    </script>
+
+</body>

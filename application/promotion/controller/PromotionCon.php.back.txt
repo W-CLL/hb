@@ -1,0 +1,854 @@
+<?php
+
+
+
+namespace app\promotion\controller;
+
+
+
+use AlibabaCloud\Cloudwf\V20170328\DelUmengPagePermission4Root;
+
+use think\Controller;
+
+use think\Db;
+
+use think\Request;
+
+use app\common\controller\Common;
+
+use think\Cache;
+
+
+
+class PromotionCon extends Common
+
+{
+
+    public function _initialize()
+
+    {
+
+        /* 客户下拉选项 */
+        // $this->assign('cli', Cache::get("redis_client"));
+        
+        /* 客户下拉选项 */
+        if(session('type')<=2){
+            $this->assign('cli', Cache::get("redis_client"));
+        }else{
+            //不是管理员只显示自己负责或有权查看的
+            $this->assign('cli', Cache::get("redis_user_client" . session('id')));
+        }
+
+        /* 推广账号下拉选项 */
+
+        $this->assign('pro_user', Cache::get("redis_pro_user"));
+
+        /* 53账号下拉选项 */
+
+        $this->assign('user_53', Cache::get("redis_user_53"));
+
+        /* 负责人下拉选项 */
+
+        $this->assign('per', Cache::get("redis_name"));
+
+        /* 项目名下拉选项 */
+
+        $this->assign('pro', Cache::get('redis_project'));
+
+        $this->assign('type', session('type'));
+    }
+
+
+
+    /* 内部消费记录视图 */
+
+    public function promotion_con()
+
+    {
+
+        return view();
+    }
+
+
+
+    /*内部消费记录数据*/
+
+    public function get_promotion_con()
+
+    {
+        //$total用于统计合计数据，姑且先设置为0 
+        $total = [
+            "Cli_Money_Coin" => 0,
+            "Money_Con" => 0,
+            "ShowCon" => 0,
+            "Click" => 0,
+            "Dialogue" => 0,
+            "Phone" => 0,
+            "Message" => 0,
+            "CueSum" => 0,
+            "DialogueCost" => 0,
+            "CueCost" => 0
+        ];
+
+        $limit = input('limit');
+
+        //查询的项目
+
+        if (input('sel_project')) {
+
+            $data['ProjectName'] = ['like', '%' . input('sel_project') . '%'];
+        }
+
+        //查询的推广账号
+
+        if (input('sel_pro_user')) {
+
+            $data['Pro_User'] = ['like', '%' . input('sel_pro_user') . '%'];
+        }
+
+        //查询的客户
+
+        if (input('sel_client_id')) {
+
+            // $data['c.Client_Id'] = ['like', '%' . input('sel_client_id') . '%'];
+            $data['c.Client_Id'] =input('sel_client_id');
+        }
+        
+        //查询的负责人
+        if(input('sel_user_id')){
+            $data['p.User_Id'] = ['like', '%' . input('sel_user_id') . '%'];
+        }
+
+        //查询的时间范围
+
+        if (input('sel_time')) {
+
+            $time = input('sel_time');
+
+            $time = explode(' - ', $time);
+
+            $StartTime = $time[0];
+
+            $EndTime = $time[1];
+
+            $data['Date'] = ['between', [$StartTime, $EndTime]];
+        }
+
+        //如果不是管理员以上权限，只能看到自己消费记录
+
+        if (session('auth') > 2 && session('type') != 6) {
+            $data['c.User_Id'] = session('id');
+        }
+
+        // 合作账户能看到指定项目的消费记录
+        if (session('type') == 6) {
+            $user_ids = Db::table('project')
+                ->field('Id')
+                ->where('See_User_Id', 'like', '%@,' . session('id') . '@,%')
+                ->group('Id')
+                ->select();
+            foreach ($user_ids as $k => $v) {
+                $project_ids[] = $v['Id'];
+            }
+            $data['c.Project_Id'] = ['in', $project_ids];
+        }
+
+        //构造客户信息子查询
+
+        $Client = Db::table('user_info')
+
+            ->where('Type_Id', 5)
+
+            ->field('User_Id Client_Id,Name Client')
+
+            ->buildSql();
+
+        $list = Db::table('promotion_con c')
+
+            ->join($Client . ' cli', 'cli.Client_Id=c.Client_Id', 'left')
+
+            ->join('user_info u', 'u.User_Id=c.User_Id', 'left')
+
+            ->join('promotion_user pu', 'pu.Id=c.Pro_Id', 'left')
+
+            ->join('project p', 'p.Id=c.Project_Id', 'left')
+
+            ->field('c.Id,Client,Name,ProjectName,Pro_User,Cli_Money_Coin,Money_Con,Cli_Money_Con,Date,ShowCon,Click,Dialogue,c.Phone,Message,c.Remarks,Cre_time')
+
+            ->where($data)
+
+            ->order('Date desc')
+
+            ->paginate($limit);
+
+
+
+        $list = $list->toArray();
+
+        //输出最后执行的sql语句
+        // var_dump(Db::getLastSql());
+
+        //消费数据统计转换
+
+        foreach ($list['data'] as $k => $v) {
+
+            $list['data'][$k]['Time'] = date('Y-m-d H:i:s', $list['data'][$k]['Cre_time']);
+
+            //如果消费为0既无资源,成本
+
+            if ($v['Money_Con'] == 0) {
+
+                $list['data'][$k]['CueSum'] = 0;
+
+                $list['data'][$k]['DialogueCost'] = 0;
+
+                $list['data'][$k]['CueCost'] = 0;
+
+                continue; //消费为0跳出循环
+
+            }
+
+            //如果是合作伙伴不传递Name字段
+            if (session('type') == 6) {
+                unset($list['data'][$k]['Name']);
+            }
+
+            //线索总数
+
+            $list['data'][$k]['CueSum'] = $v['Message'] + $v['Phone'];
+
+            //对话成本
+
+            if ($v['Dialogue'] + $v['Message'] != 0) {
+
+                $list['data'][$k]['DialogueCost'] = round($v['Money_Con'] / ($v['Dialogue'] + $v['Message']), 2);
+            } else {
+
+                $list['data'][$k]['DialogueCost'] = 0;
+            }
+
+            //线索成本
+
+            if ($v['Message'] + $v['Phone'] != 0) {
+
+                $list['data'][$k]['CueCost'] = round($v['Money_Con'] / ($v['Message'] + $v['Phone']), 2);
+            } else {
+
+                $list['data'][$k]['CueCost'] = 0;
+            }
+            //将数据统计到合计数值中
+            $total["Money_Con"] += $v['Money_Con'];
+            $total['ShowCon'] += $v['ShowCon'];
+            $total['Click'] += $v['Click'];
+            $total["Dialogue"] += $v['Dialogue'];
+            $total["Phone"] += $v['Phone'];
+            $total["Message"] += $v['Message'];
+            $total["CueSum"] += $list['data'][$k]['CueSum'];
+        }
+
+        //合计对话成本与线索成本
+        if (($total["Dialogue"] + $total["Message"]) != 0) {
+            //对话成本=消费/（对话+留言）
+            $total["DialogueCost"] = round($total["Money_Con"] / ($total["Dialogue"] + $total["Message"]), 2);
+        }
+        if (($total["CueSum"]) != 0) {
+            //线索成本=消费/线索总数
+            $total["CueCost"] = round($total["Money_Con"] / ($total["CueSum"]), 2);
+        }
+
+        $res['code'] = 0;
+        $res['data'] = $list['data'];
+
+        $res['count'] = $list['total'];
+
+        $res['totalRow'] = $total;
+
+        return $res;
+    }
+
+
+
+    //新增充值记录视图
+
+    public function ins_promotion_con()
+
+    {
+
+        $this->assign('Id', input('Id'));
+
+        return view();
+    }
+
+
+
+    public function get_ins_promotion_con()
+
+    {
+
+        $Id = input('Id');
+
+        $Client = Db::table('project p')
+
+            ->where('p.Id', $Id)
+
+            ->join('user_info u', 'u.User_Id=p.Client_Id')
+
+            ->field('Client_Id,Name,ProjectName,Id Project_Id,p.Pro_User_Id,p.User_53_Id')
+
+            ->find();
+
+        $Data = Db::table('project')
+
+            ->where('Id', $Id)
+
+            ->field('Pro_User_Id')
+
+            ->find();
+
+        $pattern = "/[@,]+/"; //切割符号标志
+
+        foreach ($Data as $k => $v) {
+
+            if (preg_match($pattern, $v)) {
+
+                $Data[$k] = explode("@,", $v);
+            } else {
+
+                $Data[$k] = [$v];
+            }
+        }
+
+        $pro_user = Db::table('promotion_user')
+
+            ->where("Id", "in", $Data['Pro_User_Id'])
+
+            ->field('Id Pro_Id,Pro_User,Remarks,Rebate,Pro_Psw')
+
+            ->select();
+
+        if (preg_match($pattern, $Client['User_53_Id'])) {
+            $user53 = explode("@,", $Client['User_53_Id']);
+        } else {
+            $user53 = [$Client['User_53_Id']];
+        }
+        // var_dump($user53);
+        $kf53 = Db::table('client_53')
+            ->where('Id', 'in', $user53)
+            ->field('Id kf53_Id,User_53,Psw_53')
+            ->select();
+        // var_dump($kf53);
+
+        $data = [];
+
+        $date = ['Date' => date('Y-m-d', strtotime('-1 day'))];
+
+        foreach ($pro_user as $k => $v) {
+            $v['Pro_Psw'] = '***';
+            $data[] = array_merge($v, $Client, $date);
+        }
+        
+        foreach ($kf53 as $k => $v) {
+            if (!isset($data[$k])) {
+                $data[$k] = array();
+            }
+            $v['Psw_53'] = '***';
+            $data[$k] = array_merge($v, $data[$k]);
+        }
+
+        $res['data'] = $data;
+
+        $res['code'] = 0;
+
+        return $res;
+    }
+
+
+
+    //新增消费记录操作
+
+    public function ins_promotion_con_do()
+
+    {
+
+        $res = (input('data/a'));
+
+        $data['Pro_Id'] = $res['Pro_Id'];
+
+        $data['Project_Id'] = $res['Project_Id'];
+
+        $data['Client_Id'] = $res['Client_Id'];
+
+        $data['Money_Con'] = round($res['Con_B'] / $res['Rebate'], 2);
+
+        $data['ShowCon'] = $res['ShowCon'];
+
+        $data['Click'] = $res['Click'];
+
+        $data['Dialogue'] = $res['Dialogue'];
+
+        $data['Message'] = $res['Message'];
+
+        $data['Phone'] = $res['Phone'];
+
+        $data['Date'] = $res['Date'];
+
+        $data['Remarks'] = $res['ConRemarks'];
+
+        $data['Cre_time'] = time();
+
+        $data['User_Id'] = session('id');
+
+        $res = Db::table('promotion_con')
+
+            ->insert($data);
+
+        if ($res) {
+
+            return ['code' => 0, 'msg' => '添加成功！'];
+        } else {
+
+            return ['code' => 1, 'msg' => '添加失败！请联系检查字段！'];
+        }
+    }
+
+
+
+    //删除消费记录操作
+
+    public function dels_promotion_con_do()
+
+    {
+
+        $code = [['code' => 0, 'msg' => '删除成功！'], ['code' => 1, 'msg' => '删除失败！请联系管理员!']];
+
+        $index['Id'] = input('Id');
+
+        $res = Db::table('promotion_con')
+
+            ->where($index)
+
+            ->delete();
+
+        return $res ? $code[0] : $code[1];
+    }
+
+
+
+    //这里没写！
+
+    public function upd_promotion_con()
+
+    {
+
+        $Id = input('Id');
+
+        $Client = Db::table('user_info')
+
+            ->where('Type_Id', 5)
+
+            ->field('User_Id Client_Id,Name Client')
+
+            ->buildSql();
+
+        $list = Db::table('promotion_con c')
+
+            ->join($Client . ' cli', 'cli.Client_Id=c.Client_Id', 'left')
+
+            ->join('user_info u', 'u.User_Id=c.User_Id', 'left')
+
+            ->join('promotion_user pu', 'pu.Id=c.Pro_Id', 'left')
+
+            ->join('project p', 'p.Id=c.Project_Id', 'left')
+
+            ->field('c.Id,Client,ProjectName,Pro_User,Money_Con,Date,ShowCon,Click,Dialogue,c.Phone,Message,c.Remarks')
+
+            ->where('c.Id', $Id)
+
+            ->find();
+
+        $this->assign('list', $list);
+
+        return view();
+    }
+
+
+
+    public function upd_promotion_con_do()
+
+    {
+
+        $code = [['code' => 0, 'msg' => '编辑成功！'], ['code' => 0, 'msg' => '编辑失败,请联系管理员！']];
+
+        $index['Id'] = input('id');
+
+        $data['Money_Con'] = input('money_con');
+
+        $data['ShowCon'] = input('showcon');
+
+        $data['Click'] = input('click');
+
+        $data['Dialogue'] = input('dialogue');
+
+        $data['Phone'] = input('phone');
+
+        $data['Message'] = input('message');
+
+        $data['Date'] = input('date');
+
+        $data['Cre_time'] = time();
+
+        $data['Remarks'] = input('remarks');
+
+        $data['User_Id'] = session('id');
+
+        $res = Db::table('promotion_con')
+
+            ->where($index)
+
+            ->update($data);
+
+        return $res ? $code[0] : $code[1];
+    }
+
+
+
+    /*外部客户消费视图*/
+
+    public function cli_promotion_con()
+
+    {
+        return view();
+    }
+
+
+
+    /*外部客户消费数据*/
+
+    public function get_cli_promotion_con()
+    {
+        //统计合计数据
+        $total = [
+            "Cli_Money_Coin" => 0, "Money_Con" => 0, "ShowCon" => 0, "Click" => 0, "Dialogue" => 0, "Phone" => 0, "Message" => 0, "CueSum" => 0, "DialogueCost" => 0, "CueCost" => 0
+        ];
+
+        $limit = input('limit');
+
+        //查询的客户
+        if (input('sel_client_id')) {
+            $data['c.Client_Id'] = ['like', '%' . input('sel_client_id') . '%'];
+        }
+        //查询的项目
+        if (input('sel_project_name')) {
+            $data['p.ProjectName'] = input('sel_project_name');
+        }
+
+        //查询的时间范围
+        if (input('sel_time')) {
+            $time = input('sel_time');
+            $time = explode(' - ', $time);
+            $StartTime = $time[0];
+            $EndTime = $time[1];
+            $data['Date'] = ['between', [$StartTime, $EndTime]];
+        }
+
+        //不是管理员则只看得到自己
+        if (session('type') == 5) {
+            $data['c.Client_Id'] = session('id');
+        }
+
+        //构造客户信息子查询
+        $Client = Db::table('user_info')
+
+            ->where('Type_Id', 5)
+
+            ->field('User_Id Client_Id,Name Client')
+
+            ->buildSql();
+
+        $list = Db::table('promotion_con c')
+
+            ->join($Client . ' cli', 'cli.Client_Id=c.Client_Id', 'left')
+
+            ->join('promotion_user pu', 'pu.Id=c.Pro_Id', 'left')
+
+            ->join('project p', 'p.Id=c.Project_Id', 'left')
+
+           ->field('c.Id,c.Client_Id,Client,ProjectName,Sum(Cli_Money_Coin) Money_Coin,Sum(Cli_Money_Con) Money_Con,Date,Sum(ShowCon) ShowCon,Sum(Click) Click,Sum(Dialogue) Dialogue,Sum(c.Phone) Phone,Sum(Message) Message')
+
+           ->group('ProjectName,Date') //按日期,项目名称
+            //->group('Project_Id,Date') //按日期,项目分组
+
+            ->where($data)
+
+            ->where(['Cli_Status' => 1])
+
+            ->order('Date desc')
+
+            ->paginate($limit);
+
+        $list = $list->toArray();
+
+        foreach ($list['data'] as $k => $v) {
+
+            if ($v['Money_Con'] == 0) {
+
+                $list['data'][$k]['CueSum'] = 0;
+
+                $list['data'][$k]['DialogueCost'] = 0;
+
+                $list['data'][$k]['CueCost'] = 0;
+
+                continue; //消费为0跳出循环
+
+            }
+
+            $list['data'][$k]['CueSum'] = $v['Message'] + $v['Phone'];
+
+            if ($v['Dialogue'] + $v['Message'] != 0) {
+
+                $list['data'][$k]['DialogueCost'] = round($v['Money_Con'] / ($v['Dialogue'] + $v['Message']), 2);
+            } else {
+
+                $list['data'][$k]['DialogueCost'] = 0;
+            }
+
+            if ($v['Message'] + $v['Phone'] != 0) {
+
+                $list['data'][$k]['CueCost'] = round($v['Money_Con'] / ($v['Message'] + $v['Phone']), 2);
+            } else {
+
+                $list['data'][$k]['CueCost'] = 0;
+            }
+            $total['Cli_Money_Coin'] += $v['Money_Coin'];
+            $total['ShowCon'] +=  $v['ShowCon'];
+            $total['Click'] +=  $v['Click'];
+            $total["Money_Con"] += $v['Money_Con'];
+            $total["Dialogue"] += $v['Dialogue'];
+            $total["Phone"] += $v['Phone'];
+            $total["Message"] += $v['Message'];
+            $total["CueSum"] += $list['data'][$k]['CueSum'];
+        }
+
+        if (($total["Dialogue"] + $total["Message"]) != 0) {
+            //对话成本=消费/（对话+留言）
+            $total["DialogueCost"] = round($total["Money_Con"] / ($total["Dialogue"] + $total["Message"]), 2);
+        }
+        if (($total["CueSum"]) != 0) {
+            //线索成本=消费/线索总数
+            $total["CueCost"] = round($total["Money_Con"] / ($total["CueSum"]), 2);
+        }
+
+        $res['code'] = 0;
+
+        $res['data'] = $list['data'];
+
+        $res['count'] = $list['total'];
+
+        $res['totalRow'] = $total;
+
+        return $res;
+    }
+
+
+
+    public function upd_cli_promotion_con()
+
+    {
+
+        //统计此条消费记录的资源数据
+
+        $Id = input('Id');
+
+        $Client = Db::table('user_info')
+
+            ->where('Type_Id', 5)
+
+            ->field('User_Id Client_Id,Name Client')
+
+            ->buildSql();
+
+        $list = Db::table('promotion_con c')
+
+            ->join($Client . ' cli', 'cli.Client_Id=c.Client_Id', 'left')
+
+            ->join('project p', 'p.Id=c.Project_Id', 'left')
+
+            ->field('c.Id,Client,ProjectName,Cli_Money_Coin,Money_Con,Date,Dialogue,Message,c.Phone,Cli_Money_Con,Cli_Status')
+
+            ->where('c.Id', $Id)
+
+            ->find();
+
+        //线索总数
+
+        $list['CueSum'] = $list['Message'] + $list['Phone'];
+
+        //对话成本
+
+        if ($list['Dialogue'] + $list['Message'] != 0) {
+
+            $list['DialogueCost'] = round($list['Money_Con'] / ($list['Dialogue'] + $list['Message']), 2);
+        } else {
+
+            $list['DialogueCost'] = 0;
+        }
+
+        //线索成本
+
+        if ($list['Message'] + $list['Phone'] != 0) {
+
+            $list['CueCost'] = round($list['Money_Con'] / ($list['Message'] + $list['Phone']), 2);
+        } else {
+
+            $list['CueCost'] = 0;
+        }
+
+        $this->assign('list', $list);
+
+        return view();
+    }
+
+
+
+    public function upd_cli_promotion_con_do()
+
+    {
+
+        $code = [['code' => 0, 'msg' => '修改成功！'], ['code' => 1, 'msg' => '修改失败！请联系管理员!']];
+
+        $Id = input('id');
+
+        $data['Cli_Money_Con'] = input('cli_money_con');
+        $data['Cli_Money_Coin'] = input('cli_money_coin');
+
+        $data['Cli_Status'] = input('cli_status') ? 1 : 0;
+
+        $res = Db::table('promotion_con')
+
+            ->where('Id', $Id)
+
+            ->update($data);
+
+        return $res ? $code[0] : $code[1];
+    }
+
+
+
+    /* 推广账号统计模块 pro_count */
+
+    public function pro_count()
+
+    {
+
+        $InSet = $this->initialize();
+
+        $DateEnd = date('Y-m-d');
+
+        $DateStrat = date('Y-m-d', strtotime('-7 day'));
+
+        if (input('type') == "查询") {
+
+            $data['Pro_User'] = [
+
+                "like",
+
+                "%" . input('sel_user') . "%"
+
+            ];
+
+            $this->assign('Sel_User', input('sel_user'));
+
+            $data['Remarks'] = [
+
+                "like",
+
+                "%" . input('sel_remarks') . "%"
+
+            ];
+
+            $this->assign('Sel_Remarks', input('sel_remarks'));
+        }
+
+        /* 构造子查询 */
+
+        #账号消费
+
+        $Con = Db::table('pro_user a')->join("promotion_con c", "c.Pro_Id=a.Id", "left")
+
+            ->field("TRUNCATE(SUM(c.Money_Con),2) as Sum_Con,c.Pro_Id")
+
+            ->where("a.status", 1)
+
+            ->where("c.delete_time", null)
+
+            ->group('c.Pro_Id')
+
+            ->buildSql();
+
+        #账号充值
+
+        $Rec = Db::table('pro_user a')->join("promotion_rec r", "r.Pro_Id=a.Id", "left")
+
+            ->field("a.Id,TRUNCATE(SUM(r.Money_Rec),2) as Sum_Rec,r.Pro_Id")
+
+            ->where("a.status", 1)
+
+            ->where("r.delete_time", null)
+
+            ->group('r.Pro_Id')
+
+            ->buildSql();
+
+        #账号近7天消费
+
+        $Day_Con = Db::table('pro_user a')
+
+            ->join("promotion_con c", "a.Id=c.Pro_Id", "left")
+
+            ->where("c.delete_time", null)
+
+            ->whereTime("Time_Con", "between", [
+
+                $DateStrat,
+
+                $DateEnd
+
+            ])
+
+            -> // 时间区间
+
+            field("SUM(c.Money_Con) as Day_Con,c.Pro_Id")
+
+            ->group('c.Pro_Id')
+
+            ->buildSql();
+
+        $list = Db::table('pro_user a')
+
+            ->where($data)
+
+            ->join($Con . "as con", "a.Id=con.Pro_Id", "left")
+
+            ->join($Rec . "as rec", "a.Id=rec.Pro_Id", "left")
+
+            ->join($Day_Con . "as day", "a.Id=day.Pro_Id", "left")
+
+            ->field("a.Id,Pro_User,Pro_Psw,Remarks,day.Day_Con,(rec.Sum_Rec-con.Sum_Con) as Sum_Mon")
+
+            ->where("a.Id", "in", $InSet)
+
+            ->where("status", 1)
+
+            ->group('a.Id')
+
+            ->order('Sum_Mon')
+
+            ->select();
+
+        $this->assign('list', $list);
+
+        $this->assign('type', session('type'));
+
+        return view();
+    }
+}

@@ -1,0 +1,181 @@
+{include file="./static/header.html"/}
+<link rel="stylesheet" href="__STATIC__/bootstrap3/css/bootstrap.min.css">
+
+<body>
+
+    <div class="layui-container">
+        <div class="layui-row">
+
+            {if $Think.session.type<=4} <div class="layui-col-xs4 layui-col-sm3 layui-col-md3 layui-col-lg3">
+                <div class="layui-inline">
+                    <div class="layui-input-inline">
+                        <select id="sel_client_id" class="layui-select">
+                            <option value="{$client.id}">{$client.name}</option>
+                            {foreach $cli as $k=>$v}
+                            <option value="{$v.User_Id}">{$v.Name}</option>
+                            {/foreach}
+                        </select>
+                    </div>
+                </div>
+        </div>
+        {/if}
+
+        <div class="layui-col-xs4 layui-col-sm3 layui-col-md4 layui-col-lg4">
+            <div class="layui-inline">
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" id="sel_time" placeholder="请选择日期范围">
+                </div>
+                <button class="layui-btn layui-btn-normal layui-btn-sm" id="lastday">前一天</button>
+                <div class="layui-input-inline">
+                    <button class="layui-btn layui-btn-normal layui-btn-sm" id="nextday">后一天</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-col-xs4 layui-col-sm3 layui-col-md1 layui-col-lg1">
+            <div class="layui-inline">
+                <div class="layui-input-inline">
+                    <button class="layui-btn layui-btn-sm laymy-w1" id="search">搜索</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <br>
+
+    <style>
+        .table-r {
+            min-width: 1100px;
+            /* width: 900px; */
+            overflow: scroll;
+        }
+
+        .table-r>table th {
+            min-width: 73px;
+            max-width: 110px;
+        }
+
+        .table-r>table td {
+            min-width: 73px;
+            max-width: 110px;
+        }
+
+        .table-r>table .th-1>th {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .table-r>table .th-2>th {
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .table-r>table>tbody td {
+            font-size: 13px;
+        }
+
+        .table-r>table>tbody td.date-width {
+            min-width: 85px;
+        }
+
+        .s-font {
+            text-align: center;
+            font-size: 1vw;
+            /* -webkit-transform-origin-x: 0; */
+            -webkit-transform: scale(0.70);
+        }
+    </style>
+
+    <div class="table-r">
+
+        <table class="table table-bordered table-hover">
+            <!-- <table class="layui-table"> -->
+            <thead>
+                <tr class="th-1">
+                    <th class="success" colspan="4">{$client.name}</th>
+                    {volist name="project" id="vo"}
+                    <th class="info" colspan="4">{$vo.ProjectName}</th>
+                    {/volist}
+                </tr>
+                <tr class="th-2">
+                    <th class="success date-width">日期</th>
+                    <th class="success">充值</th>
+                    <th class="success">消费</th>
+                    <th class="success">余额</th>
+
+                    {volist name="project" id="vo"}
+                    <th class="info">消费
+                        <div class="s-font">(人民币)</div>
+                    </th>
+                    <th class="info">消费<br />
+                        <div class="s-font">(广告币)</div>
+                    </th>
+                    <th class="info">线索总数</th>
+                    <th class="info">线索成本</th>
+                    {/volist}
+
+                </tr>
+            </thead>
+            <tbody>
+                {volist name="date" id="d"}
+                <tr>
+                    <td class="date-width">{$key}</td>
+                    <td>{if condition="isset($d['rec'])"}{$d['rec']}{/if}</td>
+                    <td>{if condition="isset($d['con'])"}{$d['con']}{/if}</td>
+                    <td>--</td>
+
+                    {volist name="project" id="p"}
+                    {if condition="isset($d[$p.Id])"}
+                    <td>{$d[$p.Id]['Sum_Con']}</td>
+                    <td>{$d[$p.Id]['Sum_Coin']}</td>
+                    <td>{$d[$p.Id]['Sum_Clue']}</td>
+                    <td>{$d[$p.Id]['CueCost']|round=2}</td>
+                    {else /}
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    {/if}
+                    {/volist}
+                </tr>
+                {/volist}
+            </tbody>
+            <tfoot>
+                <tr class="active">
+                    <td>合计</td>
+                    <td>{$total['rec_sum']}</td>
+                    <td>{$total['con_sum_all']}</td>
+                    <td>--</td>
+
+                    {volist name="project" id="p"}
+                        {if condition="isset($total['con_sum'][$p.Id])"}
+                        <td>{$total['con_sum'][$p.Id]}</td>
+                        <td>{$total['coin_sum'][$p.Id]}</td>
+                        <td>{$total['clue_sum'][$p.Id]}</td>
+                        <td>{$total['con_sum'][$p.Id]/$total['clue_sum'][$p.Id]|round=2}</td>
+                        {else /}
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        {/if}
+                    {/volist}
+                </tr>
+            </tfoot>
+        </table>
+
+    </div>
+    <!-- 导入日期选择扩展 -->
+    {include file="./static/js/selectdate.html" /}
+    <script>
+        var $ = layui.$
+        //搜索
+        $("#search").click(function () {
+            var sel_client_id = $("#sel_client_id").val() || "";
+            var sel_time = $('#sel_time').val() || "";
+            // getData(sel_client_id, sel_time)
+            location.href = '/get_client_count/?sel_client_id=' + sel_client_id + '&sel_time=' + sel_time + '&view=on'
+        });
+    </script>
+</body>

@@ -1,0 +1,410 @@
+---------------------------------------------------------------
+[ 2020-10-14T09:51:54+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\customer\controller\Customer.php:91]
+---------------------------------------------------------------
+[ 2020-10-14T09:52:04+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer?page=2&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\customer\controller\Customer.php:91]
+---------------------------------------------------------------
+[ 2020-10-14T09:52:06+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer?page=3&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\customer\controller\Customer.php:91]
+---------------------------------------------------------------
+[ 2020-10-14T10:09:29+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/bottommenu_upd/?id=5efaf8d9889c3
+[ error ] [8]未定义数组索引: show[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:76]
+[ error ] [8]未定义数组索引: show[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:116]
+---------------------------------------------------------------
+[ 2020-10-14T10:09:35+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/bottommenu_upd/?id=5efaf8d9889c3
+[ error ] [8]未定义数组索引: show[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:76]
+[ error ] [8]未定义数组索引: show[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:116]
+---------------------------------------------------------------
+[ 2020-10-14T10:16:38+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/bottommenu_upd/?id=5efaf8d9889c3
+[ error ] [8]未定义数组索引: show[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:76]
+[ error ] [8]未定义数组索引: show[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:116]
+---------------------------------------------------------------
+[ 2020-10-14T10:22:34+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu_add
+[ error ] [8]未定义数组下标: 5[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:218]
+---------------------------------------------------------------
+[ 2020-10-14T10:29:31+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/bottommenu_upd/?id=5efaf8d9889c3
+[ error ] [8]未定义数组索引: show[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:76]
+[ error ] [8]未定义数组索引: show[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:116]
+---------------------------------------------------------------
+[ 2020-10-14T10:31:25+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/bottommenu_upd/?id=5f865e665f8ca
+[ error ] [8]未定义数组下标: 5[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:139]
+[ error ] [8]未定义数组下标: 5[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:148]
+---------------------------------------------------------------
+[ 2020-10-14T10:31:53+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu_upd
+[ error ] [8]未定义数组下标: 5[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:218]
+---------------------------------------------------------------
+[ 2020-10-14T10:34:06+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/bottommenu_upd/?id=5efaf8d9889c3
+[ error ] [8]未定义数组索引: show[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:76]
+[ error ] [8]未定义数组索引: show[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:116]
+[ error ] [8]未定义数组下标: 5[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:139]
+[ error ] [8]未定义数组下标: 5[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:148]
+---------------------------------------------------------------
+[ 2020-10-14T10:40:37+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/bottommenu_upd/?id=5efaf8d9889c3
+[ error ] [8]未定义数组索引: show[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:76]
+[ error ] [8]未定义数组索引: show[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:116]
+[ error ] [8]未定义数组下标: 5[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:139]
+[ error ] [8]未定义数组下标: 5[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:148]
+---------------------------------------------------------------
+[ 2020-10-14T10:44:38+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/bottommenu_upd/?id=5efaf8d9889c3
+[ error ] [8]未定义数组索引: show[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:76]
+[ error ] [8]未定义数组索引: show[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:116]
+[ error ] [8]未定义数组下标: 5[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:139]
+[ error ] [8]未定义数组下标: 5[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:148]
+---------------------------------------------------------------
+[ 2020-10-14T10:44:46+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/bottommenu_upd/?id=5efaf8d9889c3
+[ error ] [8]未定义数组索引: show[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:76]
+[ error ] [8]未定义数组索引: show[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:116]
+[ error ] [8]未定义数组下标: 5[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:139]
+[ error ] [8]未定义数组下标: 5[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:148]
+---------------------------------------------------------------
+[ 2020-10-14T10:46:25+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+---------------------------------------------------------------
+[ 2020-10-14T10:46:37+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+---------------------------------------------------------------
+[ 2020-10-14T10:46:38+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+---------------------------------------------------------------
+[ 2020-10-14T10:47:09+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+---------------------------------------------------------------
+[ 2020-10-14T10:47:21+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+---------------------------------------------------------------
+[ 2020-10-14T10:47:24+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+---------------------------------------------------------------
+[ 2020-10-14T10:47:33+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/bottommenu_upd/?id=5efaf8d9889c3
+[ error ] [8]未定义数组索引: show[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:76]
+[ error ] [8]未定义数组索引: show[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:116]
+[ error ] [8]未定义数组下标: 5[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:139]
+[ error ] [8]未定义数组下标: 5[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:148]
+---------------------------------------------------------------
+[ 2020-10-14T10:47:44+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu_upd
+[ error ] [8]未定义数组下标: 5[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:220]
+---------------------------------------------------------------
+[ 2020-10-14T11:09:21+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+---------------------------------------------------------------
+[ 2020-10-14T11:09:45+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+---------------------------------------------------------------
+[ 2020-10-14T11:10:28+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+---------------------------------------------------------------
+[ 2020-10-14T11:11:08+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+---------------------------------------------------------------
+[ 2020-10-14T11:11:19+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:35]
+---------------------------------------------------------------
+[ 2020-10-14T11:11:52+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+---------------------------------------------------------------
+[ 2020-10-14T11:14:31+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+---------------------------------------------------------------
+[ 2020-10-14T11:18:29+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:37]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:37]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:37]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:37]
+---------------------------------------------------------------
+[ 2020-10-14T11:19:27+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:37]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:37]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:37]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:37]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:37]
+---------------------------------------------------------------
+[ 2020-10-14T11:19:37+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:37]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:37]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:37]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:37]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:37]
+---------------------------------------------------------------
+[ 2020-10-14T11:19:43+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:37]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:37]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:37]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:37]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:37]
+---------------------------------------------------------------
+[ 2020-10-14T11:21:54+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [2]Illegal string offset 'remark'[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+---------------------------------------------------------------
+[ 2020-10-14T11:21:59+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [2]Illegal string offset 'remark'[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+---------------------------------------------------------------
+[ 2020-10-14T11:22:09+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [2]Illegal string offset 'remark'[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+---------------------------------------------------------------
+[ 2020-10-14T11:22:11+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [2]Illegal string offset 'remark'[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+---------------------------------------------------------------
+[ 2020-10-14T11:22:15+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [2]Illegal string offset 'remark'[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+---------------------------------------------------------------
+[ 2020-10-14T11:22:36+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [2]Illegal string offset 'remark'[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+---------------------------------------------------------------
+[ 2020-10-14T11:22:39+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [2]Illegal string offset 'remark'[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+---------------------------------------------------------------
+[ 2020-10-14T11:23:05+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [8]Trying to get property 'remark' of non-object[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]Trying to get property 'remark' of non-object[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+---------------------------------------------------------------
+[ 2020-10-14T11:23:29+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [8]Trying to get property 'remark' of non-object[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]Trying to get property 'remark' of non-object[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+---------------------------------------------------------------
+[ 2020-10-14T11:23:30+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [8]Trying to get property 'remark' of non-object[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]Trying to get property 'remark' of non-object[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+---------------------------------------------------------------
+[ 2020-10-14T11:23:34+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [8]Trying to get property 'remark' of non-object[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]Trying to get property 'remark' of non-object[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+---------------------------------------------------------------
+[ 2020-10-14T11:23:40+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [8]Trying to get property 'remark' of non-object[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]Trying to get property 'remark' of non-object[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+---------------------------------------------------------------
+[ 2020-10-14T11:24:06+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+---------------------------------------------------------------
+[ 2020-10-14T11:24:07+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+---------------------------------------------------------------
+[ 2020-10-14T11:24:21+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+---------------------------------------------------------------
+[ 2020-10-14T11:24:26+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+---------------------------------------------------------------
+[ 2020-10-14T11:40:48+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/bottommenu_upd/?id=5f866c23830a0
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:141]
+---------------------------------------------------------------
+[ 2020-10-14T11:43:21+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+---------------------------------------------------------------
+[ 2020-10-14T11:44:52+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+---------------------------------------------------------------
+[ 2020-10-14T11:44:54+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+---------------------------------------------------------------
+[ 2020-10-14T11:44:57+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+---------------------------------------------------------------
+[ 2020-10-14T11:48:04+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+---------------------------------------------------------------
+[ 2020-10-14T11:48:13+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+---------------------------------------------------------------
+[ 2020-10-14T11:49:11+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/bottommenu_upd/?id=5f866e3dcca15
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:44]
+---------------------------------------------------------------
+[ 2020-10-14T11:49:20+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/bottommenu
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\application\customer\controller\Bottommenu.php:36]
+---------------------------------------------------------------
+[ 2020-10-14T11:49:22+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/bottommenu_upd/?id=5f866c23830a0
+[ error ] [8]未定义数组索引: remark[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:44]
+---------------------------------------------------------------
+[ 2020-10-14T11:49:38+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/bottommenu_upd/?id=5f866c23830a0
+[ error ] [8]未定义数组索引: id[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:35]
+[ error ] [8]未定义数组索引: name[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:35]
+---------------------------------------------------------------
+[ 2020-10-14T11:49:46+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/bottommenu_upd/?id=5f867302ebb17
+[ error ] [8]未定义数组索引: id[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:35]
+[ error ] [8]未定义数组索引: name[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:35]
+---------------------------------------------------------------
+[ 2020-10-14T11:49:52+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/bottommenu_upd/?id=5f867302ebb17
+[ error ] [8]未定义数组索引: id[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:35]
+[ error ] [8]未定义数组索引: name[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:35]
+---------------------------------------------------------------
+[ 2020-10-14T11:50:05+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/bottommenu_upd/?id=5f866e3dcca15
+[ error ] [8]未定义数组索引: id[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:35]
+[ error ] [8]未定义数组索引: name[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:35]
+---------------------------------------------------------------
+[ 2020-10-14T11:52:09+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/bottommenu_upd/?id=5f86759fa4a10
+[ error ] [8]未定义数组索引: id[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:35]
+[ error ] [8]未定义数组索引: name[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:35]
+---------------------------------------------------------------
+[ 2020-10-14T11:52:36+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/bottommenu_upd/?id=5f86759fa4a10
+[ error ] [8]未定义数组索引: id[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:35]
+[ error ] [8]未定义数组索引: name[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:35]
+---------------------------------------------------------------
+[ 2020-10-14T11:53:05+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/bottommenu_upd/?id=5f8676124a913
+[ error ] [8]未定义数组索引: id[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:35]
+[ error ] [8]未定义数组索引: name[D:\phpstudy_pro\WWW\runtime\temp\7a9ef5b49f7363e07b278a18d807cbb4.php:35]
+---------------------------------------------------------------
+[ 2020-10-14T14:05:42+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\customer\controller\Customer.php:91]
+---------------------------------------------------------------
+[ 2020-10-14T14:06:28+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer?page=178&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\customer\controller\Customer.php:91]
+---------------------------------------------------------------
+[ 2020-10-14T14:06:39+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\customer\controller\Customer.php:91]
+---------------------------------------------------------------
+[ 2020-10-14T14:40:00+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\customer\controller\Customer.php:91]
+---------------------------------------------------------------
+[ 2020-10-14T16:29:27+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\customer\controller\Customer.php:93]
+---------------------------------------------------------------
+[ 2020-10-14T16:29:29+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\customer\controller\Customer.php:93]
+---------------------------------------------------------------
+[ 2020-10-14T16:29:36+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\customer\controller\Customer.php:93]
+---------------------------------------------------------------
+[ 2020-10-14T16:33:24+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\customer\controller\Customer.php:93]
+---------------------------------------------------------------
+[ 2020-10-14T16:42:10+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_user?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\user\controller\User.php:49]
+---------------------------------------------------------------
+[ 2020-10-14T16:43:47+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_user?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\user\controller\User.php:49]
+---------------------------------------------------------------
+[ 2020-10-14T16:44:16+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/ins_user_do
+[ error ] [8]未定义变量: Trans[D:\phpstudy_pro\WWW\application\user\controller\User.php:99]
+---------------------------------------------------------------
+[ 2020-10-14T16:44:17+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_user?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\user\controller\User.php:49]
+---------------------------------------------------------------
+[ 2020-10-14T16:44:56+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\customer\controller\Customer.php:83]
+---------------------------------------------------------------
+[ 2020-10-14T16:45:52+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\customer\controller\Customer.php:94]
+---------------------------------------------------------------
+[ 2020-10-14T16:48:48+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/upd_project_do
+[ error ] [8]未定义数组索引: Changes[D:\phpstudy_pro\WWW\application\project\controller\Project.php:538]
+---------------------------------------------------------------
+[ 2020-10-14T16:49:01+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\customer\controller\Customer.php:83]
+---------------------------------------------------------------
+[ 2020-10-14T16:53:07+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_user?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\user\controller\User.php:49]
+---------------------------------------------------------------
+[ 2020-10-14T16:54:12+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/ins_user_do
+[ error ] [8]未定义变量: Trans[D:\phpstudy_pro\WWW\application\user\controller\User.php:99]
+---------------------------------------------------------------
+[ 2020-10-14T16:54:13+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_user?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\user\controller\User.php:49]
+---------------------------------------------------------------
+[ 2020-10-14T17:14:59+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\customer\controller\Customer.php:83]
+---------------------------------------------------------------
+[ 2020-10-14T17:15:21+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\customer\controller\Customer.php:83]
+---------------------------------------------------------------
+[ 2020-10-14T17:18:14+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\customer\controller\Customer.php:83]
+---------------------------------------------------------------
+[ 2020-10-14T17:18:35+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\customer\controller\Customer.php:83]
+---------------------------------------------------------------
+[ 2020-10-14T17:19:18+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\customer\controller\Customer.php:94]
+---------------------------------------------------------------
+[ 2020-10-14T17:19:38+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\customer\controller\Customer.php:94]
+---------------------------------------------------------------
+[ 2020-10-14T17:23:11+08:00 ] 127.0.0.1 POST localhost:8080/public/index.php/upd_project_do
+[ error ] [8]未定义数组索引: Changes[D:\phpstudy_pro\WWW\application\project\controller\Project.php:538]
+---------------------------------------------------------------
+[ 2020-10-14T17:23:42+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\customer\controller\Customer.php:94]
+---------------------------------------------------------------
+[ 2020-10-14T17:24:13+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\customer\controller\Customer.php:94]
+---------------------------------------------------------------
+[ 2020-10-14T17:33:10+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\customer\controller\Customer.php:83]
+---------------------------------------------------------------
+[ 2020-10-14T17:33:15+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\customer\controller\Customer.php:83]
+---------------------------------------------------------------
+[ 2020-10-14T17:33:41+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\customer\controller\Customer.php:83]
+---------------------------------------------------------------
+[ 2020-10-14T17:33:48+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\customer\controller\Customer.php:83]
+---------------------------------------------------------------
+[ 2020-10-14T17:34:44+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\customer\controller\Customer.php:83]
+---------------------------------------------------------------
+[ 2020-10-14T17:40:11+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\customer\controller\Customer.php:83]
+---------------------------------------------------------------
+[ 2020-10-14T18:03:49+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\customer\controller\Customer.php:94]
