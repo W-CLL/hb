@@ -2959,3 +2959,206 @@
 [ sql ] [ SQL ] SELECT c.*,u.Name Client,FROM_UNIXTIME(Time,"%Y-%m-%d %T") Sub_Time,Moblie,Ok,Ok_time FROM `customer` `c` LEFT JOIN ( SELECT `Moblie` FROM `kf_moblie` GROUP BY `Moblie` ) m ON `m`.`Moblie`=`c`.`Phone` INNER JOIN `user_info` `u` ON `u`.`User_Id`=`c`.`Client_Id` RIGHT JOIN ( SELECT `User_Id`,`Client_Id` FROM `project` WHERE  `User_Id` = 109 OR `See_User_Id` LIKE '%@,109@,%' ) pj ON `pj`.`Client_Id`=`u`.`User_Id` GROUP BY `Id` ORDER BY `Time` DESC LIMIT 0,20 [ RunTime:0.095600s ]
 [ sql ] [ SQL ] SHOW COLUMNS FROM `kw` [ RunTime:0.005635s ]
 [ sql ] [ SQL ] SELECT * FROM `kw` WHERE  `Kw` IS NOT NULL  AND `Client_Id` IS NOT NULL [ RunTime:0.004403s ]
+---------------------------------------------------------------
+[ 2020-10-17T17:44:22+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/customer
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005036s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.004844s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.003861s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.004671s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.003916s ]
+---------------------------------------------------------------
+[ 2020-10-17T17:44:23+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer?page=1&limit=20
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015686s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.019027s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.019758s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.022810s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.020469s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `kf_moblie` [ RunTime:0.022579s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `customer` [ RunTime:0.022079s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `customer` `c` LEFT JOIN ( SELECT `Moblie` FROM `kf_moblie` GROUP BY `Moblie` ) m ON `m`.`Moblie`=`c`.`Phone` INNER JOIN `user_info` `u` ON `u`.`User_Id`=`c`.`Client_Id` GROUP BY `Id` ) `_group_count_` LIMIT 1 [ RunTime:0.148129s ]
+[ sql ] [ SQL ] SELECT c.*,u.Name Client,FROM_UNIXTIME(Time,"%Y-%m-%d %T") Sub_Time,Moblie,Ok,Ok_time FROM `customer` `c` LEFT JOIN ( SELECT `Moblie` FROM `kf_moblie` GROUP BY `Moblie` ) m ON `m`.`Moblie`=`c`.`Phone` INNER JOIN `user_info` `u` ON `u`.`User_Id`=`c`.`Client_Id` GROUP BY `Id` ORDER BY `Time` DESC LIMIT 0,20 [ RunTime:0.179542s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `kw` [ RunTime:0.019915s ]
+[ sql ] [ SQL ] SELECT * FROM `kw` WHERE  `Kw` IS NOT NULL  AND `Client_Id` IS NOT NULL [ RunTime:0.018266s ]
+---------------------------------------------------------------
+[ 2020-10-17T17:44:28+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/project
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008945s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.009286s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.012014s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.012929s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.012883s ]
+---------------------------------------------------------------
+[ 2020-10-17T17:44:28+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007216s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.007733s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.009340s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.009609s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.008800s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.009529s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = 1 LIMIT 1 [ RunTime:0.009445s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`Name`,`s`.`Client`,`a`.`Remarks` FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = 1 ORDER BY `a`.`ProjectName` DESC LIMIT 0,50 [ RunTime:0.015081s ]
+[ sql ] [ SQL ] SELECT Project_Id,Sum(Money_Con) Con,Sum(c.Phone+Message) Res,Sum(c.Cli_Money_Con+c.Cli_Money_Coin) Entry, count(c.Id) ConCount,p.Pro_User_Id Pro FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` = '2020-10-16' GROUP BY `Project_Id` [ RunTime:0.009862s ]
+---------------------------------------------------------------
+[ 2020-10-17T17:44:39+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50&sel_status=0&sel_client_id=&sel_user_id=&sel_time=2020-10-17&sel_grade_min=&sel_grade_max=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004553s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.006711s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.008363s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.009480s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.008709s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.009586s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = '0' LIMIT 1 [ RunTime:0.011751s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`Name`,`s`.`Client`,`a`.`Remarks` FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = '0' ORDER BY `a`.`ProjectName` DESC LIMIT 0,50 [ RunTime:0.012223s ]
+[ sql ] [ SQL ] SELECT Project_Id,Sum(Money_Con) Con,Sum(c.Phone+Message) Res,Sum(c.Cli_Money_Con+c.Cli_Money_Coin) Entry, count(c.Id) ConCount,p.Pro_User_Id Pro FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` = '2020-10-16' GROUP BY `Project_Id` [ RunTime:0.012097s ]
+---------------------------------------------------------------
+[ 2020-10-17T17:44:42+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/ins_promotion_con?Id=179
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010301s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.012666s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.013988s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.014050s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.012324s ]
+---------------------------------------------------------------
+[ 2020-10-17T17:44:42+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_ins_promotion_con?Id=179&page=1&limit=10
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009025s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.013097s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.015614s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.013387s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.013743s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.013182s ]
+[ sql ] [ SQL ] SELECT `Client_Id`,`Name`,`ProjectName`,Id Project_Id,`p`.`Pro_User_Id`,`p`.`User_53_Id` FROM `project` `p` INNER JOIN `user_info` `u` ON `u`.`User_Id`=`p`.`Client_Id` WHERE  `p`.`Id` = '179' LIMIT 1 [ RunTime:0.012355s ]
+[ sql ] [ SQL ] SELECT `Pro_User_Id` FROM `project` WHERE  `Id` = 179 LIMIT 1 [ RunTime:0.012488s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `promotion_user` [ RunTime:0.014157s ]
+[ sql ] [ SQL ] SELECT Id Pro_Id,`Pro_User`,`Remarks`,`Rebate`,`Pro_Psw`,`Client_Rebate` FROM `promotion_user` WHERE  `Id` IN (193) [ RunTime:0.012990s ]
+[ sql ] [ SQL ] SELECT Id kf53_Id,`User_53`,`Psw_53` FROM `client_53` WHERE  `Id` IN (8) [ RunTime:0.010931s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `promotion_con` [ RunTime:0.013715s ]
+[ sql ] [ SQL ] SELECT * FROM `promotion_con` WHERE  `Date` = '2020-10-16'  AND `Project_Id` = 179 [ RunTime:0.013771s ]
+---------------------------------------------------------------
+[ 2020-10-17T17:44:46+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50&sel_status=0&sel_client_id=&sel_user_id=&sel_time=2020-10-17&sel_grade_min=&sel_grade_max=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005185s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.005831s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.007774s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.009081s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.009388s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.008593s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = '0' LIMIT 1 [ RunTime:0.012581s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`Name`,`s`.`Client`,`a`.`Remarks` FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = '0' ORDER BY `a`.`ProjectName` DESC LIMIT 0,50 [ RunTime:0.010475s ]
+[ sql ] [ SQL ] SELECT Project_Id,Sum(Money_Con) Con,Sum(c.Phone+Message) Res,Sum(c.Cli_Money_Con+c.Cli_Money_Coin) Entry, count(c.Id) ConCount,p.Pro_User_Id Pro FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` = '2020-10-16' GROUP BY `Project_Id` [ RunTime:0.010006s ]
+---------------------------------------------------------------
+[ 2020-10-17T17:44:51+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=2&limit=50&sel_status=0&sel_client_id=&sel_user_id=&sel_time=2020-10-17&sel_grade_min=&sel_grade_max=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008611s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.012059s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.014428s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.015761s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.014327s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.015571s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = '0' LIMIT 1 [ RunTime:0.017198s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`Name`,`s`.`Client`,`a`.`Remarks` FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = '0' ORDER BY `a`.`ProjectName` DESC LIMIT 50,50 [ RunTime:0.018625s ]
+[ sql ] [ SQL ] SELECT Project_Id,Sum(Money_Con) Con,Sum(c.Phone+Message) Res,Sum(c.Cli_Money_Con+c.Cli_Money_Coin) Entry, count(c.Id) ConCount,p.Pro_User_Id Pro FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` = '2020-10-16' GROUP BY `Project_Id` [ RunTime:0.018750s ]
+---------------------------------------------------------------
+[ 2020-10-17T17:44:57+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=2&limit=50&sel_status=0&sel_client_id=56&sel_user_id=&sel_time=2020-10-17&sel_grade_min=&sel_grade_max=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006666s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.009976s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.012235s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.013040s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.012232s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.013385s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = '0'  AND `a`.`Client_Id` = '56' LIMIT 1 [ RunTime:0.013270s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`Name`,`s`.`Client`,`a`.`Remarks` FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = '0'  AND `a`.`Client_Id` = '56' ORDER BY `a`.`ProjectName` DESC LIMIT 50,50 [ RunTime:0.012791s ]
+[ sql ] [ SQL ] SELECT Project_Id,Sum(Money_Con) Con,Sum(c.Phone+Message) Res,Sum(c.Cli_Money_Con+c.Cli_Money_Coin) Entry, count(c.Id) ConCount,p.Pro_User_Id Pro FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` = '2020-10-16' GROUP BY `Project_Id` [ RunTime:0.015467s ]
+---------------------------------------------------------------
+[ 2020-10-17T17:45:00+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=2&limit=50&sel_status=0&sel_client_id=86&sel_user_id=&sel_time=2020-10-17&sel_grade_min=&sel_grade_max=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006100s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.007347s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.008602s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.009518s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.008923s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.009565s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = '0'  AND `a`.`Client_Id` = '86' LIMIT 1 [ RunTime:0.009075s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`Name`,`s`.`Client`,`a`.`Remarks` FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = '0'  AND `a`.`Client_Id` = '86' ORDER BY `a`.`ProjectName` DESC LIMIT 50,50 [ RunTime:0.009733s ]
+[ sql ] [ SQL ] SELECT Project_Id,Sum(Money_Con) Con,Sum(c.Phone+Message) Res,Sum(c.Cli_Money_Con+c.Cli_Money_Coin) Entry, count(c.Id) ConCount,p.Pro_User_Id Pro FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` = '2020-10-16' GROUP BY `Project_Id` [ RunTime:0.010039s ]
+---------------------------------------------------------------
+[ 2020-10-17T17:45:03+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=2&limit=50&sel_status=0&sel_client_id=60&sel_user_id=&sel_time=2020-10-17&sel_grade_min=&sel_grade_max=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006256s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.007513s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.009041s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.011137s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.008928s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.010047s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = '0'  AND `a`.`Client_Id` = '60' LIMIT 1 [ RunTime:0.011815s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`Name`,`s`.`Client`,`a`.`Remarks` FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = '0'  AND `a`.`Client_Id` = '60' ORDER BY `a`.`ProjectName` DESC LIMIT 50,50 [ RunTime:0.009501s ]
+[ sql ] [ SQL ] SELECT Project_Id,Sum(Money_Con) Con,Sum(c.Phone+Message) Res,Sum(c.Cli_Money_Con+c.Cli_Money_Coin) Entry, count(c.Id) ConCount,p.Pro_User_Id Pro FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` = '2020-10-16' GROUP BY `Project_Id` [ RunTime:0.010974s ]
+---------------------------------------------------------------
+[ 2020-10-17T17:45:05+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=2&limit=50&sel_status=0&sel_client_id=76&sel_user_id=&sel_time=2020-10-17&sel_grade_min=&sel_grade_max=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006312s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.008355s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.009977s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.011860s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.010313s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.012101s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = '0'  AND `a`.`Client_Id` = '76' LIMIT 1 [ RunTime:0.010709s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`Name`,`s`.`Client`,`a`.`Remarks` FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = '0'  AND `a`.`Client_Id` = '76' ORDER BY `a`.`ProjectName` DESC LIMIT 50,50 [ RunTime:0.010518s ]
+[ sql ] [ SQL ] SELECT Project_Id,Sum(Money_Con) Con,Sum(c.Phone+Message) Res,Sum(c.Cli_Money_Con+c.Cli_Money_Coin) Entry, count(c.Id) ConCount,p.Pro_User_Id Pro FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` = '2020-10-16' GROUP BY `Project_Id` [ RunTime:0.011293s ]
+---------------------------------------------------------------
+[ 2020-10-17T17:45:10+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=2&limit=50&sel_status=0&sel_client_id=58&sel_user_id=&sel_time=2020-10-17&sel_grade_min=&sel_grade_max=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006943s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.008123s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.011914s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.011736s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.011385s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.013344s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = '0'  AND `a`.`Client_Id` = '58' LIMIT 1 [ RunTime:0.017173s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`Name`,`s`.`Client`,`a`.`Remarks` FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = '0'  AND `a`.`Client_Id` = '58' ORDER BY `a`.`ProjectName` DESC LIMIT 50,50 [ RunTime:0.014409s ]
+[ sql ] [ SQL ] SELECT Project_Id,Sum(Money_Con) Con,Sum(c.Phone+Message) Res,Sum(c.Cli_Money_Con+c.Cli_Money_Coin) Entry, count(c.Id) ConCount,p.Pro_User_Id Pro FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` = '2020-10-16' GROUP BY `Project_Id` [ RunTime:0.015830s ]
+---------------------------------------------------------------
+[ 2020-10-17T17:45:13+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=2&limit=50&sel_status=0&sel_client_id=&sel_user_id=&sel_time=2020-10-17&sel_grade_min=&sel_grade_max=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010885s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.013997s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.014753s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.017126s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.015785s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.016538s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = '0' LIMIT 1 [ RunTime:0.015404s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`Name`,`s`.`Client`,`a`.`Remarks` FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = '0' ORDER BY `a`.`ProjectName` DESC LIMIT 50,50 [ RunTime:0.017213s ]
+[ sql ] [ SQL ] SELECT Project_Id,Sum(Money_Con) Con,Sum(c.Phone+Message) Res,Sum(c.Cli_Money_Con+c.Cli_Money_Coin) Entry, count(c.Id) ConCount,p.Pro_User_Id Pro FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` = '2020-10-16' GROUP BY `Project_Id` [ RunTime:0.015521s ]
+---------------------------------------------------------------
+[ 2020-10-17T17:45:16+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50&sel_status=0&sel_client_id=&sel_user_id=&sel_time=2020-10-17&sel_grade_min=&sel_grade_max=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007123s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.008033s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.010333s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.010935s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.009411s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.011079s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = '0' LIMIT 1 [ RunTime:0.013246s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`Name`,`s`.`Client`,`a`.`Remarks` FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = '0' ORDER BY `a`.`ProjectName` DESC LIMIT 0,50 [ RunTime:0.016147s ]
+[ sql ] [ SQL ] SELECT Project_Id,Sum(Money_Con) Con,Sum(c.Phone+Message) Res,Sum(c.Cli_Money_Con+c.Cli_Money_Coin) Entry, count(c.Id) ConCount,p.Pro_User_Id Pro FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` = '2020-10-16' GROUP BY `Project_Id` [ RunTime:0.016747s ]
+---------------------------------------------------------------
+[ 2020-10-17T17:45:20+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50&sel_status=0&sel_client_id=45&sel_user_id=&sel_time=2020-10-17&sel_grade_min=&sel_grade_max=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011676s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.015369s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.017553s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.018530s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.017478s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.018542s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = '0'  AND `a`.`Client_Id` = '45' LIMIT 1 [ RunTime:0.016976s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`Name`,`s`.`Client`,`a`.`Remarks` FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = '0'  AND `a`.`Client_Id` = '45' ORDER BY `a`.`ProjectName` DESC LIMIT 0,50 [ RunTime:0.017969s ]
+[ sql ] [ SQL ] SELECT Project_Id,Sum(Money_Con) Con,Sum(c.Phone+Message) Res,Sum(c.Cli_Money_Con+c.Cli_Money_Coin) Entry, count(c.Id) ConCount,p.Pro_User_Id Pro FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` = '2020-10-16' GROUP BY `Project_Id` [ RunTime:0.018006s ]
+---------------------------------------------------------------
+[ 2020-10-17T17:45:25+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50&sel_status=0&sel_client_id=45&sel_user_id=&sel_time=2020-10-18&sel_grade_min=&sel_grade_max=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010650s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.013485s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.015599s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.015525s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.013932s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.015840s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = '0'  AND `a`.`Client_Id` = '45' LIMIT 1 [ RunTime:0.013527s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`Name`,`s`.`Client`,`a`.`Remarks` FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = '0'  AND `a`.`Client_Id` = '45' ORDER BY `a`.`ProjectName` DESC LIMIT 0,50 [ RunTime:0.014981s ]
+[ sql ] [ SQL ] SELECT Project_Id,Sum(Money_Con) Con,Sum(c.Phone+Message) Res,Sum(c.Cli_Money_Con+c.Cli_Money_Coin) Entry, count(c.Id) ConCount,p.Pro_User_Id Pro FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` = '2020-10-17' GROUP BY `Project_Id` [ RunTime:0.014527s ]
+---------------------------------------------------------------
+[ 2020-10-17T17:45:29+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50&sel_status=0&sel_client_id=45&sel_user_id=&sel_time=2020-10-17&sel_grade_min=&sel_grade_max=
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010420s ] mysql:host=127.0.0.1;dbname=www_hb_demo;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_info` [ RunTime:0.012623s ]
+[ sql ] [ SQL ] SELECT `ui`.`User_Id`,`ui`.`Name` FROM `user_info` `ui` INNER JOIN `project` `p` ON `p`.`Client_Id`=`ui`.`User_Id` WHERE  (  `p`.`User_Id` = 96 OR `See_User_Id` LIKE '%@,96@,%' )  AND `Type_Id` = 5  AND `Status` = 1 GROUP BY `Name` ORDER BY `Name` [ RunTime:0.014588s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `client_53` [ RunTime:0.016456s ]
+[ sql ] [ SQL ] SELECT `User_53`,`Id` FROM `client_53` ORDER BY `User_53` [ RunTime:0.014922s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `project` [ RunTime:0.016802s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = '0'  AND `a`.`Client_Id` = '45' LIMIT 1 [ RunTime:0.015677s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`Name`,`s`.`Client`,`a`.`Remarks` FROM `project` `a` LEFT JOIN `user_info` `b` ON `b`.`User_Id`=`a`.`User_Id` LEFT JOIN ( SELECT Name Client,User_Id Client_Id FROM `user_info` WHERE  `Type_Id` = 5 GROUP BY `Client_Id` ) s ON `s`.`Client_Id`=`a`.`Client_Id` LEFT JOIN `client_53` `c` ON `c`.`Id`=`a`.`User_53_Id` LEFT JOIN `promotion_user` `d` ON `d`.`Id`=`a`.`Pro_User_Id` WHERE  `a`.`Status` = '0'  AND `a`.`Client_Id` = '45' ORDER BY `a`.`ProjectName` DESC LIMIT 0,50 [ RunTime:0.017038s ]
+[ sql ] [ SQL ] SELECT Project_Id,Sum(Money_Con) Con,Sum(c.Phone+Message) Res,Sum(c.Cli_Money_Con+c.Cli_Money_Coin) Entry, count(c.Id) ConCount,p.Pro_User_Id Pro FROM `project` `p` LEFT JOIN `promotion_con` `c` ON `p`.`Id`=`c`.`Project_Id` WHERE  `Date` = '2020-10-16' GROUP BY `Project_Id` [ RunTime:0.016906s ]

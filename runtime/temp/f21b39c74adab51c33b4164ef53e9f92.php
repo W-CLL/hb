@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:93:"D:\phpstudy_pro\WWW\public/../application/promotion\view\promotion_con\ins_promotion_con.html";i:1602726935;s:20:"./static/header.html";i:1602579388;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:93:"D:\phpstudy_pro\WWW\public/../application/promotion\view\promotion_con\ins_promotion_con.html";i:1602726935;s:20:"./static/header.html";i:1602917348;}*/ ?>
     <head>
 
     <meta charset="utf-8">
@@ -17,9 +17,11 @@
 
 	<link rel="stylesheet" href="/public/static/css/formfields.css">
 
-     <script src="/public/static/layui/layui.all.js" ></script>
+     <script type="text/javascript" src="/public/static/layui/layui.all.js" ></script>
 
-     <script src="/public/static/jquery.min.js"></script>
+     <script type="text/javascript" src="/public/static/layui/lay/modules/laydate.js"></script>
+
+     <script type="text/javascript" src="/public/static/jquery.min.js"></script>
 
     </head>
 <body>

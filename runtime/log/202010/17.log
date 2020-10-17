@@ -25880,3 +25880,841 @@
 [ info ] [ DB ] INIT mysql
 [ info ] [ RUN ] app\customer\controller\Customer->get_customer[ D:\phpstudy_pro\WWW\application\customer\controller\Customer.php ]
 [ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-17T17:44:22+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/customer
+[运行时间：0.071613s] [吞吐率：13.96req/s] [内存消耗：429.08kb] [文件加载：47]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 'customer/customer/customer/login',
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-34e771d1=225f105b-2546-4f37-826e-3d5f427e4d0f; PHPSESSID=akvoe8nb1ocpefevgl02ecb8p0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/public/index.php/index',
+  'sec-fetch-dest' => 'iframe',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\customer\controller\Customer->customer[ D:\phpstudy_pro\WWW\application\customer\controller\Customer.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\public/../application/customer\view\customer\customer.html [ array (
+  0 => 'cli',
+  1 => 'type',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-17T17:44:23+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer?page=1&limit=20
+[运行时间：0.595893s] [吞吐率：1.68req/s] [内存消耗：514.63kb] [文件加载：53]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 'customer/customer/get_customer/login',
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-34e771d1=225f105b-2546-4f37-826e-3d5f427e4d0f; PHPSESSID=akvoe8nb1ocpefevgl02ecb8p0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/public/index.php/customer',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '20',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\customer\controller\Customer->get_customer[ D:\phpstudy_pro\WWW\application\customer\controller\Customer.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-17T17:44:28+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/project
+[运行时间：0.179971s] [吞吐率：5.56req/s] [内存消耗：535.41kb] [文件加载：47]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 'project/project/project/login',
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-34e771d1=225f105b-2546-4f37-826e-3d5f427e4d0f; PHPSESSID=akvoe8nb1ocpefevgl02ecb8p0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/public/index.php/index',
+  'sec-fetch-dest' => 'iframe',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\project\controller\Project->project[ D:\phpstudy_pro\WWW\application\project\controller\Project.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\public/../application/project\view\project\project.html [ array (
+  0 => 'cli',
+  1 => 'pro_user',
+  2 => 'user_53',
+  3 => 'per',
+  4 => 'part',
+  5 => 'pro',
+  6 => 'type',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-17T17:44:28+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50
+[运行时间：0.152917s] [吞吐率：6.54req/s] [内存消耗：596.91kb] [文件加载：50]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 'project/project/get_project/login',
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-34e771d1=225f105b-2546-4f37-826e-3d5f427e4d0f; PHPSESSID=akvoe8nb1ocpefevgl02ecb8p0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/public/index.php/project',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '50',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\project\controller\Project->get_project[ D:\phpstudy_pro\WWW\application\project\controller\Project.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-17T17:44:39+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50&sel_status=0&sel_client_id=&sel_user_id=&sel_time=2020-10-17&sel_grade_min=&sel_grade_max=
+[运行时间：0.211031s] [吞吐率：4.74req/s] [内存消耗：613.37kb] [文件加载：50]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 'project/project/get_project/login',
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-34e771d1=225f105b-2546-4f37-826e-3d5f427e4d0f; PHPSESSID=akvoe8nb1ocpefevgl02ecb8p0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/public/index.php/project',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '50',
+  'sel_status' => '0',
+  'sel_client_id' => '',
+  'sel_user_id' => '',
+  'sel_time' => '2020-10-17',
+  'sel_grade_min' => '',
+  'sel_grade_max' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\project\controller\Project->get_project[ D:\phpstudy_pro\WWW\application\project\controller\Project.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-17T17:44:42+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/ins_promotion_con?Id=179
+[运行时间：0.125113s] [吞吐率：7.99req/s] [内存消耗：621.52kb] [文件加载：49]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 'promotion/promotionCon/ins_promotion_con/login',
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-34e771d1=225f105b-2546-4f37-826e-3d5f427e4d0f; PHPSESSID=akvoe8nb1ocpefevgl02ecb8p0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/public/index.php/project',
+  'sec-fetch-dest' => 'iframe',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'Id' => '179',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\promotion\controller\PromotionCon->ins_promotion_con[ D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\public/../application/promotion\view\promotion_con\ins_promotion_con.html [ array (
+  0 => 'cli',
+  1 => 'pro_user',
+  2 => 'user_53',
+  3 => 'per',
+  4 => 'pro',
+  5 => 'type',
+  6 => 'Id',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-17T17:44:42+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_ins_promotion_con?Id=179&page=1&limit=10
+[运行时间：0.236208s] [吞吐率：4.23req/s] [内存消耗：534.86kb] [文件加载：46]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 'promotion/promotionCon/get_ins_promotion_con/login',
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-34e771d1=225f105b-2546-4f37-826e-3d5f427e4d0f; PHPSESSID=akvoe8nb1ocpefevgl02ecb8p0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/public/index.php/ins_promotion_con?Id=179',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'Id' => '179',
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\promotion\controller\PromotionCon->get_ins_promotion_con[ D:\phpstudy_pro\WWW\application\promotion\controller\PromotionCon.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-17T17:44:46+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50&sel_status=0&sel_client_id=&sel_user_id=&sel_time=2020-10-17&sel_grade_min=&sel_grade_max=
+[运行时间：0.145161s] [吞吐率：6.89req/s] [内存消耗：613.37kb] [文件加载：50]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 'project/project/get_project/login',
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-34e771d1=225f105b-2546-4f37-826e-3d5f427e4d0f; PHPSESSID=akvoe8nb1ocpefevgl02ecb8p0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/public/index.php/project',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '50',
+  'sel_status' => '0',
+  'sel_client_id' => '',
+  'sel_user_id' => '',
+  'sel_time' => '2020-10-17',
+  'sel_grade_min' => '',
+  'sel_grade_max' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\project\controller\Project->get_project[ D:\phpstudy_pro\WWW\application\project\controller\Project.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-17T17:44:51+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=2&limit=50&sel_status=0&sel_client_id=&sel_user_id=&sel_time=2020-10-17&sel_grade_min=&sel_grade_max=
+[运行时间：0.232542s] [吞吐率：4.30req/s] [内存消耗：597.37kb] [文件加载：50]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 'project/project/get_project/login',
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-34e771d1=225f105b-2546-4f37-826e-3d5f427e4d0f; PHPSESSID=akvoe8nb1ocpefevgl02ecb8p0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/public/index.php/project',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '2',
+  'limit' => '50',
+  'sel_status' => '0',
+  'sel_client_id' => '',
+  'sel_user_id' => '',
+  'sel_time' => '2020-10-17',
+  'sel_grade_min' => '',
+  'sel_grade_max' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\project\controller\Project->get_project[ D:\phpstudy_pro\WWW\application\project\controller\Project.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-17T17:44:57+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=2&limit=50&sel_status=0&sel_client_id=56&sel_user_id=&sel_time=2020-10-17&sel_grade_min=&sel_grade_max=
+[运行时间：0.207389s] [吞吐率：4.82req/s] [内存消耗：602.84kb] [文件加载：53]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 'project/project/get_project/login',
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-34e771d1=225f105b-2546-4f37-826e-3d5f427e4d0f; PHPSESSID=akvoe8nb1ocpefevgl02ecb8p0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/public/index.php/project',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '2',
+  'limit' => '50',
+  'sel_status' => '0',
+  'sel_client_id' => '56',
+  'sel_user_id' => '',
+  'sel_time' => '2020-10-17',
+  'sel_grade_min' => '',
+  'sel_grade_max' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\project\controller\Project->get_project[ D:\phpstudy_pro\WWW\application\project\controller\Project.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-17T17:45:00+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=2&limit=50&sel_status=0&sel_client_id=86&sel_user_id=&sel_time=2020-10-17&sel_grade_min=&sel_grade_max=
+[运行时间：0.130446s] [吞吐率：7.67req/s] [内存消耗：602.84kb] [文件加载：53]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 'project/project/get_project/login',
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-34e771d1=225f105b-2546-4f37-826e-3d5f427e4d0f; PHPSESSID=akvoe8nb1ocpefevgl02ecb8p0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/public/index.php/project',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '2',
+  'limit' => '50',
+  'sel_status' => '0',
+  'sel_client_id' => '86',
+  'sel_user_id' => '',
+  'sel_time' => '2020-10-17',
+  'sel_grade_min' => '',
+  'sel_grade_max' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\project\controller\Project->get_project[ D:\phpstudy_pro\WWW\application\project\controller\Project.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-17T17:45:03+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=2&limit=50&sel_status=0&sel_client_id=60&sel_user_id=&sel_time=2020-10-17&sel_grade_min=&sel_grade_max=
+[运行时间：0.284611s] [吞吐率：3.51req/s] [内存消耗：602.84kb] [文件加载：53]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 'project/project/get_project/login',
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-34e771d1=225f105b-2546-4f37-826e-3d5f427e4d0f; PHPSESSID=akvoe8nb1ocpefevgl02ecb8p0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/public/index.php/project',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '2',
+  'limit' => '50',
+  'sel_status' => '0',
+  'sel_client_id' => '60',
+  'sel_user_id' => '',
+  'sel_time' => '2020-10-17',
+  'sel_grade_min' => '',
+  'sel_grade_max' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\project\controller\Project->get_project[ D:\phpstudy_pro\WWW\application\project\controller\Project.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-17T17:45:05+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=2&limit=50&sel_status=0&sel_client_id=76&sel_user_id=&sel_time=2020-10-17&sel_grade_min=&sel_grade_max=
+[运行时间：0.167194s] [吞吐率：5.98req/s] [内存消耗：602.84kb] [文件加载：53]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 'project/project/get_project/login',
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-34e771d1=225f105b-2546-4f37-826e-3d5f427e4d0f; PHPSESSID=akvoe8nb1ocpefevgl02ecb8p0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/public/index.php/project',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '2',
+  'limit' => '50',
+  'sel_status' => '0',
+  'sel_client_id' => '76',
+  'sel_user_id' => '',
+  'sel_time' => '2020-10-17',
+  'sel_grade_min' => '',
+  'sel_grade_max' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\project\controller\Project->get_project[ D:\phpstudy_pro\WWW\application\project\controller\Project.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-17T17:45:10+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=2&limit=50&sel_status=0&sel_client_id=58&sel_user_id=&sel_time=2020-10-17&sel_grade_min=&sel_grade_max=
+[运行时间：0.172339s] [吞吐率：5.80req/s] [内存消耗：602.84kb] [文件加载：53]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 'project/project/get_project/login',
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-34e771d1=225f105b-2546-4f37-826e-3d5f427e4d0f; PHPSESSID=akvoe8nb1ocpefevgl02ecb8p0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/public/index.php/project',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '2',
+  'limit' => '50',
+  'sel_status' => '0',
+  'sel_client_id' => '58',
+  'sel_user_id' => '',
+  'sel_time' => '2020-10-17',
+  'sel_grade_min' => '',
+  'sel_grade_max' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\project\controller\Project->get_project[ D:\phpstudy_pro\WWW\application\project\controller\Project.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-17T17:45:13+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=2&limit=50&sel_status=0&sel_client_id=&sel_user_id=&sel_time=2020-10-17&sel_grade_min=&sel_grade_max=
+[运行时间：0.232186s] [吞吐率：4.31req/s] [内存消耗：597.37kb] [文件加载：50]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 'project/project/get_project/login',
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-34e771d1=225f105b-2546-4f37-826e-3d5f427e4d0f; PHPSESSID=akvoe8nb1ocpefevgl02ecb8p0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/public/index.php/project',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '2',
+  'limit' => '50',
+  'sel_status' => '0',
+  'sel_client_id' => '',
+  'sel_user_id' => '',
+  'sel_time' => '2020-10-17',
+  'sel_grade_min' => '',
+  'sel_grade_max' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\project\controller\Project->get_project[ D:\phpstudy_pro\WWW\application\project\controller\Project.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-17T17:45:16+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50&sel_status=0&sel_client_id=&sel_user_id=&sel_time=2020-10-17&sel_grade_min=&sel_grade_max=
+[运行时间：0.139394s] [吞吐率：7.17req/s] [内存消耗：613.37kb] [文件加载：50]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 'project/project/get_project/login',
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-34e771d1=225f105b-2546-4f37-826e-3d5f427e4d0f; PHPSESSID=akvoe8nb1ocpefevgl02ecb8p0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/public/index.php/project',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '50',
+  'sel_status' => '0',
+  'sel_client_id' => '',
+  'sel_user_id' => '',
+  'sel_time' => '2020-10-17',
+  'sel_grade_min' => '',
+  'sel_grade_max' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\project\controller\Project->get_project[ D:\phpstudy_pro\WWW\application\project\controller\Project.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-17T17:45:20+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50&sel_status=0&sel_client_id=45&sel_user_id=&sel_time=2020-10-17&sel_grade_min=&sel_grade_max=
+[运行时间：0.245098s] [吞吐率：4.08req/s] [内存消耗：597.37kb] [文件加载：50]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 'project/project/get_project/login',
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-34e771d1=225f105b-2546-4f37-826e-3d5f427e4d0f; PHPSESSID=akvoe8nb1ocpefevgl02ecb8p0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/public/index.php/project',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '50',
+  'sel_status' => '0',
+  'sel_client_id' => '45',
+  'sel_user_id' => '',
+  'sel_time' => '2020-10-17',
+  'sel_grade_min' => '',
+  'sel_grade_max' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\project\controller\Project->get_project[ D:\phpstudy_pro\WWW\application\project\controller\Project.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-17T17:45:25+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50&sel_status=0&sel_client_id=45&sel_user_id=&sel_time=2020-10-18&sel_grade_min=&sel_grade_max=
+[运行时间：0.252598s] [吞吐率：3.96req/s] [内存消耗：596.85kb] [文件加载：50]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 'project/project/get_project/login',
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-34e771d1=225f105b-2546-4f37-826e-3d5f427e4d0f; PHPSESSID=akvoe8nb1ocpefevgl02ecb8p0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/public/index.php/project',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '50',
+  'sel_status' => '0',
+  'sel_client_id' => '45',
+  'sel_user_id' => '',
+  'sel_time' => '2020-10-18',
+  'sel_grade_min' => '',
+  'sel_grade_max' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\project\controller\Project->get_project[ D:\phpstudy_pro\WWW\application\project\controller\Project.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-10-17T17:45:29+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=1&limit=50&sel_status=0&sel_client_id=45&sel_user_id=&sel_time=2020-10-17&sel_grade_min=&sel_grade_max=
+[运行时间：0.201557s] [吞吐率：4.96req/s] [内存消耗：597.37kb] [文件加载：50]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 'project/project/get_project/login',
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Phpstorm-34e771d1=225f105b-2546-4f37-826e-3d5f427e4d0f; PHPSESSID=akvoe8nb1ocpefevgl02ecb8p0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost:8080/public/index.php/project',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-origin',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'localhost:8080',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '50',
+  'sel_status' => '0',
+  'sel_client_id' => '45',
+  'sel_user_id' => '',
+  'sel_time' => '2020-10-17',
+  'sel_grade_min' => '',
+  'sel_grade_max' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\project\controller\Project->get_project[ D:\phpstudy_pro\WWW\application\project\controller\Project.php ]
+[ info ] [ LOG ] INIT File

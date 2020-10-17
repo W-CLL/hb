@@ -1482,3 +1482,21 @@
 ---------------------------------------------------------------
 [ 2020-10-17T17:27:57+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer?page=1&limit=20
 [ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\customer\controller\Customer.php:83]
+---------------------------------------------------------------
+[ 2020-10-17T17:44:23+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_customer?page=1&limit=20
+[ error ] [8]未定义变量: data[D:\phpstudy_pro\WWW\application\customer\controller\Customer.php:94]
+---------------------------------------------------------------
+[ 2020-10-17T17:44:57+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=2&limit=50&sel_status=0&sel_client_id=56&sel_user_id=&sel_time=2020-10-17&sel_grade_min=&sel_grade_max=
+[ error ] [8]未定义变量: b[D:\phpstudy_pro\WWW\application\project\controller\Project.php:248]
+---------------------------------------------------------------
+[ 2020-10-17T17:45:00+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=2&limit=50&sel_status=0&sel_client_id=86&sel_user_id=&sel_time=2020-10-17&sel_grade_min=&sel_grade_max=
+[ error ] [8]未定义变量: b[D:\phpstudy_pro\WWW\application\project\controller\Project.php:248]
+---------------------------------------------------------------
+[ 2020-10-17T17:45:03+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=2&limit=50&sel_status=0&sel_client_id=60&sel_user_id=&sel_time=2020-10-17&sel_grade_min=&sel_grade_max=
+[ error ] [8]未定义变量: b[D:\phpstudy_pro\WWW\application\project\controller\Project.php:248]
+---------------------------------------------------------------
+[ 2020-10-17T17:45:05+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=2&limit=50&sel_status=0&sel_client_id=76&sel_user_id=&sel_time=2020-10-17&sel_grade_min=&sel_grade_max=
+[ error ] [8]未定义变量: b[D:\phpstudy_pro\WWW\application\project\controller\Project.php:248]
+---------------------------------------------------------------
+[ 2020-10-17T17:45:10+08:00 ] 127.0.0.1 GET localhost:8080/public/index.php/get_project?page=2&limit=50&sel_status=0&sel_client_id=58&sel_user_id=&sel_time=2020-10-17&sel_grade_min=&sel_grade_max=
+[ error ] [8]未定义变量: b[D:\phpstudy_pro\WWW\application\project\controller\Project.php:248]

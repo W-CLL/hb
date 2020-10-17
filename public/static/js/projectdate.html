@@ -39,18 +39,14 @@
 
     //监听前一天，后一天按钮单击
     $(document).ready(function () {
-        //var nowdate = document.getElementById("sel_time");
         $('#lastday').click(function () {
             //当前时间变量
-            //var nowdate = document.getElementById("sel_time");
             var nowdate = $('#sel_time').val();
             if (nowdate.length < 10) {
                 nowdate = new Date();
             } else {
                 nowdate = new Date(nowdate.substr(0, 10));
             }
-            console.log(nowdate);
-
             //新的时间
             var newdate = new Date(nowdate.setDate(nowdate.getDate() - 1));
             var str = formatDate(newdate, 'yyyy-MM-dd');
@@ -58,9 +54,8 @@
             return false;
         });
         $('#nextday').click(function () {
-           // var nowdate = document.getElementById("sel_time");
            var nowdate = $('#sel_time').val();
-            //console.log(nowdate);
+         
             if (nowdate.length < 10) {
                 nowdate = new Date();
             } else {
