@@ -134,7 +134,7 @@
 
             //表单提交
             form.on('submit(add)', function (data) {
-                $.post('/upd_target_do', data.field, function (obj) {
+                $.post('/public/index.php/upd_target_do', data.field, function (obj) {
                     layer.alert(obj.msg, function () {
                         if (obj.code === 0) {
                             

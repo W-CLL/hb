@@ -100,7 +100,7 @@
 
             //表单提交
             form.on('submit(add)', function (data) {
-                $.post('/ins_target_do', data.field, function (obj) {
+                $.post('/public/index.php/ins_target_do', data.field, function (obj) {
                     layer.alert(obj.msg, function () {
                         if (obj.code === 0) {
                             window.parent.location.reload();//刷新父页面

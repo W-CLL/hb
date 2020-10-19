@@ -100,7 +100,7 @@
             totalRow: true,//开启合计
             toolbar: '#head_toolbar', //开启头部工具栏，并为其绑定左侧模板
             defaultToolbar: ['exports', 'print'],
-            url: '/get_meal',
+            url: '/public/index.php/get_meal',
             method: 'get',
             cols: [[
                 { field: 'Id', title: 'Id', hide: true },
@@ -138,7 +138,7 @@
                             type: 2,
                             title: "新增订餐",
                             area: ['50%', '700px'],
-                            content: '/ins_meal'
+                            content: '/public/index.php/ins_meal'
                         });
                         break;
                     }
@@ -155,14 +155,14 @@
                         type: 2,
                         title: "编辑订单信息",
                         area: ['80%', 600],
-                        content: '/upd_meal?Id=' + data.Id
+                        content: '/public/index.php/upd_meal?Id=' + data.Id
                     });
                     break;
                 }
                 case 'dels': {
                     layer.confirm('注意删除操作”不可恢复“，是否确定删除？', { btn: ['确定', '取消'], anim: 6, icon: 0 }, function () {
                         $.ajax({
-                            url: "/del_meal_do/?Id=" + data.Id,
+                            url: "/public/index.php/del_meal_do/?Id=" + data.Id,
                             data: {},
                             type: "delete",
                             dataType: "json",

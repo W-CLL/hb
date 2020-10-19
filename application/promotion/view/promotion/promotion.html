@@ -78,7 +78,9 @@
 
           <option value="1">正常</option>
 
-          <option value="0">停用</option>
+		  <option value="0">停用</option>
+
+		  <option value="2">退款中</option>
 
         </select>
 
@@ -128,13 +130,16 @@
   		  <!-- <button class="layui-btn layui-btn-sm layui-btn-warm" lay-event="del">停用/启用</button> -->
 
 		  {{#  if(d.Status == 1){ }}
-		  	<button class="layui-btn layui-btn-sm layui-btn-warm" lay-event="del">停用</button>
-		  {{#  } else { }}
-			<button class="layui-btn layui-btn-sm layui-btn-normal" lay-event="del">启用</button>
-		  {{#  } }}
-
-          <button class="layui-btn layui-btn-sm layui-btn-danger" lay-event="dels">删除</button>
-
+		  	<button class="layui-btn layui-btn-sm layui-btn-warm" lay-event="del">退款</button>
+		  {{#  } else if(d.Status == 2){ }}
+			<button class="layui-btn layui-btn-sm layui-btn-normal" lay-event="del" id="stop">停用</button>
+			<button class="layui-btn layui-btn-sm layui-btn-normal" lay-event="back" id="back">恢复</button>
+		  {{#  } else {  }}
+		  <button class="layui-btn layui-btn-sm layui-btn-normal" lay-event="del">启用</button>
+          
+			{{#  } }}
+			<button class="layui-btn layui-btn-sm layui-btn-danger" lay-event="dels">删除</button>
+			
 		</div>
 		
 	  </script>
@@ -267,10 +272,7 @@
 						  content: '/public/index.php/ins_promotion'
 
 						});
-
-
-
-						break;
+					break;
 
 				}
 
@@ -319,19 +321,30 @@
 				}
 
 				case 'del':
-
 				{
-
 						$.post('/public/index.php/del_promotion_do',{Id:data.Id},function(data){
-
 							layer.msg(data.msg,function(){
-
 								if(data.code === 0)
-
 								{
-
 									form_table.reload();
+								}
 
+							})
+
+						},'json');
+
+					break;
+
+				}
+
+				case 'back':
+				{
+					
+						$.post('/public/index.php/del_promotion_do',{Id:data.Id,Back:'b'},function(data){
+							layer.msg(data.msg,function(){
+								if(data.code === 0)
+								{
+									form_table.reload();
 								}
 
 							})

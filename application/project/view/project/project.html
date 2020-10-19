@@ -4,7 +4,7 @@
 	<div class="layui-container">
 		
 		<div class="layui-row">
-			{if $Think.session.type<3}
+			{if  $Think.session.type < 3 }
 			<div class="layui-col-xs4 layui-col-sm3 layui-col-md2 layui-col-lg2">
 				<div class="layui-inline">
 					<div class="layui-input-inline">
@@ -17,6 +17,7 @@
 					</div>
 				</div>
 			</div>
+			{/if}
 			<div class="layui-col-xs4 layui-col-sm3 layui-col-md2 layui-col-lg2">
 				<div class="layui-inline">
 					<div class="layui-input-inline">
@@ -29,7 +30,7 @@
 					</div>
 				</div>
 			</div>
-			{/if}
+			
 			
 			<div class="layui-col-xs4 layui-col-sm3 layui-col-md3 layui-col-lg3">
 				<div class="layui-inline layui-input-inline">

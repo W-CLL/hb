@@ -1,10 +1,13 @@
 <?php
+
 namespace app\promotion\controller;
+
 use think\Controller;
 use think\Db;
 use think\Request;
 use app\common\controller\Common;
 use think\Cache;
+
 class Promotion extends Common
 {
     public function _initialize()
@@ -172,24 +175,38 @@ class Promotion extends Common
     {
         $code1 = [['code' => 0, 'msg' => '停用成功！'], ['code' => 1, 'msg' => '停用失败,请联系管理员！']];
         $code2 = [['code' => 0, 'msg' => '启用成功！'], ['code' => 1, 'msg' => '启用失败,请联系管理员！']];
+        $code3 = [['code' => 0, 'msg' => '退款修改成功！'], ['code' => 1, 'msg' => '退款修改失败,请联系管理员！']];
+        $code4 = [['code' => 0, 'msg' => '恢复成功！'], ['code' => 1, 'msg' => '恢复失败,请联系管理员！']];
+
+
         $Id = input('Id');
+        $back = input('Back');
+
         $list = Db::table('promotion_user')->where('Id', $Id)->field('Status')->find();
+
         if ($list['Status'] == 1) {
+            $status['Status'] = 2;
+            $code = $code3;
+        } else if ($list['Status'] == 2 && $back == 'b') {
+            $status['Status'] = 1;
+            $code = $code4;
+        } else if ($list['Status'] == 2) {
             $status['Status'] = 0;
             $code = $code1;
         } else {
             $status['Status'] = 1;
             $code = $code2;
         }
-        $res = Db::table('promotion_user')
-            ->where('Id', $Id)
-            ->update($status);
+        $res = Db::table('promotion_user')->where('Id', $Id)->update($status);
         if ($res) {
             return $code[0];
         } else {
             return $code[1];
         }
+
+
     }
+    
     public function dels_promotion_do()
     {
         if (session('auth') > 2) {
@@ -205,6 +222,7 @@ class Promotion extends Common
             return $code[1];
         }
     }
+
     public function upd_promotion()
     {
         $Id = input('Id');
